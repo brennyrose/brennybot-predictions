@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrennyBot Predictions</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+        :root {
+            --bg: #0a0a0a;
+            --surface: #111111;
+            --border: #1e1e1e;
+            --text: #c8c8c8;
+            --text-dim: #666666;
+            --gold: #d4a843;
+            --gold-dim: #8a7030;
+            --green: #4ade80;
+            --yellow: #facc15;
+            --red: #f87171;
+            --blue: #60a5fa;
+            --mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--mono);
+            font-size: 13px;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* ── Header ── */
+        .header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+
+        .header h1 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .header .subtitle {
+            color: var(--text-dim);
+            font-size: 11px;
+            margin-top: 4px;
+            letter-spacing: 1px;
+        }
+
+        .header .last-updated {
+            color: var(--text-dim);
+            font-size: 11px;
+            margin-top: 8px;
+        }
+
+        .header .last-updated span {
+            color: var(--text);
+        }
+
+        /* ── Nav tabs ── */
+        .nav {
+            display: flex;
+            gap: 0;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav button {
+            background: none;
+            border: none;
+            color: var(--text-dim);
+            font-family: var(--mono);
+            font-size: 13px;
+            font-weight: 500;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.15s;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .nav button:hover {
+            color: var(--text);
+        }
+
+        .nav button.active {
+            color: var(--gold);
+            border-bottom-color: var(--gold);
+        }
+
+        /* ── Section ── */
+        .section { display: none; }
+        .section.active { display: block; }
+
+        .section-header {
+            color: var(--gold);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .section-meta {
+            color: var(--text-dim);
+            font-size: 11px;
+            margin-bottom: 16px;
+        }
+
+        .section-meta span { color: var(--text); }
+
+        /* ── Tables ── */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 24px;
+        }
+
+        th {
+            text-align: left;
+            color: var(--text-dim);
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 8px 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        td {
+            padding: 7px 10px;
+            border-bottom: 1px solid var(--border);
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        tr:hover { background: rgba(212, 168, 67, 0.03); }
+
+        /* ── Confidence colors ── */
+        .conf-high { color: var(--green); font-weight: 600; }
+        .conf-medium { color: var(--yellow); font-weight: 500; }
+        .conf-none { color: var(--text-dim); }
+
+        .edge-positive { color: var(--green); }
+        .edge-small { color: var(--yellow); }
+        .edge-none { color: var(--text-dim); }
+
+        .spread { font-variant-numeric: tabular-nums; }
+
+        .bet-team { color: var(--gold); font-weight: 600; }
+
+        .matchup-away { color: var(--text); }
+        .matchup-at { color: var(--text-dim); padding: 0 2px; }
+        .matchup-home { color: var(--text); }
+
+        /* ── Summary boxes ── */
+        .summary-row {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .summary-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 12px 16px;
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .summary-box .label {
+            color: var(--text-dim);
+            font-size: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .summary-box .value {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 4px;
+        }
+
+        .summary-box .value.gold { color: var(--gold); }
+        .summary-box .value.green { color: var(--green); }
+        .summary-box .value.yellow { color: var(--yellow); }
+        .summary-box .value.dim { color: var(--text-dim); }
+
+        /* ── Actionable picks highlight ── */
+        .picks-section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+
+        .picks-section h3 {
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .pick-line {
+            padding: 6px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .pick-line:last-child { border-bottom: none; }
+
+        .pick-rec { color: var(--gold); font-weight: 600; }
+        .pick-edge { font-size: 11px; }
+
+        /* ── Footer ── */
+        .footer {
+            border-top: 1px solid var(--border);
+            padding-top: 16px;
+            margin-top: 32px;
+            color: var(--text-dim);
+            font-size: 10px;
+            line-height: 1.8;
+        }
+
+        .footer a { color: var(--gold-dim); text-decoration: none; }
+        .footer a:hover { color: var(--gold); }
+
+        /* ── Loading / Error ── */
+        .loading {
+            color: var(--text-dim);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .error {
+            color: var(--red);
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            background: rgba(248, 113, 113, 0.05);
+            border: 1px solid rgba(248, 113, 113, 0.2);
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 700px) {
+            body { font-size: 11px; padding: 12px; }
+            td, th { padding: 5px 6px; font-size: 10px; }
+            .header h1 { font-size: 15px; }
+            .summary-box .value { font-size: 16px; }
+            .nav button { padding: 8px 12px; font-size: 11px; }
+            .summary-row { gap: 8px; }
+            .summary-box { padding: 8px 12px; }
+        }
+
+        @media (max-width: 480px) {
+            .hide-mobile { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>BrennyBot Predictions</h1>
+    <div class="subtitle">Sports Prediction Engine — Model-Generated Picks vs Vegas</div>
+    <div class="last-updated" id="lastUpdated"></div>
+</div>
+
+<div class="nav">
+    <button class="active" onclick="switchTab('nba')">NBA</button>
+    <button onclick="switchTab('nhl')">NHL</button>
+</div>
+
+<!-- ═══════════════════ NBA SECTION ═══════════════════ -->
+<div class="section active" id="section-nba">
+    <div id="nba-loading" class="loading">Loading NBA predictions...</div>
+    <div id="nba-content" style="display:none">
+        <div class="section-meta" id="nba-meta"></div>
+        <div class="summary-row" id="nba-summary"></div>
+        <div class="picks-section" id="nba-picks" style="display:none">
+            <h3>⚡ Actionable Picks</h3>
+            <div id="nba-picks-list"></div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Matchup</th>
+                    <th>Model</th>
+                    <th class="hide-mobile">D&T</th>
+                    <th>Vegas</th>
+                    <th>Edge</th>
+                    <th>Conf</th>
+                    <th>Recommendation</th>
+                </tr>
+            </thead>
+            <tbody id="nba-table"></tbody>
+        </table>
+    </div>
+</div>
+
+<!-- ═══════════════════ NHL SECTION ═══════════════════ -->
+<div class="section" id="section-nhl">
+    <div id="nhl-loading" class="loading">Loading NHL predictions...</div>
+    <div id="nhl-content" style="display:none">
+        <div class="section-meta" id="nhl-meta"></div>
+        <div class="summary-row" id="nhl-summary"></div>
+        <div class="picks-section" id="nhl-picks" style="display:none">
+            <h3>⚡ Actionable Picks</h3>
+            <div id="nhl-picks-list"></div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Matchup</th>
+                    <th>Model ML</th>
+                    <th>Vegas ML</th>
+                    <th>EV</th>
+                    <th>Conf</th>
+                    <th>Recommendation</th>
+                </tr>
+            </thead>
+            <tbody id="nhl-table"></tbody>
+        </table>
+    </div>
+</div>
+
+<div class="footer">
+    BrennyBot Predictions Engine<br>
+    NBA Model v2.1 (Backtested: 1,231 games — 69.3% directional accuracy, +4.57% ATS ROI)<br>
+    NHL Model v2.1 (Backtested: 2,542 games — Pythagorean luck adj, goalie impact, rest/travel modeling)<br>
+    <br>
+    Data auto-refreshes on cron schedule. NBA: 10 AM + 6:15 PM EST &nbsp;|&nbsp; NHL: 6:20 PM + 8:10 PM EST<br>
+    For personal use only. Not financial advice.
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════
+//  TAB SWITCHING
+// ═══════════════════════════════════════════════════════
+
+function switchTab(tab) {
+    document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelector(`.nav button[onclick="switchTab('${tab}')"]`).classList.add('active');
+    document.getElementById(`section-${tab}`).classList.add('active');
+}
+
+// ═══════════════════════════════════════════════════════
+//  HELPERS
+// ═══════════════════════════════════════════════════════
+
+function fmt(n, decimals = 1) {
+    if (n == null || isNaN(n)) return '—';
+    const val = Number(n).toFixed(decimals);
+    return n > 0 ? `+${val}` : val;
+}
+
+function fmtOdds(n) {
+    if (n == null || isNaN(n)) return '—';
+    return n > 0 ? `+${n}` : `${n}`;
+}
+
+function fmtPct(n) {
+    if (n == null || isNaN(n)) return '—';
+    return `${(n * 100).toFixed(1)}%`;
+}
+
+function confClass(c) {
+    if (c === 'HIGH') return 'conf-high';
+    if (c === 'MEDIUM') return 'conf-medium';
+    return 'conf-none';
+}
+
+function confLabel(c) {
+    if (c === 'HIGH') return 'HIGH';
+    if (c === 'MEDIUM') return 'MED';
+    return '—';
+}
+
+function edgeClass(e) {
+    if (e >= 4) return 'edge-positive';
+    if (e >= 2) return 'edge-small';
+    return 'edge-none';
+}
+
+function shortName(team) {
+    if (!team) return '???';
+    const parts = team.split(' ');
+    return parts[parts.length - 1];
+}
+
+// ═══════════════════════════════════════════════════════
+//  NBA RENDER
+// ═══════════════════════════════════════════════════════
+
+async function loadNBA() {
+    try {
+        const resp = await fetch('predictions.json?t=' + Date.now());
+        if (!resp.ok) throw new Error('No NBA data');
+        const data = await resp.json();
+
+        document.getElementById('nba-loading').style.display = 'none';
+        document.getElementById('nba-content').style.display = 'block';
+
+        // Meta
+        const meta = document.getElementById('nba-meta');
+        meta.innerHTML = `
+            Model: <span>${data.model_version || 'v2.1'}</span>
+            &nbsp;|&nbsp; Generated: <span>${data.generated_at || '—'}</span>
+            &nbsp;|&nbsp; Odds API remaining: <span>${data.odds_api_remaining ?? '—'}</span>
+        `;
+
+        // Update header timestamp
+        const headerTs = document.getElementById('lastUpdated');
+        headerTs.innerHTML = `NBA updated: <span>${data.generated_at || '—'}</span>`;
+
+        const preds = data.predictions || [];
+        const summary = data.summary || {};
+
+        // Summary boxes
+        const sumEl = document.getElementById('nba-summary');
+        sumEl.innerHTML = `
+            <div class="summary-box"><div class="label">Games</div><div class="value gold">${summary.total_games || preds.length}</div></div>
+            <div class="summary-box"><div class="label">High Conf</div><div class="value green">${summary.high_confidence || 0}</div></div>
+            <div class="summary-box"><div class="label">Medium</div><div class="value yellow">${summary.medium_confidence || 0}</div></div>
+            <div class="summary-box"><div class="label">No Edge</div><div class="value dim">${summary.no_edge || 0}</div></div>
+        `;
+
+        // Actionable picks
+        const actionable = preds.filter(p => p.confidence === 'HIGH' || p.confidence === 'MEDIUM');
+        if (actionable.length > 0) {
+            document.getElementById('nba-picks').style.display = 'block';
+            const picksEl = document.getElementById('nba-picks-list');
+            picksEl.innerHTML = actionable.map(p => `
+                <div class="pick-line">
+                    <span class="pick-rec">${p.recommendation}</span>
+                    <span class="pick-edge ${edgeClass(p.edge)}">Edge: +${p.edge.toFixed(1)} pts &nbsp; <span class="${confClass(p.confidence)}">${p.confidence}</span></span>
+                </div>
+            `).join('');
+        }
+
+        // Table
+        const tbody = document.getElementById('nba-table');
+        tbody.innerHTML = preds.map(p => {
+            const away = shortName(p.away_team);
+            const home = shortName(p.home_team);
+            const dtStr = p.dt_spread != null ? fmt(p.dt_spread) : '—';
+
+            return `<tr>
+                <td><span class="matchup-away">${away}</span><span class="matchup-at"> @ </span><span class="matchup-home">${home}</span></td>
+                <td class="spread">${fmt(p.model_spread)}</td>
+                <td class="spread hide-mobile">${dtStr}</td>
+                <td class="spread">${fmt(p.vegas_spread)}</td>
+                <td class="${edgeClass(p.edge)}">${p.edge != null ? '+' + p.edge.toFixed(1) : '—'}</td>
+                <td class="${confClass(p.confidence)}">${confLabel(p.confidence)}</td>
+                <td>${p.confidence !== 'NO_EDGE' ? `<span class="bet-team">${p.recommendation}</span>` : '<span class="conf-none">—</span>'}</td>
+            </tr>`;
+        }).join('');
+
+    } catch (e) {
+        document.getElementById('nba-loading').innerHTML =
+            `<div class="error">NBA predictions not available — waiting for next cron run<br><small>${e.message}</small></div>`;
+    }
+}
+
+// ═══════════════════════════════════════════════════════
+//  NHL RENDER
+// ═══════════════════════════════════════════════════════
+
+async function loadNHL() {
+    try {
+        const resp = await fetch('nhl_predictions.json?t=' + Date.now());
+        if (!resp.ok) throw new Error('No NHL data');
+        const data = await resp.json();
+
+        document.getElementById('nhl-loading').style.display = 'none';
+        document.getElementById('nhl-content').style.display = 'block';
+
+        // Meta
+        const meta = document.getElementById('nhl-meta');
+        meta.innerHTML = `
+            Model: <span>${data.model_version || 'v2.1'}</span>
+            &nbsp;|&nbsp; Generated: <span>${data.generated_at || '—'}</span>
+            ${data.odds_api_remaining != null ? `&nbsp;|&nbsp; Odds API remaining: <span>${data.odds_api_remaining}</span>` : ''}
+        `;
+
+        const preds = data.predictions || [];
+
+        const high = preds.filter(p => p.confidence === 'HIGH');
+        const med = preds.filter(p => p.confidence === 'MEDIUM');
+        const none = preds.filter(p => p.confidence === 'NO_EDGE');
+
+        // Summary boxes
+        const sumEl = document.getElementById('nhl-summary');
+        sumEl.innerHTML = `
+            <div class="summary-box"><div class="label">Games</div><div class="value gold">${preds.length}</div></div>
+            <div class="summary-box"><div class="label">High Conf</div><div class="value green">${high.length}</div></div>
+            <div class="summary-box"><div class="label">Medium</div><div class="value yellow">${med.length}</div></div>
+            <div class="summary-box"><div class="label">No Edge</div><div class="value dim">${none.length}</div></div>
+        `;
+
+        // Actionable picks
+        const actionable = preds.filter(p => p.confidence === 'HIGH' || p.confidence === 'MEDIUM');
+        if (actionable.length > 0) {
+            document.getElementById('nhl-picks').style.display = 'block';
+            const picksEl = document.getElementById('nhl-picks-list');
+            picksEl.innerHTML = actionable.map(p => {
+                const evStr = p.best_bet_ev != null ? `EV: +${(p.best_bet_ev * 100).toFixed(1)}%` : '';
+                return `
+                    <div class="pick-line">
+                        <span class="pick-rec">${p.recommendation}</span>
+                        <span class="pick-edge ${confClass(p.confidence)}">${evStr} &nbsp; ${p.confidence}</span>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Table
+        const tbody = document.getElementById('nhl-table');
+        tbody.innerHTML = preds.map(p => {
+            const away = shortName(p.away_team);
+            const home = shortName(p.home_team);
+
+            const modelML = `${away} ${fmtOdds(p.model_away_odds)} / ${home} ${fmtOdds(p.model_home_odds)}`;
+            const vegasML = p.vegas_away_odds != null
+                ? `${away} ${fmtOdds(p.vegas_away_odds)} / ${home} ${fmtOdds(p.vegas_home_odds)}`
+                : '—';
+
+            const evStr = p.best_bet_ev != null ? `+${(p.best_bet_ev * 100).toFixed(1)}%` : '—';
+            const evClass = p.best_bet_ev != null && p.best_bet_ev > 0.05 ? 'edge-positive' : (p.best_bet_ev != null ? 'edge-small' : 'edge-none');
+
+            const rec = p.recommendation || '—';
+
+            return `<tr>
+                <td><span class="matchup-away">${away}</span><span class="matchup-at"> @ </span><span class="matchup-home">${home}</span></td>
+                <td class="spread" style="font-size:10px">${modelML}</td>
+                <td class="spread" style="font-size:10px">${vegasML}</td>
+                <td class="${evClass}">${evStr}</td>
+                <td class="${confClass(p.confidence)}">${confLabel(p.confidence)}</td>
+                <td>${p.confidence !== 'NO_EDGE' ? `<span class="bet-team">${rec}</span>` : '<span class="conf-none">—</span>'}</td>
+            </tr>`;
+        }).join('');
+
+    } catch (e) {
+        document.getElementById('nhl-loading').innerHTML =
+            `<div class="error">NHL predictions not available — waiting for next cron run<br><small>${e.message}</small></div>`;
+    }
+}
+
+// ═══════════════════════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════════════════════
+
+loadNBA();
+loadNHL();
+
+// Auto-refresh every 5 minutes
+setInterval(() => { loadNBA(); loadNHL(); }, 5 * 60 * 1000);
+</script>
+
+</body>
+</html>

@@ -408,9 +408,9 @@
     <div class="footer">
         <div class="api-credits" id="footer-credits"></div>
         NBA Model v2.1 — Backtested: 1,231 games, February 2026<br>
-        NHL Model v2.1 — Backtested: 2,542 games, February 2026<br>
+        NHL Model v2.2 — Backtested: 2,542 games, February 2026<br>
         <br>
-        Auto-refreshes on cron: NBA 10 AM + 6:15 PM · NHL 6:20 PM + 8:10 PM EST<br>
+        Auto-refreshes on cron: NBA 11:15 AM + 6:15 PM · NHL 11:15 AM + 6:20 PM + 8:10 PM EST<br>
         For personal use only. Not financial advice.
     </div>
 </div>
@@ -490,12 +490,13 @@ async function loadNBA() {
         document.getElementById('nba-table').innerHTML = p.map(function(x){
             var aw=x.away_abbrev||shortName(x.away_team), hm=x.home_abbrev||shortName(x.home_team);
             var gt=gameTimeEST(x.commence);
+            var locked=x._locked?' \ud83d\udd12':'';
             var pickText='\u2014';
             if(x.confidence!=='NO_EDGE'&&x.bet_team!=null){
                 var pAbbr=x.bet_team===x.home_team?hm:aw;
                 pickText='<span class="bet-team">'+pAbbr+' '+(x.bet_spread>=0?'+':'')+x.bet_spread.toFixed(1)+'</span>';
             } else { pickText='<span class="conf-none">\u2014</span>'; }
-            return '<tr><td class="spread">'+gt+'</td><td><span class="matchup-away">'+aw+'</span><span class="matchup-at"> @ </span><span class="matchup-home">'+hm+'</span></td>'+
+            return '<tr><td class="spread">'+gt+locked+'</td><td><span class="matchup-away">'+aw+'</span><span class="matchup-at"> @ </span><span class="matchup-home">'+hm+'</span></td>'+
                 '<td class="spread">'+fmt(x.model_spread)+'</td><td class="spread">'+fmt(x.vegas_spread)+'</td>'+
                 '<td class="'+edgeClass(x.edge)+'">+'+ x.edge.toFixed(1)+'</td><td class="'+confClass(x.confidence)+'">'+confLabel(x.confidence)+'</td>'+
                 '<td>'+pickText+'</td></tr>';
@@ -541,6 +542,7 @@ async function loadNHL() {
         document.getElementById('nhl-table').innerHTML = p.map(function(x){
             var aw=x.away_team, hm=x.home_team;
             var gt=gameTimeEST(x.game_time);
+            var locked=x._locked?' \ud83d\udd12':'';
             var awp=x.away_win_prob!=null?(x.away_win_prob*100).toFixed(0)+'%':'\u2014';
             var hwp=x.home_win_prob!=null?(x.home_win_prob*100).toFixed(0)+'%':'\u2014';
             var wp=aw+' '+awp+' / '+hm+' '+hwp;
@@ -549,7 +551,7 @@ async function loadNHL() {
             var kyc=x.kelly_pct!=null&&x.kelly_pct>=0.03?'edge-positive':(x.kelly_pct!=null&&x.kelly_pct>0?'edge-small':'edge-none');
             var pick=x.recommendation||'';
             pick=pick.replace(/ ML/g,'').replace(/\s*\|\s*EV:.*?(?=\s*\||$)/g,'');
-            return '<tr><td class="spread">'+gt+'</td><td><span class="matchup-away">'+aw+'</span><span class="matchup-at"> @ </span><span class="matchup-home">'+hm+'</span></td>'+
+            return '<tr><td class="spread">'+gt+locked+'</td><td><span class="matchup-away">'+aw+'</span><span class="matchup-at"> @ </span><span class="matchup-home">'+hm+'</span></td>'+
                 '<td class="spread" style="font-size:10px">'+wp+'</td><td class="spread" style="font-size:10px">'+vml+'</td>'+
                 '<td class="'+kyc+'">'+kys+'</td>'+
                 '<td class="'+confClass(x.confidence)+'">'+confLabel(x.confidence)+'</td>'+

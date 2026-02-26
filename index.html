@@ -340,7 +340,7 @@
                 </div>
                 <div class="table-wrap"><table>
                     <thead><tr>
-                        <th>Matchup</th><th>Model ML</th><th>Vegas ML</th><th>EV</th><th>Kelly</th><th>Conf</th><th>Pick</th>
+                        <th>Time</th><th>Matchup</th><th>Win %</th><th>Vegas ML</th><th>Kelly</th><th>Conf</th><th>Pick</th>
                     </tr></thead>
                     <tbody id="nhl-table"></tbody>
                 </table></div>
@@ -372,7 +372,7 @@
                 </div>
                 <div class="table-wrap"><table>
                     <thead><tr>
-                        <th>Matchup</th><th>Model</th><th>D&T</th><th>Vegas</th><th>Edge</th><th>Conf</th><th>Pick</th>
+                        <th>Time</th><th>Matchup</th><th>Model</th><th>Vegas</th><th>Edge</th><th>Conf</th><th>Pick</th>
                     </tr></thead>
                     <tbody id="nba-table"></tbody>
                 </table></div>
@@ -407,8 +407,8 @@
 
     <div class="footer">
         <div class="api-credits" id="footer-credits"></div>
-        NBA Model v2.1 — Backtested: 1,231 games, 69.3% directional accuracy, +4.57% ATS ROI<br>
-        NHL Model v2.1 — Backtested: 2,542 games, Pythagorean luck adj, goalie impact, rest/travel modeling<br>
+        NBA Model v2.1 — Backtested: 1,231 games, February 2026<br>
+        NHL Model v2.1 — Backtested: 2,542 games, February 2026<br>
         <br>
         Auto-refreshes on cron: NBA 10 AM + 6:15 PM · NHL 6:20 PM + 8:10 PM EST<br>
         For personal use only. Not financial advice.
@@ -447,6 +447,15 @@ function confLabel(c) { return c === 'HIGH' ? 'HIGH' : c === 'MEDIUM' ? 'MED' : 
 function edgeClass(e) { return e >= 4 ? 'edge-positive' : e >= 2 ? 'edge-small' : 'edge-none'; }
 function shortName(t) { if (!t) return '???'; var p = t.split(' '); return p[p.length - 1]; }
 
+function gameTimeEST(iso) {
+    if (!iso) return '\u2014';
+    try {
+        var d = new Date(iso);
+        if (isNaN(d)) return '\u2014';
+        return d.toLocaleTimeString('en-US', {hour:'numeric', minute:'2-digit', timeZone:'America/New_York'});
+    } catch(e) { return '\u2014'; }
+}
+
 var nbaCredits = null, nhlCredits = null;
 function updateCredits() {
     var c = nhlCredits != null ? nhlCredits : nbaCredits;
@@ -461,7 +470,7 @@ async function loadNBA() {
         var d = await r.json();
         document.getElementById('nba-loading').style.display = 'none';
         document.getElementById('nba-content').style.display = 'block';
-        document.getElementById('nba-meta').innerHTML = 'Model: <span>' + (d.model_version||'v2.1') + '</span> \u00b7 Generated: <span>' + (d.generated_at||'\u2014') + '</span>';
+        document.getElementById('nba-meta').innerHTML = 'Model: <span>v2.1</span> \u00b7 Generated: <span>' + (d.generated_at||'\u2014') + '</span>';
         nbaCredits = d.odds_api_remaining; updateCredits();
         var p = d.predictions || [], s = d.summary || {};
         document.getElementById('nba-summary').innerHTML =
@@ -477,9 +486,10 @@ async function loadNBA() {
             }).join('');
         }
         document.getElementById('nba-table').innerHTML = p.map(function(x){
-            var aw=shortName(x.away_team), hm=shortName(x.home_team), dt=x.dt_spread!=null?fmt(x.dt_spread):'\u2014';
-            return '<tr><td><span class="matchup-away">'+aw+'</span><span class="matchup-at"> @ </span><span class="matchup-home">'+hm+'</span></td>'+
-                '<td class="spread">'+fmt(x.model_spread)+'</td><td class="spread">'+dt+'</td><td class="spread">'+fmt(x.vegas_spread)+'</td>'+
+            var aw=x.away_abbrev||shortName(x.away_team), hm=x.home_abbrev||shortName(x.home_team);
+            var gt=gameTimeEST(x.commence);
+            return '<tr><td class="spread">'+gt+'</td><td><span class="matchup-away">'+aw+'</span><span class="matchup-at"> @ </span><span class="matchup-home">'+hm+'</span></td>'+
+                '<td class="spread">'+fmt(x.model_spread)+'</td><td class="spread">'+fmt(x.vegas_spread)+'</td>'+
                 '<td class="'+edgeClass(x.edge)+'">+'+ x.edge.toFixed(1)+'</td><td class="'+confClass(x.confidence)+'">'+confLabel(x.confidence)+'</td>'+
                 '<td>'+(x.confidence!=='NO_EDGE'?'<span class="bet-team">'+x.recommendation+'</span>':'<span class="conf-none">\u2014</span>')+'</td></tr>';
         }).join('');
@@ -508,25 +518,29 @@ async function loadNHL() {
         if (ac.length > 0) {
             document.getElementById('nhl-picks').style.display = 'block';
             document.getElementById('nhl-picks-list').innerHTML = ac.map(function(x){
-                var ev = x.best_bet_ev!=null ? 'EV: +'+(x.best_bet_ev*100).toFixed(1)+'%' : '';
                 var ky = x.kelly_pct!=null ? 'Kelly: '+(x.kelly_pct*100).toFixed(1)+'%' : '';
-                var detail = [ev,ky,x.confidence].filter(Boolean).join(' \u00b7 ');
-                return '<div class="pick-line"><span class="pick-rec">'+x.recommendation+'</span><span class="pick-edge '+confClass(x.confidence)+'">'+detail+'</span></div>';
+                var pick=x.recommendation||'';
+                pick=pick.replace(/ ML/g,'').replace(/\s*\|\s*EV:.*?(?=\s*\||$)/g,'');
+                var detail = [ky,x.confidence].filter(Boolean).join(' \u00b7 ');
+                return '<div class="pick-line"><span class="pick-rec">'+pick+'</span><span class="pick-edge '+confClass(x.confidence)+'">'+detail+'</span></div>';
             }).join('');
         }
         document.getElementById('nhl-table').innerHTML = p.map(function(x){
             var aw=x.away_team, hm=x.home_team;
-            var mml=aw+' '+fmtOdds(x.model_away_odds)+' / '+hm+' '+fmtOdds(x.model_home_odds);
+            var gt=gameTimeEST(x.game_time);
+            var awp=x.away_win_prob!=null?(x.away_win_prob*100).toFixed(0)+'%':'\u2014';
+            var hwp=x.home_win_prob!=null?(x.home_win_prob*100).toFixed(0)+'%':'\u2014';
+            var wp=aw+' '+awp+' / '+hm+' '+hwp;
             var vml=x.vegas_away_odds!=null ? aw+' '+fmtOdds(x.vegas_away_odds)+' / '+hm+' '+fmtOdds(x.vegas_home_odds) : '\u2014';
-            var evs=x.best_bet_ev!=null?'+'+(x.best_bet_ev*100).toFixed(1)+'%':'\u2014';
-            var evc=x.best_bet_ev!=null&&x.best_bet_ev>=0.04?'edge-positive':(x.best_bet_ev!=null&&x.best_bet_ev>=0.02?'edge-small':'edge-none');
             var kys=x.kelly_pct!=null?(x.kelly_pct*100).toFixed(1)+'%':'\u2014';
             var kyc=x.kelly_pct!=null&&x.kelly_pct>=0.03?'edge-positive':(x.kelly_pct!=null&&x.kelly_pct>0?'edge-small':'edge-none');
-            return '<tr><td><span class="matchup-away">'+aw+'</span><span class="matchup-at"> @ </span><span class="matchup-home">'+hm+'</span></td>'+
-                '<td class="spread" style="font-size:10px">'+mml+'</td><td class="spread" style="font-size:10px">'+vml+'</td>'+
-                '<td class="'+evc+'">'+evs+'</td><td class="'+kyc+'">'+kys+'</td>'+
+            var pick=x.recommendation||'';
+            pick=pick.replace(/ ML/g,'').replace(/\s*\|\s*EV:.*?(?=\s*\||$)/g,'');
+            return '<tr><td class="spread">'+gt+'</td><td><span class="matchup-away">'+aw+'</span><span class="matchup-at"> @ </span><span class="matchup-home">'+hm+'</span></td>'+
+                '<td class="spread" style="font-size:10px">'+wp+'</td><td class="spread" style="font-size:10px">'+vml+'</td>'+
+                '<td class="'+kyc+'">'+kys+'</td>'+
                 '<td class="'+confClass(x.confidence)+'">'+confLabel(x.confidence)+'</td>'+
-                '<td>'+(x.confidence!=='NO_EDGE'?'<span class="bet-team">'+x.recommendation+'</span>':'<span class="conf-none">\u2014</span>')+'</td></tr>';
+                '<td>'+(x.confidence!=='NO_EDGE'?'<span class="bet-team">'+pick+'</span>':'<span class="conf-none">\u2014</span>')+'</td></tr>';
         }).join('');
     } catch(e) {
         document.getElementById('nhl-loading').innerHTML = '<div class="error">NHL predictions not available \u2014 waiting for next cron run<br><small>'+e.message+'</small></div>';

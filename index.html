@@ -180,7 +180,7 @@
         .summary-box .value.yellow { color: var(--yellow); }
         .summary-box .value.dim { color: var(--text-muted); }
 
-        /* ── Actionable picks ── */
+        /* ── Recommended picks ── */
         .picks-section {
             background: var(--surface);
             border: 1px solid var(--border);
@@ -335,7 +335,7 @@
                 <div class="section-meta" id="nhl-meta"></div>
                 <div class="summary-row" id="nhl-summary"></div>
                 <div class="picks-section" id="nhl-picks" style="display:none">
-                    <h3>Actionable Picks</h3>
+                    <h3>Recommended Picks</h3>
                     <div id="nhl-picks-list"></div>
                 </div>
                 <div class="table-wrap"><table>
@@ -367,7 +367,7 @@
                 <div class="section-meta" id="nba-meta"></div>
                 <div class="summary-row" id="nba-summary"></div>
                 <div class="picks-section" id="nba-picks" style="display:none">
-                    <h3>Actionable Picks</h3>
+                    <h3>Recommended Picks</h3>
                     <div id="nba-picks-list"></div>
                 </div>
                 <div class="table-wrap"><table>
@@ -482,16 +482,23 @@ async function loadNBA() {
         if (ac.length > 0) {
             document.getElementById('nba-picks').style.display = 'block';
             document.getElementById('nba-picks-list').innerHTML = ac.map(function(x){
-                return '<div class="pick-line"><span class="pick-rec">'+x.recommendation+'</span><span class="pick-edge '+edgeClass(x.edge)+'">+'+x.edge.toFixed(1)+' pts \u00b7 <span class="'+confClass(x.confidence)+'">'+x.confidence+'</span></span></div>';
+                var abbr = x.bet_team===x.home_team ? (x.home_abbrev||shortName(x.home_team)) : (x.away_abbrev||shortName(x.away_team));
+                var pickText = abbr + ' ' + (x.bet_spread>=0?'+':'') + x.bet_spread.toFixed(1);
+                return '<div class="pick-line"><span class="pick-rec">'+pickText+'</span><span class="pick-edge '+edgeClass(x.edge)+'">+'+x.edge.toFixed(1)+' pts \u00b7 <span class="'+confClass(x.confidence)+'">'+x.confidence+'</span></span></div>';
             }).join('');
         }
         document.getElementById('nba-table').innerHTML = p.map(function(x){
             var aw=x.away_abbrev||shortName(x.away_team), hm=x.home_abbrev||shortName(x.home_team);
             var gt=gameTimeEST(x.commence);
+            var pickText='\u2014';
+            if(x.confidence!=='NO_EDGE'&&x.bet_team!=null){
+                var pAbbr=x.bet_team===x.home_team?hm:aw;
+                pickText='<span class="bet-team">'+pAbbr+' '+(x.bet_spread>=0?'+':'')+x.bet_spread.toFixed(1)+'</span>';
+            } else { pickText='<span class="conf-none">\u2014</span>'; }
             return '<tr><td class="spread">'+gt+'</td><td><span class="matchup-away">'+aw+'</span><span class="matchup-at"> @ </span><span class="matchup-home">'+hm+'</span></td>'+
                 '<td class="spread">'+fmt(x.model_spread)+'</td><td class="spread">'+fmt(x.vegas_spread)+'</td>'+
                 '<td class="'+edgeClass(x.edge)+'">+'+ x.edge.toFixed(1)+'</td><td class="'+confClass(x.confidence)+'">'+confLabel(x.confidence)+'</td>'+
-                '<td>'+(x.confidence!=='NO_EDGE'?'<span class="bet-team">'+x.recommendation+'</span>':'<span class="conf-none">\u2014</span>')+'</td></tr>';
+                '<td>'+pickText+'</td></tr>';
         }).join('');
     } catch(e) {
         document.getElementById('nba-loading').innerHTML = '<div class="error">NBA predictions not available \u2014 waiting for next cron run<br><small>'+e.message+'</small></div>';
@@ -505,9 +512,15 @@ async function loadNHL() {
         var d = await r.json();
         document.getElementById('nhl-loading').style.display = 'none';
         document.getElementById('nhl-content').style.display = 'block';
-        document.getElementById('nhl-meta').innerHTML = 'Model: <span>' + (d.model_version||'v2.1') + '</span> \u00b7 Generated: <span>' + (d.generated_at||'\u2014') + '</span>';
+        var nhlGenAt = (d.generated_at||'\u2014').replace(/:\d{2}$/, '');
+        document.getElementById('nhl-meta').innerHTML = 'Model: <span>' + (d.model_version||'v2.1') + '</span> \u00b7 Generated: <span>' + nhlGenAt + '</span>';
         nhlCredits = d.odds_api_remaining; updateCredits();
         var p = d.predictions || [];
+        p.sort(function(a,b){
+            var ak=a.kelly_pct||0, bk=b.kelly_pct||0;
+            if(bk!==ak) return bk-ak;
+            return (a.game_time||'').localeCompare(b.game_time||'');
+        });
         var hi=p.filter(function(x){return x.confidence==='HIGH';}), md=p.filter(function(x){return x.confidence==='MEDIUM';}), no=p.filter(function(x){return x.confidence==='NO_EDGE';});
         document.getElementById('nhl-summary').innerHTML =
             '<div class="summary-box"><div class="label">Games</div><div class="value white">'+p.length+'</div></div>' +

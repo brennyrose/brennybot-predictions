@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26 18:30:48",
+  "generated_at": "2026-02-26 20:10:08",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -41,7 +41,8 @@
       "kelly_pct": 0.0399,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "CBJ ML (+102) \u2014 2.0u | EV: 8.1% | Kelly: 4.0%"
+      "recommendation": "CBJ ML (+102) \u2014 2.0u | EV: 8.1% | Kelly: 4.0%",
+      "_locked": true
     },
     {
       "away_team": "NYI",
@@ -81,7 +82,8 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "DET",
@@ -121,7 +123,8 @@
       "kelly_pct": 0.0363,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "OTT ML (-147) \u2014 2.0u | EV: 4.9% | Kelly: 3.6%"
+      "recommendation": "OTT ML (-147) \u2014 2.0u | EV: 4.9% | Kelly: 3.6%",
+      "_locked": true
     },
     {
       "away_team": "TOR",
@@ -161,7 +164,8 @@
       "kelly_pct": 0.2013,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "FLA ML (-154) \u2014 3.0u | EV: 26.1% | Kelly: 20.1%"
+      "recommendation": "FLA ML (-154) \u2014 3.0u | EV: 26.1% | Kelly: 20.1%",
+      "_locked": true
     },
     {
       "away_team": "N.J",
@@ -201,7 +205,8 @@
       "kelly_pct": 0.0842,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "PIT ML (-150) \u2014 3.0u | EV: 11.2% | Kelly: 8.4%"
+      "recommendation": "PIT ML (-150) \u2014 3.0u | EV: 11.2% | Kelly: 8.4%",
+      "_locked": true
     },
     {
       "away_team": "T.B",
@@ -241,7 +246,8 @@
       "kelly_pct": 0.1109,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "CAR ML (-145) \u2014 3.0u | EV: 15.3% | Kelly: 11.1%"
+      "recommendation": "CAR ML (-145) \u2014 3.0u | EV: 15.3% | Kelly: 11.1%",
+      "_locked": true
     },
     {
       "away_team": "PHI",
@@ -281,7 +287,8 @@
       "kelly_pct": 0.0166,
       "recommended_units": 0,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "SEA",
@@ -321,7 +328,8 @@
       "kelly_pct": 0.0459,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "STL ML (-135) \u2014 2.0u | EV: 6.8% | Kelly: 4.6%"
+      "recommendation": "STL ML (-135) \u2014 2.0u | EV: 6.8% | Kelly: 4.6%",
+      "_locked": true
     },
     {
       "away_team": "CHI",
@@ -361,7 +369,8 @@
       "kelly_pct": 0.0221,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "NSH ML (-165) \u2014 2.0u | EV: 2.7% | Kelly: 2.2%"
+      "recommendation": "NSH ML (-165) \u2014 2.0u | EV: 2.7% | Kelly: 2.2%",
+      "_locked": true
     },
     {
       "away_team": "MIN",

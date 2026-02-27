@@ -607,9 +607,14 @@ async function loadNCAAB() {
         var d = await r.json();
         document.getElementById('ncaab-loading').style.display = 'none';
         document.getElementById('ncaab-content').style.display = 'block';
-        document.getElementById('ncaab-meta').innerHTML = 'Model: <span>' + (d.model_version||'v1.1') + '</span> \u00b7 Source: <span>' + (d.ratings_source||'KenPom + Torvik') + '</span> \u00b7 Generated: <span>' + (d.generated_at||'\u2014') + '</span>';
+        document.getElementById('ncaab-meta').innerHTML = 'Model: <span>' + (d.model_version||'v1.1') + '</span> \u00b7 Generated: <span>' + (d.generated_at||'\u2014') + '</span>';
         ncaabCredits = d.odds_api_remaining; updateCredits();
         var p = d.predictions || [], s = d.summary || {};
+        p.sort(function(a,b){
+            var ae=a.edge||0, be=b.edge||0;
+            if(be!==ae) return be-ae;
+            return (a.commence||'').localeCompare(b.commence||'');
+        });
         document.getElementById('ncaab-summary').innerHTML =
             '<div class="summary-box"><div class="label">Games</div><div class="value white">'+(s.total_games||p.length)+'</div></div>' +
             '<div class="summary-box"><div class="label">High</div><div class="value green">'+(s.high_confidence||0)+'</div></div>' +

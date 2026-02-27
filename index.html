@@ -180,7 +180,7 @@
         .summary-box .value.yellow { color: var(--yellow); }
         .summary-box .value.dim { color: var(--text-muted); }
 
-        /* ── Actionable picks ── */
+        /* ── Recommended picks ── */
         .picks-section {
             background: var(--surface);
             border: 1px solid var(--border);
@@ -256,6 +256,19 @@
         .matchup-at { color: var(--text-muted); padding: 0 2px; }
         .matchup-home { color: var(--text); }
 
+        /* ── Neutral badge ── */
+        .neutral-badge {
+            display: inline-block;
+            font-size: 9px;
+            color: var(--blue);
+            background: rgba(96, 165, 250, 0.1);
+            padding: 1px 5px;
+            border-radius: 3px;
+            margin-left: 4px;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+
         /* ── Tracker ── */
         .tracker-empty {
             text-align: center;
@@ -319,8 +332,8 @@
     <div class="nav" id="mainNav">
         <button onclick="switchTab('nhl')" class="active">NHL</button>
         <button onclick="switchTab('nba')">NBA</button>
-        <button onclick="switchTab('nfl')">NFL</button>
         <button onclick="switchTab('ncaab')">NCAAB</button>
+        <button onclick="switchTab('nfl')">NFL</button>
     </div>
 
     <!-- ═══ NHL ═══ -->
@@ -335,12 +348,12 @@
                 <div class="section-meta" id="nhl-meta"></div>
                 <div class="summary-row" id="nhl-summary"></div>
                 <div class="picks-section" id="nhl-picks" style="display:none">
-                    <h3>Actionable Picks</h3>
+                    <h3>Recommended Picks</h3>
                     <div id="nhl-picks-list"></div>
                 </div>
                 <div class="table-wrap"><table>
                     <thead><tr>
-                        <th>Matchup</th><th>Model ML</th><th>Vegas ML</th><th>EV</th><th>Kelly</th><th>Conf</th><th>Pick</th>
+                        <th>Time</th><th>Matchup</th><th>Win %</th><th>Vegas ML</th><th>Kelly</th><th>Conf</th><th>Pick</th>
                     </tr></thead>
                     <tbody id="nhl-table"></tbody>
                 </table></div>
@@ -367,12 +380,12 @@
                 <div class="section-meta" id="nba-meta"></div>
                 <div class="summary-row" id="nba-summary"></div>
                 <div class="picks-section" id="nba-picks" style="display:none">
-                    <h3>Actionable Picks</h3>
+                    <h3>Recommended Picks</h3>
                     <div id="nba-picks-list"></div>
                 </div>
                 <div class="table-wrap"><table>
                     <thead><tr>
-                        <th>Matchup</th><th>Model</th><th>D&T</th><th>Vegas</th><th>Edge</th><th>Conf</th><th>Pick</th>
+                        <th>Time</th><th>Matchup</th><th>Model</th><th>Vegas</th><th>Edge</th><th>Conf</th><th>Pick</th>
                     </tr></thead>
                     <tbody id="nba-table"></tbody>
                 </table></div>
@@ -398,19 +411,43 @@
 
     <!-- ═══ NCAAB ═══ -->
     <div class="section" id="section-ncaab">
-        <div class="under-construction">
-            <div class="icon">🏀</div>
-            <h3>NCAAB Predictions</h3>
-            <p>Under construction — expected later in 2026</p>
+        <div class="sub-nav">
+            <button class="active" onclick="switchSubTab('ncaab','picks')">Today's Picks</button>
+            <button onclick="switchSubTab('ncaab','tracker')">Bet Tracker</button>
+        </div>
+        <div id="ncaab-picks-panel">
+            <div id="ncaab-loading" class="loading">Loading NCAAB predictions...</div>
+            <div id="ncaab-content" style="display:none">
+                <div class="section-meta" id="ncaab-meta"></div>
+                <div class="summary-row" id="ncaab-summary"></div>
+                <div class="picks-section" id="ncaab-picks" style="display:none">
+                    <h3>Recommended Picks</h3>
+                    <div id="ncaab-picks-list"></div>
+                </div>
+                <div class="table-wrap"><table>
+                    <thead><tr>
+                        <th>Time</th><th>Matchup</th><th>Model</th><th>Vegas</th><th>Edge</th><th>Conf</th><th>Pick</th>
+                    </tr></thead>
+                    <tbody id="ncaab-table"></tbody>
+                </table></div>
+            </div>
+        </div>
+        <div id="ncaab-tracker-panel" style="display:none">
+            <div class="tracker-empty">
+                Bet tracker monitors NCAAB picks with edge &ge; 5 pts (HIGH confidence).<br>
+                Results will accumulate here as tracked picks resolve.<br><br>
+                <span style="color:var(--text-muted)">Coming soon — data pipeline in development</span>
+            </div>
         </div>
     </div>
 
     <div class="footer">
         <div class="api-credits" id="footer-credits"></div>
-        NBA Model v2.1 — Backtested: 1,231 games, 69.3% directional accuracy, +4.57% ATS ROI<br>
-        NHL Model v2.1 — Backtested: 2,542 games, Pythagorean luck adj, goalie impact, rest/travel modeling<br>
+        NBA Model v2.1 — Backtested: 1,231 games, February 2026<br>
+        NHL Model v2.1 — Backtested: 2,542 games, February 2026<br>
+        NCAAB Model v1.1 — Backtested: 4,078 games, February 2026<br>
         <br>
-        Auto-refreshes on cron: NBA 10 AM + 6:15 PM · NHL 6:20 PM + 8:10 PM EST<br>
+        Auto-refreshes on cron: NBA 10 AM + 6:15 PM + 8:45 PM · NHL 6:20 PM + 8:10 PM · NCAAB 11 AM + 6:25 PM EST<br>
         For personal use only. Not financial advice.
     </div>
 </div>
@@ -447,9 +484,18 @@ function confLabel(c) { return c === 'HIGH' ? 'HIGH' : c === 'MEDIUM' ? 'MED' : 
 function edgeClass(e) { return e >= 4 ? 'edge-positive' : e >= 2 ? 'edge-small' : 'edge-none'; }
 function shortName(t) { if (!t) return '???'; var p = t.split(' '); return p[p.length - 1]; }
 
-var nbaCredits = null, nhlCredits = null;
+function gameTimeEST(iso) {
+    if (!iso) return '\u2014';
+    try {
+        var d = new Date(iso);
+        if (isNaN(d)) return '\u2014';
+        return d.toLocaleTimeString('en-US', {hour:'numeric', minute:'2-digit', timeZone:'America/New_York'});
+    } catch(e) { return '\u2014'; }
+}
+
+var nbaCredits = null, nhlCredits = null, ncaabCredits = null;
 function updateCredits() {
-    var c = nhlCredits != null ? nhlCredits : nbaCredits;
+    var c = ncaabCredits != null ? ncaabCredits : (nhlCredits != null ? nhlCredits : nbaCredits);
     var el = document.getElementById('footer-credits');
     if (c != null) el.innerHTML = 'Odds API credits remaining: <span>' + c + '</span> / 500';
 }
@@ -461,7 +507,7 @@ async function loadNBA() {
         var d = await r.json();
         document.getElementById('nba-loading').style.display = 'none';
         document.getElementById('nba-content').style.display = 'block';
-        document.getElementById('nba-meta').innerHTML = 'Model: <span>' + (d.model_version||'v2.1') + '</span> \u00b7 Generated: <span>' + (d.generated_at||'\u2014') + '</span>';
+        document.getElementById('nba-meta').innerHTML = 'Model: <span>v2.1</span> \u00b7 Generated: <span>' + (d.generated_at||'\u2014') + '</span>';
         nbaCredits = d.odds_api_remaining; updateCredits();
         var p = d.predictions || [], s = d.summary || {};
         document.getElementById('nba-summary').innerHTML =
@@ -473,15 +519,23 @@ async function loadNBA() {
         if (ac.length > 0) {
             document.getElementById('nba-picks').style.display = 'block';
             document.getElementById('nba-picks-list').innerHTML = ac.map(function(x){
-                return '<div class="pick-line"><span class="pick-rec">'+x.recommendation+'</span><span class="pick-edge '+edgeClass(x.edge)+'">+'+x.edge.toFixed(1)+' pts \u00b7 <span class="'+confClass(x.confidence)+'">'+x.confidence+'</span></span></div>';
+                var abbr = x.bet_team===x.home_team ? (x.home_abbrev||shortName(x.home_team)) : (x.away_abbrev||shortName(x.away_team));
+                var pickText = abbr + ' ' + (x.bet_spread>=0?'+':'') + x.bet_spread.toFixed(1);
+                return '<div class="pick-line"><span class="pick-rec">'+pickText+'</span><span class="pick-edge '+edgeClass(x.edge)+'">+'+x.edge.toFixed(1)+' pts \u00b7 <span class="'+confClass(x.confidence)+'">'+x.confidence+'</span></span></div>';
             }).join('');
         }
         document.getElementById('nba-table').innerHTML = p.map(function(x){
-            var aw=shortName(x.away_team), hm=shortName(x.home_team), dt=x.dt_spread!=null?fmt(x.dt_spread):'\u2014';
-            return '<tr><td><span class="matchup-away">'+aw+'</span><span class="matchup-at"> @ </span><span class="matchup-home">'+hm+'</span></td>'+
-                '<td class="spread">'+fmt(x.model_spread)+'</td><td class="spread">'+dt+'</td><td class="spread">'+fmt(x.vegas_spread)+'</td>'+
+            var aw=x.away_abbrev||shortName(x.away_team), hm=x.home_abbrev||shortName(x.home_team);
+            var gt=gameTimeEST(x.commence);
+            var pickText='\u2014';
+            if(x.confidence!=='NO_EDGE'&&x.bet_team!=null){
+                var pAbbr=x.bet_team===x.home_team?hm:aw;
+                pickText='<span class="bet-team">'+pAbbr+' '+(x.bet_spread>=0?'+':'')+x.bet_spread.toFixed(1)+'</span>';
+            } else { pickText='<span class="conf-none">\u2014</span>'; }
+            return '<tr><td class="spread">'+gt+'</td><td><span class="matchup-away">'+aw+'</span><span class="matchup-at"> @ </span><span class="matchup-home">'+hm+'</span></td>'+
+                '<td class="spread">'+fmt(x.model_spread)+'</td><td class="spread">'+fmt(x.vegas_spread)+'</td>'+
                 '<td class="'+edgeClass(x.edge)+'">+'+ x.edge.toFixed(1)+'</td><td class="'+confClass(x.confidence)+'">'+confLabel(x.confidence)+'</td>'+
-                '<td>'+(x.confidence!=='NO_EDGE'?'<span class="bet-team">'+x.recommendation+'</span>':'<span class="conf-none">\u2014</span>')+'</td></tr>';
+                '<td>'+pickText+'</td></tr>';
         }).join('');
     } catch(e) {
         document.getElementById('nba-loading').innerHTML = '<div class="error">NBA predictions not available \u2014 waiting for next cron run<br><small>'+e.message+'</small></div>';
@@ -495,9 +549,15 @@ async function loadNHL() {
         var d = await r.json();
         document.getElementById('nhl-loading').style.display = 'none';
         document.getElementById('nhl-content').style.display = 'block';
-        document.getElementById('nhl-meta').innerHTML = 'Model: <span>' + (d.model_version||'v2.1') + '</span> \u00b7 Generated: <span>' + (d.generated_at||'\u2014') + '</span>';
+        var nhlGenAt = (d.generated_at||'\u2014').replace(/:\d{2}$/, '');
+        document.getElementById('nhl-meta').innerHTML = 'Model: <span>' + (d.model_version||'v2.1') + '</span> \u00b7 Generated: <span>' + nhlGenAt + '</span>';
         nhlCredits = d.odds_api_remaining; updateCredits();
         var p = d.predictions || [];
+        p.sort(function(a,b){
+            var ak=a.kelly_pct||0, bk=b.kelly_pct||0;
+            if(bk!==ak) return bk-ak;
+            return (a.game_time||'').localeCompare(b.game_time||'');
+        });
         var hi=p.filter(function(x){return x.confidence==='HIGH';}), md=p.filter(function(x){return x.confidence==='MEDIUM';}), no=p.filter(function(x){return x.confidence==='NO_EDGE';});
         document.getElementById('nhl-summary').innerHTML =
             '<div class="summary-box"><div class="label">Games</div><div class="value white">'+p.length+'</div></div>' +
@@ -508,33 +568,82 @@ async function loadNHL() {
         if (ac.length > 0) {
             document.getElementById('nhl-picks').style.display = 'block';
             document.getElementById('nhl-picks-list').innerHTML = ac.map(function(x){
-                var ev = x.best_bet_ev!=null ? 'EV: +'+(x.best_bet_ev*100).toFixed(1)+'%' : '';
                 var ky = x.kelly_pct!=null ? 'Kelly: '+(x.kelly_pct*100).toFixed(1)+'%' : '';
-                var detail = [ev,ky,x.confidence].filter(Boolean).join(' \u00b7 ');
-                return '<div class="pick-line"><span class="pick-rec">'+x.recommendation+'</span><span class="pick-edge '+confClass(x.confidence)+'">'+detail+'</span></div>';
+                var pick=x.recommendation||'';
+                pick=pick.replace(/ ML/g,'').replace(/\s*\|\s*EV:.*?(?=\s*\||$)/g,'');
+                var detail = [ky,x.confidence].filter(Boolean).join(' \u00b7 ');
+                return '<div class="pick-line"><span class="pick-rec">'+pick+'</span><span class="pick-edge '+confClass(x.confidence)+'">'+detail+'</span></div>';
             }).join('');
         }
         document.getElementById('nhl-table').innerHTML = p.map(function(x){
             var aw=x.away_team, hm=x.home_team;
-            var mml=aw+' '+fmtOdds(x.model_away_odds)+' / '+hm+' '+fmtOdds(x.model_home_odds);
+            var gt=gameTimeEST(x.game_time);
+            var awp=x.away_win_prob!=null?(x.away_win_prob*100).toFixed(0)+'%':'\u2014';
+            var hwp=x.home_win_prob!=null?(x.home_win_prob*100).toFixed(0)+'%':'\u2014';
+            var wp=aw+' '+awp+' / '+hm+' '+hwp;
             var vml=x.vegas_away_odds!=null ? aw+' '+fmtOdds(x.vegas_away_odds)+' / '+hm+' '+fmtOdds(x.vegas_home_odds) : '\u2014';
-            var evs=x.best_bet_ev!=null?'+'+(x.best_bet_ev*100).toFixed(1)+'%':'\u2014';
-            var evc=x.best_bet_ev!=null&&x.best_bet_ev>=0.04?'edge-positive':(x.best_bet_ev!=null&&x.best_bet_ev>=0.02?'edge-small':'edge-none');
             var kys=x.kelly_pct!=null?(x.kelly_pct*100).toFixed(1)+'%':'\u2014';
             var kyc=x.kelly_pct!=null&&x.kelly_pct>=0.03?'edge-positive':(x.kelly_pct!=null&&x.kelly_pct>0?'edge-small':'edge-none');
-            return '<tr><td><span class="matchup-away">'+aw+'</span><span class="matchup-at"> @ </span><span class="matchup-home">'+hm+'</span></td>'+
-                '<td class="spread" style="font-size:10px">'+mml+'</td><td class="spread" style="font-size:10px">'+vml+'</td>'+
-                '<td class="'+evc+'">'+evs+'</td><td class="'+kyc+'">'+kys+'</td>'+
+            var pick=x.recommendation||'';
+            pick=pick.replace(/ ML/g,'').replace(/\s*\|\s*EV:.*?(?=\s*\||$)/g,'');
+            return '<tr><td class="spread">'+gt+'</td><td><span class="matchup-away">'+aw+'</span><span class="matchup-at"> @ </span><span class="matchup-home">'+hm+'</span></td>'+
+                '<td class="spread" style="font-size:10px">'+wp+'</td><td class="spread" style="font-size:10px">'+vml+'</td>'+
+                '<td class="'+kyc+'">'+kys+'</td>'+
                 '<td class="'+confClass(x.confidence)+'">'+confLabel(x.confidence)+'</td>'+
-                '<td>'+(x.confidence!=='NO_EDGE'?'<span class="bet-team">'+x.recommendation+'</span>':'<span class="conf-none">\u2014</span>')+'</td></tr>';
+                '<td>'+(x.confidence!=='NO_EDGE'?'<span class="bet-team">'+pick+'</span>':'<span class="conf-none">\u2014</span>')+'</td></tr>';
         }).join('');
     } catch(e) {
         document.getElementById('nhl-loading').innerHTML = '<div class="error">NHL predictions not available \u2014 waiting for next cron run<br><small>'+e.message+'</small></div>';
     }
 }
 
-loadNBA(); loadNHL();
-setInterval(function(){ loadNBA(); loadNHL(); }, 5*60*1000);
+loadNBA(); loadNHL(); loadNCAAB();
+setInterval(function(){ loadNBA(); loadNHL(); loadNCAAB(); }, 5*60*1000);
+
+async function loadNCAAB() {
+    try {
+        var r = await fetch('ncaab_predictions.json?t=' + Date.now());
+        if (!r.ok) throw new Error('No data');
+        var d = await r.json();
+        document.getElementById('ncaab-loading').style.display = 'none';
+        document.getElementById('ncaab-content').style.display = 'block';
+        document.getElementById('ncaab-meta').innerHTML = 'Model: <span>' + (d.model_version||'v1.1') + '</span> \u00b7 Source: <span>' + (d.ratings_source||'KenPom + Torvik') + '</span> \u00b7 Generated: <span>' + (d.generated_at||'\u2014') + '</span>';
+        ncaabCredits = d.odds_api_remaining; updateCredits();
+        var p = d.predictions || [], s = d.summary || {};
+        document.getElementById('ncaab-summary').innerHTML =
+            '<div class="summary-box"><div class="label">Games</div><div class="value white">'+(s.total_games||p.length)+'</div></div>' +
+            '<div class="summary-box"><div class="label">High</div><div class="value green">'+(s.high_confidence||0)+'</div></div>' +
+            '<div class="summary-box"><div class="label">Medium</div><div class="value yellow">'+(s.medium_confidence||0)+'</div></div>' +
+            '<div class="summary-box"><div class="label">No Edge</div><div class="value dim">'+(s.no_edge||0)+'</div></div>';
+        var ac = p.filter(function(x){return x.confidence==='HIGH'||x.confidence==='MEDIUM';});
+        if (ac.length > 0) {
+            document.getElementById('ncaab-picks').style.display = 'block';
+            document.getElementById('ncaab-picks-list').innerHTML = ac.map(function(x){
+                var abbr = x.bet_team===x.home_team ? (x.home_abbrev||shortName(x.home_team)) : (x.away_abbrev||shortName(x.away_team));
+                var pickText = abbr + ' ' + (x.bet_spread>=0?'+':'') + x.bet_spread.toFixed(1);
+                var neutral = x.neutral_site ? '<span class="neutral-badge">N</span>' : '';
+                return '<div class="pick-line"><span class="pick-rec">'+pickText+neutral+'</span><span class="pick-edge '+edgeClass(x.edge)+'">+'+x.edge.toFixed(1)+' pts \u00b7 <span class="'+confClass(x.confidence)+'">'+x.confidence+'</span></span></div>';
+            }).join('');
+        }
+        document.getElementById('ncaab-table').innerHTML = p.map(function(x){
+            var aw=x.away_abbrev||shortName(x.away_team), hm=x.home_abbrev||shortName(x.home_team);
+            var gt=gameTimeEST(x.commence);
+            var locked=x._locked?' \ud83d\udd12':'';
+            var neutral=x.neutral_site?' <span class="neutral-badge">N</span>':'';
+            var pickText='\u2014';
+            if(x.confidence!=='NO_EDGE'&&x.confidence!=='NO_ODDS'&&x.bet_team!=null){
+                var pAbbr=x.bet_team===x.home_team?hm:aw;
+                pickText='<span class="bet-team">'+pAbbr+' '+(x.bet_spread>=0?'+':'')+x.bet_spread.toFixed(1)+'</span>';
+            } else { pickText='<span class="conf-none">\u2014</span>'; }
+            return '<tr><td class="spread">'+gt+locked+'</td><td><span class="matchup-away">'+aw+'</span><span class="matchup-at"> @ </span><span class="matchup-home">'+hm+'</span>'+neutral+'</td>'+
+                '<td class="spread">'+fmt(x.model_spread)+'</td><td class="spread">'+fmt(x.vegas_spread)+'</td>'+
+                '<td class="'+edgeClass(x.edge)+'">+'+ x.edge.toFixed(1)+'</td><td class="'+confClass(x.confidence)+'">'+confLabel(x.confidence)+'</td>'+
+                '<td>'+pickText+'</td></tr>';
+        }).join('');
+    } catch(e) {
+        document.getElementById('ncaab-loading').innerHTML = '<div class="error">NCAAB predictions not available \u2014 waiting for next cron run<br><small>'+e.message+'</small></div>';
+    }
+}
 </script>
 </body>
 </html>

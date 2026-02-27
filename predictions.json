@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26 18:30",
+  "generated_at": "2026-02-26 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 384,
@@ -20,46 +20,6 @@
     "directional_accuracy": 0.693
   },
   "predictions": [
-    {
-      "home_team": "Phoenix Suns",
-      "away_team": "Los Angeles Lakers",
-      "date": "2026-02-26",
-      "commence": "2026-02-27T02:10:00Z",
-      "vegas_spread": 5.5,
-      "consensus_spread": 5.5,
-      "model_spread": 2.5,
-      "ratings_spread": 2.6,
-      "edge": 3.0,
-      "home_rating": -2.1,
-      "away_rating": 2.9,
-      "home_hca": 2.5,
-      "hca_default": 2.5,
-      "home_recent_perf": 0,
-      "away_recent_perf": 0,
-      "home_shooting_luck": 0,
-      "away_shooting_luck": 0,
-      "home_ts": 0.565,
-      "away_ts": 0.565,
-      "games_analyzed": 0,
-      "confidence_scale": 1.0,
-      "recommendation": "BET Phoenix Suns +5.5",
-      "confidence": "MEDIUM",
-      "bet_team": "Phoenix Suns",
-      "bet_spread": 5.5,
-      "warning": "",
-      "total": null,
-      "home_ml": null,
-      "away_ml": null,
-      "spread_book": "BetMGM",
-      "books_count": 9,
-      "dt_spread": 2.0,
-      "dt_total": 225.5,
-      "dt_home_score": 111.8,
-      "dt_away_score": 113.8,
-      "dt_win_prob": 0.438,
-      "home_abbrev": "PHX",
-      "away_abbrev": "LAL"
-    },
     {
       "home_team": "Philadelphia 76ers",
       "away_team": "Miami Heat",
@@ -98,7 +58,48 @@
       "dt_away_score": 116.1,
       "dt_win_prob": 0.501,
       "home_abbrev": "PHI",
-      "away_abbrev": "MIA"
+      "away_abbrev": "MIA",
+      "_locked": true
+    },
+    {
+      "home_team": "Phoenix Suns",
+      "away_team": "Los Angeles Lakers",
+      "date": "2026-02-26",
+      "commence": "2026-02-27T02:10:00Z",
+      "vegas_spread": 5.5,
+      "consensus_spread": 5.5,
+      "model_spread": 3.5,
+      "ratings_spread": 3.6,
+      "edge": 2.0,
+      "home_rating": -2.1,
+      "away_rating": 3.9,
+      "home_hca": 2.5,
+      "hca_default": 2.5,
+      "home_recent_perf": 0,
+      "away_recent_perf": 0,
+      "home_shooting_luck": 0,
+      "away_shooting_luck": 0,
+      "home_ts": 0.565,
+      "away_ts": 0.565,
+      "games_analyzed": 0,
+      "confidence_scale": 1.0,
+      "recommendation": "NO EDGE",
+      "confidence": "NO_EDGE",
+      "bet_team": null,
+      "bet_spread": null,
+      "warning": "",
+      "total": null,
+      "home_ml": null,
+      "away_ml": null,
+      "spread_book": "BetMGM",
+      "books_count": 9,
+      "dt_spread": 2.7,
+      "dt_total": 225.3,
+      "dt_home_score": 111.3,
+      "dt_away_score": 114.0,
+      "dt_win_prob": 0.416,
+      "home_abbrev": "PHX",
+      "away_abbrev": "LAL"
     },
     {
       "home_team": "Indiana Pacers",
@@ -138,7 +139,8 @@
       "dt_away_score": 120.4,
       "dt_win_prob": 0.223,
       "home_abbrev": "IND",
-      "away_abbrev": "CHA"
+      "away_abbrev": "CHA",
+      "_locked": true
     },
     {
       "home_team": "Dallas Mavericks",
@@ -178,7 +180,8 @@
       "dt_away_score": 109.3,
       "dt_win_prob": 0.76,
       "home_abbrev": "DAL",
-      "away_abbrev": "SAC"
+      "away_abbrev": "SAC",
+      "_locked": true
     },
     {
       "home_team": "Brooklyn Nets",
@@ -218,7 +221,8 @@
       "dt_away_score": 116.8,
       "dt_win_prob": 0.246,
       "home_abbrev": "BKN",
-      "away_abbrev": "SAS"
+      "away_abbrev": "SAS",
+      "_locked": true
     },
     {
       "home_team": "Utah Jazz",
@@ -298,7 +302,8 @@
       "dt_away_score": 108.2,
       "dt_win_prob": 0.499,
       "home_abbrev": "ORL",
-      "away_abbrev": "HOU"
+      "away_abbrev": "HOU",
+      "_locked": true
     },
     {
       "home_team": "Chicago Bulls",
@@ -338,7 +343,8 @@
       "dt_away_score": 118.1,
       "dt_win_prob": 0.392,
       "home_abbrev": "CHI",
-      "away_abbrev": "POR"
+      "away_abbrev": "POR",
+      "_locked": true
     },
     {
       "home_team": "Atlanta Hawks",
@@ -378,7 +384,8 @@
       "dt_away_score": 111.0,
       "dt_win_prob": 0.744,
       "home_abbrev": "ATL",
-      "away_abbrev": "WAS"
+      "away_abbrev": "WAS",
+      "_locked": true
     },
     {
       "home_team": "Los Angeles Clippers",
@@ -424,7 +431,7 @@
   "summary": {
     "total_games": 10,
     "high_confidence": 0,
-    "medium_confidence": 2,
-    "no_edge": 8
+    "medium_confidence": 1,
+    "no_edge": 9
   }
 }

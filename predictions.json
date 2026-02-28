@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-27 18:15",
+  "generated_at": "2026-02-27 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 372,
@@ -98,7 +98,8 @@
       "dt_away_score": 116.0,
       "dt_win_prob": 0.312,
       "home_abbrev": "MIL",
-      "away_abbrev": "NYK"
+      "away_abbrev": "NYK",
+      "_locked": true
     },
     {
       "home_team": "Dallas Mavericks",
@@ -138,7 +139,8 @@
       "dt_away_score": 113.1,
       "dt_win_prob": 0.538,
       "home_abbrev": "DAL",
-      "away_abbrev": "MEM"
+      "away_abbrev": "MEM",
+      "_locked": true
     },
     {
       "home_team": "Detroit Pistons",
@@ -178,7 +180,8 @@
       "dt_away_score": 108.8,
       "dt_win_prob": 0.687,
       "home_abbrev": "DET",
-      "away_abbrev": "CLE"
+      "away_abbrev": "CLE",
+      "_locked": true
     },
     {
       "home_team": "Boston Celtics",
@@ -218,7 +221,8 @@
       "dt_away_score": 100.8,
       "dt_win_prob": 0.914,
       "home_abbrev": "BOS",
-      "away_abbrev": "BKN"
+      "away_abbrev": "BKN",
+      "_locked": true
     }
   ],
   "summary": {

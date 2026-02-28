@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-27 18:20:05",
+  "generated_at": "2026-02-27 20:10:05",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -41,7 +41,8 @@
       "kelly_pct": 0.0623,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "FLA ML (-111) \u2014 3.0u | EV: 11.2% | Kelly: 6.2%"
+      "recommendation": "FLA ML (-111) \u2014 3.0u | EV: 11.2% | Kelly: 6.2%",
+      "_locked": true
     },
     {
       "away_team": "VGK",
@@ -81,7 +82,8 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "MIN",

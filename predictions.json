@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-28 18:15",
+  "generated_at": "2026-02-28 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 364,
@@ -58,7 +58,8 @@
       "dt_away_score": 111.9,
       "dt_win_prob": 0.549,
       "home_abbrev": "GSW",
-      "away_abbrev": "LAL"
+      "away_abbrev": "LAL",
+      "_locked": true
     },
     {
       "home_team": "Utah Jazz",
@@ -93,9 +94,9 @@
       "spread_book": "BetMGM",
       "books_count": 8,
       "dt_spread": 3.2,
-      "dt_total": 236.7,
+      "dt_total": 236.8,
       "dt_home_score": 116.8,
-      "dt_away_score": 119.9,
+      "dt_away_score": 120.0,
       "dt_win_prob": 0.402,
       "home_abbrev": "UTA",
       "away_abbrev": "NOP"
@@ -179,7 +180,8 @@
       "dt_away_score": 118.1,
       "dt_win_prob": 0.175,
       "home_abbrev": "WAS",
-      "away_abbrev": "TOR"
+      "away_abbrev": "TOR",
+      "_locked": true
     }
   ],
   "summary": {

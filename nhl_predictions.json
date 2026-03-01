@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-01 10:00:28",
+  "generated_at": "2026-03-01 18:20:05",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -41,7 +41,8 @@
       "kelly_pct": 0.0704,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "PIT ML (+132) \u2014 3.0u | EV: 18.6% | Kelly: 7.0%"
+      "recommendation": "PIT ML (+132) \u2014 3.0u | EV: 18.6% | Kelly: 7.0%",
+      "_locked": true
     },
     {
       "away_team": "CHI",
@@ -81,7 +82,8 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "WPG",
@@ -121,7 +123,8 @@
       "kelly_pct": 0.0777,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "WPG ML (-115) \u2014 3.0u | EV: 13.5% | Kelly: 7.8%"
+      "recommendation": "WPG ML (-115) \u2014 3.0u | EV: 13.5% | Kelly: 7.8%",
+      "_locked": true
     },
     {
       "away_team": "STL",
@@ -161,19 +164,20 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "FLA",
       "home_team": "NYI",
-      "away_win_prob": 0.6254,
-      "home_win_prob": 0.3746,
-      "model_away_odds": -167,
-      "model_home_odds": 167,
-      "goalie_adj": 0.1026,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "away_win_prob": 0.6179,
+      "home_win_prob": 0.3821,
+      "model_away_odds": -162,
+      "model_home_odds": 162,
+      "goalie_adj": 0.15,
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Sergei Bobrovsky",
+      "home_goalie": "Semyon Varlamov",
       "away_b2b": false,
       "home_b2b": true,
       "away_gp": 56,
@@ -191,29 +195,29 @@
       "home_luck_adj": 0.0007,
       "rest_effect": -0.06,
       "model_version": "v2.2",
-      "vegas_away_odds": -142,
-      "vegas_home_odds": 127,
-      "away_ev": 0.0658,
-      "home_ev": -0.1497,
+      "vegas_away_odds": -145,
+      "vegas_home_odds": 134,
+      "away_ev": 0.044,
+      "home_ev": -0.1059,
       "best_bet_team": "FLA",
-      "best_bet_odds": -142,
-      "best_bet_ev": 0.0658,
-      "kelly_pct": 0.0467,
+      "best_bet_odds": -145,
+      "best_bet_ev": 0.044,
+      "kelly_pct": 0.0319,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "FLA ML (-142) \u2014 2.0u | EV: 6.6% | Kelly: 4.7%"
+      "recommendation": "FLA ML (-145) \u2014 2.0u | EV: 4.4% | Kelly: 3.2%"
     },
     {
       "away_team": "CGY",
       "home_team": "ANA",
-      "away_win_prob": 0.4009,
-      "home_win_prob": 0.5991,
-      "model_away_odds": 149,
-      "model_home_odds": -149,
-      "goalie_adj": -0.08,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "away_win_prob": 0.4372,
+      "home_win_prob": 0.5628,
+      "model_away_odds": 129,
+      "model_home_odds": -129,
+      "goalie_adj": -0.3,
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Dustin Wolf",
+      "home_goalie": "Petr Mrazek",
       "away_b2b": true,
       "home_b2b": false,
       "away_gp": 56,
@@ -231,18 +235,18 @@
       "home_luck_adj": -0.0019,
       "rest_effect": 0.06,
       "model_version": "v2.2",
-      "vegas_away_odds": 155,
-      "vegas_home_odds": -175,
-      "away_ev": 0.0223,
-      "home_ev": -0.0586,
+      "vegas_away_odds": 165,
+      "vegas_home_odds": -180,
+      "away_ev": 0.1586,
+      "home_ev": -0.1245,
       "best_bet_team": "CGY",
-      "best_bet_odds": 155,
-      "best_bet_ev": 0.0223,
-      "kelly_pct": 0.0072,
-      "recommended_units": 0,
-      "confidence": "NO_EDGE",
-      "recommendation": ""
+      "best_bet_odds": 165,
+      "best_bet_ev": 0.1586,
+      "kelly_pct": 0.0481,
+      "recommended_units": 2.0,
+      "confidence": "MEDIUM",
+      "recommendation": "CGY ML (+165) \u2014 2.0u | EV: 15.9% | Kelly: 4.8%"
     }
   ],
-  "odds_api_remaining": 498
+  "odds_api_remaining": 494
 }

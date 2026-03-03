@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-02 18:20:06",
+  "generated_at": "2026-03-02 20:10:05",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -82,7 +82,8 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "PHI",
@@ -122,7 +123,8 @@
       "kelly_pct": 0.0847,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "PHI ML (+112) \u2014 3.0u | EV: 19.0% | Kelly: 8.5%"
+      "recommendation": "PHI ML (+112) \u2014 3.0u | EV: 19.0% | Kelly: 8.5%",
+      "_locked": true
     },
     {
       "away_team": "DAL",

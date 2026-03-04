@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-03 18:15",
+  "generated_at": "2026-03-03 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 479,
@@ -58,7 +58,8 @@
       "dt_away_score": 117.5,
       "dt_win_prob": 0.182,
       "home_abbrev": "CHI",
-      "away_abbrev": "OKC"
+      "away_abbrev": "OKC",
+      "_locked": true
     },
     {
       "home_team": "Orlando Magic",
@@ -98,7 +99,8 @@
       "dt_away_score": 103.4,
       "dt_win_prob": 0.894,
       "home_abbrev": "ORL",
-      "away_abbrev": "WAS"
+      "away_abbrev": "WAS",
+      "_locked": true
     },
     {
       "home_team": "Los Angeles Lakers",
@@ -178,7 +180,8 @@
       "dt_away_score": 107.9,
       "dt_win_prob": 0.781,
       "home_abbrev": "MIA",
-      "away_abbrev": "BKN"
+      "away_abbrev": "BKN",
+      "_locked": true
     },
     {
       "home_team": "Cleveland Cavaliers",
@@ -218,7 +221,8 @@
       "dt_away_score": 113.4,
       "dt_win_prob": 0.442,
       "home_abbrev": "CLE",
-      "away_abbrev": "DET"
+      "away_abbrev": "DET",
+      "_locked": true
     },
     {
       "home_team": "Toronto Raptors",
@@ -258,7 +262,8 @@
       "dt_away_score": 112.5,
       "dt_win_prob": 0.436,
       "home_abbrev": "TOR",
-      "away_abbrev": "NYK"
+      "away_abbrev": "NYK",
+      "_locked": true
     },
     {
       "home_team": "Sacramento Kings",
@@ -338,7 +343,8 @@
       "dt_away_score": 108.7,
       "dt_win_prob": 0.78,
       "home_abbrev": "CHA",
-      "away_abbrev": "DAL"
+      "away_abbrev": "DAL",
+      "_locked": true
     },
     {
       "home_team": "Philadelphia 76ers",
@@ -378,7 +384,8 @@
       "dt_away_score": 116.0,
       "dt_win_prob": 0.311,
       "home_abbrev": "PHI",
-      "away_abbrev": "SAS"
+      "away_abbrev": "SAS",
+      "_locked": true
     },
     {
       "home_team": "Minnesota Timberwolves",
@@ -418,7 +425,8 @@
       "dt_away_score": 108.9,
       "dt_win_prob": 0.798,
       "home_abbrev": "MIN",
-      "away_abbrev": "MEM"
+      "away_abbrev": "MEM",
+      "_locked": true
     }
   ],
   "summary": {

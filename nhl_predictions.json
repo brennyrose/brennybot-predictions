@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-04 18:20:06",
+  "generated_at": "2026-03-04 20:10:05",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -41,7 +41,8 @@
       "kelly_pct": 0.0318,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "DET ML (-134) \u2014 2.0u | EV: 4.7% | Kelly: 3.2%"
+      "recommendation": "DET ML (-134) \u2014 2.0u | EV: 4.7% | Kelly: 3.2%",
+      "_locked": true
     },
     {
       "away_team": "TOR",
@@ -81,7 +82,8 @@
       "kelly_pct": 0.0422,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "N.J ML (-118) \u2014 2.0u | EV: 7.2% | Kelly: 4.2%"
+      "recommendation": "N.J ML (-118) \u2014 2.0u | EV: 7.2% | Kelly: 4.2%",
+      "_locked": true
     },
     {
       "away_team": "CAR",

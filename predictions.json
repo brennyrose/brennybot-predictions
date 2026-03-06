@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-05 18:15",
+  "generated_at": "2026-03-05 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 463,
@@ -20,6 +20,46 @@
     "directional_accuracy": 0.693
   },
   "predictions": [
+    {
+      "home_team": "Phoenix Suns",
+      "away_team": "Chicago Bulls",
+      "date": "2026-03-05",
+      "commence": "2026-03-06T02:10:00Z",
+      "vegas_spread": -11.5,
+      "consensus_spread": -11.0,
+      "model_spread": -15.4,
+      "ratings_spread": -15.3,
+      "edge": 3.9,
+      "home_rating": 2.0,
+      "away_rating": -10.8,
+      "home_hca": 2.5,
+      "hca_default": 2.5,
+      "home_recent_perf": 0,
+      "away_recent_perf": 0,
+      "home_shooting_luck": 0,
+      "away_shooting_luck": 0,
+      "home_ts": 0.565,
+      "away_ts": 0.565,
+      "games_analyzed": 0,
+      "confidence_scale": 1.0,
+      "recommendation": "BET Phoenix Suns -11.5",
+      "confidence": "MEDIUM",
+      "bet_team": "Phoenix Suns",
+      "bet_spread": -11.5,
+      "warning": "",
+      "total": null,
+      "home_ml": null,
+      "away_ml": null,
+      "spread_book": "BetMGM",
+      "books_count": 9,
+      "dt_spread": -11.6,
+      "dt_total": 229.4,
+      "dt_home_score": 120.5,
+      "dt_away_score": 108.9,
+      "dt_win_prob": 0.814,
+      "home_abbrev": "PHX",
+      "away_abbrev": "CHI"
+    },
     {
       "home_team": "San Antonio Spurs",
       "away_team": "Detroit Pistons",
@@ -58,7 +98,8 @@
       "dt_away_score": 110.7,
       "dt_win_prob": 0.504,
       "home_abbrev": "SAS",
-      "away_abbrev": "DET"
+      "away_abbrev": "DET",
+      "_locked": true
     },
     {
       "home_team": "Denver Nuggets",
@@ -67,11 +108,11 @@
       "commence": "2026-03-06T03:10:00Z",
       "vegas_spread": -4.5,
       "consensus_spread": -4.6,
-      "model_spread": -2.8,
-      "ratings_spread": -2.9,
-      "edge": 1.7,
+      "model_spread": -3.0,
+      "ratings_spread": -3.1,
+      "edge": 1.5,
       "home_rating": 5.1,
-      "away_rating": 4.7,
+      "away_rating": 4.4,
       "home_hca": 2.4,
       "hca_default": 2.5,
       "home_recent_perf": 0,
@@ -92,11 +133,11 @@
       "away_ml": null,
       "spread_book": "BetMGM",
       "books_count": 9,
-      "dt_spread": -2.9,
-      "dt_total": 238.0,
-      "dt_home_score": 120.4,
-      "dt_away_score": 117.6,
-      "dt_win_prob": 0.588,
+      "dt_spread": -3.0,
+      "dt_total": 237.9,
+      "dt_home_score": 120.5,
+      "dt_away_score": 117.4,
+      "dt_win_prob": 0.593,
       "home_abbrev": "DEN",
       "away_abbrev": "LAL"
     },
@@ -138,7 +179,8 @@
       "dt_away_score": 115.7,
       "dt_win_prob": 0.609,
       "home_abbrev": "WAS",
-      "away_abbrev": "UTA"
+      "away_abbrev": "UTA",
+      "_locked": true
     },
     {
       "home_team": "Sacramento Kings",
@@ -218,7 +260,8 @@
       "dt_away_score": 108.3,
       "dt_win_prob": 0.694,
       "home_abbrev": "ORL",
-      "away_abbrev": "DAL"
+      "away_abbrev": "DAL",
+      "_locked": true
     },
     {
       "home_team": "Houston Rockets",
@@ -258,7 +301,8 @@
       "dt_away_score": 104.8,
       "dt_win_prob": 0.709,
       "home_abbrev": "HOU",
-      "away_abbrev": "GSW"
+      "away_abbrev": "GSW",
+      "_locked": true
     },
     {
       "home_team": "Minnesota Timberwolves",
@@ -298,47 +342,8 @@
       "dt_away_score": 111.3,
       "dt_win_prob": 0.601,
       "home_abbrev": "MIN",
-      "away_abbrev": "TOR"
-    },
-    {
-      "home_team": "Phoenix Suns",
-      "away_team": "Chicago Bulls",
-      "date": "2026-03-05",
-      "commence": "2026-03-06T02:10:00Z",
-      "vegas_spread": -11.5,
-      "consensus_spread": -11.0,
-      "model_spread": -10.9,
-      "ratings_spread": -10.8,
-      "edge": 0.6,
-      "home_rating": 1.7,
-      "away_rating": -6.6,
-      "home_hca": 2.5,
-      "hca_default": 2.5,
-      "home_recent_perf": 0,
-      "away_recent_perf": 0,
-      "home_shooting_luck": 0,
-      "away_shooting_luck": 0,
-      "home_ts": 0.565,
-      "away_ts": 0.565,
-      "games_analyzed": 0,
-      "confidence_scale": 1.0,
-      "recommendation": "NO EDGE",
-      "confidence": "NO_EDGE",
-      "bet_team": null,
-      "bet_spread": null,
-      "warning": "",
-      "total": null,
-      "home_ml": null,
-      "away_ml": null,
-      "spread_book": "BetMGM",
-      "books_count": 9,
-      "dt_spread": -8.3,
-      "dt_total": 229.1,
-      "dt_home_score": 118.7,
-      "dt_away_score": 110.4,
-      "dt_win_prob": 0.74,
-      "home_abbrev": "PHX",
-      "away_abbrev": "CHI"
+      "away_abbrev": "TOR",
+      "_locked": true
     },
     {
       "home_team": "Miami Heat",
@@ -378,13 +383,14 @@
       "dt_away_score": 108.8,
       "dt_win_prob": 0.767,
       "home_abbrev": "MIA",
-      "away_abbrev": "BKN"
+      "away_abbrev": "BKN",
+      "_locked": true
     }
   ],
   "summary": {
     "total_games": 9,
     "high_confidence": 0,
-    "medium_confidence": 1,
-    "no_edge": 8
+    "medium_confidence": 2,
+    "no_edge": 7
   }
 }

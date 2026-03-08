@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-07 18:20:07",
+  "generated_at": "2026-03-07 20:10:07",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -205,7 +205,8 @@
       "kelly_pct": 0.0498,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "T.B ML (-205) \u2014 2.0u | EV: 4.9% | Kelly: 5.0%"
+      "recommendation": "T.B ML (-205) \u2014 2.0u | EV: 4.9% | Kelly: 5.0%",
+      "_locked": true
     },
     {
       "away_team": "UTA",
@@ -245,7 +246,8 @@
       "kelly_pct": 0.0438,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "CBJ ML (+103) \u2014 2.0u | EV: 9.0% | Kelly: 4.4%"
+      "recommendation": "CBJ ML (+103) \u2014 2.0u | EV: 9.0% | Kelly: 4.4%",
+      "_locked": true
     },
     {
       "away_team": "VAN",
@@ -285,7 +287,8 @@
       "kelly_pct": 0.0249,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "VAN ML (+250) \u2014 2.0u | EV: 12.5% | Kelly: 2.5%"
+      "recommendation": "VAN ML (+250) \u2014 2.0u | EV: 12.5% | Kelly: 2.5%",
+      "_locked": true
     },
     {
       "away_team": "MTL",
@@ -325,7 +328,8 @@
       "kelly_pct": 0.1524,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "L.A ML (-112) \u2014 3.0u | EV: 27.2% | Kelly: 15.2%"
+      "recommendation": "L.A ML (-112) \u2014 3.0u | EV: 27.2% | Kelly: 15.2%",
+      "_locked": true
     },
     {
       "away_team": "CAR",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-07 18:15",
+  "generated_at": "2026-03-07 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 451,
@@ -58,7 +58,8 @@
       "dt_away_score": 104.2,
       "dt_win_prob": 0.76,
       "home_abbrev": "OKC",
-      "away_abbrev": "GSW"
+      "away_abbrev": "GSW",
+      "_locked": true
     },
     {
       "home_team": "Milwaukee Bucks",
@@ -98,7 +99,8 @@
       "dt_away_score": 113.3,
       "dt_win_prob": 0.73,
       "home_abbrev": "MIL",
-      "away_abbrev": "UTA"
+      "away_abbrev": "UTA",
+      "_locked": true
     },
     {
       "home_team": "Memphis Grizzlies",
@@ -138,7 +140,8 @@
       "dt_away_score": 113.0,
       "dt_win_prob": 0.405,
       "home_abbrev": "MEM",
-      "away_abbrev": "LAC"
+      "away_abbrev": "LAC",
+      "_locked": true
     },
     {
       "home_team": "Atlanta Hawks",

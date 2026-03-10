@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-09 18:20:06",
+  "generated_at": "2026-03-09 20:10:04",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -164,7 +164,8 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "OTT",
@@ -204,7 +205,8 @@
       "kelly_pct": 0.0308,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "VAN ML (+200) \u2014 2.0u | EV: 12.3% | Kelly: 3.1%"
+      "recommendation": "VAN ML (+200) \u2014 2.0u | EV: 12.3% | Kelly: 3.1%",
+      "_locked": true
     }
   ],
   "odds_api_remaining": 436

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-10 18:15",
+  "generated_at": "2026-03-10 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 429,
@@ -56,7 +56,7 @@
       "dt_total": 230.5,
       "dt_home_score": 116.9,
       "dt_away_score": 113.6,
-      "dt_win_prob": 0.6,
+      "dt_win_prob": 0.601,
       "home_abbrev": "LAL",
       "away_abbrev": "MIN"
     },
@@ -67,10 +67,10 @@
       "commence": "2026-03-11T02:10:00Z",
       "vegas_spread": -6.5,
       "consensus_spread": -6.2,
-      "model_spread": -11.5,
-      "ratings_spread": -12.0,
-      "edge": 5.0,
-      "home_rating": 3.3,
+      "model_spread": -11.3,
+      "ratings_spread": -11.9,
+      "edge": 4.8,
+      "home_rating": 3.2,
       "away_rating": -6.2,
       "home_hca": 2.0,
       "hca_default": 2.5,
@@ -92,11 +92,11 @@
       "away_ml": null,
       "spread_book": "BetMGM",
       "books_count": 9,
-      "dt_spread": -7.7,
-      "dt_total": 226.4,
-      "dt_home_score": 117.0,
-      "dt_away_score": 109.4,
-      "dt_win_prob": 0.723,
+      "dt_spread": -7.6,
+      "dt_total": 226.9,
+      "dt_home_score": 117.3,
+      "dt_away_score": 109.7,
+      "dt_win_prob": 0.722,
       "home_abbrev": "GSW",
       "away_abbrev": "CHI"
     },
@@ -138,7 +138,8 @@
       "dt_away_score": 110.5,
       "dt_win_prob": 0.525,
       "home_abbrev": "SAS",
-      "away_abbrev": "BOS"
+      "away_abbrev": "BOS",
+      "_locked": true
     },
     {
       "home_team": "Miami Heat",
@@ -178,7 +179,8 @@
       "dt_away_score": 107.1,
       "dt_win_prob": 0.904,
       "home_abbrev": "MIA",
-      "away_abbrev": "WAS"
+      "away_abbrev": "WAS",
+      "_locked": true
     },
     {
       "home_team": "Milwaukee Bucks",
@@ -218,7 +220,8 @@
       "dt_away_score": 114.0,
       "dt_win_prob": 0.367,
       "home_abbrev": "MIL",
-      "away_abbrev": "PHX"
+      "away_abbrev": "PHX",
+      "_locked": true
     },
     {
       "home_team": "Sacramento Kings",
@@ -253,7 +256,7 @@
       "spread_book": "BetMGM",
       "books_count": 9,
       "dt_spread": -0.5,
-      "dt_total": 229.8,
+      "dt_total": 229.9,
       "dt_home_score": 115.2,
       "dt_away_score": 114.7,
       "dt_win_prob": 0.514,
@@ -294,7 +297,7 @@
       "books_count": 9,
       "dt_spread": 2.6,
       "dt_total": 232.9,
-      "dt_home_score": 115.1,
+      "dt_home_score": 115.2,
       "dt_away_score": 117.8,
       "dt_win_prob": 0.42,
       "home_abbrev": "POR",
@@ -338,7 +341,8 @@
       "dt_away_score": 113.0,
       "dt_win_prob": 0.703,
       "home_abbrev": "ATL",
-      "away_abbrev": "DAL"
+      "away_abbrev": "DAL",
+      "_locked": true
     },
     {
       "home_team": "Brooklyn Nets",
@@ -378,7 +382,8 @@
       "dt_away_score": 117.4,
       "dt_win_prob": 0.131,
       "home_abbrev": "BKN",
-      "away_abbrev": "DET"
+      "away_abbrev": "DET",
+      "_locked": true
     },
     {
       "home_team": "Houston Rockets",
@@ -418,7 +423,8 @@
       "dt_away_score": 106.9,
       "dt_win_prob": 0.616,
       "home_abbrev": "HOU",
-      "away_abbrev": "TOR"
+      "away_abbrev": "TOR",
+      "_locked": true
     },
     {
       "home_team": "Philadelphia 76ers",

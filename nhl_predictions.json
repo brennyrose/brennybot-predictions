@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-10 18:20:10",
+  "generated_at": "2026-03-10 20:10:10",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -328,7 +328,8 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "VGK",
@@ -368,7 +369,8 @@
       "kelly_pct": 0.0132,
       "recommended_units": 0,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "UTA",
@@ -408,7 +410,8 @@
       "kelly_pct": 0.028,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "MIN ML (-147) \u2014 2.0u | EV: 3.8% | Kelly: 2.8%"
+      "recommendation": "MIN ML (-147) \u2014 2.0u | EV: 3.8% | Kelly: 2.8%",
+      "_locked": true
     },
     {
       "away_team": "ANA",
@@ -448,7 +451,8 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "EDM",

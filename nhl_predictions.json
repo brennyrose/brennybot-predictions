@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11 18:20:04",
+  "generated_at": "2026-03-11 20:10:05",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -41,7 +41,8 @@
       "kelly_pct": 0.0912,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "OTT ML (-180) \u2014 3.0u | EV: 10.1% | Kelly: 9.1%"
+      "recommendation": "OTT ML (-180) \u2014 3.0u | EV: 10.1% | Kelly: 9.1%",
+      "_locked": true
     },
     {
       "away_team": "WSH",
@@ -81,7 +82,8 @@
       "kelly_pct": 0.0538,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "PHI ML (+116) \u2014 3.0u | EV: 12.5% | Kelly: 5.4%"
+      "recommendation": "PHI ML (+116) \u2014 3.0u | EV: 12.5% | Kelly: 5.4%",
+      "_locked": true
     }
   ],
   "odds_api_remaining": 420

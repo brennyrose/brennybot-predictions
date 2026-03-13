@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-12 18:20:09",
+  "generated_at": "2026-03-12 20:10:10",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -328,7 +328,8 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "PHI",
@@ -368,7 +369,8 @@
       "kelly_pct": 0.0135,
       "recommended_units": 0,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "NYR",
@@ -408,7 +410,8 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "CHI",
@@ -448,7 +451,8 @@
       "kelly_pct": 0.0054,
       "recommended_units": 0,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "NSH",

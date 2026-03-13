@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-12 18:15",
+  "generated_at": "2026-03-12 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 413,
@@ -58,7 +58,8 @@
       "dt_away_score": 115.6,
       "dt_win_prob": 0.471,
       "home_abbrev": "MEM",
-      "away_abbrev": "DAL"
+      "away_abbrev": "DAL",
+      "_locked": true
     },
     {
       "home_team": "Indiana Pacers",
@@ -180,7 +181,8 @@
       "dt_away_score": 111.9,
       "dt_win_prob": 0.702,
       "home_abbrev": "MIA",
-      "away_abbrev": "MIL"
+      "away_abbrev": "MIL",
+      "_locked": true
     },
     {
       "home_team": "Oklahoma City Thunder",
@@ -220,7 +222,8 @@
       "dt_away_score": 105.2,
       "dt_win_prob": 0.674,
       "home_abbrev": "OKC",
-      "away_abbrev": "BOS"
+      "away_abbrev": "BOS",
+      "_locked": true
     },
     {
       "home_team": "Atlanta Hawks",
@@ -260,7 +263,8 @@
       "dt_away_score": 106.1,
       "dt_win_prob": 0.848,
       "home_abbrev": "ATL",
-      "away_abbrev": "BKN"
+      "away_abbrev": "BKN",
+      "_locked": true
     },
     {
       "home_team": "Detroit Pistons",
@@ -341,7 +345,8 @@
       "dt_away_score": 114.2,
       "dt_win_prob": 0.675,
       "home_abbrev": "SAS",
-      "away_abbrev": "DEN"
+      "away_abbrev": "DEN",
+      "_locked": true
     },
     {
       "home_team": "Los Angeles Lakers",
@@ -376,7 +381,7 @@
       "spread_book": "BetMGM",
       "books_count": 9,
       "dt_spread": -8.5,
-      "dt_total": 236.5,
+      "dt_total": 236.6,
       "dt_home_score": 122.5,
       "dt_away_score": 114.0,
       "dt_win_prob": 0.745,

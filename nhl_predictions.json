@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-13 10:00:28",
+  "generated_at": "2026-03-13 18:20:04",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -41,19 +41,20 @@
       "kelly_pct": 0.0765,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "L.A ML (+116) \u2014 3.0u | EV: 17.7% | Kelly: 7.6%"
+      "recommendation": "L.A ML (+116) \u2014 3.0u | EV: 17.7% | Kelly: 7.6%",
+      "_locked": true
     },
     {
       "away_team": "EDM",
       "home_team": "STL",
-      "away_win_prob": 0.5655,
-      "home_win_prob": 0.4345,
-      "model_away_odds": -130,
-      "model_home_odds": 130,
-      "goalie_adj": -0.0048,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "away_win_prob": 0.6106,
+      "home_win_prob": 0.3894,
+      "model_away_odds": -157,
+      "model_home_odds": 157,
+      "goalie_adj": -0.3,
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Tristan Jarry",
+      "home_goalie": "Jordan Binnington",
       "away_b2b": true,
       "home_b2b": true,
       "away_gp": 58,
@@ -71,18 +72,18 @@
       "home_luck_adj": -0.0066,
       "rest_effect": 0.0,
       "model_version": "v2.2",
-      "vegas_away_odds": -148,
-      "vegas_home_odds": 136,
-      "away_ev": -0.0524,
-      "home_ev": 0.0254,
-      "best_bet_team": "STL",
-      "best_bet_odds": 136,
-      "best_bet_ev": 0.0254,
-      "kelly_pct": 0.0093,
-      "recommended_units": 0,
-      "confidence": "NO_EDGE",
-      "recommendation": ""
+      "vegas_away_odds": -145,
+      "vegas_home_odds": 135,
+      "away_ev": 0.0317,
+      "home_ev": -0.0849,
+      "best_bet_team": "EDM",
+      "best_bet_odds": -145,
+      "best_bet_ev": 0.0317,
+      "kelly_pct": 0.023,
+      "recommended_units": 2.0,
+      "confidence": "MEDIUM",
+      "recommendation": "EDM ML (-145) \u2014 2.0u | EV: 3.2% | Kelly: 2.3%"
     }
   ],
-  "odds_api_remaining": 408
+  "odds_api_remaining": 404
 }

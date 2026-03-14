@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-13 18:15",
+  "generated_at": "2026-03-13 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 405,
@@ -98,7 +98,8 @@
       "dt_away_score": 119.9,
       "dt_win_prob": 0.249,
       "home_abbrev": "DAL",
-      "away_abbrev": "CLE"
+      "away_abbrev": "CLE",
+      "_locked": true
     },
     {
       "home_team": "Toronto Raptors",
@@ -138,7 +139,8 @@
       "dt_away_score": 109.0,
       "dt_win_prob": 0.591,
       "home_abbrev": "TOR",
-      "away_abbrev": "PHX"
+      "away_abbrev": "PHX",
+      "_locked": true
     },
     {
       "home_team": "Indiana Pacers",
@@ -178,7 +180,8 @@
       "dt_away_score": 118.4,
       "dt_win_prob": 0.185,
       "home_abbrev": "IND",
-      "away_abbrev": "NYK"
+      "away_abbrev": "NYK",
+      "_locked": true
     },
     {
       "home_team": "Los Angeles Clippers",
@@ -258,7 +261,8 @@
       "dt_away_score": 108.4,
       "dt_win_prob": 0.7,
       "home_abbrev": "HOU",
-      "away_abbrev": "NOP"
+      "away_abbrev": "NOP",
+      "_locked": true
     },
     {
       "home_team": "Portland Trail Blazers",
@@ -338,7 +342,8 @@
       "dt_away_score": 104.5,
       "dt_win_prob": 0.876,
       "home_abbrev": "DET",
-      "away_abbrev": "MEM"
+      "away_abbrev": "MEM",
+      "_locked": true
     }
   ],
   "summary": {

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-14 18:20:09",
+  "generated_at": "2026-03-14 20:10:10",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -410,7 +410,8 @@
       "kelly_pct": 0.064,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "PHI ML (+121) \u2014 3.0u | EV: 15.5% | Kelly: 6.4%"
+      "recommendation": "PHI ML (+121) \u2014 3.0u | EV: 15.5% | Kelly: 6.4%",
+      "_locked": true
     },
     {
       "away_team": "DET",
@@ -450,7 +451,8 @@
       "kelly_pct": 0.0505,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "DET ML (+166) \u2014 3.0u | EV: 16.8% | Kelly: 5.1%"
+      "recommendation": "DET ML (+166) \u2014 3.0u | EV: 16.8% | Kelly: 5.1%",
+      "_locked": true
     },
     {
       "away_team": "PIT",
@@ -490,7 +492,8 @@
       "kelly_pct": 0.0721,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "PIT ML (+130) \u2014 3.0u | EV: 18.7% | Kelly: 7.2%"
+      "recommendation": "PIT ML (+130) \u2014 3.0u | EV: 18.7% | Kelly: 7.2%",
+      "_locked": true
     },
     {
       "away_team": "SEA",

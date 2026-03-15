@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-14 18:15",
+  "generated_at": "2026-03-14 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 397,
@@ -95,9 +95,9 @@
       "books_count": 9,
       "dt_spread": -12.5,
       "dt_total": 224.0,
-      "dt_home_score": 118.3,
+      "dt_home_score": 118.2,
       "dt_away_score": 105.7,
-      "dt_win_prob": 0.834,
+      "dt_win_prob": 0.833,
       "home_abbrev": "LAC",
       "away_abbrev": "SAC"
     },
@@ -139,7 +139,8 @@
       "dt_away_score": 118.1,
       "dt_win_prob": 0.521,
       "home_abbrev": "LAL",
-      "away_abbrev": "DEN"
+      "away_abbrev": "DEN",
+      "_locked": true
     },
     {
       "home_team": "Miami Heat",
@@ -179,7 +180,8 @@
       "dt_away_score": 113.2,
       "dt_win_prob": 0.623,
       "home_abbrev": "MIA",
-      "away_abbrev": "ORL"
+      "away_abbrev": "ORL",
+      "_locked": true
     }
   ],
   "summary": {

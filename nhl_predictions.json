@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-16 10:00:23",
+  "generated_at": "2026-03-16 18:20:05",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -41,7 +41,8 @@
       "kelly_pct": 0.0303,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "CGY ML (+160) \u2014 2.0u | EV: 9.7% | Kelly: 3.0%"
+      "recommendation": "CGY ML (+160) \u2014 2.0u | EV: 9.7% | Kelly: 3.0%",
+      "_locked": true
     },
     {
       "away_team": "BOS",
@@ -81,7 +82,8 @@
       "kelly_pct": 0.0691,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "N.J ML (-120) \u2014 3.0u | EV: 11.5% | Kelly: 6.9%"
+      "recommendation": "N.J ML (-120) \u2014 3.0u | EV: 11.5% | Kelly: 6.9%",
+      "_locked": true
     },
     {
       "away_team": "L.A",
@@ -121,19 +123,20 @@
       "kelly_pct": 0.0229,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "L.A ML (-112) \u2014 2.0u | EV: 4.1% | Kelly: 2.3%"
+      "recommendation": "L.A ML (-112) \u2014 2.0u | EV: 4.1% | Kelly: 2.3%",
+      "_locked": true
     },
     {
       "away_team": "UTA",
       "home_team": "DAL",
-      "away_win_prob": 0.4564,
-      "home_win_prob": 0.5436,
-      "model_away_odds": 119,
-      "model_home_odds": -119,
-      "goalie_adj": 0.0362,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "away_win_prob": 0.4377,
+      "home_win_prob": 0.5623,
+      "model_away_odds": 128,
+      "model_home_odds": -128,
+      "goalie_adj": 0.15,
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Vitek Vanecek",
+      "home_goalie": "Casey Desmith",
       "away_b2b": false,
       "home_b2b": false,
       "away_gp": 57,
@@ -151,17 +154,17 @@
       "home_luck_adj": 0.0044,
       "rest_effect": 0.0,
       "model_version": "v2.2",
-      "vegas_away_odds": 136,
+      "vegas_away_odds": 139,
       "vegas_home_odds": -155,
-      "away_ev": 0.0771,
-      "home_ev": -0.1057,
+      "away_ev": 0.0461,
+      "home_ev": -0.0749,
       "best_bet_team": "UTA",
-      "best_bet_odds": 136,
-      "best_bet_ev": 0.0771,
-      "kelly_pct": 0.0283,
-      "recommended_units": 2.0,
-      "confidence": "MEDIUM",
-      "recommendation": "UTA ML (+136) \u2014 2.0u | EV: 7.7% | Kelly: 2.8%"
+      "best_bet_odds": 139,
+      "best_bet_ev": 0.0461,
+      "kelly_pct": 0.0166,
+      "recommended_units": 0,
+      "confidence": "NO_EDGE",
+      "recommendation": ""
     },
     {
       "away_team": "PIT",
@@ -171,9 +174,9 @@
       "model_away_odds": 254,
       "model_home_odds": -254,
       "goalie_adj": 0.0,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Stuart Skinner",
+      "home_goalie": "Scott Wedgewood",
       "away_b2b": false,
       "home_b2b": false,
       "away_gp": 55,
@@ -191,18 +194,18 @@
       "home_luck_adj": 0.009,
       "rest_effect": 0.0,
       "model_version": "v2.2",
-      "vegas_away_odds": 195,
-      "vegas_home_odds": -210,
-      "away_ev": -0.1675,
-      "home_ev": 0.0596,
+      "vegas_away_odds": 190,
+      "vegas_home_odds": -206,
+      "away_ev": -0.1816,
+      "home_ev": 0.0662,
       "best_bet_team": "COL",
-      "best_bet_odds": -210,
-      "best_bet_ev": 0.0596,
-      "kelly_pct": 0.0626,
+      "best_bet_odds": -206,
+      "best_bet_ev": 0.0662,
+      "kelly_pct": 0.0682,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "COL ML (-210) \u2014 3.0u | EV: 6.0% | Kelly: 6.3%"
+      "recommendation": "COL ML (-206) \u2014 3.0u | EV: 6.6% | Kelly: 6.8%"
     }
   ],
-  "odds_api_remaining": 384
+  "odds_api_remaining": 382
 }

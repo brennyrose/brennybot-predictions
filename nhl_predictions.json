@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-16 18:20:05",
+  "generated_at": "2026-03-16 20:10:06",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -164,7 +164,8 @@
       "kelly_pct": 0.0166,
       "recommended_units": 0,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "PIT",

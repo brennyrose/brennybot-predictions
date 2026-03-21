@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-20 18:15",
+  "generated_at": "2026-03-20 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 353,
@@ -58,7 +58,8 @@
       "dt_away_score": 105.6,
       "dt_win_prob": 0.618,
       "home_abbrev": "DET",
-      "away_abbrev": "GSW"
+      "away_abbrev": "GSW",
+      "_locked": true
     },
     {
       "home_team": "Houston Rockets",
@@ -98,7 +99,8 @@
       "dt_away_score": 110.9,
       "dt_win_prob": 0.612,
       "home_abbrev": "HOU",
-      "away_abbrev": "ATL"
+      "away_abbrev": "ATL",
+      "_locked": true
     },
     {
       "home_team": "Memphis Grizzlies",
@@ -138,7 +140,8 @@
       "dt_away_score": 120.2,
       "dt_win_prob": 0.161,
       "home_abbrev": "MEM",
-      "away_abbrev": "BOS"
+      "away_abbrev": "BOS",
+      "_locked": true
     },
     {
       "home_team": "Denver Nuggets",
@@ -178,7 +181,8 @@
       "dt_away_score": 112.0,
       "dt_win_prob": 0.671,
       "home_abbrev": "DEN",
-      "away_abbrev": "TOR"
+      "away_abbrev": "TOR",
+      "_locked": true
     },
     {
       "home_team": "Brooklyn Nets",
@@ -218,7 +222,8 @@
       "dt_away_score": 116.4,
       "dt_win_prob": 0.093,
       "home_abbrev": "BKN",
-      "away_abbrev": "NYK"
+      "away_abbrev": "NYK",
+      "_locked": true
     },
     {
       "home_team": "Minnesota Timberwolves",
@@ -258,7 +263,8 @@
       "dt_away_score": 112.9,
       "dt_win_prob": 0.537,
       "home_abbrev": "MIN",
-      "away_abbrev": "POR"
+      "away_abbrev": "POR",
+      "_locked": true
     }
   ],
   "summary": {

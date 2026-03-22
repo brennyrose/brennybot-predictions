@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-21 18:15",
+  "generated_at": "2026-03-21 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 345,
@@ -58,7 +58,8 @@
       "dt_away_score": 113.0,
       "dt_win_prob": 0.397,
       "home_abbrev": "UTA",
-      "away_abbrev": "PHI"
+      "away_abbrev": "PHI",
+      "_locked": true
     },
     {
       "home_team": "Atlanta Hawks",
@@ -98,7 +99,8 @@
       "dt_away_score": 110.0,
       "dt_win_prob": 0.672,
       "home_abbrev": "ATL",
-      "away_abbrev": "GSW"
+      "away_abbrev": "GSW",
+      "_locked": true
     },
     {
       "home_team": "Charlotte Hornets",
@@ -142,6 +144,46 @@
       "_locked": true
     },
     {
+      "home_team": "Phoenix Suns",
+      "away_team": "Milwaukee Bucks",
+      "date": "2026-03-21",
+      "commence": "2026-03-22T02:11:00Z",
+      "vegas_spread": -11.5,
+      "consensus_spread": -11.2,
+      "model_spread": -14.4,
+      "ratings_spread": -14.4,
+      "edge": 2.9,
+      "home_rating": 2.4,
+      "away_rating": -9.5,
+      "home_hca": 2.5,
+      "hca_default": 2.5,
+      "home_recent_perf": 0,
+      "away_recent_perf": 0,
+      "home_shooting_luck": 0,
+      "away_shooting_luck": 0,
+      "home_ts": 0.565,
+      "away_ts": 0.565,
+      "games_analyzed": 0,
+      "confidence_scale": 1.0,
+      "recommendation": "BET Phoenix Suns -11.5",
+      "confidence": "MEDIUM",
+      "bet_team": "Phoenix Suns",
+      "bet_spread": -11.5,
+      "warning": "",
+      "total": null,
+      "home_ml": null,
+      "away_ml": null,
+      "spread_book": "BetMGM",
+      "books_count": 9,
+      "dt_spread": -10.9,
+      "dt_total": 217.6,
+      "dt_home_score": 114.3,
+      "dt_away_score": 103.3,
+      "dt_win_prob": 0.801,
+      "home_abbrev": "PHX",
+      "away_abbrev": "MIL"
+    },
+    {
       "home_team": "Dallas Mavericks",
       "away_team": "Los Angeles Clippers",
       "date": "2026-03-21",
@@ -179,7 +221,8 @@
       "dt_away_score": 114.6,
       "dt_win_prob": 0.354,
       "home_abbrev": "DAL",
-      "away_abbrev": "LAC"
+      "away_abbrev": "LAC",
+      "_locked": true
     },
     {
       "home_team": "San Antonio Spurs",
@@ -219,7 +262,8 @@
       "dt_away_score": 107.8,
       "dt_win_prob": 0.86,
       "home_abbrev": "SAS",
-      "away_abbrev": "IND"
+      "away_abbrev": "IND",
+      "_locked": true
     },
     {
       "home_team": "Washington Wizards",
@@ -345,46 +389,6 @@
       "_locked": true
     },
     {
-      "home_team": "Phoenix Suns",
-      "away_team": "Milwaukee Bucks",
-      "date": "2026-03-21",
-      "commence": "2026-03-22T02:11:00Z",
-      "vegas_spread": -11.5,
-      "consensus_spread": -11.2,
-      "model_spread": -11.3,
-      "ratings_spread": -11.3,
-      "edge": 0.2,
-      "home_rating": 2.4,
-      "away_rating": -6.3,
-      "home_hca": 2.5,
-      "hca_default": 2.5,
-      "home_recent_perf": 0,
-      "away_recent_perf": 0,
-      "home_shooting_luck": 0,
-      "away_shooting_luck": 0,
-      "home_ts": 0.565,
-      "away_ts": 0.565,
-      "games_analyzed": 0,
-      "confidence_scale": 1.0,
-      "recommendation": "NO EDGE",
-      "confidence": "NO_EDGE",
-      "bet_team": null,
-      "bet_spread": null,
-      "warning": "",
-      "total": null,
-      "home_ml": null,
-      "away_ml": null,
-      "spread_book": "BetMGM",
-      "books_count": 9,
-      "dt_spread": -8.7,
-      "dt_total": 218.8,
-      "dt_home_score": 113.8,
-      "dt_away_score": 105.0,
-      "dt_win_prob": 0.75,
-      "home_abbrev": "PHX",
-      "away_abbrev": "MIL"
-    },
-    {
       "home_team": "Houston Rockets",
       "away_team": "Miami Heat",
       "date": "2026-03-21",
@@ -422,13 +426,14 @@
       "dt_away_score": 112.3,
       "dt_win_prob": 0.508,
       "home_abbrev": "HOU",
-      "away_abbrev": "MIA"
+      "away_abbrev": "MIA",
+      "_locked": true
     }
   ],
   "summary": {
     "total_games": 10,
     "high_confidence": 1,
-    "medium_confidence": 3,
-    "no_edge": 6
+    "medium_confidence": 4,
+    "no_edge": 5
   }
 }

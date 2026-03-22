@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-22 10:00:25",
+  "generated_at": "2026-03-22 18:20:07",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -41,7 +41,8 @@
       "kelly_pct": 0.0454,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "NYR ML (-120) \u2014 2.0u | EV: 7.6% | Kelly: 4.5%"
+      "recommendation": "NYR ML (-120) \u2014 2.0u | EV: 7.6% | Kelly: 4.5%",
+      "_locked": true
     },
     {
       "away_team": "COL",
@@ -81,7 +82,8 @@
       "kelly_pct": 0.0435,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "COL ML (-162) \u2014 2.0u | EV: 5.4% | Kelly: 4.3%"
+      "recommendation": "COL ML (-162) \u2014 2.0u | EV: 5.4% | Kelly: 4.3%",
+      "_locked": true
     },
     {
       "away_team": "CAR",
@@ -121,7 +123,8 @@
       "kelly_pct": 0.1059,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "CAR ML (-140) \u2014 3.0u | EV: 15.1% | Kelly: 10.6%"
+      "recommendation": "CAR ML (-140) \u2014 3.0u | EV: 15.1% | Kelly: 10.6%",
+      "_locked": true
     },
     {
       "away_team": "NSH",
@@ -161,7 +164,8 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "CBJ",
@@ -201,7 +205,8 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "VGK",
@@ -241,19 +246,20 @@
       "kelly_pct": 0.0327,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "VGK ML (+132) \u2014 2.0u | EV: 8.6% | Kelly: 3.3%"
+      "recommendation": "VGK ML (+132) \u2014 2.0u | EV: 8.6% | Kelly: 3.3%",
+      "_locked": true
     },
     {
       "away_team": "T.B",
       "home_team": "CGY",
-      "away_win_prob": 0.5485,
-      "home_win_prob": 0.4515,
-      "model_away_odds": -121,
-      "model_home_odds": 121,
-      "goalie_adj": 0.0518,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "away_win_prob": 0.5562,
+      "home_win_prob": 0.4438,
+      "model_away_odds": -125,
+      "model_home_odds": 125,
+      "goalie_adj": 0.0,
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Andrei Vasilevskiy",
+      "home_goalie": "Dustin Wolf",
       "away_b2b": true,
       "home_b2b": false,
       "away_gp": 54,
@@ -271,29 +277,29 @@
       "home_luck_adj": -0.0039,
       "rest_effect": 0.06,
       "model_version": "v2.2",
-      "vegas_away_odds": -165,
-      "vegas_home_odds": 152,
-      "away_ev": -0.1191,
-      "home_ev": 0.1378,
+      "vegas_away_odds": -164,
+      "vegas_home_odds": 148,
+      "away_ev": -0.1047,
+      "home_ev": 0.1006,
       "best_bet_team": "CGY",
-      "best_bet_odds": 152,
-      "best_bet_ev": 0.1378,
-      "kelly_pct": 0.0453,
+      "best_bet_odds": 148,
+      "best_bet_ev": 0.1006,
+      "kelly_pct": 0.034,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "CGY ML (+152) \u2014 2.0u | EV: 13.8% | Kelly: 4.5%"
+      "recommendation": "CGY ML (+148) \u2014 2.0u | EV: 10.1% | Kelly: 3.4%"
     },
     {
       "away_team": "BUF",
       "home_team": "ANA",
-      "away_win_prob": 0.3709,
-      "home_win_prob": 0.6291,
-      "model_away_odds": 170,
-      "model_home_odds": -170,
-      "goalie_adj": -0.08,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "away_win_prob": 0.4071,
+      "home_win_prob": 0.5929,
+      "model_away_odds": 146,
+      "model_home_odds": -146,
+      "goalie_adj": -0.3,
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Alex Lyon",
+      "home_goalie": "Petr Mrazek",
       "away_b2b": true,
       "home_b2b": false,
       "away_gp": 56,
@@ -313,27 +319,27 @@
       "model_version": "v2.2",
       "vegas_away_odds": -110,
       "vegas_home_odds": -102,
-      "away_ev": -0.2919,
-      "home_ev": 0.2459,
+      "away_ev": -0.2228,
+      "home_ev": 0.1742,
       "best_bet_team": "ANA",
       "best_bet_odds": -102,
-      "best_bet_ev": 0.2459,
-      "kelly_pct": 0.1254,
+      "best_bet_ev": 0.1742,
+      "kelly_pct": 0.0888,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "ANA ML (-102) \u2014 3.0u | EV: 24.6% | Kelly: 12.5%"
+      "recommendation": "ANA ML (-102) \u2014 3.0u | EV: 17.4% | Kelly: 8.9%"
     },
     {
       "away_team": "L.A",
       "home_team": "UTA",
-      "away_win_prob": 0.4097,
-      "home_win_prob": 0.5903,
-      "model_away_odds": 144,
-      "model_home_odds": -144,
-      "goalie_adj": -0.0362,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "away_win_prob": 0.4285,
+      "home_win_prob": 0.5715,
+      "model_away_odds": 133,
+      "model_home_odds": -133,
+      "goalie_adj": -0.15,
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Darcy Kuemper",
+      "home_goalie": "Vitek Vanecek",
       "away_b2b": true,
       "home_b2b": false,
       "away_gp": 55,
@@ -351,18 +357,18 @@
       "home_luck_adj": 0.0036,
       "rest_effect": 0.06,
       "model_version": "v2.2",
-      "vegas_away_odds": 150,
-      "vegas_home_odds": -170,
-      "away_ev": 0.0242,
-      "home_ev": -0.0625,
+      "vegas_away_odds": 153,
+      "vegas_home_odds": -173,
+      "away_ev": 0.0841,
+      "home_ev": -0.0982,
       "best_bet_team": "L.A",
-      "best_bet_odds": 150,
-      "best_bet_ev": 0.0242,
-      "kelly_pct": 0.0081,
-      "recommended_units": 0,
-      "confidence": "NO_EDGE",
-      "recommendation": ""
+      "best_bet_odds": 153,
+      "best_bet_ev": 0.0841,
+      "kelly_pct": 0.0275,
+      "recommended_units": 2.0,
+      "confidence": "MEDIUM",
+      "recommendation": "L.A ML (+153) \u2014 2.0u | EV: 8.4% | Kelly: 2.7%"
     }
   ],
-  "odds_api_remaining": 340
+  "odds_api_remaining": 336
 }

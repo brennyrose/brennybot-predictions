@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-21 18:20:08",
+  "generated_at": "2026-03-21 20:10:08",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -410,7 +410,8 @@
       "kelly_pct": 0.0843,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "DET ML (-119) \u2014 3.0u | EV: 14.2% | Kelly: 8.4%"
+      "recommendation": "DET ML (-119) \u2014 3.0u | EV: 14.2% | Kelly: 8.4%",
+      "_locked": true
     },
     {
       "away_team": "T.B",

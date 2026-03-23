@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-03-23 10:00:24",
+  "generated_at": "2026-03-23 18:20:10",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
     {
       "away_team": "OTT",
       "home_team": "NYR",
-      "away_win_prob": 0.6586,
-      "home_win_prob": 0.3414,
-      "model_away_odds": -193,
-      "model_home_odds": 193,
-      "goalie_adj": 0.1248,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "away_win_prob": 0.6773,
+      "home_win_prob": 0.3227,
+      "model_away_odds": -210,
+      "model_home_odds": 210,
+      "goalie_adj": 0.0,
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "James Reimer",
+      "home_goalie": "Jonathan Quick",
       "away_b2b": false,
       "home_b2b": true,
       "away_gp": 56,
@@ -32,17 +32,17 @@
       "rest_effect": -0.06,
       "model_version": "v2.2",
       "vegas_away_odds": -185,
-      "vegas_home_odds": 163,
-      "away_ev": 0.0146,
-      "home_ev": -0.1021,
-      "best_bet_team": null,
-      "best_bet_odds": null,
-      "best_bet_ev": null,
-      "kelly_pct": null,
-      "recommended_units": null,
-      "confidence": "NO_EDGE",
-      "recommendation": ""
+      "vegas_home_odds": 162,
+      "away_ev": 0.0434,
+      "home_ev": -0.1545,
+      "best_bet_team": "OTT",
+      "best_bet_odds": -185,
+      "best_bet_ev": 0.0434,
+      "kelly_pct": 0.0402,
+      "recommended_units": 2.0,
+      "confidence": "MEDIUM",
+      "recommendation": "OTT ML (-185) \u2014 2.0u | EV: 4.3% | Kelly: 4.0%"
     }
   ],
-  "odds_api_remaining": 332
+  "odds_api_remaining": 330
 }

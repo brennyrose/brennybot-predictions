@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-22 18:15",
+  "generated_at": "2026-03-22 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 337,
@@ -58,7 +58,8 @@
       "dt_away_score": 109.5,
       "dt_win_prob": 0.436,
       "home_abbrev": "PHX",
-      "away_abbrev": "TOR"
+      "away_abbrev": "TOR",
+      "_locked": true
     },
     {
       "home_team": "Boston Celtics",
@@ -98,7 +99,8 @@
       "dt_away_score": 105.7,
       "dt_win_prob": 0.783,
       "home_abbrev": "BOS",
-      "away_abbrev": "MIN"
+      "away_abbrev": "MIN",
+      "_locked": true
     },
     {
       "home_team": "Denver Nuggets",
@@ -179,7 +181,8 @@
       "dt_away_score": 102.2,
       "dt_win_prob": 0.951,
       "home_abbrev": "NYK",
-      "away_abbrev": "WAS"
+      "away_abbrev": "WAS",
+      "_locked": true
     },
     {
       "home_team": "Sacramento Kings",

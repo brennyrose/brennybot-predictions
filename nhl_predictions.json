@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-23 18:20:10",
+  "generated_at": "2026-03-23 20:10:10",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -41,7 +41,8 @@
       "kelly_pct": 0.0402,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "OTT ML (-185) \u2014 2.0u | EV: 4.3% | Kelly: 4.0%"
+      "recommendation": "OTT ML (-185) \u2014 2.0u | EV: 4.3% | Kelly: 4.0%",
+      "_locked": true
     }
   ],
   "odds_api_remaining": 330

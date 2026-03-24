@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-23 18:15",
+  "generated_at": "2026-03-23 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 331,
@@ -99,7 +99,8 @@
       "dt_away_score": 112.4,
       "dt_win_prob": 0.724,
       "home_abbrev": "ATL",
-      "away_abbrev": "MEM"
+      "away_abbrev": "MEM",
+      "_locked": true
     },
     {
       "home_team": "Utah Jazz",
@@ -139,7 +140,8 @@
       "dt_away_score": 114.1,
       "dt_win_prob": 0.339,
       "home_abbrev": "UTA",
-      "away_abbrev": "TOR"
+      "away_abbrev": "TOR",
+      "_locked": true
     },
     {
       "home_team": "Orlando Magic",
@@ -342,7 +344,8 @@
       "dt_away_score": 113.1,
       "dt_win_prob": 0.407,
       "home_abbrev": "DAL",
-      "away_abbrev": "GSW"
+      "away_abbrev": "GSW",
+      "_locked": true
     },
     {
       "home_team": "Chicago Bulls",
@@ -382,7 +385,8 @@
       "dt_away_score": 116.7,
       "dt_win_prob": 0.266,
       "home_abbrev": "CHI",
-      "away_abbrev": "HOU"
+      "away_abbrev": "HOU",
+      "_locked": true
     },
     {
       "home_team": "Portland Trail Blazers",

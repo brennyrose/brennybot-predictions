@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24 18:20:10",
+  "generated_at": "2026-03-24 20:10:11",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -328,7 +328,8 @@
       "kelly_pct": 0.081,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "T.B ML (-155) \u2014 3.0u | EV: 10.5% | Kelly: 8.1%"
+      "recommendation": "T.B ML (-155) \u2014 3.0u | EV: 10.5% | Kelly: 8.1%",
+      "_locked": true
     },
     {
       "away_team": "WSH",
@@ -368,7 +369,8 @@
       "kelly_pct": 0.055,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "WSH ML (-105) \u2014 3.0u | EV: 10.5% | Kelly: 5.5%"
+      "recommendation": "WSH ML (-105) \u2014 3.0u | EV: 10.5% | Kelly: 5.5%",
+      "_locked": true
     },
     {
       "away_team": "S.J",
@@ -408,7 +410,8 @@
       "kelly_pct": 0.0548,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "NSH ML (-128) \u2014 3.0u | EV: 8.6% | Kelly: 5.5%"
+      "recommendation": "NSH ML (-128) \u2014 3.0u | EV: 8.6% | Kelly: 5.5%",
+      "_locked": true
     },
     {
       "away_team": "N.J",
@@ -448,7 +451,8 @@
       "kelly_pct": 0.0289,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "N.J ML (+143) \u2014 2.0u | EV: 8.3% | Kelly: 2.9%"
+      "recommendation": "N.J ML (+143) \u2014 2.0u | EV: 8.3% | Kelly: 2.9%",
+      "_locked": true
     },
     {
       "away_team": "VGK",
@@ -488,7 +492,8 @@
       "kelly_pct": 0.0371,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "WPG ML (+112) \u2014 2.0u | EV: 8.3% | Kelly: 3.7%"
+      "recommendation": "WPG ML (+112) \u2014 2.0u | EV: 8.3% | Kelly: 3.7%",
+      "_locked": true
     },
     {
       "away_team": "L.A",
@@ -528,7 +533,8 @@
       "kelly_pct": 0.0484,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "CGY ML (+128) \u2014 2.0u | EV: 12.4% | Kelly: 4.8%"
+      "recommendation": "CGY ML (+128) \u2014 2.0u | EV: 12.4% | Kelly: 4.8%",
+      "_locked": true
     },
     {
       "away_team": "EDM",

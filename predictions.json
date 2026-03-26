@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-25 18:15",
+  "generated_at": "2026-03-25 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 317,
@@ -108,10 +108,10 @@
       "commence": "2026-03-26T02:10:00Z",
       "vegas_spread": -12.5,
       "consensus_spread": -12.4,
-      "model_spread": -15.0,
-      "ratings_spread": -15.5,
-      "edge": 2.5,
-      "home_rating": 0.7,
+      "model_spread": -15.3,
+      "ratings_spread": -15.8,
+      "edge": 2.8,
+      "home_rating": 1.0,
       "away_rating": -12.3,
       "home_hca": 2.0,
       "hca_default": 2.5,
@@ -133,11 +133,11 @@
       "away_ml": null,
       "spread_book": "BetMGM",
       "books_count": 9,
-      "dt_spread": -12.7,
-      "dt_total": 212.3,
-      "dt_home_score": 112.5,
+      "dt_spread": -12.9,
+      "dt_total": 212.4,
+      "dt_home_score": 112.7,
       "dt_away_score": 99.8,
-      "dt_win_prob": 0.837,
+      "dt_win_prob": 0.841,
       "home_abbrev": "GSW",
       "away_abbrev": "BKN"
     },
@@ -179,7 +179,8 @@
       "dt_away_score": 120.5,
       "dt_win_prob": 0.136,
       "home_abbrev": "MEM",
-      "away_abbrev": "SAS"
+      "away_abbrev": "SAS",
+      "_locked": true
     },
     {
       "home_team": "Cleveland Cavaliers",
@@ -219,7 +220,8 @@
       "dt_away_score": 118.1,
       "dt_win_prob": 0.576,
       "home_abbrev": "CLE",
-      "away_abbrev": "MIA"
+      "away_abbrev": "MIA",
+      "_locked": true
     },
     {
       "home_team": "Boston Celtics",
@@ -259,7 +261,8 @@
       "dt_away_score": 109.2,
       "dt_win_prob": 0.481,
       "home_abbrev": "BOS",
-      "away_abbrev": "OKC"
+      "away_abbrev": "OKC",
+      "_locked": true
     },
     {
       "home_team": "Indiana Pacers",
@@ -421,7 +424,8 @@
       "dt_away_score": 109.7,
       "dt_win_prob": 0.474,
       "home_abbrev": "MIN",
-      "away_abbrev": "HOU"
+      "away_abbrev": "HOU",
+      "_locked": true
     },
     {
       "home_team": "Los Angeles Clippers",
@@ -501,7 +505,8 @@
       "dt_away_score": 112.3,
       "dt_win_prob": 0.603,
       "home_abbrev": "UTA",
-      "away_abbrev": "WAS"
+      "away_abbrev": "WAS",
+      "_locked": true
     }
   ],
   "summary": {

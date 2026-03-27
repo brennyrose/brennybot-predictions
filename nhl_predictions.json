@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-26 18:20:09",
+  "generated_at": "2026-03-26 20:10:09",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -287,7 +287,8 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "N.J",
@@ -327,7 +328,8 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "COL",
@@ -367,7 +369,8 @@
       "kelly_pct": 0.0691,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "COL ML (-175) \u2014 3.0u | EV: 7.9% | Kelly: 6.9%"
+      "recommendation": "COL ML (-175) \u2014 3.0u | EV: 7.9% | Kelly: 6.9%",
+      "_locked": true
     },
     {
       "away_team": "WSH",
@@ -407,7 +410,8 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "ANA",
@@ -447,7 +451,8 @@
       "kelly_pct": 0.0945,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "CGY ML (+115) \u2014 3.0u | EV: 21.7% | Kelly: 9.4%"
+      "recommendation": "CGY ML (+115) \u2014 3.0u | EV: 21.7% | Kelly: 9.4%",
+      "_locked": true
     },
     {
       "away_team": "EDM",

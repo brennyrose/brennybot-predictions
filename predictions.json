@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-03-29 10:00",
+  "generated_at": "2026-03-29 18:15",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
-  "odds_api_remaining": 289,
+  "odds_api_remaining": 285,
   "parameters": {
     "home_court_advantage": 2.5,
     "hca_variance_enabled": true,
@@ -20,46 +20,6 @@
     "directional_accuracy": 0.693
   },
   "predictions": [
-    {
-      "home_team": "Milwaukee Bucks",
-      "away_team": "Los Angeles Clippers",
-      "date": "2026-03-29",
-      "commence": "2026-03-29T19:40:00Z",
-      "vegas_spread": 13.5,
-      "consensus_spread": 13.9,
-      "model_spread": 8.0,
-      "ratings_spread": 8.1,
-      "edge": 5.5,
-      "home_rating": -5.3,
-      "away_rating": 5.2,
-      "home_hca": 2.6,
-      "hca_default": 2.5,
-      "home_recent_perf": 0,
-      "away_recent_perf": 0,
-      "home_shooting_luck": 0,
-      "away_shooting_luck": 0,
-      "home_ts": 0.565,
-      "away_ts": 0.565,
-      "games_analyzed": 0,
-      "confidence_scale": 1.0,
-      "recommendation": "BET Milwaukee Bucks +13.5",
-      "confidence": "HIGH",
-      "bet_team": "Milwaukee Bucks",
-      "bet_spread": 13.5,
-      "warning": "",
-      "total": null,
-      "home_ml": null,
-      "away_ml": null,
-      "spread_book": "BetMGM",
-      "books_count": 9,
-      "dt_spread": 8.9,
-      "dt_total": 223.7,
-      "dt_home_score": 107.4,
-      "dt_away_score": 116.3,
-      "dt_win_prob": 0.245,
-      "home_abbrev": "MIL",
-      "away_abbrev": "LAC"
-    },
     {
       "home_team": "Indiana Pacers",
       "away_team": "Miami Heat",
@@ -98,7 +58,8 @@
       "dt_away_score": 121.4,
       "dt_win_prob": 0.315,
       "home_abbrev": "IND",
-      "away_abbrev": "MIA"
+      "away_abbrev": "MIA",
+      "_locked": true
     },
     {
       "home_team": "New Orleans Pelicans",
@@ -138,7 +99,8 @@
       "dt_away_score": 114.9,
       "dt_win_prob": 0.386,
       "home_abbrev": "NOP",
-      "away_abbrev": "HOU"
+      "away_abbrev": "HOU",
+      "_locked": true
     },
     {
       "home_team": "Charlotte Hornets",
@@ -178,7 +140,8 @@
       "dt_away_score": 114.1,
       "dt_win_prob": 0.453,
       "home_abbrev": "CHA",
-      "away_abbrev": "BOS"
+      "away_abbrev": "BOS",
+      "_locked": true
     },
     {
       "home_team": "Toronto Raptors",
@@ -218,7 +181,8 @@
       "dt_away_score": 109.9,
       "dt_win_prob": 0.508,
       "home_abbrev": "TOR",
-      "away_abbrev": "ORL"
+      "away_abbrev": "ORL",
+      "_locked": true
     },
     {
       "home_team": "Brooklyn Nets",
@@ -258,7 +222,48 @@
       "dt_away_score": 108.5,
       "dt_win_prob": 0.562,
       "home_abbrev": "BKN",
-      "away_abbrev": "SAC"
+      "away_abbrev": "SAC",
+      "_locked": true
+    },
+    {
+      "home_team": "Oklahoma City Thunder",
+      "away_team": "New York Knicks",
+      "date": "2026-03-29",
+      "commence": "2026-03-29T23:40:00Z",
+      "vegas_spread": -8.5,
+      "consensus_spread": -8.3,
+      "model_spread": -9.8,
+      "ratings_spread": -9.8,
+      "edge": 1.3,
+      "home_rating": 14.8,
+      "away_rating": 7.5,
+      "home_hca": 2.4,
+      "hca_default": 2.5,
+      "home_recent_perf": 0,
+      "away_recent_perf": 0,
+      "home_shooting_luck": 0,
+      "away_shooting_luck": 0,
+      "home_ts": 0.565,
+      "away_ts": 0.565,
+      "games_analyzed": 0,
+      "confidence_scale": 1.0,
+      "recommendation": "NO EDGE",
+      "confidence": "NO_EDGE",
+      "bet_team": null,
+      "bet_spread": null,
+      "warning": "",
+      "total": null,
+      "home_ml": null,
+      "away_ml": null,
+      "spread_book": "BetMGM",
+      "books_count": 9,
+      "dt_spread": -8.1,
+      "dt_total": 220.5,
+      "dt_home_score": 114.3,
+      "dt_away_score": 106.2,
+      "dt_win_prob": 0.735,
+      "home_abbrev": "OKC",
+      "away_abbrev": "NYK"
     },
     {
       "home_team": "Denver Nuggets",
@@ -266,7 +271,7 @@
       "date": "2026-03-29",
       "commence": "2026-03-30T02:10:00Z",
       "vegas_spread": -12.5,
-      "consensus_spread": -12.3,
+      "consensus_spread": -12.5,
       "model_spread": -11.2,
       "ratings_spread": -11.3,
       "edge": 1.3,
@@ -299,46 +304,6 @@
       "dt_win_prob": 0.763,
       "home_abbrev": "DEN",
       "away_abbrev": "GSW"
-    },
-    {
-      "home_team": "Oklahoma City Thunder",
-      "away_team": "New York Knicks",
-      "date": "2026-03-29",
-      "commence": "2026-03-29T23:40:00Z",
-      "vegas_spread": -8.5,
-      "consensus_spread": -8.5,
-      "model_spread": -9.7,
-      "ratings_spread": -9.8,
-      "edge": 1.2,
-      "home_rating": 14.8,
-      "away_rating": 7.5,
-      "home_hca": 2.4,
-      "hca_default": 2.5,
-      "home_recent_perf": 0,
-      "away_recent_perf": 0,
-      "home_shooting_luck": 0,
-      "away_shooting_luck": 0,
-      "home_ts": 0.565,
-      "away_ts": 0.565,
-      "games_analyzed": 0,
-      "confidence_scale": 1.0,
-      "recommendation": "NO EDGE",
-      "confidence": "NO_EDGE",
-      "bet_team": null,
-      "bet_spread": null,
-      "warning": "",
-      "total": null,
-      "home_ml": null,
-      "away_ml": null,
-      "spread_book": "BetMGM",
-      "books_count": 9,
-      "dt_spread": -8.1,
-      "dt_total": 220.5,
-      "dt_home_score": 114.3,
-      "dt_away_score": 106.2,
-      "dt_win_prob": 0.735,
-      "home_abbrev": "OKC",
-      "away_abbrev": "NYK"
     },
     {
       "home_team": "Portland Trail Blazers",
@@ -378,12 +343,13 @@
       "dt_away_score": 107.1,
       "dt_win_prob": 0.84,
       "home_abbrev": "POR",
-      "away_abbrev": "WAS"
+      "away_abbrev": "WAS",
+      "_locked": true
     }
   ],
   "summary": {
-    "total_games": 9,
-    "high_confidence": 1,
+    "total_games": 8,
+    "high_confidence": 0,
     "medium_confidence": 2,
     "no_edge": 6
   }

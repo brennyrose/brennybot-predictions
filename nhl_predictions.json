@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-28 18:20:11",
+  "generated_at": "2026-03-28 20:10:10",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -492,7 +492,8 @@
       "kelly_pct": 0.0437,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "PHI ML (+120) \u2014 2.0u | EV: 10.5% | Kelly: 4.4%"
+      "recommendation": "PHI ML (+120) \u2014 2.0u | EV: 10.5% | Kelly: 4.4%",
+      "_locked": true
     },
     {
       "away_team": "UTA",
@@ -532,7 +533,8 @@
       "kelly_pct": 0.0688,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "L.A ML (-110) \u2014 3.0u | EV: 12.5% | Kelly: 6.9%"
+      "recommendation": "L.A ML (-110) \u2014 3.0u | EV: 12.5% | Kelly: 6.9%",
+      "_locked": true
     },
     {
       "away_team": "VAN",

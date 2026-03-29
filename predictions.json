@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-28 18:15",
+  "generated_at": "2026-03-28 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 293,
@@ -99,7 +99,8 @@
       "dt_away_score": 113.8,
       "dt_win_prob": 0.727,
       "home_abbrev": "ATL",
-      "away_abbrev": "SAC"
+      "away_abbrev": "SAC",
+      "_locked": true
     },
     {
       "home_team": "Memphis Grizzlies",
@@ -139,7 +140,8 @@
       "dt_away_score": 116.7,
       "dt_win_prob": 0.445,
       "home_abbrev": "MEM",
-      "away_abbrev": "CHI"
+      "away_abbrev": "CHI",
+      "_locked": true
     },
     {
       "home_team": "Charlotte Hornets",

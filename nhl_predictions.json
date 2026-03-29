@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-29 10:00:31",
+  "generated_at": "2026-03-29 18:20:06",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -41,7 +41,8 @@
       "kelly_pct": 0.0826,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "FLA ML (+142) \u2014 3.0u | EV: 23.4% | Kelly: 8.3%"
+      "recommendation": "FLA ML (+142) \u2014 3.0u | EV: 23.4% | Kelly: 8.3%",
+      "_locked": true
     },
     {
       "away_team": "NSH",
@@ -81,7 +82,8 @@
       "kelly_pct": 0.0847,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "T.B ML (-196) \u2014 3.0u | EV: 8.6% | Kelly: 8.5%"
+      "recommendation": "T.B ML (-196) \u2014 3.0u | EV: 8.6% | Kelly: 8.5%",
+      "_locked": true
     },
     {
       "away_team": "MTL",
@@ -121,7 +123,8 @@
       "kelly_pct": 0.2235,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "CAR ML (-170) \u2014 3.0u | EV: 26.3% | Kelly: 22.4%"
+      "recommendation": "CAR ML (-170) \u2014 3.0u | EV: 26.3% | Kelly: 22.4%",
+      "_locked": true
     },
     {
       "away_team": "BOS",
@@ -161,7 +164,8 @@
       "kelly_pct": 0.0369,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "CBJ ML (-148) \u2014 2.0u | EV: 5.0% | Kelly: 3.7%"
+      "recommendation": "CBJ ML (-148) \u2014 2.0u | EV: 5.0% | Kelly: 3.7%",
+      "_locked": true
     },
     {
       "away_team": "CHI",
@@ -201,7 +205,8 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "DAL",
@@ -241,8 +246,9 @@
       "kelly_pct": 0.0611,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "PHI ML (+140) \u2014 3.0u | EV: 17.1% | Kelly: 6.1%"
+      "recommendation": "PHI ML (+140) \u2014 3.0u | EV: 17.1% | Kelly: 6.1%",
+      "_locked": true
     }
   ],
-  "odds_api_remaining": 288
+  "odds_api_remaining": 284
 }

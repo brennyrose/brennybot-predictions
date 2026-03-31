@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-31 10:00:26",
+  "generated_at": "2026-03-31 18:20:08",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -41,7 +41,8 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "NYI",
@@ -81,7 +82,8 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "MTL",
@@ -121,7 +123,8 @@
       "kelly_pct": 0.1172,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "T.B ML (-163) \u2014 3.0u | EV: 14.4% | Kelly: 11.7%"
+      "recommendation": "T.B ML (-163) \u2014 3.0u | EV: 14.4% | Kelly: 11.7%",
+      "_locked": true
     },
     {
       "away_team": "OTT",
@@ -161,7 +164,8 @@
       "kelly_pct": 0.093,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "FLA ML (+152) \u2014 3.0u | EV: 28.3% | Kelly: 9.3%"
+      "recommendation": "FLA ML (+152) \u2014 3.0u | EV: 28.3% | Kelly: 9.3%",
+      "_locked": true
     },
     {
       "away_team": "N.J",
@@ -201,7 +205,8 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "DET",
@@ -241,7 +246,8 @@
       "kelly_pct": 0.0163,
       "recommended_units": 0,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "PHI",
@@ -281,19 +287,20 @@
       "kelly_pct": 0.052,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "WSH ML (-128) \u2014 3.0u | EV: 8.1% | Kelly: 5.2%"
+      "recommendation": "WSH ML (-128) \u2014 3.0u | EV: 8.1% | Kelly: 5.2%",
+      "_locked": true
     },
     {
       "away_team": "CAR",
       "home_team": "CBJ",
-      "away_win_prob": 0.6549,
-      "home_win_prob": 0.3451,
-      "model_away_odds": -190,
-      "model_home_odds": 190,
-      "goalie_adj": -0.0306,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "away_win_prob": 0.6714,
+      "home_win_prob": 0.3286,
+      "model_away_odds": -204,
+      "model_home_odds": 204,
+      "goalie_adj": -0.15,
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Frederik Andersen",
+      "home_goalie": "Elvis Merzlikins",
       "away_b2b": false,
       "home_b2b": false,
       "away_gp": 56,
@@ -312,28 +319,28 @@
       "rest_effect": 0.0,
       "model_version": "v2.2",
       "vegas_away_odds": -130,
-      "vegas_home_odds": 120,
-      "away_ev": 0.1587,
-      "home_ev": -0.2408,
+      "vegas_home_odds": 118,
+      "away_ev": 0.1879,
+      "home_ev": -0.2837,
       "best_bet_team": "CAR",
       "best_bet_odds": -130,
-      "best_bet_ev": 0.1587,
-      "kelly_pct": 0.1031,
+      "best_bet_ev": 0.1879,
+      "kelly_pct": 0.1221,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "CAR ML (-130) \u2014 3.0u | EV: 15.9% | Kelly: 10.3%"
+      "recommendation": "CAR ML (-130) \u2014 3.0u | EV: 18.8% | Kelly: 12.2%"
     },
     {
       "away_team": "WPG",
       "home_team": "CHI",
-      "away_win_prob": 0.5861,
-      "home_win_prob": 0.4139,
-      "model_away_odds": -142,
-      "model_home_odds": 142,
-      "goalie_adj": -0.03,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "away_win_prob": 0.5813,
+      "home_win_prob": 0.4187,
+      "model_away_odds": -139,
+      "model_home_odds": 139,
+      "goalie_adj": 0.0,
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Connor Hellebuyck",
+      "home_goalie": "Spencer Knight",
       "away_b2b": false,
       "home_b2b": false,
       "away_gp": 56,
@@ -351,10 +358,10 @@
       "home_luck_adj": -0.0038,
       "rest_effect": -0.01,
       "model_version": "v2.2",
-      "vegas_away_odds": -148,
-      "vegas_home_odds": 133,
-      "away_ev": -0.0179,
-      "home_ev": -0.0356,
+      "vegas_away_odds": -147,
+      "vegas_home_odds": 132,
+      "away_ev": -0.0233,
+      "home_ev": -0.0286,
       "best_bet_team": null,
       "best_bet_odds": null,
       "best_bet_ev": null,
@@ -366,14 +373,14 @@
     {
       "away_team": "SEA",
       "home_team": "EDM",
-      "away_win_prob": 0.3092,
-      "home_win_prob": 0.6908,
-      "model_away_odds": 223,
-      "model_home_odds": -223,
-      "goalie_adj": -0.15,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "away_win_prob": 0.2867,
+      "home_win_prob": 0.7133,
+      "model_away_odds": 249,
+      "model_home_odds": -249,
+      "goalie_adj": 0.0,
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Philipp Grubauer",
+      "home_goalie": "Tristan Jarry",
       "away_b2b": false,
       "home_b2b": false,
       "away_gp": 56,
@@ -391,18 +398,18 @@
       "home_luck_adj": 0.0005,
       "rest_effect": 0.0,
       "model_version": "v2.2",
-      "vegas_away_odds": 160,
-      "vegas_home_odds": -180,
-      "away_ev": -0.1961,
-      "home_ev": 0.0746,
+      "vegas_away_odds": 156,
+      "vegas_home_odds": -177,
+      "away_ev": -0.266,
+      "home_ev": 0.1163,
       "best_bet_team": "EDM",
-      "best_bet_odds": -180,
-      "best_bet_ev": 0.0746,
-      "kelly_pct": 0.0671,
+      "best_bet_odds": -177,
+      "best_bet_ev": 0.1163,
+      "kelly_pct": 0.1029,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "EDM ML (-180) \u2014 3.0u | EV: 7.5% | Kelly: 6.7%"
+      "recommendation": "EDM ML (-177) \u2014 3.0u | EV: 11.6% | Kelly: 10.3%"
     }
   ],
-  "odds_api_remaining": 276
+  "odds_api_remaining": 274
 }

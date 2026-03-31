@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-30 18:15",
+  "generated_at": "2026-03-30 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 279,
@@ -58,7 +58,8 @@
       "dt_away_score": 116.0,
       "dt_win_prob": 0.388,
       "home_abbrev": "DAL",
-      "away_abbrev": "MIN"
+      "away_abbrev": "MIN",
+      "_locked": true
     },
     {
       "home_team": "Los Angeles Lakers",
@@ -138,7 +139,8 @@
       "dt_away_score": 112.3,
       "dt_win_prob": 0.516,
       "home_abbrev": "ATL",
-      "away_abbrev": "BOS"
+      "away_abbrev": "BOS",
+      "_locked": true
     },
     {
       "home_team": "Utah Jazz",
@@ -178,7 +180,8 @@
       "dt_away_score": 124.9,
       "dt_win_prob": 0.173,
       "home_abbrev": "UTA",
-      "away_abbrev": "CLE"
+      "away_abbrev": "CLE",
+      "_locked": true
     },
     {
       "home_team": "Memphis Grizzlies",
@@ -218,7 +221,8 @@
       "dt_away_score": 116.4,
       "dt_win_prob": 0.226,
       "home_abbrev": "MEM",
-      "away_abbrev": "PHX"
+      "away_abbrev": "PHX",
+      "_locked": true
     },
     {
       "home_team": "Miami Heat",
@@ -299,7 +303,8 @@
       "dt_away_score": 98.6,
       "dt_win_prob": 0.77,
       "home_abbrev": "OKC",
-      "away_abbrev": "DET"
+      "away_abbrev": "DET",
+      "_locked": true
     },
     {
       "home_team": "San Antonio Spurs",
@@ -339,7 +344,8 @@
       "dt_away_score": 109.5,
       "dt_win_prob": 0.886,
       "home_abbrev": "SAS",
-      "away_abbrev": "CHI"
+      "away_abbrev": "CHI",
+      "_locked": true
     }
   ],
   "summary": {

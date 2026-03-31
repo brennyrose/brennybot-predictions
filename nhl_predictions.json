@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-30 18:20:06",
+  "generated_at": "2026-03-30 20:10:05",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -82,7 +82,8 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "VAN",

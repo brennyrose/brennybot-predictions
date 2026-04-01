@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-04-01 11:00",
+  "generated_at": "2026-04-01 18:25",
   "sport": "NCAAB",
   "model_version": "v1.1.1",
   "ratings_source": "KenPom + Bart Torvik (35/65 blend)",
   "torvik_active": true,
-  "odds_api_remaining": 496,
+  "odds_api_remaining": 492,
   "parameters": {
     "kp_weight": 0.35,
     "bt_weight": 0.65,
@@ -15,9 +15,9 @@
   "summary": {
     "total_games": 2,
     "high_confidence": 0,
-    "medium_confidence": 0,
-    "no_edge": 0,
-    "no_odds": 2
+    "medium_confidence": 1,
+    "no_edge": 1,
+    "no_odds": 0
   },
   "predictions": [
     {
@@ -26,7 +26,7 @@
       "home_abbrev": "COLO",
       "away_abbrev": "OU",
       "date": "2026-04-01",
-      "commence": "2026-04-02T00:00Z",
+      "commence": "2026-04-02T00:00:00Z",
       "neutral_site": true,
       "model_spread": 5.3,
       "game_possessions": 67.4,
@@ -54,16 +54,16 @@
       "away_efg": 55.0876,
       "home_defg": 52.8936,
       "away_defg": 51.2189,
-      "vegas_spread": null,
-      "consensus_spread": null,
-      "vegas_total": null,
-      "spread_book": "",
-      "books_count": 0,
-      "edge": 0,
-      "confidence": "NO_ODDS",
-      "recommendation": "NO ODDS",
-      "bet_team": "",
-      "bet_spread": 0
+      "vegas_spread": 9.5,
+      "consensus_spread": 9.5,
+      "vegas_total": 164.5,
+      "spread_book": "FanDuel",
+      "books_count": 1,
+      "edge": 4.2,
+      "confidence": "MEDIUM",
+      "recommendation": "BET Colorado +9.5",
+      "bet_team": "Colorado",
+      "bet_spread": 9.5
     },
     {
       "home_team": "Minnesota",
@@ -71,7 +71,7 @@
       "home_abbrev": "MINN",
       "away_abbrev": "BAY",
       "date": "2026-04-01",
-      "commence": "2026-04-02T02:30Z",
+      "commence": "2026-04-02T02:30:00Z",
       "neutral_site": true,
       "model_spread": 2.3,
       "game_possessions": 65.2,
@@ -99,16 +99,16 @@
       "away_efg": 53.834,
       "home_defg": 51.8884,
       "away_defg": 52.5478,
-      "vegas_spread": null,
-      "consensus_spread": null,
-      "vegas_total": null,
-      "spread_book": "",
-      "books_count": 0,
-      "edge": 0,
-      "confidence": "NO_ODDS",
-      "recommendation": "NO ODDS",
-      "bet_team": "",
-      "bet_spread": 0
+      "vegas_spread": 3.5,
+      "consensus_spread": 3.5,
+      "vegas_total": 146.5,
+      "spread_book": "FanDuel",
+      "books_count": 1,
+      "edge": 1.2,
+      "confidence": "NO_EDGE",
+      "recommendation": "No edge",
+      "bet_team": "Minnesota",
+      "bet_spread": 3.5
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-01 18:20:04",
+  "generated_at": "2026-04-01 20:10:04",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -41,7 +41,8 @@
       "kelly_pct": 0.0783,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "COL ML (-440) \u2014 3.0u | EV: 3.6% | Kelly: 7.8%"
+      "recommendation": "COL ML (-440) \u2014 3.0u | EV: 3.6% | Kelly: 7.8%",
+      "_locked": true
     },
     {
       "away_team": "STL",
@@ -81,7 +82,8 @@
       "kelly_pct": 0.1805,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "L.A ML (-138) \u2014 3.0u | EV: 26.2% | Kelly: 18.0%"
+      "recommendation": "L.A ML (-138) \u2014 3.0u | EV: 26.2% | Kelly: 18.0%",
+      "_locked": true
     },
     {
       "away_team": "ANA",
@@ -121,7 +123,8 @@
       "kelly_pct": 0.0426,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "ANA ML (-105) \u2014 2.0u | EV: 8.1% | Kelly: 4.3%"
+      "recommendation": "ANA ML (-105) \u2014 2.0u | EV: 8.1% | Kelly: 4.3%",
+      "_locked": true
     }
   ],
   "odds_api_remaining": 494

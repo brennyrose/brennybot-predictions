@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-01 18:15",
+  "generated_at": "2026-04-01 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 495,
@@ -68,10 +68,10 @@
       "commence": "2026-04-02T02:00:00Z",
       "vegas_spread": 14.5,
       "consensus_spread": 14.0,
-      "model_spread": 12.3,
-      "ratings_spread": 11.7,
-      "edge": 2.2,
-      "home_rating": -4.7,
+      "model_spread": 16.5,
+      "ratings_spread": 16.0,
+      "edge": 2.0,
+      "home_rating": -9.0,
       "away_rating": 9.5,
       "home_hca": 2.0,
       "hca_default": 2.5,
@@ -83,21 +83,21 @@
       "away_ts": 0.565,
       "games_analyzed": 0,
       "confidence_scale": 1.0,
-      "recommendation": "BET Golden State Warriors +14.5",
+      "recommendation": "BET San Antonio Spurs -14.5",
       "confidence": "MEDIUM",
-      "bet_team": "Golden State Warriors",
-      "bet_spread": 14.5,
+      "bet_team": "San Antonio Spurs",
+      "bet_spread": -14.5,
       "warning": "",
       "total": null,
       "home_ml": null,
       "away_ml": null,
       "spread_book": "BetMGM",
       "books_count": 9,
-      "dt_spread": 10.5,
-      "dt_total": 224.4,
-      "dt_home_score": 106.9,
-      "dt_away_score": 117.5,
-      "dt_win_prob": 0.208,
+      "dt_spread": 14.2,
+      "dt_total": 222.9,
+      "dt_home_score": 104.4,
+      "dt_away_score": 118.5,
+      "dt_win_prob": 0.137,
       "home_abbrev": "GSW",
       "away_abbrev": "SAS"
     },
@@ -139,7 +139,8 @@
       "dt_away_score": 128.1,
       "dt_win_prob": 0.148,
       "home_abbrev": "UTA",
-      "away_abbrev": "DEN"
+      "away_abbrev": "DEN",
+      "_locked": true
     },
     {
       "home_team": "Washington Wizards",
@@ -220,7 +221,8 @@
       "dt_away_score": 117.8,
       "dt_win_prob": 0.201,
       "home_abbrev": "MEM",
-      "away_abbrev": "NYK"
+      "away_abbrev": "NYK",
+      "_locked": true
     },
     {
       "home_team": "Toronto Raptors",
@@ -260,7 +262,8 @@
       "dt_away_score": 106.8,
       "dt_win_prob": 0.773,
       "home_abbrev": "TOR",
-      "away_abbrev": "SAC"
+      "away_abbrev": "SAC",
+      "_locked": true
     },
     {
       "home_team": "Miami Heat",
@@ -300,7 +303,8 @@
       "dt_away_score": 115.6,
       "dt_win_prob": 0.395,
       "home_abbrev": "MIA",
-      "away_abbrev": "BOS"
+      "away_abbrev": "BOS",
+      "_locked": true
     },
     {
       "home_team": "Chicago Bulls",
@@ -340,7 +344,8 @@
       "dt_away_score": 115.7,
       "dt_win_prob": 0.592,
       "home_abbrev": "CHI",
-      "away_abbrev": "IND"
+      "away_abbrev": "IND",
+      "_locked": true
     },
     {
       "home_team": "Houston Rockets",
@@ -380,7 +385,8 @@
       "dt_away_score": 101.7,
       "dt_win_prob": 0.877,
       "home_abbrev": "HOU",
-      "away_abbrev": "MIL"
+      "away_abbrev": "MIL",
+      "_locked": true
     }
   ],
   "summary": {

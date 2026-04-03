@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-03 10:00:29",
+  "generated_at": "2026-04-03 18:20:04",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -41,19 +41,20 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "STL",
       "home_team": "ANA",
-      "away_win_prob": 0.3693,
-      "home_win_prob": 0.6307,
-      "model_away_odds": 171,
-      "model_home_odds": -171,
-      "goalie_adj": 0.0748,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "away_win_prob": 0.3812,
+      "home_win_prob": 0.6188,
+      "model_away_odds": 162,
+      "model_home_odds": -162,
+      "goalie_adj": 0.0,
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Jordan Binnington",
+      "home_goalie": "Petr Mrazek",
       "away_b2b": false,
       "home_b2b": false,
       "away_gp": 57,
@@ -71,18 +72,18 @@
       "home_luck_adj": -0.0019,
       "rest_effect": 0.0,
       "model_version": "v2.2",
-      "vegas_away_odds": 123,
-      "vegas_home_odds": -140,
-      "away_ev": -0.1765,
-      "home_ev": 0.0812,
+      "vegas_away_odds": 127,
+      "vegas_home_odds": -138,
+      "away_ev": -0.1347,
+      "home_ev": 0.0672,
       "best_bet_team": "ANA",
-      "best_bet_odds": -140,
-      "best_bet_ev": 0.0812,
-      "kelly_pct": 0.0568,
-      "recommended_units": 3.0,
-      "confidence": "HIGH",
-      "recommendation": "ANA ML (-140) \u2014 3.0u | EV: 8.1% | Kelly: 5.7%"
+      "best_bet_odds": -138,
+      "best_bet_ev": 0.0672,
+      "kelly_pct": 0.0464,
+      "recommended_units": 2.0,
+      "confidence": "MEDIUM",
+      "recommendation": "ANA ML (-138) \u2014 2.0u | EV: 6.7% | Kelly: 4.6%"
     }
   ],
-  "odds_api_remaining": 482
+  "odds_api_remaining": 480
 }

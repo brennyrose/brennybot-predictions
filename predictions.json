@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-03 18:15",
+  "generated_at": "2026-04-03 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 481,
@@ -99,7 +99,8 @@
       "dt_away_score": 116.2,
       "dt_win_prob": 0.153,
       "home_abbrev": "BKN",
-      "away_abbrev": "ATL"
+      "away_abbrev": "ATL",
+      "_locked": true
     },
     {
       "home_team": "Dallas Mavericks",
@@ -139,7 +140,8 @@
       "dt_away_score": 115.0,
       "dt_win_prob": 0.38,
       "home_abbrev": "DAL",
-      "away_abbrev": "ORL"
+      "away_abbrev": "ORL",
+      "_locked": true
     },
     {
       "home_team": "New York Knicks",
@@ -179,7 +181,8 @@
       "dt_away_score": 109.1,
       "dt_win_prob": 0.863,
       "home_abbrev": "NYK",
-      "away_abbrev": "CHI"
+      "away_abbrev": "CHI",
+      "_locked": true
     },
     {
       "home_team": "Memphis Grizzlies",
@@ -219,7 +222,8 @@
       "dt_away_score": 116.4,
       "dt_win_prob": 0.208,
       "home_abbrev": "MEM",
-      "away_abbrev": "TOR"
+      "away_abbrev": "TOR",
+      "_locked": true
     },
     {
       "home_team": "Sacramento Kings",
@@ -340,7 +344,8 @@
       "dt_away_score": 118.1,
       "dt_win_prob": 0.11,
       "home_abbrev": "MIL",
-      "away_abbrev": "BOS"
+      "away_abbrev": "BOS",
+      "_locked": true
     },
     {
       "home_team": "Houston Rockets",
@@ -380,7 +385,8 @@
       "dt_away_score": 105.8,
       "dt_win_prob": 0.882,
       "home_abbrev": "HOU",
-      "away_abbrev": "UTA"
+      "away_abbrev": "UTA",
+      "_locked": true
     }
   ],
   "summary": {

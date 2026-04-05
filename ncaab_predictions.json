@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-04-05 11:00",
+  "generated_at": "2026-04-05 18:25",
   "sport": "NCAAB",
   "model_version": "v1.1.1",
   "ratings_source": "KenPom + Bart Torvik (35/65 blend)",
   "torvik_active": true,
-  "odds_api_remaining": 468,
+  "odds_api_remaining": 464,
   "parameters": {
     "kp_weight": 0.35,
     "bt_weight": 0.65,
@@ -56,7 +56,7 @@
       "away_defg": 49.4115,
       "vegas_spread": -5.5,
       "consensus_spread": -5.5,
-      "vegas_total": 159.83333333333334,
+      "vegas_total": 159.5,
       "spread_book": "FanDuel",
       "books_count": 3,
       "edge": 1.9,
@@ -108,7 +108,8 @@
       "confidence": "NO_EDGE",
       "recommendation": "No edge",
       "bet_team": "Oklahoma",
-      "bet_spread": -3.5
+      "bet_spread": -3.5,
+      "_locked": true
     }
   ]
 }

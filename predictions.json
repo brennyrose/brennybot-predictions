@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-05 18:15",
+  "generated_at": "2026-04-05 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 467,
@@ -58,7 +58,8 @@
       "dt_away_score": 111.0,
       "dt_win_prob": 0.587,
       "home_abbrev": "DAL",
-      "away_abbrev": "LAL"
+      "away_abbrev": "LAL",
+      "_locked": true
     },
     {
       "home_team": "Oklahoma City Thunder",
@@ -133,11 +134,11 @@
       "away_ml": null,
       "spread_book": "BetMGM",
       "books_count": 9,
-      "dt_spread": 0.4,
+      "dt_spread": 0.3,
       "dt_total": 221.5,
       "dt_home_score": 110.6,
       "dt_away_score": 110.9,
-      "dt_win_prob": 0.489,
+      "dt_win_prob": 0.49,
       "home_abbrev": "GSW",
       "away_abbrev": "HOU"
     },
@@ -220,7 +221,8 @@
       "dt_away_score": 118.9,
       "dt_win_prob": 0.218,
       "home_abbrev": "SAC",
-      "away_abbrev": "LAC"
+      "away_abbrev": "LAC",
+      "_locked": true
     },
     {
       "home_team": "New Orleans Pelicans",

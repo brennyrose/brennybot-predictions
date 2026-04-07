@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-06 18:20:05",
+  "generated_at": "2026-04-06 20:10:05",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -82,7 +82,8 @@
       "kelly_pct": 0.0398,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "WPG ML (-165) \u2014 2.0u | EV: 4.8% | Kelly: 4.0%"
+      "recommendation": "WPG ML (-165) \u2014 2.0u | EV: 4.8% | Kelly: 4.0%",
+      "_locked": true
     },
     {
       "away_team": "CHI",

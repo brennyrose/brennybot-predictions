@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-07 18:15",
+  "generated_at": "2026-04-07 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 453,
@@ -99,7 +99,8 @@
       "dt_away_score": 116.0,
       "dt_win_prob": 0.603,
       "home_abbrev": "NOP",
-      "away_abbrev": "UTA"
+      "away_abbrev": "UTA",
+      "_locked": true
     },
     {
       "home_team": "Phoenix Suns",
@@ -220,7 +221,8 @@
       "dt_away_score": 106.5,
       "dt_win_prob": 0.471,
       "home_abbrev": "BKN",
-      "away_abbrev": "MIL"
+      "away_abbrev": "MIL",
+      "_locked": true
     },
     {
       "home_team": "Boston Celtics",
@@ -260,7 +262,8 @@
       "dt_away_score": 109.7,
       "dt_win_prob": 0.679,
       "home_abbrev": "BOS",
-      "away_abbrev": "CHA"
+      "away_abbrev": "CHA",
+      "_locked": true
     },
     {
       "home_team": "Los Angeles Clippers",
@@ -349,11 +352,11 @@
       "commence": "2026-04-08T02:10:00Z",
       "vegas_spread": -14.5,
       "consensus_spread": -14.6,
-      "model_spread": -15.2,
-      "ratings_spread": -15.7,
-      "edge": 0.7,
-      "home_rating": 2.8,
-      "away_rating": -10.4,
+      "model_spread": -15.4,
+      "ratings_spread": -15.9,
+      "edge": 0.9,
+      "home_rating": 2.9,
+      "away_rating": -10.5,
       "home_hca": 2.0,
       "hca_default": 2.5,
       "home_recent_perf": 0,
@@ -375,10 +378,10 @@
       "spread_book": "BetMGM",
       "books_count": 9,
       "dt_spread": -13.1,
-      "dt_total": 227.0,
-      "dt_home_score": 120.0,
-      "dt_away_score": 107.0,
-      "dt_win_prob": 0.844,
+      "dt_total": 226.4,
+      "dt_home_score": 119.8,
+      "dt_away_score": 106.6,
+      "dt_win_prob": 0.845,
       "home_abbrev": "GSW",
       "away_abbrev": "SAC"
     },
@@ -420,7 +423,8 @@
       "dt_away_score": 114.9,
       "dt_win_prob": 0.544,
       "home_abbrev": "TOR",
-      "away_abbrev": "MIA"
+      "away_abbrev": "MIA",
+      "_locked": true
     }
   ],
   "summary": {

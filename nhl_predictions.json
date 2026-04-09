@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-08 18:20:04",
+  "generated_at": "2026-04-08 20:10:04",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -82,7 +82,8 @@
       "kelly_pct": 0.0095,
       "recommended_units": 0,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "EDM",

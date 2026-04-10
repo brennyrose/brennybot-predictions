@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-09 18:20:10",
+  "generated_at": "2026-04-09 20:10:10",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -287,7 +287,8 @@
       "kelly_pct": 0.0438,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "WPG ML (-105) \u2014 2.0u | EV: 8.3% | Kelly: 4.4%"
+      "recommendation": "WPG ML (-105) \u2014 2.0u | EV: 8.3% | Kelly: 4.4%",
+      "_locked": true
     },
     {
       "away_team": "CAR",
@@ -327,7 +328,8 @@
       "kelly_pct": 0.1681,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "CAR ML (-185) \u2014 3.0u | EV: 18.2% | Kelly: 16.8%"
+      "recommendation": "CAR ML (-185) \u2014 3.0u | EV: 18.2% | Kelly: 16.8%",
+      "_locked": true
     },
     {
       "away_team": "MIN",
@@ -367,7 +369,8 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "CGY",
@@ -407,7 +410,8 @@
       "kelly_pct": 0.0382,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "COL ML (-320) \u2014 2.0u | EV: 2.4% | Kelly: 3.8%"
+      "recommendation": "COL ML (-320) \u2014 2.0u | EV: 2.4% | Kelly: 3.8%",
+      "_locked": true
     },
     {
       "away_team": "NSH",
@@ -447,7 +451,8 @@
       "kelly_pct": 0.0211,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "NSH ML (+146) \u2014 2.0u | EV: 6.2% | Kelly: 2.1%"
+      "recommendation": "NSH ML (+146) \u2014 2.0u | EV: 6.2% | Kelly: 2.1%",
+      "_locked": true
     },
     {
       "away_team": "S.J",

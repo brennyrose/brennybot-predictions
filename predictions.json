@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-09 18:15",
+  "generated_at": "2026-04-09 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 445,
@@ -27,10 +27,10 @@
       "commence": "2026-04-10T02:10:00Z",
       "vegas_spread": -2.5,
       "consensus_spread": -2.5,
-      "model_spread": -9.0,
-      "ratings_spread": -9.6,
-      "edge": 6.5,
-      "home_rating": -2.0,
+      "model_spread": -7.4,
+      "ratings_spread": -7.9,
+      "edge": 4.9,
+      "home_rating": -3.7,
       "away_rating": -9.1,
       "home_hca": 2.0,
       "hca_default": 2.5,
@@ -52,11 +52,11 @@
       "away_ml": null,
       "spread_book": "FanDuel",
       "books_count": 9,
-      "dt_spread": -6.2,
-      "dt_total": 221.3,
-      "dt_home_score": 113.7,
-      "dt_away_score": 107.6,
-      "dt_win_prob": 0.683,
+      "dt_spread": -4.8,
+      "dt_total": 220.3,
+      "dt_home_score": 112.6,
+      "dt_away_score": 107.7,
+      "dt_win_prob": 0.646,
       "home_abbrev": "GSW",
       "away_abbrev": "LAL"
     },
@@ -98,7 +98,8 @@
       "dt_away_score": 109.6,
       "dt_win_prob": 0.543,
       "home_abbrev": "NYK",
-      "away_abbrev": "BOS"
+      "away_abbrev": "BOS",
+      "_locked": true
     },
     {
       "home_team": "Washington Wizards",
@@ -179,7 +180,8 @@
       "dt_away_score": 107.4,
       "dt_win_prob": 0.685,
       "home_abbrev": "HOU",
-      "away_abbrev": "PHI"
+      "away_abbrev": "PHI",
+      "_locked": true
     },
     {
       "home_team": "Toronto Raptors",
@@ -260,7 +262,8 @@
       "dt_away_score": 109.7,
       "dt_win_prob": 0.397,
       "home_abbrev": "BKN",
-      "away_abbrev": "IND"
+      "away_abbrev": "IND",
+      "_locked": true
     }
   ],
   "summary": {

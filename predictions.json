@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-10 18:15",
+  "generated_at": "2026-04-10 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 442,
@@ -58,7 +58,8 @@
       "dt_away_score": 116.3,
       "dt_win_prob": 0.328,
       "home_abbrev": "IND",
-      "away_abbrev": "PHI"
+      "away_abbrev": "PHI",
+      "_locked": true
     },
     {
       "home_team": "Boston Celtics",
@@ -98,7 +99,8 @@
       "dt_away_score": 100.5,
       "dt_win_prob": 0.935,
       "home_abbrev": "BOS",
-      "away_abbrev": "NOP"
+      "away_abbrev": "NOP",
+      "_locked": true
     },
     {
       "home_team": "Chicago Bulls",
@@ -138,7 +140,8 @@
       "dt_away_score": 119.5,
       "dt_win_prob": 0.223,
       "home_abbrev": "CHI",
-      "away_abbrev": "ORL"
+      "away_abbrev": "ORL",
+      "_locked": true
     },
     {
       "home_team": "Denver Nuggets",
@@ -178,7 +181,8 @@
       "dt_away_score": 110.5,
       "dt_win_prob": 0.816,
       "home_abbrev": "DEN",
-      "away_abbrev": "OKC"
+      "away_abbrev": "OKC",
+      "_locked": true
     },
     {
       "home_team": "Sacramento Kings",
@@ -381,7 +385,8 @@
       "dt_away_score": 107.5,
       "dt_win_prob": 0.872,
       "home_abbrev": "SAS",
-      "away_abbrev": "DAL"
+      "away_abbrev": "DAL",
+      "_locked": true
     },
     {
       "home_team": "Milwaukee Bucks",
@@ -421,7 +426,8 @@
       "dt_away_score": 104.8,
       "dt_win_prob": 0.73,
       "home_abbrev": "MIL",
-      "away_abbrev": "BKN"
+      "away_abbrev": "BKN",
+      "_locked": true
     },
     {
       "home_team": "Houston Rockets",
@@ -461,7 +467,8 @@
       "dt_away_score": 105.7,
       "dt_win_prob": 0.688,
       "home_abbrev": "HOU",
-      "away_abbrev": "MIN"
+      "away_abbrev": "MIN",
+      "_locked": true
     },
     {
       "home_team": "Utah Jazz",
@@ -501,7 +508,8 @@
       "dt_away_score": 115.0,
       "dt_win_prob": 0.526,
       "home_abbrev": "UTA",
-      "away_abbrev": "MEM"
+      "away_abbrev": "MEM",
+      "_locked": true
     },
     {
       "home_team": "Portland Trail Blazers",
@@ -621,7 +629,8 @@
       "dt_away_score": 108.0,
       "dt_win_prob": 0.675,
       "home_abbrev": "NYK",
-      "away_abbrev": "TOR"
+      "away_abbrev": "TOR",
+      "_locked": true
     }
   ],
   "summary": {

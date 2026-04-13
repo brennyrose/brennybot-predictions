@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-12 18:15",
+  "generated_at": "2026-04-12 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 435,
@@ -99,7 +99,8 @@
       "dt_away_score": 105.8,
       "dt_win_prob": 0.505,
       "home_abbrev": "OKC",
-      "away_abbrev": "PHX"
+      "away_abbrev": "PHX",
+      "_locked": true
     },
     {
       "home_team": "New York Knicks",
@@ -180,7 +181,8 @@
       "dt_away_score": 112.0,
       "dt_win_prob": 0.693,
       "home_abbrev": "LAL",
-      "away_abbrev": "UTA"
+      "away_abbrev": "UTA",
+      "_locked": true
     },
     {
       "home_team": "Los Angeles Clippers",
@@ -220,7 +222,8 @@
       "dt_away_score": 111.7,
       "dt_win_prob": 0.502,
       "home_abbrev": "LAC",
-      "away_abbrev": "GSW"
+      "away_abbrev": "GSW",
+      "_locked": true
     },
     {
       "home_team": "San Antonio Spurs",
@@ -260,7 +263,8 @@
       "dt_away_score": 108.3,
       "dt_win_prob": 0.851,
       "home_abbrev": "SAS",
-      "away_abbrev": "DEN"
+      "away_abbrev": "DEN",
+      "_locked": true
     },
     {
       "home_team": "Minnesota Timberwolves",
@@ -300,7 +304,8 @@
       "dt_away_score": 107.8,
       "dt_win_prob": 0.693,
       "home_abbrev": "MIN",
-      "away_abbrev": "NOP"
+      "away_abbrev": "NOP",
+      "_locked": true
     },
     {
       "home_team": "Miami Heat",
@@ -381,7 +386,8 @@
       "dt_away_score": 111.8,
       "dt_win_prob": 0.685,
       "home_abbrev": "DAL",
-      "away_abbrev": "CHI"
+      "away_abbrev": "CHI",
+      "_locked": true
     },
     {
       "home_team": "Houston Rockets",
@@ -421,7 +427,8 @@
       "dt_away_score": 98.8,
       "dt_win_prob": 0.844,
       "home_abbrev": "HOU",
-      "away_abbrev": "MEM"
+      "away_abbrev": "MEM",
+      "_locked": true
     },
     {
       "home_team": "Portland Trail Blazers",
@@ -461,7 +468,8 @@
       "dt_away_score": 106.1,
       "dt_win_prob": 0.839,
       "home_abbrev": "POR",
-      "away_abbrev": "SAC"
+      "away_abbrev": "SAC",
+      "_locked": true
     },
     {
       "home_team": "Indiana Pacers",

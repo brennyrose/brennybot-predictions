@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-14 18:15",
+  "generated_at": "2026-04-14 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 427,
@@ -98,7 +98,8 @@
       "dt_away_score": 117.3,
       "dt_win_prob": 0.616,
       "home_abbrev": "CHA",
-      "away_abbrev": "MIA"
+      "away_abbrev": "MIA",
+      "_locked": true
     }
   ],
   "summary": {

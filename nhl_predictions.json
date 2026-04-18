@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-18 10:00:13",
+  "generated_at": "2026-04-18 18:20:03",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -41,7 +41,8 @@
       "kelly_pct": 0.1234,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "CAR ML (-148) \u2014 3.0u | EV: 16.7% | Kelly: 12.3%"
+      "recommendation": "CAR ML (-148) \u2014 3.0u | EV: 16.7% | Kelly: 12.3%",
+      "_locked": true
     },
     {
       "away_team": "MIN",
@@ -81,7 +82,8 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "PHI",
@@ -111,9 +113,9 @@
       "home_luck_adj": 0.0032,
       "rest_effect": 0.0,
       "model_version": "v2.2",
-      "vegas_away_odds": 127,
+      "vegas_away_odds": 125,
       "vegas_home_odds": -142,
-      "away_ev": -0.1204,
+      "away_ev": -0.1281,
       "home_ev": 0.0438,
       "best_bet_team": "PIT",
       "best_bet_odds": -142,
@@ -124,5 +126,5 @@
       "recommendation": "PIT ML (-142) \u2014 2.0u | EV: 4.4% | Kelly: 3.1%"
     }
   ],
-  "odds_api_remaining": 417
+  "odds_api_remaining": 415
 }

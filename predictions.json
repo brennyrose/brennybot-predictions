@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-17 18:15",
+  "generated_at": "2026-04-17 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 419,
@@ -58,7 +58,8 @@
       "dt_away_score": 114.8,
       "dt_win_prob": 0.482,
       "home_abbrev": "ORL",
-      "away_abbrev": "CHA"
+      "away_abbrev": "CHA",
+      "_locked": true
     },
     {
       "home_team": "Phoenix Suns",
@@ -67,10 +68,10 @@
       "commence": "2026-04-18T02:10:00Z",
       "vegas_spread": -2.5,
       "consensus_spread": -2.7,
-      "model_spread": -3.9,
-      "ratings_spread": -3.8,
-      "edge": 1.4,
-      "home_rating": 4.6,
+      "model_spread": -3.4,
+      "ratings_spread": -3.4,
+      "edge": 0.9,
+      "home_rating": 4.1,
       "away_rating": 3.3,
       "home_hca": 2.5,
       "hca_default": 2.5,
@@ -92,11 +93,11 @@
       "away_ml": null,
       "spread_book": "BetMGM",
       "books_count": 9,
-      "dt_spread": -3.0,
-      "dt_total": 229.1,
-      "dt_home_score": 116.0,
-      "dt_away_score": 113.1,
-      "dt_win_prob": 0.591,
+      "dt_spread": -2.6,
+      "dt_total": 228.4,
+      "dt_home_score": 115.5,
+      "dt_away_score": 112.9,
+      "dt_win_prob": 0.579,
       "home_abbrev": "PHX",
       "away_abbrev": "GSW"
     }

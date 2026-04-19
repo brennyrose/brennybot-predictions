@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-18 18:15",
+  "generated_at": "2026-04-18 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 416,
@@ -58,7 +58,8 @@
       "dt_away_score": 109.0,
       "dt_win_prob": 0.352,
       "home_abbrev": "LAL",
-      "away_abbrev": "HOU"
+      "away_abbrev": "HOU",
+      "_locked": true
     },
     {
       "home_team": "Denver Nuggets",

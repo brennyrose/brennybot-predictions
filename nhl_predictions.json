@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-18 18:20:03",
+  "generated_at": "2026-04-18 20:10:02",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -123,7 +123,8 @@
       "kelly_pct": 0.0311,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "PIT ML (-142) \u2014 2.0u | EV: 4.4% | Kelly: 3.1%"
+      "recommendation": "PIT ML (-142) \u2014 2.0u | EV: 4.4% | Kelly: 3.1%",
+      "_locked": true
     }
   ],
   "odds_api_remaining": 415

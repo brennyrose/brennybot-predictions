@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19 10:00:21",
+  "generated_at": "2026-04-19 18:20:05",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -41,7 +41,8 @@
       "kelly_pct": 0.0308,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "COL ML (-265) \u2014 2.0u | EV: 2.3% | Kelly: 3.1%"
+      "recommendation": "COL ML (-265) \u2014 2.0u | EV: 2.3% | Kelly: 3.1%",
+      "_locked": true
     },
     {
       "away_team": "MTL",
@@ -81,7 +82,8 @@
       "kelly_pct": 0.0881,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "T.B ML (-183) \u2014 3.0u | EV: 9.6% | Kelly: 8.8%"
+      "recommendation": "T.B ML (-183) \u2014 3.0u | EV: 9.6% | Kelly: 8.8%",
+      "_locked": true
     },
     {
       "away_team": "BOS",
@@ -91,9 +93,9 @@
       "model_away_odds": 137,
       "model_home_odds": -137,
       "goalie_adj": 0.0,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Joonas Korpisalo",
+      "home_goalie": "Alex Lyon",
       "away_b2b": false,
       "home_b2b": false,
       "away_gp": 57,
@@ -111,29 +113,29 @@
       "home_luck_adj": 0.0025,
       "rest_effect": 0.0,
       "model_version": "v2.2",
-      "vegas_away_odds": 145,
-      "vegas_home_odds": -163,
-      "away_ev": 0.0329,
-      "home_ev": -0.0668,
-      "best_bet_team": "BOS",
-      "best_bet_odds": 145,
-      "best_bet_ev": 0.0329,
-      "kelly_pct": 0.0114,
-      "recommended_units": 0,
+      "vegas_away_odds": 140,
+      "vegas_home_odds": -158,
+      "away_ev": 0.0118,
+      "home_ev": -0.0555,
+      "best_bet_team": null,
+      "best_bet_odds": null,
+      "best_bet_ev": null,
+      "kelly_pct": null,
+      "recommended_units": null,
       "confidence": "NO_EDGE",
       "recommendation": ""
     },
     {
       "away_team": "UTA",
       "home_team": "VGK",
-      "away_win_prob": 0.4138,
-      "home_win_prob": 0.5862,
-      "model_away_odds": 142,
-      "model_home_odds": -142,
-      "goalie_adj": -0.1188,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "away_win_prob": 0.419,
+      "home_win_prob": 0.581,
+      "model_away_odds": 139,
+      "model_home_odds": -139,
+      "goalie_adj": -0.15,
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Vitek Vanecek",
+      "home_goalie": "Adin Hill",
       "away_b2b": false,
       "home_b2b": false,
       "away_gp": 57,
@@ -151,10 +153,10 @@
       "home_luck_adj": 0.0013,
       "rest_effect": 0.01,
       "model_version": "v2.2",
-      "vegas_away_odds": 135,
+      "vegas_away_odds": 134,
       "vegas_home_odds": -150,
-      "away_ev": -0.0276,
-      "home_ev": -0.023,
+      "away_ev": -0.0195,
+      "home_ev": -0.0317,
       "best_bet_team": null,
       "best_bet_odds": null,
       "best_bet_ev": null,
@@ -164,5 +166,5 @@
       "recommendation": ""
     }
   ],
-  "odds_api_remaining": 413
+  "odds_api_remaining": 411
 }

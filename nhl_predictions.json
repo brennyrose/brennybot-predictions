@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19 18:20:05",
+  "generated_at": "2026-04-19 20:10:04",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -123,7 +123,8 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "UTA",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26 10:00:32",
+  "generated_at": "2026-04-26 18:20:13",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -41,7 +41,8 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "COL",
@@ -81,7 +82,8 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "T.B",
@@ -121,19 +123,20 @@
       "kelly_pct": 0.1031,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "T.B ML (-112) \u2014 3.0u | EV: 18.4% | Kelly: 10.3%"
+      "recommendation": "T.B ML (-112) \u2014 3.0u | EV: 18.4% | Kelly: 10.3%",
+      "_locked": true
     },
     {
       "away_team": "EDM",
       "home_team": "ANA",
-      "away_win_prob": 0.4862,
-      "home_win_prob": 0.5138,
-      "model_away_odds": 106,
-      "model_home_odds": -106,
-      "goalie_adj": 0.07,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "away_win_prob": 0.473,
+      "home_win_prob": 0.527,
+      "model_away_odds": 111,
+      "model_home_odds": -111,
+      "goalie_adj": 0.15,
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Connor Ingram",
+      "home_goalie": "Lukas Dostal",
       "away_b2b": false,
       "home_b2b": false,
       "away_gp": 58,
@@ -151,18 +154,18 @@
       "home_luck_adj": -0.0019,
       "rest_effect": 0.0,
       "model_version": "v2.2",
-      "vegas_away_odds": -130,
-      "vegas_home_odds": 119,
-      "away_ev": -0.1398,
-      "home_ev": 0.1252,
+      "vegas_away_odds": -128,
+      "vegas_home_odds": 115,
+      "away_ev": -0.1575,
+      "home_ev": 0.1331,
       "best_bet_team": "ANA",
-      "best_bet_odds": 119,
-      "best_bet_ev": 0.1252,
-      "kelly_pct": 0.0526,
+      "best_bet_odds": 115,
+      "best_bet_ev": 0.1331,
+      "kelly_pct": 0.0578,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "ANA ML (+119) \u2014 3.0u | EV: 12.5% | Kelly: 5.3%"
+      "recommendation": "ANA ML (+115) \u2014 3.0u | EV: 13.3% | Kelly: 5.8%"
     }
   ],
-  "odds_api_remaining": 394
+  "odds_api_remaining": 392
 }

@@ -278,6 +278,94 @@
             line-height: 1.8;
         }
 
+        /* ── Ponies ── */
+        .race-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            transition: border-color 0.15s;
+        }
+        .race-card:hover { border-color: var(--border-light); }
+
+        .race-header {
+            padding: 12px 16px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+        .race-header:hover { background: rgba(124,141,181,0.04); }
+        .race-meta-row { display: flex; align-items: center; gap: 10px; }
+
+        .race-num {
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 600;
+            font-size: 12px;
+            color: var(--blue);
+            background: rgba(96,165,250,0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        .race-info-text { font-size: 12px; color: var(--text-dim); }
+
+        .race-pick-preview { display: flex; align-items: center; gap: 8px; }
+        .race-pick-name { font-size: 14px; font-weight: 600; color: var(--white); }
+        .race-pick-ml { font-size: 11px; color: var(--text-dim); font-family: 'IBM Plex Mono', monospace; }
+        .race-chevron { font-size: 14px; color: var(--text-muted); transition: transform 0.2s; }
+        .race-chevron.open { transform: rotate(180deg); }
+
+        .race-detail {
+            padding: 0 16px 16px;
+            border-top: 1px solid var(--border);
+            display: none;
+        }
+        .race-detail.open { display: block; }
+
+        .wps-row { display: flex; gap: 8px; margin-top: 14px; }
+        .wps-box { border-radius: 6px; padding: 10px 14px; flex: 1; min-width: 0; }
+        .wps-box.w { background: #122b1e; border: 1px solid #1a4a2e; }
+        .wps-box.p { background: #111c3a; border: 1px solid #1a2f5e; }
+        .wps-box.s { background: #1f1a0b; border: 1px solid #3a2e0e; }
+        .wps-label { font-size: 9px; font-weight: 700; color: rgba(255,255,255,0.35); letter-spacing: 1.5px; text-transform: uppercase; }
+        .wps-horse { font-size: 14px; font-weight: 700; color: var(--white); margin-top: 2px; }
+        .wps-ml { font-size: 11px; color: var(--text-dim); font-family: 'IBM Plex Mono', monospace; margin-top: 1px; }
+        .wps-factors { margin-top: 6px; list-style: none; }
+        .wps-factors li { font-size: 10px; color: var(--text-dim); line-height: 1.5; }
+        .wps-factors li::before { content: "· "; color: var(--text-muted); }
+
+        .race-analysis {
+            font-size: 12px; color: var(--text); line-height: 1.65;
+            margin-top: 12px; padding: 12px;
+            background: rgba(0,0,0,0.15); border-radius: 6px;
+        }
+
+        .exotic-bar {
+            margin-top: 10px; padding: 8px 12px;
+            background: rgba(167,139,250,0.06); border: 1px solid rgba(167,139,250,0.12);
+            border-radius: 6px;
+        }
+        .exotic-label { font-size: 10px; font-weight: 700; color: #a78bfa; letter-spacing: 0.5px; text-transform: uppercase; }
+        .exotic-play { font-size: 11px; color: #c4b5fd; margin-top: 2px; font-family: 'IBM Plex Mono', monospace; }
+
+        .bet-badge {
+            display: inline-block; margin-top: 8px; padding: 3px 10px;
+            background: rgba(74,222,128,0.08); border: 1px solid rgba(74,222,128,0.15);
+            border-radius: 4px; font-size: 11px; font-weight: 600; color: var(--green);
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .ponies-legend {
+            margin-top: 16px; padding: 14px 16px;
+            background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+            text-align: center;
+        }
+        .ponies-legend .legend-title { font-size: 10px; color: var(--text-dim); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+        .ponies-legend .legend-items { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; font-size: 12px; color: var(--text-dim); }
+        .ponies-legend .legend-note { font-size: 10px; color: var(--text-muted); margin-top: 10px; line-height: 1.6; }
+
         /* ── Under Construction ── */
         .under-construction {
             text-align: center;
@@ -318,6 +406,8 @@
             td, th { padding: 6px 8px; }
             .pick-line { flex-direction: column; align-items: flex-start; gap: 2px; }
             .pick-edge { text-align: left; }
+            .wps-row { flex-direction: column; }
+            .race-pick-preview .race-pick-name { font-size: 12px; }
         }
     </style>
 </head>
@@ -334,6 +424,7 @@
         <button onclick="switchTab('nba')">NBA</button>
         <button onclick="switchTab('ncaab')">NCAAB</button>
         <button onclick="switchTab('nfl')">NFL</button>
+        <button onclick="switchTab('ponies')">PONIES</button>
     </div>
 
     <!-- ═══ NHL ═══ -->
@@ -441,11 +532,40 @@
         </div>
     </div>
 
+    <!-- ═══ PONIES ═══ -->
+    <div class="section" id="section-ponies">
+        <div class="sub-nav">
+            <button class="active" onclick="switchSubTab('ponies','picks')">Race Day Picks</button>
+            <button onclick="switchSubTab('ponies','tracker')">Bet Tracker</button>
+        </div>
+        <div id="ponies-picks-panel">
+            <div id="ponies-loading" class="loading">Loading race picks...</div>
+            <div id="ponies-content" style="display:none">
+                <div class="section-meta" id="ponies-meta"></div>
+                <div class="summary-row" id="ponies-summary"></div>
+                <div id="ponies-track-tabs" class="sub-nav" style="margin-bottom:16px"></div>
+                <div class="picks-section" id="ponies-top-plays" style="display:none">
+                    <h3>🔥 Top Plays</h3>
+                    <div id="ponies-top-list"></div>
+                </div>
+                <div id="ponies-races"></div>
+            </div>
+        </div>
+        <div id="ponies-tracker-panel" style="display:none">
+            <div class="tracker-empty">
+                Bet tracker monitors Ponies picks vs closing odds.<br>
+                Results will accumulate here as tracked picks resolve.<br><br>
+                <span style="color:var(--text-muted)">Coming soon — data pipeline in development</span>
+            </div>
+        </div>
+    </div>
+
     <div class="footer">
         <div class="api-credits" id="footer-credits"></div>
         NBA Model v2.1 — Backtested: 1,231 games, February 2026<br>
         NHL Model v2.1 — Backtested: 2,542 games, February 2026<br>
         NCAAB Model v1.1 — Backtested: 4,078 games, February 2026<br>
+        Ponies Model v1.0 — Backtested: 82,536 entrants / 10,619 races, 2023 Equibase<br>
         <br>
         Auto-refreshes on cron: NBA 10 AM + 6:15 PM + 8:45 PM · NHL 6:20 PM + 8:10 PM · NCAAB 11 AM + 6:25 PM EST<br>
         For personal use only. Not financial advice.
@@ -597,8 +717,149 @@ async function loadNHL() {
     }
 }
 
-loadNBA(); loadNHL(); loadNCAAB();
-setInterval(function(){ loadNBA(); loadNHL(); loadNCAAB(); }, 5*60*1000);
+loadNBA(); loadNHL(); loadNCAAB(); loadPonies();
+setInterval(function(){ loadNBA(); loadNHL(); loadNCAAB(); loadPonies(); }, 5*60*1000);
+
+// ── Ponies ──
+var poniesTrack = null;
+var poniesData = null;
+
+async function loadPonies() {
+    try {
+        var r = await fetch('ponies_predictions.json?t=' + Date.now());
+        if (!r.ok) throw new Error('No data');
+        poniesData = await r.json();
+        document.getElementById('ponies-loading').style.display = 'none';
+        document.getElementById('ponies-content').style.display = 'block';
+        renderPonies();
+    } catch(e) {
+        document.getElementById('ponies-loading').innerHTML = '<div class="error">Race picks not available — upload a PP to generate picks<br><small>' + e.message + '</small></div>';
+    }
+}
+
+function renderPonies() {
+    var d = poniesData;
+    if (!d || !d.races || !d.races.length) return;
+
+    // Meta
+    document.getElementById('ponies-meta').innerHTML = 'Model: <span>' + (d.model || 'BrennyPonies v1.0') + '</span> · Generated: <span>' + (d.generatedAt || d.date || '—') + '</span>';
+
+    // Track tabs
+    var tracks = [];
+    d.races.forEach(function(r) { if (tracks.indexOf(r.track) === -1) tracks.push(r.track); });
+    if (!poniesTrack) poniesTrack = tracks[0];
+
+    var trackNames = {AQU:'Aqueduct',OP:'Oaklawn',SAR:'Saratoga',CD:'Churchill',GP:'Gulfstream',KEE:'Keeneland',BEL:'Belmont',PIM:'Pimlico',DMR:'Del Mar',MTH:'Monmouth',TAM:'Tampa Bay'};
+    if (tracks.length > 1) {
+        document.getElementById('ponies-track-tabs').style.display = 'flex';
+        document.getElementById('ponies-track-tabs').innerHTML = tracks.map(function(t) {
+            var cnt = d.races.filter(function(r){return r.track===t;}).length;
+            var label = (trackNames[t] || t) + ' (' + cnt + ')';
+            return '<button class="' + (t === poniesTrack ? 'active' : '') + '" onclick="switchPoniesTrack(\'' + t + '\')">' + label + '</button>';
+        }).join('');
+    } else {
+        document.getElementById('ponies-track-tabs').style.display = 'none';
+    }
+
+    var filtered = d.races.filter(function(r) { return r.track === poniesTrack; });
+
+    // Summary
+    var highConf = filtered.filter(function(r) { return r.picks && r.picks.win && r.picks.win.confidence === '★★★'; }).length;
+    var medConf = filtered.filter(function(r) { return r.picks && r.picks.win && r.picks.win.confidence === '★★'; }).length;
+    var totalEntries = filtered.reduce(function(s, r) { return s + (r.fieldSize || 0); }, 0);
+    document.getElementById('ponies-summary').innerHTML =
+        '<div class="summary-box"><div class="label">Races</div><div class="value white">' + filtered.length + '</div></div>' +
+        '<div class="summary-box"><div class="label">★★★</div><div class="value green">' + highConf + '</div></div>' +
+        '<div class="summary-box"><div class="label">★★</div><div class="value yellow">' + medConf + '</div></div>' +
+        '<div class="summary-box"><div class="label">Entries</div><div class="value dim">' + totalEntries + '</div></div>';
+
+    // Top plays
+    var topPlays = filtered.filter(function(r) { return r.picks && r.picks.win && r.picks.win.confidence === '★★★'; });
+    if (topPlays.length > 0) {
+        document.getElementById('ponies-top-plays').style.display = 'block';
+        document.getElementById('ponies-top-list').innerHTML = topPlays.map(function(r) {
+            var w = r.picks.win;
+            return '<div class="pick-line"><span class="pick-rec">R' + r.race + ' #' + w.pp + ' ' + w.name + ' (' + w.ml + ')</span><span class="pick-edge conf-high">' + (r.betType || 'WIN') + '</span></div>';
+        }).join('');
+    } else {
+        document.getElementById('ponies-top-plays').style.display = 'none';
+    }
+
+    // Race cards
+    document.getElementById('ponies-races').innerHTML = filtered.map(function(r) {
+        var w = r.picks ? r.picks.win : null;
+        var confCls = !w ? 'conf-none' : w.confidence === '★★★' ? 'conf-high' : w.confidence === '★★' ? 'conf-medium' : 'conf-none';
+        var id = 'ponies-r' + r.track + r.race;
+        var surface = r.surface || '';
+        var surfColor = surface.toLowerCase() === 'turf' ? 'color:var(--green)' : '';
+
+        return '<div class="race-card" id="' + id + '">' +
+            '<div class="race-header" onclick="togglePoniesRace(\'' + id + '\')">' +
+                '<div class="race-meta-row">' +
+                    '<span class="race-num">R' + r.race + '</span>' +
+                    '<span class="race-info-text">' + (r.type || '') + ' · ' + (r.distance || '') + ' <span style="' + surfColor + '">' + surface + '</span>' +
+                        (r.raceRating ? ' <span style="color:var(--text-muted)">RR:' + r.raceRating + '</span>' : '') +
+                    '</span>' +
+                '</div>' +
+                '<div class="race-pick-preview">' +
+                    (w ? '<span class="race-pick-name">' + w.name + '</span><span class="race-pick-ml">(' + w.ml + ')</span><span class="' + confCls + '">' + (w.confidence || '') + '</span>' : '') +
+                    '<span class="race-chevron" id="chev-' + id + '">▼</span>' +
+                '</div>' +
+            '</div>' +
+            '<div class="race-detail" id="detail-' + id + '">' +
+                renderWPS(r.picks) +
+                (r.analysis ? '<div class="race-analysis">' + r.analysis + '</div>' : '') +
+                (r.exoticPlay ? '<div class="exotic-bar"><div class="exotic-label">Exotic Play</div><div class="exotic-play">' + r.exoticPlay + '</div></div>' : '') +
+                (r.betType ? '<div class="bet-badge">' + r.betType + '</div>' : '') +
+            '</div>' +
+        '</div>';
+    }).join('') +
+    '<div class="ponies-legend">' +
+        '<div class="legend-title">Confidence Key</div>' +
+        '<div class="legend-items">' +
+            '<span><span class="conf-high">★★★</span> Strong (4+ factors)</span>' +
+            '<span><span class="conf-medium">★★</span> Moderate (2-3)</span>' +
+            '<span><span class="conf-none">◑</span> Lean / Volatile</span>' +
+        '</div>' +
+        '<div class="legend-note">Speed Fig Gap · Surface Exp · Running Style · Post Position · Days Off · Fig Trend · Trainer/Jockey</div>' +
+    '</div>';
+}
+
+function renderWPS(picks) {
+    if (!picks) return '';
+    var html = '<div class="wps-row">';
+    ['win','place','show'].forEach(function(slot) {
+        var p = picks[slot];
+        if (!p) return;
+        var cls = slot === 'win' ? 'w' : slot === 'place' ? 'p' : 's';
+        var label = slot.toUpperCase();
+        var factors = (p.keyFactors || []).map(function(f) { return '<li>' + f + '</li>'; }).join('');
+        html += '<div class="wps-box ' + cls + '">' +
+            '<div class="wps-label">' + label + '</div>' +
+            '<div class="wps-horse">#' + p.pp + ' ' + p.name + '</div>' +
+            '<div class="wps-ml">ML: ' + p.ml + '</div>' +
+            (factors ? '<ul class="wps-factors">' + factors + '</ul>' : '') +
+        '</div>';
+    });
+    return html + '</div>';
+}
+
+function switchPoniesTrack(t) {
+    poniesTrack = t;
+    renderPonies();
+}
+
+function togglePoniesRace(id) {
+    var detail = document.getElementById('detail-' + id);
+    var chev = document.getElementById('chev-' + id);
+    var isOpen = detail.classList.contains('open');
+    document.querySelectorAll('#ponies-races .race-detail').forEach(function(d) { d.classList.remove('open'); });
+    document.querySelectorAll('#ponies-races .race-chevron').forEach(function(c) { c.classList.remove('open'); });
+    if (!isOpen) {
+        detail.classList.add('open');
+        chev.classList.add('open');
+    }
+}
 
 async function loadNCAAB() {
     try {

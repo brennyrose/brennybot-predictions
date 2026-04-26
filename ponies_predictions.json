@@ -1,0 +1,715 @@
+{
+  "date": "2026-04-26",
+  "generatedAt": "2026-04-26T10:30:00Z",
+  "model": "BrennyPonies v1.0",
+  "tracks": ["AQU", "OP"],
+  "races": [
+    {
+      "track": "AQU",
+      "race": 1,
+      "type": "Starter Alw",
+      "distance": "6f",
+      "surface": "Dirt",
+      "purse": "$60,000",
+      "raceRating": 84,
+      "fieldSize": 7,
+      "picks": {
+        "win": {
+          "pp": 3,
+          "name": "Sheer Will",
+          "ml": "9-5",
+          "confidence": "★★★",
+          "keyFactors": ["Rice/Prat 30% combo (best in field)", "improving figs 68→80→83", "post 3 inside bias in sprint", "51 days off sweet spot", "12 dirt starts (surface exp)", "6 distance starts"]
+        },
+        "place": {
+          "pp": 7,
+          "name": "Meg's Foxy Grey",
+          "ml": "7-2",
+          "keyFactors": ["best career High E (91)", "within-3pts value angle", "Nevin/Santana combo", "11 dirt starts"]
+        },
+        "show": {
+          "pp": 2,
+          "name": "Majestic Return",
+          "ml": "3-1",
+          "keyFactors": ["won last 2 starts", "Franco jockey 28%", "87 High E within-6pts", "21 distance starts"]
+        }
+      },
+      "analysis": "Sheer Will anchors with Rice (22% trainer)/Prat (50% meet) combo, steadily improving figs from maiden claim to starter level. 51 days off is the ideal layoff window. Post 3 gives inside advantage in this 6f sprint. Meg's Foxy Grey has the best career fig (91) but has been inconsistent — last two were 76 and 81. Best used underneath. Majestic Return won back-to-back at lower levels and gets Franco, but jumps in class today from Clm 17500 and SOC 12500. Princess Ny (pp6) has Rice barn but 0 starts at 6f distance and 67 days off with erratic form. Karey (pp4) is severely outclassed with 65 High E, 15+ points back — auto-toss.",
+      "exoticPlay": "EX: 3 over 7,2 | TRI: 3 with 7,2 with 7,2,1,6",
+      "betType": "WIN — straight play on #3 Sheer Will",
+      "topToss": {
+        "pp": 5,
+        "name": "Maxisure",
+        "reason": "Only 1 lifetime start (56 fig), zero distance exp at 6f, 20-1 ML, 15+ points below field leader"
+      }
+    },
+    {
+      "track": "AQU",
+      "race": 2,
+      "type": "Clm $45,000",
+      "distance": "1m",
+      "surface": "Dirt",
+      "purse": "$60,000",
+      "raceRating": 99,
+      "fieldSize": 7,
+      "picks": {
+        "win": {
+          "pp": 6,
+          "name": "Emirates Road",
+          "ml": "8-5",
+          "confidence": "★★★",
+          "keyFactors": ["High E 107 (field leader)", "Rodriguez 22% off-claim", "Santana Jr 27% with trainer", "14 distance starts", "won last at Clm 50000 easily", "36 days off sweet spot"]
+        },
+        "place": {
+          "pp": 1,
+          "name": "Unlimitedpotential",
+          "ml": "7-2",
+          "keyFactors": ["High E 102 within-5pts", "won 2 back at this level", "9 AQU starts (5 wins)", "Gonzalez 20% with trainer"]
+        },
+        "show": {
+          "pp": 4,
+          "name": "Shadow Dragon",
+          "ml": "6-1",
+          "keyFactors": ["High E 100 within-7pts", "NY-bred claiming price advantage ($55k tag)", "won 2 back at Aoc 45000 level", "consistent recent form"]
+        }
+      },
+      "analysis": "Emirates Road is the clear class of this field with a 107 High E and recent dominant win (eased up late). Drops to Clm 45000 from Aoc 75000 — significant class relief. Rodriguez/Santana combo fires at 27%. The concern is trainer Rodriguez at 0% current meet, but the horse's talent overcomes. Unlimitedpotential has 5 wins from 9 AQU starts and ran well behind CrushedIt last out. Mr. Papagiorgio (pp3) has Dutrow/Prat but form is inconsistent — 98 High E but hasn't won since July 2025. Three Technique (pp5) is 9 years old with declining form — 15+ points back on recent figs. Frizzante (pp7) gets Rice barn but hasn't run since March 15.",
+      "exoticPlay": "EX: 6 over 1,4 | TRI: 6 with 1,4,3 with 1,4,3",
+      "betType": "WIN — straight play on #6 Emirates Road",
+      "topToss": {
+        "pp": 5,
+        "name": "Three Technique",
+        "reason": "9 years old, declining fast figs (96→81→77), 15+ points below field leader on recent form"
+      }
+    },
+    {
+      "track": "AQU",
+      "race": 3,
+      "type": "Clm $30,000",
+      "distance": "6.5f",
+      "surface": "Dirt",
+      "purse": "$54,000",
+      "raceRating": 87,
+      "fieldSize": 7,
+      "picks": {
+        "win": {
+          "pp": 5,
+          "name": "Will Not Be Swayed",
+          "ml": "2-1",
+          "confidence": "★★",
+          "keyFactors": ["Rice/Prat 30% combo", "84 High E within-5pts of leader", "won at Str 50000 level Dec 31", "class drop from Alw to Clm 30000"]
+        },
+        "place": {
+          "pp": 6,
+          "name": "Always Angels",
+          "ml": "5-2",
+          "keyFactors": ["Atras/Rodriguez combo", "87 fig in Jan win", "class drop from Aoc 75000", "off-claim angle"]
+        },
+        "show": {
+          "pp": 2,
+          "name": "Geez Eloise",
+          "ml": "4-1",
+          "keyFactors": ["High E 89 (field leader)", "Rice/Lezcano combo 19%", "surface experience (13 dirt starts)"]
+        }
+      },
+      "analysis": "Will Not Be Swayed drops from Alw 83000 to Clm 30000 — huge class relief. Gets Rice/Prat, the most potent combo on the card. Concern: 0 starts at 6.5f (distance first-timer) and last two on dirt were poor (74, 81). Always Angels won going away at Clm 50000 in Jan and drops here. Geez Eloise has the best fig (89) but hasn't run since April 4 where she trailed badly at Aoc 50000. Khali Magic (pp3) has BLINKERS OFF change — Rodriguez trainer at 22% with that move, but figs have been declining. Rachel's Rock (pp4) has been off since Jan 23 with poor recent form. That's Funny (pp7) won last at Clm 17500 but jumps up and has 0 starts at 6.5f.",
+      "exoticPlay": "EX: 5,6 over 5,6,2 | TRI: 5,6 with 5,6,2 with ALL",
+      "betType": "EXOTIC — spread in exactas, volatile field",
+      "topToss": {
+        "pp": 1,
+        "name": "Ah Ca Ira",
+        "reason": "0 starts at 6.5f distance, declining figs (77→71→68), route-to-sprint negative"
+      }
+    },
+    {
+      "track": "AQU",
+      "race": 4,
+      "type": "Clm $10,000",
+      "distance": "1m",
+      "surface": "Dirt",
+      "purse": "$28,000",
+      "raceRating": 75,
+      "fieldSize": 8,
+      "picks": {
+        "win": {
+          "pp": 6,
+          "name": "Curlin's Magic",
+          "ml": "1-1",
+          "confidence": "★★",
+          "keyFactors": ["Rice/Rivera 27% combo", "High E 89 (field leader by 6pts)", "massive class drop from Aoc 50000 to Clm 10000", "sprint-to-route angle (26% Rice stat)"]
+        },
+        "place": {
+          "pp": 1,
+          "name": "Floge",
+          "ml": "7-2",
+          "keyFactors": ["won last at this level", "Lezcano 19% jockey", "14 distance starts", "82 High E within-7pts"]
+        },
+        "show": {
+          "pp": 5,
+          "name": "Whistler's Style",
+          "ml": "8-1",
+          "keyFactors": ["won 2 back at SOC 12500", "40 distance starts (massive exp)", "consistent low-level performer"]
+        }
+      },
+      "analysis": "Curlin's Magic drops from Aoc 50000 to Clm 10000 — enormous class relief. Rice trains at 28% with claimers and 26% sprint/route. The 89 High E towers over this field. However, she's been off since Oct 29 (179 days) and has two scratches for vet issues — health concern tempers confidence. Floge won last at this exact level and has Lezcano. Farm House (pp2) has talent (73 High E) but erratic — eased/walked off in two of last three starts. Brooklyn Dantz (pp8) grinder at low levels but figs too low.",
+      "exoticPlay": "EX: 6 over 1,5 | TRI: 6 with 1,5,2 with 1,5,2,3",
+      "betType": "WIN — #6 Curlin's Magic (short price but deserved)",
+      "topToss": {
+        "pp": 4,
+        "name": "Troubled Luck",
+        "reason": "Declining fast figs (67→46→63), DeLauro 0% trainer, 15+ points below leader"
+      }
+    },
+    {
+      "track": "AQU",
+      "race": 5,
+      "type": "Clm $55,000",
+      "distance": "1m 1/16",
+      "surface": "Turf (Inner)",
+      "purse": "$53,000",
+      "raceRating": 87,
+      "fieldSize": 12,
+      "picks": {
+        "win": {
+          "pp": 1,
+          "name": "Sandborn",
+          "ml": "5-2",
+          "confidence": "★★",
+          "keyFactors": ["High E 93 on turf (field leader)", "DeVaux trainer 17%", "Franco jockey 28%", "4 turf starts (surface exp)", "won last on turf by open lengths"]
+        },
+        "place": {
+          "pp": 7,
+          "name": "Kulapat",
+          "ml": "3-1",
+          "keyFactors": ["Maker 33% current meet", "95 High E on turf within-2pts", "closed from last to win at Elp on turf", "off-claim from GP"]
+        },
+        "show": {
+          "pp": 2,
+          "name": "Board of Directors",
+          "ml": "9-2",
+          "keyFactors": ["Brown/Prat 25% combo", "78 turf fig but won only start on turf", "maiden winner stretching out"]
+        }
+      },
+      "analysis": "TURF RACE — surface experience is paramount. Sandborn won his only turf start by open lengths (93 fig) and gets Franco. Layoff is 259 days but DeVaux at 15% from layoffs of 180+. Kulapat closed impressively at Elp on turf (95 fig) and gets Maker/Santana. Board of Directors has Brown/Prat but only 2 lifetime starts and stretching out to a distance he's never tried. Three Percent (pp4) won at Tampa on turf but adds BLINKERS ON today. MTO entries: Shellac (E13), Moment's Notice (E14), Calling Card (E15) would change this race completely if it comes off turf — all are dirt horses. Wind Dancer (pp3) won last on turf but at Mcl 50000 level with big class jump. McDiesel (pp9) has been poor on dirt recently. This is a spread race in exotics.",
+      "exoticPlay": "EX: 1,7 over 1,7,2,4 | TRI: 1,7 with 1,7,2,4 with ALL",
+      "betType": "EXOTIC — spread, volatile turf race with MTO entries lurking",
+      "topToss": {
+        "pp": 6,
+        "name": "You're Lookin Good",
+        "reason": "0 turf starts, 30-1 ML, won Mcl 40000 on dirt — wrong surface"
+      },
+      "mtoNote": "If race comes off turf: Shellac (E13, Rice/Prat, won last by 4+ lengths at Mcl 12500) and Calling Card (E15, Maker/Santana, NY-bred with 90 dirt High E) become serious contenders. Moment's Notice (E14) also dangerous."
+    },
+    {
+      "track": "AQU",
+      "race": 6,
+      "type": "Clm $55,000",
+      "distance": "6f",
+      "surface": "Turf (Outer)",
+      "purse": "$53,000",
+      "raceRating": 83,
+      "fieldSize": 10,
+      "picks": {
+        "win": {
+          "pp": 9,
+          "name": "Heads in Beds",
+          "ml": "4-1",
+          "confidence": "★★",
+          "keyFactors": ["Joseph Jr 33% current meet", "Franco jockey 28%", "89 turf fig (within-1pt of leader)", "won MSW on turf at Dmr", "first US turf start for NY claiming — intrigue"]
+        },
+        "place": {
+          "pp": 1,
+          "name": "Artistic Success",
+          "ml": "3-1",
+          "keyFactors": ["7 turf starts (most in field)", "89 High E on turf (tied field leader)", "Sharp trainer 19%", "won at Sar on turf last summer"]
+        },
+        "show": {
+          "pp": 7,
+          "name": "Boston's Phinest",
+          "ml": "9-2",
+          "keyFactors": ["Castellano jockey 33%", "81 career fig but 0 turf starts — risk", "Brown trainer 17% from dirt/turf move"]
+        }
+      },
+      "analysis": "TURF RACE — surface experience critical. Artistic Success has the most turf experience (7 starts) and the co-best turf fig (89). But she's been off 163 days. Heads in Beds won on turf at Del Mar and has Joseph Jr (33% current meet) — the French-bred should handle AQU turf. Boston's Phinest has 0 turf starts but has the pedigree and Brown trainer at 17% for dirt-to-turf moves. Brokealltherules (pp10) won on turf at Mcl 50000 — but that's the only start. Midnite Ginny (pp3) adds BLINKERS ON, 0 turf starts, 1st Lasix — too many unknowns. MTO entries: Big Air (E11) becomes the play if race comes off turf — Rice/Prat, 83 dirt High E.",
+      "exoticPlay": "EX: 9,1 over 9,1,7,10 | TRI: 9,1 with 9,1,7,10 with ALL",
+      "betType": "EXOTIC — volatile turf field, spread widely",
+      "topToss": {
+        "pp": 5,
+        "name": "Furry Fox",
+        "reason": "0 turf starts, 30-1 ML, declining figs, bottom-level form"
+      },
+      "mtoNote": "If off turf: Big Air (E11, Rice/Prat, 83 dirt fig, won at Cnl on dirt) becomes top pick. Circuit Court (E12) also enters."
+    },
+    {
+      "track": "AQU",
+      "race": 7,
+      "type": "Aoc $100,000",
+      "distance": "7f",
+      "surface": "Dirt",
+      "purse": "$88,000",
+      "raceRating": 108,
+      "fieldSize": 7,
+      "picks": {
+        "win": {
+          "pp": 3,
+          "name": "Raise the Bar",
+          "ml": "5-2",
+          "confidence": "★★",
+          "keyFactors": ["Brown/Prat 25% combo", "High E 106 (within-1pt of leader)", "won DE Hooper Stakes last out by open lengths", "improving trend 47→102→106"]
+        },
+        "place": {
+          "pp": 6,
+          "name": "Ignite the Light",
+          "ml": "3-1",
+          "keyFactors": ["High E 107 (field leader)", "Dutrow/Velazquez combo", "won 2 back at Aoc 75000 by 5+ lengths", "13 AQU starts"]
+        },
+        "show": {
+          "pp": 7,
+          "name": "Bourbon Day",
+          "ml": "7-2",
+          "keyFactors": ["Rice/Lezcano 19%", "High E 112 career best (best in field)", "won last at Clm 100000 under wraps"]
+        }
+      },
+      "analysis": "Best race on the card. Raise the Bar ships from Houston with a surging form cycle — won the DE Hooper Stakes by daylight with a 106 fig. Brown/Prat is lethal. The question is first start at AQU and first 7f attempt. Ignite the Light has the best recent dirt fig (107) and Dutrow angles, but was caught last out at Aoc 100000. Bourbon Day owns the highest career fig (112) and Rice/Lezcano at this track, but at 7 years old and coming off a sloppy track win over lesser. Donegal Surges (pp1) takes BLINKERS OFF — Pletcher at 25% with that move, but walked off eased in last two starts. Toxic Gray (pp2) is consistent but lacks the closing kick of the top three. Quick to Accuse (pp4) is honest but Synnefias 0% current meet and outclassed here. Bernie's Mitts (pp5) ships from Philly circuit, out of class.",
+      "exoticPlay": "EX: 3,6 over 3,6,7 | TRI: 3,6 with 3,6,7,2 with ALL",
+      "betType": "WIN — #3 Raise the Bar (value vs. #6 and #7)",
+      "topToss": {
+        "pp": 5,
+        "name": "Bernie's Mitts",
+        "reason": "Philly-circuit horse, 15-1 ML, 0 AQU starts, 0 starts at 7f, outclassed"
+      }
+    },
+    {
+      "track": "AQU",
+      "race": 8,
+      "type": "Stakes - Memories Of Silver S. (Listed)",
+      "distance": "1m",
+      "surface": "Turf (Inner)",
+      "purse": "$150,000",
+      "raceRating": 92,
+      "fieldSize": 9,
+      "picks": {
+        "win": {
+          "pp": 3,
+          "name": "Ultimate Love",
+          "ml": "2-1",
+          "confidence": "★★★",
+          "keyFactors": ["High E 102 on turf (field leader by 10+ pts)", "Trombetta/Velazquez combo", "3-for-4 lifetime with 3 turf wins", "BC Juvenile Fillies Turf experience", "class of the field"]
+        },
+        "place": {
+          "pp": 7,
+          "name": "Quiet Street",
+          "ml": "4-1",
+          "keyFactors": ["Mott/Lezcano combo", "won Untapable at KD (82 fig)", "Godolphin homebred", "4 turf starts"]
+        },
+        "show": {
+          "pp": 4,
+          "name": "Fitz Right",
+          "ml": "9-2",
+          "keyFactors": ["Brown/Prat 25% combo", "won at Tampa on turf (80 fig)", "improving pattern"]
+        }
+      },
+      "analysis": "TURF STAKES — Ultimate Love is head and shoulders the best here. 102 turf fig is 10+ points clear of the field. Three wins from four starts including the Selima at Laurel. Only loss was 5th in the BC Juvenile Fillies Turf — but she was bumped at the start and shifted. Quiet Street won the Untapable on the KD lawn and gets Mott/Lezcano. Fitz Right won at Tampa for Brown/Prat — legit contender. Smexy (pp5) is the Euro shipper — Irish form translates but no US turf race yet. Piper's Gift (pp6) dominated at Woodbine but all wins were on all-weather, not turf — first turf start is a significant negative. Imperatrice (pp8) is Pletcher/Franco but 0 turf starts — huge question. MTO entries: Hot Gossip (E10) and Point of Reference (E11) enter if off turf.",
+      "exoticPlay": "EX: 3 over 7,4,5 | TRI: 3 with 7,4,5 with 7,4,5,6",
+      "betType": "WIN — #3 Ultimate Love (deserves short price)",
+      "topToss": {
+        "pp": 1,
+        "name": "Y'allreadyforthis",
+        "reason": "30-1 ML, 0-for-5 in US, 76 High E is 15+ points below leader, outclassed"
+      },
+      "mtoNote": "If off turf: Hot Gossip (E10, Rice/Franco, 76 dirt fig, won last two on dirt) becomes dangerous. Point of Reference (E11, Brown, won MSW last out by open lengths on dirt) is the top play off turf."
+    },
+    {
+      "track": "AQU",
+      "race": 9,
+      "type": "Mcl $50,000",
+      "distance": "6f",
+      "surface": "Turf (Outer)",
+      "purse": "$49,000",
+      "raceRating": 73,
+      "fieldSize": 10,
+      "picks": {
+        "win": {
+          "pp": 10,
+          "name": "Twenty One Red",
+          "ml": "5-2",
+          "confidence": "◑",
+          "keyFactors": ["Weaver/Prat combo", "76 High E (within-7pts of leader)", "8 lifetime starts (most experience)", "2nd in last two maiden races"]
+        },
+        "place": {
+          "pp": 8,
+          "name": "Ryan's Shadow",
+          "ml": "3-1",
+          "keyFactors": ["Cox trainer 34% with Mcl", "Franco jockey 28%", "82 High E career (field leader) but on AW", "off-claim from TP"]
+        },
+        "show": {
+          "pp": 1,
+          "name": "Out of the Fog",
+          "ml": "6-1",
+          "keyFactors": ["4 turf starts (surface experience)", "68 turf High E", "Antonucci 22% current meet"]
+        }
+      },
+      "analysis": "VOLATILE MAIDEN CLAIMER ON TURF — inherently unpredictable. Twenty One Red has the most experience and Prat, but 0-for-8 lifetime. Ryan's Shadow has the best career fig (82) but it was earned on all-weather at TP — first turf start is a big negative per Tier 2. Cox at 34% with maiden claimers is elite. Out of the Fog has the most turf experience (4 starts) which matters most in turf races. Golden Joker (E13) is a first-time starter for Clement/Franco — 24% 1stTimer rate is notable but impossible to rate. Tony Hooks (pp2) is also debuting — 0% trainer and 30-1 ML. MTO entries: Richie's Love (E14) and Chris's Song (E15, Rice/Lezcano with blinkers on) are live if off turf. Spread widely in exotics.",
+      "exoticPlay": "TRI: 10,8 with 10,8,1,7 with ALL | SUPER: 10,8 with 10,8,1,7 with ALL with ALL",
+      "betType": "EXOTIC ONLY — spread in trifectas, no win bet in maiden turf claimers",
+      "topToss": {
+        "pp": 4,
+        "name": "Whiskey Runner",
+        "reason": "0 turf starts, 30-1 ML, eased/walked off in last start, 0-for-4 lifetime"
+      },
+      "mtoNote": "If off turf: Chris's Song (E15, Rice/Lezcano, blinkers on, 59 dirt fig from limited starts) and Richie's Love (E14, 56 dirt fig, 2nd last on sloppy track) enter."
+    },
+    {
+      "track": "OP",
+      "race": 1,
+      "type": "Clm $55,000-$50,000",
+      "distance": "1m 1/16",
+      "surface": "Dirt",
+      "purse": "$70,000",
+      "raceRating": 101,
+      "fieldSize": 6,
+      "picks": {
+        "win": {
+          "pp": 2,
+          "name": "Spoiler",
+          "ml": "2-1",
+          "confidence": "★★",
+          "keyFactors": ["Maker/Arrieta combo 18%", "High E 103 on turf but 98 on dirt (within-3pts)", "won last at Clm 50000 driving", "off-claim from OP"]
+        },
+        "place": {
+          "pp": 3,
+          "name": "Glen Airy",
+          "ml": "9-5",
+          "confidence": "★★",
+          "keyFactors": ["High E 101 (within-7pts)", "won last by 1+ lengths at FG", "LaRose/Bejarano 18%", "12 distance starts"]
+        },
+        "show": {
+          "pp": 1,
+          "name": "Classic Legacy",
+          "ml": "3-1",
+          "keyFactors": ["High E 108 (field leader)", "Contreras/Esquivel 18%", "off-claim from OP (20% rate)", "4 distance starts"]
+        }
+      },
+      "analysis": "Classic Legacy has the best career fig (108) but hasn't won since May 2025 at CD and fell at the start in Dec — question mark. Spoiler won last at OP driving and gets Maker off the claim. Glen Airy won last at FG and has 12 distance starts. Speed Bias (pp4) has high-level experience but declining fast figs — from 102 to 74 last out. Protonic Power (pp5) ships from Hawthorne with mostly turf form — dirt figs are modest. Midnight West (pp6) has been stopping in recent starts at OP (92→59→53→92→88, erratic).",
+      "exoticPlay": "EX: 2,3 over 2,3,1 | TRI: 2,3 with 2,3,1 with ALL",
+      "betType": "WIN — #2 Spoiler (value vs. #3 and #1)",
+      "topToss": {
+        "pp": 5,
+        "name": "Protonic Power",
+        "reason": "Mostly turf form, 12-1 ML, 0 OP starts, 83 dirt fig but declining trend"
+      }
+    },
+    {
+      "track": "OP",
+      "race": 2,
+      "type": "Clm $25,000-$20,000 (AR-Bred F&M)",
+      "distance": "6f",
+      "surface": "Dirt",
+      "purse": "$38,000",
+      "raceRating": 65,
+      "fieldSize": 10,
+      "picks": {
+        "win": {
+          "pp": 7,
+          "name": "Bossoftheblock",
+          "ml": "2-1",
+          "confidence": "◑",
+          "keyFactors": ["Morse/Bejarano 17% combo", "won Mcl 40000 in Feb", "65 High E (within-5pts of leader)", "3yo getting weight"]
+        },
+        "place": {
+          "pp": 4,
+          "name": "Texas Sequoia",
+          "ml": "3-1",
+          "keyFactors": ["High E 70 (field leader)", "17 distance starts (most experience)", "Cates/Bealmear combo", "consistent placer"]
+        },
+        "show": {
+          "pp": 1,
+          "name": "Not for Everyone",
+          "ml": "8-1",
+          "keyFactors": ["Asmussen/E.Asmussen combo 18%", "won Mcl at OP in Dec", "off-claim angle"]
+        }
+      },
+      "analysis": "VOLATILE AR-BRED MAIDEN/NW2 CLAIMER — inherently unpredictable. Texas Sequoia has the best fig (70) and most experience but is 0-for-17 at the distance — professional maiden. Bossoftheblock won the maiden race convincingly in Feb for Morse/Bejarano and steps up. Not for Everyone won a maiden claimer in Dec and gets Asmussen. Doubledaddy Issues (pp6) has a 72 High E but hasn't run since May 2025 (328+ days). Spread widely.",
+      "exoticPlay": "TRI: 7,4 with 7,4,1,6 with ALL",
+      "betType": "EXOTIC ONLY — maiden/nw2 AR-bred field too volatile for straight bets",
+      "topToss": {
+        "pp": 8,
+        "name": "Flirtin Again",
+        "reason": "20-1 ML, 44 High E, declining figs, 0-for-10 lifetime"
+      }
+    },
+    {
+      "track": "OP",
+      "race": 3,
+      "type": "Aoc $62,500",
+      "distance": "5.5f",
+      "surface": "Dirt",
+      "purse": "$126,000",
+      "raceRating": 94,
+      "fieldSize": 7,
+      "picks": {
+        "win": {
+          "pp": 2,
+          "name": "Itzel",
+          "ml": "2-1",
+          "confidence": "★★★",
+          "keyFactors": ["Miller/Vazquez 24% combo", "won last by 7+ lengths at OP", "High E 96 on dirt (within-3pts)", "4+ positive factors stacked"]
+        },
+        "place": {
+          "pp": 6,
+          "name": "Kelly's Girl",
+          "ml": "3-1",
+          "keyFactors": ["won last at OP Aoc 35000", "Robertson/Cedillo combo 66%", "88 dirt High E (field leader)", "improving pattern"]
+        },
+        "show": {
+          "pp": 7,
+          "name": "Mo for Us",
+          "ml": "7-2",
+          "keyFactors": ["Asmussen/K.Asmussen combo", "97 High E career", "won Rosewater Stakes in Dec", "0 starts at 5.5f — distance concern"]
+        }
+      },
+      "analysis": "Itzel romped last out by 7+ lengths at OP for Miller/Vazquez. Gets the rail but that's fine at 5.5f sprint. Mo for Us has the best career fig (97) but 0 starts at this short distance — all wins came at 6f or longer. Kelly's Girl won impressively last out. Kant Believe It (pp4) has been off since April 2025 (367+ days) but has a 93 career fig — layoff risk. Lady Aberdeen (pp3) is Miller's other entry with Espinoza. Blue Squall (pp5) has been inconsistent — 94 best fig but hasn't fired in recent starts. Carson Bay (pp1) is 20-1 and clearly outclassed here.",
+      "exoticPlay": "EX: 2 over 6,7 | TRI: 2 with 6,7,4 with 6,7,4,5",
+      "betType": "WIN — #2 Itzel (strong play)",
+      "topToss": {
+        "pp": 1,
+        "name": "Carson Bay",
+        "reason": "20-1 ML, 0 OP starts, 90 fig from MN tracks, outclassed in stakes-quality field"
+      }
+    },
+    {
+      "track": "OP",
+      "race": 4,
+      "type": "Clm $27,500-$22,500",
+      "distance": "1m",
+      "surface": "Dirt",
+      "purse": "$56,000",
+      "raceRating": 97,
+      "fieldSize": 8,
+      "picks": {
+        "win": {
+          "pp": 3,
+          "name": "Black Powder",
+          "ml": "2-1",
+          "confidence": "★★",
+          "keyFactors": ["High E 107 (field leader)", "won Clm 45000 last out at OP", "Santamaria/Esquivel combo", "6 distance starts (2 wins)"]
+        },
+        "place": {
+          "pp": 5,
+          "name": "Onthestage",
+          "ml": "5-2",
+          "keyFactors": ["Asmussen/E.Asmussen combo 18%", "High E 102 within-5pts", "2nd last two starts showing improvement", "off-claim angle from Santamaria"]
+        },
+        "show": {
+          "pp": 2,
+          "name": "Determinedly",
+          "ml": "9-2",
+          "keyFactors": ["Vazquez jockey 18%", "won Clm 24000 at OP 2 back", "97 High E within-10pts"]
+        }
+      },
+      "analysis": "Black Powder's 107 career fig towers over this field and he won comfortably last out. Gets Esquivel who has been improving. Onthestage has been running well at lower levels and Asmussen angles him up. Hern (pp8) has a 102 High E and won Clm 25000 at Ind, but Asmussen claimed him and he's been cold in recent OP starts. Machine Gun Man (pp1) has a 104 career fig but declining fast — last figs are 91→81→76. Woodcock Flight (pp4) ships from Ireland/Hawthorne circuit — 0 OP starts, 95 career fig on turf only.",
+      "exoticPlay": "EX: 3 over 5,2 | TRI: 3 with 5,2,8 with ALL",
+      "betType": "WIN — #3 Black Powder",
+      "topToss": {
+        "pp": 7,
+        "name": "Texas Cyclone",
+        "reason": "20-1 ML, 81 career High E but recent figs 65→70→71→67→65, outclassed"
+      }
+    },
+    {
+      "track": "OP",
+      "race": 5,
+      "type": "Mcl $12,500 (F&M)",
+      "distance": "6f",
+      "surface": "Dirt",
+      "purse": "$30,000",
+      "raceRating": 58,
+      "fieldSize": 9,
+      "picks": {
+        "win": {
+          "pp": 4,
+          "name": "Emmallene",
+          "ml": "3-1",
+          "confidence": "◑",
+          "keyFactors": ["2nd in last 3 starts (consistency)", "55 High E (within-4pts of leader)", "Milligan/Castillo combo", "8 distance starts (most exp)"]
+        },
+        "place": {
+          "pp": 5,
+          "name": "Conniption",
+          "ml": "7-2",
+          "keyFactors": ["Moquett/K.Asmussen combo", "58 High E (field leader)", "BLINKERS ON today", "first-time blinkers (Moquett 0% — caution)"]
+        },
+        "show": {
+          "pp": 2,
+          "name": "Miss Que Sera",
+          "ml": "5-1",
+          "keyFactors": ["Arrieta jockey 18%", "59 High E within-1pt of leader", "3rd in last two at this level"]
+        }
+      },
+      "analysis": "BOTTOM-LEVEL MAIDEN CLAIMER — extremely volatile. No horse in this field has shown much ability. Emmallene has been the most consistent with three consecutive 2nds but can't find the win. Conniption adds blinkers for Moquett but only 1 career start. Miss Que Sera has been close twice but faded each time. Highway Seventy (pp1) is 15-1 with declining figs. Santa Luzia (pp3) showed a late rally in debut but has been trailing since. Spread widely or skip entirely.",
+      "exoticPlay": "SUPER: 4,5 with 4,5,2,7 with ALL with ALL",
+      "betType": "PASS or small exotic spread — lowest quality race on the card",
+      "topToss": {
+        "pp": 9,
+        "name": "Cowboy Killer",
+        "reason": "0-for-7 lifetime, 51 High E, declining figs, 8-1 ML is too short for ability"
+      }
+    },
+    {
+      "track": "OP",
+      "race": 6,
+      "type": "Ratings Handicap (74-1)",
+      "distance": "6f",
+      "surface": "Dirt",
+      "purse": "$75,000",
+      "raceRating": 96,
+      "fieldSize": 9,
+      "picks": {
+        "win": {
+          "pp": 7,
+          "name": "Gloriette",
+          "ml": "7-5",
+          "confidence": "★★",
+          "keyFactors": ["High E 100 (field leader)", "Stuart/Mendoza combo", "won at OP in Dec at Aoc 62500", "28 dirt starts (experience)", "rating 62 gives weight advantage"]
+        },
+        "place": {
+          "pp": 9,
+          "name": "Misty Muppet",
+          "ml": "9-2",
+          "keyFactors": ["Pish/E.Asmussen combo", "87 High E within-13pts", "won last two starts", "off-claim from Miller"]
+        },
+        "show": {
+          "pp": 3,
+          "name": "Hallowed Hall",
+          "ml": "6-1",
+          "keyFactors": ["Bainum/Vazquez 60% combo", "won last by 2+ lengths", "3yo getting weight", "77 fig improving rapidly"]
+        }
+      },
+      "analysis": "Ratings handicap creates unusual dynamics with weight assignments. Gloriette is the class with a 100 career fig but has been short of her best recently (98→91→75→98). At 7-5 she's the rightful favorite but no value. Misty Muppet has won her last two and gets the in-form Pish/E.Asmussen combo. Hallowed Hall is rapidly improving 3yo with only 3 starts — unknown ceiling. Austrian Navy (pp1) and Tell Me When (pp6) are lower-level gallopers. Hideki (pp4) is 20-1 with mostly AW form. Popperina (pp5) has been stopping repeatedly. Wise Miss (pp8) returns from 240+ day layoff.",
+      "exoticPlay": "EX: 7 over 9,3 | TRI: 7 with 9,3,8 with 9,3,8,1",
+      "betType": "EXOTIC — use #9 Misty Muppet on top for value",
+      "topToss": {
+        "pp": 4,
+        "name": "Hideki",
+        "reason": "20-1 ML, mostly AW form, 96 career fig but recent dirt figs in 60s-80s, aging mare"
+      }
+    },
+    {
+      "track": "OP",
+      "race": 7,
+      "type": "Maiden (3yo F)",
+      "distance": "6f",
+      "surface": "Dirt",
+      "purse": "$110,000",
+      "raceRating": 85,
+      "fieldSize": 9,
+      "picks": {
+        "win": {
+          "pp": 5,
+          "name": "Splendid Song",
+          "ml": "7-2",
+          "confidence": "★★",
+          "keyFactors": ["Robertson/Bejarano 75% combo", "78 High E (within-4pts of leader)", "2nd at Kee last out (lost by neck)", "1st LASIX today (6 for 36% trainer)", "135 days off but solid works"]
+        },
+        "place": {
+          "pp": 1,
+          "name": "Bet the Gray",
+          "ml": "4-1",
+          "keyFactors": ["Williams/Arrieta combo 18%", "82 High E (field leader)", "2nd in last two starts", "improving trend"]
+        },
+        "show": {
+          "pp": 3,
+          "name": "Bodacious Bay",
+          "ml": "9-2",
+          "keyFactors": ["Brisset/Torres combo 17%", "first-time starter (Brisset 9% 1stTimer — caution)", "Not This Time filly, $350K purchase", "strong work tab"]
+        }
+      },
+      "analysis": "MAIDEN RACE with 3 first-time starters — volatile. Splendid Song was a unlucky 2nd at Keeneland (headed 1/8, held place in tight) and gets 1st Lasix today. Bet the Gray has the best fig (82) and has been 2nd twice — the classic maiden who can't close the deal. Bodacious Bay is the big-money first-timer for Brisset — works are solid but 9% debut win rate. The Long Embrace (pp2) and Paynterpretty (pp9) are also debuting — Hartman at 5% and Schultz at 19% with first-timers respectively. Mi Amiga (pp6) showed improvement last out for Asmussen. Metry Mama (pp4) closed from last in debut at FG.",
+      "exoticPlay": "EX: 5,1 over 5,1,3,9 | TRI: 5,1 with 5,1,3,9,6 with ALL",
+      "betType": "EXOTIC — maiden race, spread including a first-timer",
+      "topToss": {
+        "pp": 8,
+        "name": "Dream Eagle",
+        "reason": "15-1 ML, 68 High E, 0-for-5, shipping from FG/Haw, outmatched"
+      }
+    },
+    {
+      "track": "OP",
+      "race": 8,
+      "type": "Stakes - Majestic Overnight S.",
+      "distance": "6f",
+      "surface": "Dirt",
+      "purse": "$135,000",
+      "raceRating": 100,
+      "fieldSize": 6,
+      "picks": {
+        "win": {
+          "pp": 5,
+          "name": "Anakarina",
+          "ml": "5-2",
+          "confidence": "★★",
+          "keyFactors": ["Stewart/E.Asmussen combo", "won last at OP Rhp 80000 by 4+ lengths", "96 High E (within-4pts of leader)", "improving pattern after bad trips"]
+        },
+        "place": {
+          "pp": 6,
+          "name": "Ervadean",
+          "ml": "3-1",
+          "keyFactors": ["Stewart/Torres combo", "won last at OP Alw 125000", "92 career High E", "16 distance starts at 6f (3 wins)"]
+        },
+        "show": {
+          "pp": 4,
+          "name": "Spring Dancer",
+          "ml": "5-1",
+          "keyFactors": ["Morse/Arrieta combo", "won last two starts including Aoc 62500", "95 High E (within-5pts)", "improving 3-start pattern"]
+        }
+      },
+      "analysis": "Anakarina romped last out by 4+ lengths and Stewart is lighting it up at OP. E. Asmussen gets the call. Ervadean is the class — won last at Alw 125000 and Stewart trains both top picks. Spring Dancer won her last two for Morse including an Aoc 62500 and stretches out speed here. R Pretty Kitty (pp2) won last two at lower levels for Manley/Cedillo — big class hike. Dream Concert (pp1) has run well in ratings handicaps but is 0-for-26 lifetime — quintessential maiden. Pistol (pp3) has a 106 career fig but that was Nov 2025 and she's been cold since.",
+      "exoticPlay": "EX: 5 over 6,4 | TRI: 5,6 with 5,6,4,2 with ALL",
+      "betType": "WIN — #5 Anakarina",
+      "topToss": {
+        "pp": 3,
+        "name": "Pistol",
+        "reason": "6-1 ML, 0-for-last-4, declining from 106 to 77 recent figs, aging mare"
+      }
+    },
+    {
+      "track": "OP",
+      "race": 9,
+      "type": "Clm $25,000-$20,000 (AR-Bred)",
+      "distance": "6f",
+      "surface": "Dirt",
+      "purse": "$38,000",
+      "raceRating": 76,
+      "fieldSize": 10,
+      "picks": {
+        "win": {
+          "pp": 10,
+          "name": "Extract's Arrow",
+          "ml": "3-1",
+          "confidence": "◑",
+          "keyFactors": ["won Mcl 50000 at OP in Jan", "74 High E (within-8pts of leader)", "Johnston/Cabrera combo", "cut back from route to sprint"]
+        },
+        "place": {
+          "pp": 4,
+          "name": "Time Andbeyond",
+          "ml": "7-2",
+          "keyFactors": ["Moquett/K.Asmussen combo 16%", "81 High E (within-1pt of leader)", "2nd in last two starts at this level", "15 distance starts"]
+        },
+        "show": {
+          "pp": 3,
+          "name": "Task",
+          "ml": "4-1",
+          "keyFactors": ["Witt/Torres combo", "82 High E (field leader)", "9 distance starts with 5 2nds", "consistent placer but 1 win from 11 starts"]
+        }
+      },
+      "analysis": "VOLATILE AR-BRED CLAIMER. Task has the best fig (82) but is 1-for-11 — classic never-winner. Time Andbeyond has been 2nd in his last two and is honest. Extract's Arrow won a maiden at OP but that was a 74 fig and the class jump is significant (Aoc 125000 last out where he was 6th beaten 9+). Gray Taps (pp1) won his maiden nicely last out at 76 fig — live at 5-1. Cool Under Fire (pp6) won Mcl 20000 last out but adds BLINKERS ON and steps way up. Midnight Whirl (pp8) adds 1st LASIX and won his maiden — Morse/Bejarano at 17% is notable but 119 days off. Spread widely in this volatile AR-bred field.",
+      "exoticPlay": "TRI: 4,3 with 4,3,10,1 with ALL | SUPER: 4,3 with 4,3,10,1 with ALL with ALL",
+      "betType": "EXOTIC ONLY — volatile AR-bred restricted field",
+      "topToss": {
+        "pp": 5,
+        "name": "Saved",
+        "reason": "20-1 ML, 67 High E, 1-for-6, last two starts were 33 and 48 figs — declining fast"
+      }
+    }
+  ]
+}

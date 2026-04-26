@@ -1,6 +1,6 @@
 {
   "date": "2026-04-26",
-  "generatedAt": "2026-04-26T20:51:19.540Z",
+  "generatedAt": "2026-04-26T21:02:45.367Z",
   "model": "BrennyPonies v2.0",
   "tracks": [
     "AQU",
@@ -10,142 +10,135 @@
     {
       "track": "AQU",
       "race": 1,
-      "type": "Starter Allowance",
-      "distance": "6f",
-      "surface": "Dirt",
+      "type": "STARTER ALLOWANCE",
+      "distance": "6F",
+      "surface": "DIRT",
       "purse": 60000,
       "raceRating": 84,
       "fieldSize": 7,
       "postTime": "1:10PM",
-      "fieldLeaderFig": 95,
+      "fieldLeaderFig": 91,
       "picks": {
         "win": {
           "pp": 3,
           "name": "Sheer Will",
           "ml": "9-5",
-          "brennyScore": 35,
-          "impliedWinPct": 28.7,
-          "fairOdds": 2.48,
+          "brennyScore": 36,
+          "impliedWinPct": 32.7,
+          "fairOdds": 2.06,
           "valueRating": "⛔ UNDERLAID",
-          "valueCeiling": 2.48,
+          "valueCeiling": 1.95,
           "confidence": "★★★",
           "keyFactors": [
-            "Fig leader 83 speed (+10pts)",
-            "Linda Rice 22% trainer / Prat 50% T-J combo (+3pts)",
+            "Fig leader 83 (+10pts)",
+            "Rice/Prat combo both 20%+ (+3pts)",
             "E/P style post 3 (+8pts combined)"
           ],
           "negatives": [
-            "Dec-mild trend last 2 starts (-1pt)",
-            "Post 3 acceptable but field has speed"
-          ],
-          "boosters": [
-            "Within-3+consistent+dist +2",
-            "Best fig+dist +2"
+            "9-5 ML well below fair value",
+            "Hasn't won in 3 tries this condition"
           ]
         },
         "place": {
-          "pp": 2,
-          "name": "Majestic Return",
-          "ml": "3-1",
-          "brennyScore": 31,
-          "impliedWinPct": 22.4,
-          "fairOdds": 3.46,
-          "valueRating": "➡️ FAIR",
-          "valueCeiling": 3.46,
-          "confidence": "★★★",
-          "keyFactors": [
-            "Won last start wire-to-wire (+2 won last at class)",
-            "E/P style post 1 (+9pts fig gap)",
-            "Franco 28% jockey (+2pts T-J)"
-          ],
-          "negatives": [
-            "New trainer after claim 0% with Franco",
-            "15+ days back off claim fitness question"
-          ],
-          "boosters": [
-            "Won last at class +2"
-          ]
-        },
-        "show": {
           "pp": 7,
           "name": "Meg's Foxy Grey",
           "ml": "7-2",
           "brennyScore": 28,
-          "impliedWinPct": 22,
-          "fairOdds": 3.55,
+          "impliedWinPct": 20,
+          "fairOdds": 4,
           "valueRating": "➡️ FAIR",
-          "valueCeiling": 3.55,
+          "valueCeiling": 3.8,
           "confidence": "★★",
           "keyFactors": [
-            "Best career fig 91 in field (+6 within-3pts)",
-            "E/P style post 7 sprint (-3 post 9+ penalty waived)",
-            "91 fig highest lifetime in field"
+            "Best dirt fig 91 (+10pts)",
+            "E/P style post 5 (+8pts)",
+            "Won last at class level (+2pts)"
           ],
           "negatives": [
-            "Post 7 in sprint -3",
-            "Trainer Nevin 0% recent starts"
+            "Dec-mild trend last 2 starts (-1pt)",
+            "Trainer Nevin 0% last 8 starts"
+          ]
+        },
+        "show": {
+          "pp": 1,
+          "name": "Hey Cookie",
+          "ml": "9-2",
+          "brennyScore": 25,
+          "impliedWinPct": 16.7,
+          "fairOdds": 5,
+          "valueRating": "➡️ FAIR",
+          "valueCeiling": 4.8,
+          "confidence": "★★",
+          "keyFactors": [
+            "Within-3 of leader fig (+9pts)",
+            "Won at this class level Aug 2025",
+            "30-60 day layoff ideal (+4pts)"
+          ],
+          "negatives": [
+            "Trainer Rodriguez 0% current meet",
+            "Cancel 0% with this trainer"
           ]
         }
       },
       "otherContenders": [
         {
-          "pp": 1,
-          "name": "Hey Cookie",
-          "ml": "9-2",
-          "brennyScore": 22,
-          "impliedWinPct": 10.8,
-          "fairOdds": 8.26,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 8.26,
-          "confidence": "◑",
+          "pp": 2,
+          "name": "Majestic Return",
+          "ml": "3-1",
+          "brennyScore": 30,
+          "impliedWinPct": 22.2,
+          "fairOdds": 3.5,
+          "valueRating": "➡️ FAIR",
+          "valueCeiling": 3.4,
+          "confidence": "★★★",
           "keyFactors": [
-            "30-60 day rest +4",
-            "Won at distance 2x +3",
-            "83 fig competitive"
+            "Won last two starts including gate score",
+            "Post 4 mid-field (+3pts)",
+            "Franco 28% jockey (+3pts)"
           ],
           "negatives": [
-            "Dec-fast last start -3",
-            "Post 1 can trap"
+            "Class jump from Clm 12500 to Str 50000nw1/x significant",
+            "Trainer Charlerie 0% allowance"
           ]
         },
         {
           "pp": 6,
           "name": "Princess Ny",
           "ml": "6-1",
-          "brennyScore": 20,
-          "impliedWinPct": 9.7,
-          "fairOdds": 9.31,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 9.31,
+          "brennyScore": 22,
+          "impliedWinPct": 14.3,
+          "fairOdds": 6,
+          "valueRating": "➡️ FAIR",
+          "valueCeiling": 5.8,
           "confidence": "◑",
           "keyFactors": [
-            "Rice 22% trainer +2",
-            "86 career high fig",
-            "Won last start 2 back at class"
+            "Fig 87 competitive (+9pts)",
+            "Rice barn 22% trainer (+3pts)",
+            "0 distance experience (-1pt)"
           ],
           "negatives": [
-            "0 distance experience -1",
-            "Tired last two starts"
+            "0 turf starts at 6F dirt route experience limited",
+            "Tired badly last start at 7F"
           ]
         }
       ],
-      "analysis": "Sheer Will leads on figures and has ideal E/P style with elite connections but is underlaid at 9-5; Majestic Return's wire-to-wire win at lower class and Franco-Rice combo makes her dangerous.",
-      "exoticPlay": "Exacta: 3 over 2,7 / Trifecta: 3-2-7",
-      "betType": "Win #2 Majestic Return if 3-1 or better, place #3 Sheer Will",
-      "valueSummary": "Majestic Return at 3-1 is near fair value and showed dominant gate-to-wire ability; Sheer Will is underlaid favorite.",
+      "analysis": "Sheer Will is the class of the field with the top fig and ideal connections but is deservedly underlaid at 9-5; Majestic Return's back-to-back wins are compelling but the class jump is steep.",
+      "exoticPlay": "Exacta 3-7, Trifecta 3/2,7/1,2,7",
+      "betType": "PLACE",
+      "valueSummary": "No standout value on top; best approach is Majestic Return win at 3-1 if price holds as fair value play.",
       "topToss": {
         "pp": 5,
         "name": "Maxisure",
-        "brennyScore": 8,
-        "reason": "0 distance experience -1, 0 surface starts as first-time claimer, trainer WonLastStart 0%"
+        "brennyScore": 14,
+        "reason": "1-start career, 0 distance exp (-1pt), weak trainer stats WonLastStart 0%"
       }
     },
     {
       "track": "AQU",
       "race": 2,
-      "type": "Claiming $45,000",
+      "type": "CLAIMING $45,000",
       "distance": "1M",
-      "surface": "Dirt",
+      "surface": "DIRT",
       "purse": 60000,
       "raceRating": 99,
       "fieldSize": 7,
@@ -164,16 +157,12 @@
           "confidence": "★★★",
           "keyFactors": [
             "Fig leader 107 (+10pts)",
-            "Won last start at class +2",
-            "Best fig+dist+surf booster +2"
+            "Won last start impressively (+2pts)",
+            "Rice/Santana both 20%+ (+3pts)"
           ],
           "negatives": [
-            "Trainer Rodriguez 0% all starts recent",
-            "Short price 8-5 underlaid"
-          ],
-          "boosters": [
-            "Best fig+improving +3",
-            "Won last at class +2"
+            "8-5 ML significantly underlaid",
+            "15+ pts back horses in field at full price"
           ]
         },
         "place": {
@@ -181,61 +170,61 @@
           "name": "Unlimitedpotential",
           "ml": "7-2",
           "brennyScore": 34,
-          "impliedWinPct": 22.4,
-          "fairOdds": 3.46,
+          "impliedWinPct": 22.2,
+          "fairOdds": 3.5,
           "valueRating": "➡️ FAIR",
-          "valueCeiling": 3.46,
+          "valueCeiling": 3.4,
           "confidence": "★★★",
           "keyFactors": [
-            "Fig gap within-3 of leader (+9pts)",
-            "E/P style post 1 (+4pts)",
-            "Won Feb at this class level"
+            "Within-3 of leader fig 102 (+9pts)",
+            "Won Feb 15 at exactly this class (+2pts)",
+            "Gonzalez 67% with trainer (+3pts)"
           ],
           "negatives": [
-            "Tired late last out at $75K class",
-            "Trainer 10% overall"
+            "Tired at 75K last out after mid-race move",
+            "Drops from 75K to 45K suggests connections concerned"
           ]
         },
         "show": {
-          "pp": 3,
-          "name": "Mr. Papagiorgio",
-          "ml": "4-1",
-          "brennyScore": 29,
-          "impliedWinPct": 16.3,
-          "fairOdds": 5.14,
+          "pp": 4,
+          "name": "Shadow Dragon",
+          "ml": "6-1",
+          "brennyScore": 28,
+          "impliedWinPct": 14.3,
+          "fairOdds": 6,
           "valueRating": "✅ VALUE",
-          "valueCeiling": 5.14,
+          "valueCeiling": 6.2,
           "confidence": "★★",
           "keyFactors": [
-            "4-7 fig gap competitive (+6pts)",
-            "Dutrow 25% trainer +3",
-            "Prat 50% jockey +3"
+            "Fig 100 competitive (+6pts)",
+            "Won last at 45K class (+2pts)",
+            "E/P style post 4 (+8pts combined)"
           ],
           "negatives": [
-            "Closer style -3 below 7 field",
-            "Dec-mild trend recent"
+            "Three different trainers/owners last 3 starts",
+            "Zayas jockey 7% strike rate"
           ]
         }
       },
       "otherContenders": [
         {
-          "pp": 4,
-          "name": "Shadow Dragon",
-          "ml": "6-1",
-          "brennyScore": 27,
-          "impliedWinPct": 11.3,
-          "fairOdds": 7.85,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 7.85,
-          "confidence": "◑",
+          "pp": 3,
+          "name": "Mr. Papagiorgio",
+          "ml": "4-1",
+          "brennyScore": 30,
+          "impliedWinPct": 20,
+          "fairOdds": 4,
+          "valueRating": "➡️ FAIR",
+          "valueCeiling": 3.9,
+          "confidence": "★★★",
           "keyFactors": [
-            "100 career high fig",
-            "Won at 1.5M claiming March 6",
-            "New claim connections"
+            "Fig 98 within range (+6pts)",
+            "Dutrow 25% trainer (+3pts)",
+            "Prat 50% AQU meet (+3pts)"
           ],
           "negatives": [
-            "0% trainer Saul all starts",
-            "New barn adjustment period"
+            "Wknd late last 3 starts at this distance",
+            "Lost when favorite Feb 15"
           ]
         },
         {
@@ -243,39 +232,39 @@
           "name": "Frizzante",
           "ml": "6-1",
           "brennyScore": 26,
-          "impliedWinPct": 10.8,
-          "fairOdds": 8.26,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 8.26,
-          "confidence": "◑",
+          "impliedWinPct": 14.3,
+          "fairOdds": 6,
+          "valueRating": "➡️ FAIR",
+          "valueCeiling": 5.9,
+          "confidence": "★★",
           "keyFactors": [
-            "Rice 22% / Rodriguez 50% T-J +3",
-            "99 career high fig",
-            "Close-up stalker style"
+            "Consistent place horse 13 seconds lifetime",
+            "Rice barn 28% claiming trainer",
+            "Near miss Feb and March"
           ],
           "negatives": [
-            "Closer style field <7 -3",
-            "0 wins since claimed to Rice"
+            "Has not won since Dec 2025",
+            "0 wins at the mile distance"
           ]
         }
       ],
-      "analysis": "Emirates Road's 107 figure dominates but 8-5 price is unplayable; Unlimitedpotential offers fair value with strong early pace and distance experience.",
-      "exoticPlay": "Exacta: 6 over 1,3 / Quinella 1-6",
-      "betType": "Place #1 Unlimitedpotential at 7-2, show #3 Mr. Papagiorgio",
-      "valueSummary": "Mr. Papagiorgio at 4-1 offers best value with elite connections; Emirates Road underlaid at 8-5.",
+      "analysis": "Emirates Road is the most logical winner but the 8-5 ML offers no value; the best betting angle is Shadow Dragon at 6-1 who won at this exact class and has improving form.",
+      "exoticPlay": "Exacta 6/1,3, Trifecta 6/1,3/1,3,4",
+      "betType": "WIN",
+      "valueSummary": "Shadow Dragon at 6-1 represents the best value in the race at fair odds with a recent win at identical class.",
       "topToss": {
         "pp": 5,
         "name": "Three Technique",
-        "brennyScore": 14,
-        "reason": "Figure 8-15 behind leader -2, 9yo declining form, 0% trainer recent allowance stats"
+        "brennyScore": 12,
+        "reason": "9-yr-old, 0-for-3 in 2026, declining fast trend, 15+ pts off leader (-2pts)"
       }
     },
     {
       "track": "AQU",
       "race": 3,
-      "type": "Claiming $30,000",
-      "distance": "6.5f",
-      "surface": "Dirt",
+      "type": "CLAIMING $30,000",
+      "distance": "6.5F",
+      "surface": "DIRT",
       "purse": 54000,
       "raceRating": 87,
       "fieldSize": 7,
@@ -286,24 +275,20 @@
           "pp": 5,
           "name": "Will Not Be Swayed",
           "ml": "2-1",
-          "brennyScore": 32,
+          "brennyScore": 33,
           "impliedWinPct": 33.3,
           "fairOdds": 2,
           "valueRating": "➡️ FAIR",
-          "valueCeiling": 2,
+          "valueCeiling": 2.1,
           "confidence": "★★★",
           "keyFactors": [
-            "Won last at class Dec 31 +2",
-            "Rice 22% trainer / Prat 50% T-J +3",
-            "E/P style post 5 +3"
+            "Won Dec 31 at this level at 6.5F (+2pts)",
+            "Rice/Prat both 20%+ (+3pts)",
+            "Best fig at distance 84 within field (+9pts)"
           ],
           "negatives": [
-            "Dropped in class significantly",
-            "Last two starts on turf poor form"
-          ],
-          "boosters": [
-            "Won last at class +2",
-            "Within-3+consistent +2"
+            "2-1 ML at fair value only, no overlay",
+            "Broke through gate Mar 13 start (-concern)"
           ]
         },
         "place": {
@@ -311,22 +296,19 @@
           "name": "Always Angels",
           "ml": "5-2",
           "brennyScore": 31,
-          "impliedWinPct": 25,
-          "fairOdds": 3,
+          "impliedWinPct": 28.6,
+          "fairOdds": 2.5,
           "valueRating": "➡️ FAIR",
-          "valueCeiling": 3,
+          "valueCeiling": 2.6,
           "confidence": "★★★",
           "keyFactors": [
-            "87 career fig competitive (+9pts within-3)",
-            "Won Jan at $50K class",
-            "Atras 25% trainer +2"
+            "Won Jan 9 at similar class level (+2pts)",
+            "Atras 25% trainer (+3pts)",
+            "E/P style in sprint (+5pts)"
           ],
           "negatives": [
-            "Post 6 sprint +3 acceptable",
-            "Won at route not sprint distance"
-          ],
-          "boosters": [
-            "Won last at class +2"
+            "Dropped class from 50K claim to 30K suggests issues",
+            "Last 2 starts show mild decline"
           ]
         },
         "show": {
@@ -334,79 +316,79 @@
           "name": "Geez Eloise",
           "ml": "4-1",
           "brennyScore": 27,
-          "impliedWinPct": 16.3,
-          "fairOdds": 5.14,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 5.14,
+          "impliedWinPct": 20,
+          "fairOdds": 4,
+          "valueRating": "➡️ FAIR",
+          "valueCeiling": 4.1,
           "confidence": "★★",
           "keyFactors": [
-            "Rice 22% / Lezcano 19% +2",
-            "89 career high fig",
-            "30-60 day freshened +4"
+            "Rice/Lezcano both 20%+ (+3pts)",
+            "148-day layoff fresh (60-90 days +2pts)",
+            "Fig 89 career best competitive"
           ],
           "negatives": [
-            "2off61-180 Rice only 15% -1",
-            "Last sprint start poor at AQU"
+            "0 distance experience at 6.5F (-1pt)",
+            "Last start Apr 4 was poor effort at AQU"
           ]
         }
       },
       "otherContenders": [
         {
-          "pp": 3,
-          "name": "Khali Magic",
-          "ml": "6-1",
-          "brennyScore": 23,
-          "impliedWinPct": 9.6,
-          "fairOdds": 9.42,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 9.42,
-          "confidence": "◑",
-          "keyFactors": [
-            "Won NY Stakes race Nov 22",
-            "92 career fig",
-            "Blinkers off equipment change +1"
-          ],
-          "negatives": [
-            "Class drop from stakes to $30K claiming",
-            "Dec-fast recent -3"
-          ]
-        },
-        {
           "pp": 7,
           "name": "That's Funny",
           "ml": "10-1",
-          "brennyScore": 21,
-          "impliedWinPct": 8.5,
-          "fairOdds": 10.76,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 10.76,
+          "brennyScore": 22,
+          "impliedWinPct": 9.1,
+          "fairOdds": 10,
+          "valueRating": "➡️ FAIR",
+          "valueCeiling": 10.5,
           "confidence": "◑",
           "keyFactors": [
-            "Won last start Apr 4 at lower class",
-            "Franco 28% jockey",
-            "Claimed to Kantarmaci fresh"
+            "Won last start Apr 4 at 17.5K (+2pts)",
+            "Franco 28% jockey (+3pts)",
+            "Class rise manageable"
           ],
           "negatives": [
-            "Won at 1M route not sprint",
-            "Trainer 0% with Franco recent"
+            "Huge class jump from 17.5K claiming to 30K",
+            "0 career wins above 17.5K level"
+          ]
+        },
+        {
+          "pp": 3,
+          "name": "Khali Magic",
+          "ml": "6-1",
+          "brennyScore": 24,
+          "impliedWinPct": 14.3,
+          "fairOdds": 6,
+          "valueRating": "➡️ FAIR",
+          "valueCeiling": 5.8,
+          "confidence": "◑",
+          "keyFactors": [
+            "Fig 92 field leader dirt career (+10pts)",
+            "NY-bred distance specialist 9-3-2-0",
+            "Blinkers off equipment change (+1pt)"
+          ],
+          "negatives": [
+            "0 for 3 in 2026 with declining trend",
+            "Last 3 starts all off the board"
           ]
         }
       ],
-      "analysis": "Will Not Be Swayed fits best on class and connections but fair-priced; Always Angels second choice adds value with Atras win streak; Geez Eloise offers best price value at 4-1.",
-      "exoticPlay": "Exacta: 5 over 6,2 / Trifecta: 5-6-2",
-      "betType": "Win #5 Will Not Be Swayed if 5-2 or better; Win #2 Geez Eloise at 4-1 as value play",
-      "valueSummary": "Geez Eloise at 4-1 is the best value play with Rice-Lezcano combo and 89 career fig; Will Not Be Swayed is fairly priced at 2-1.",
+      "analysis": "Will Not Be Swayed is the logical choice having won at exactly this distance and class but the 2-1 ML offers no overlay; Always Angels is a solid alternative who also brings a recent win.",
+      "exoticPlay": "Exacta 5-6, Trifecta 5/6/2,7",
+      "betType": "EXACTA",
+      "valueSummary": "No significant value exists at the top; the 5-6 exacta at estimated 8-1 represents the best return on a race where top two are fairly priced.",
       "topToss": {
         "pp": 1,
         "name": "Ah Ca Ira",
-        "brennyScore": 10,
-        "reason": "0 distance experience -1, trainer Route/Sprint 0%, last two starts off-the-board at routes"
+        "brennyScore": 14,
+        "reason": "0 distance experience at 6.5F (-1pt), trainer Dixon 0% route-to-sprint, Elliott 7% strike rate"
       }
     },
     {
       "track": "AQU",
       "race": 4,
-      "type": "CLM $10,000",
+      "type": "Claiming $10,000",
       "distance": "1 Mile",
       "surface": "Dirt",
       "purse": 28000,
@@ -419,82 +401,82 @@
           "pp": 6,
           "name": "Curlin's Magic",
           "ml": "1-1",
-          "brennyScore": 30,
-          "impliedWinPct": 28.4,
-          "fairOdds": 2.52,
+          "brennyScore": 31,
+          "impliedWinPct": 36.5,
+          "fairOdds": 1.74,
           "valueRating": "⛔ UNDERLAID",
-          "valueCeiling": 2.52,
+          "valueCeiling": 1.74,
           "confidence": "★★",
           "keyFactors": [
-            "Fig leader 89 (+10)",
-            "Rice trainer 22% dist/surf (+3)",
+            "Best fig 89 in field (+10)",
+            "Rice/Rivera combo both 20%+ (+3)",
             "Won last at class level (+2)"
           ],
           "negatives": [
-            "1-1 ML severely underlaid",
-            "Trainer 0% WonLastStart recently"
+            "1-1 ML vs 1.74 fair odds heavily underlaid",
+            "0 distance experience this cycle (-1)"
           ]
         },
         "place": {
           "pp": 1,
           "name": "Floge",
           "ml": "7-2",
-          "brennyScore": 29,
-          "impliedWinPct": 22.2,
-          "fairOdds": 3.5,
+          "brennyScore": 28,
+          "impliedWinPct": 22.1,
+          "fairOdds": 3.52,
           "valueRating": "➡️ FAIR",
-          "valueCeiling": 3.5,
+          "valueCeiling": 3.52,
           "confidence": "★★",
           "keyFactors": [
-            "Best recent figs at this level (+9 within-3)",
-            "2 wins in last 4 starts (+3)",
-            "Lezcano 19% jockey (+2)"
+            "2 wins in last 4 starts, within-3 figs (+9)",
+            "Lezcano 19% jockey (+2)",
+            "30-60 day layoff ideal (+4)"
           ],
           "negatives": [
-            "Days off pattern irregular",
-            "Fig gap to leader 6pts"
+            "0 wins last start at this level",
+            "Trainer 14% overall"
           ]
         },
         "show": {
-          "pp": 3,
-          "name": "Foxy Cara",
-          "ml": "6-1",
+          "pp": 5,
+          "name": "Whistler's Style",
+          "ml": "8-1",
           "brennyScore": 22,
-          "impliedWinPct": 14.1,
-          "fairOdds": 6.1,
-          "valueRating": "➡️ FAIR",
-          "valueCeiling": 6.1,
+          "impliedWinPct": 13.9,
+          "fairOdds": 6.2,
+          "valueRating": "✅ VALUE",
+          "valueCeiling": 6.2,
           "confidence": "◑",
           "keyFactors": [
-            "Consistent placings at level (+2)",
-            "Distance experience 11 starts (+3)",
-            "Post 3 favorable (+4)"
+            "High fig 91 in field (+10 tie)",
+            "8 starts at distance (+3)",
+            "Recent sharp workout Apr 17 :49 Breezing"
           ],
           "negatives": [
-            "Fig 79 trails leader by 10pts (-2)",
-            "Trainer 8% win rate"
+            "0 wins in 2026 from 6 starts",
+            "Trainer Ibrahim 0% claiming"
           ]
         }
       },
       "otherContenders": [
         {
-          "pp": 5,
-          "name": "Whistler's Style",
-          "ml": "8-1",
-          "brennyScore": 20,
-          "impliedWinPct": 10.3,
-          "fairOdds": 8.7,
-          "valueRating": "➡️ FAIR",
-          "valueCeiling": 8.7,
+          "pp": 3,
+          "name": "Foxy Cara",
+          "ml": "6-1",
+          "brennyScore": 19,
+          "impliedWinPct": 12,
+          "fairOdds": 7.3,
+          "valueRating": "✅ VALUE",
+          "valueCeiling": 7.3,
           "confidence": "◑",
           "keyFactors": [
-            "Distance specialist 40 starts (+3)",
-            "Recent second 4/17 (+3)",
-            "Post 5 neutral (+3)"
+            "Second at this level last out (+1)",
+            "Post 3 favorable (+4)",
+            "6 distance starts"
           ],
           "negatives": [
-            "Fig 76 lags field",
-            "Trainer 11% recent"
+            "0 wins in 2026",
+            "Trainer 8% last 365"
           ]
         },
         {
@@ -502,38 +484,38 @@
           "name": "Farm House",
           "ml": "8-1",
           "brennyScore": 18,
-          "impliedWinPct": 9.1,
-          "fairOdds": 10,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 10,
+          "impliedWinPct": 11.4,
+          "fairOdds": 7.8,
+          "valueRating": "➡️ FAIR",
+          "valueCeiling": 7.8,
           "confidence": "◑",
           "keyFactors": [
-            "Won last start at distance (+2)",
-            "NY-bred eligible (+1)",
-            "Improving trend (+3)"
+            "Won at this class level Dec 2025",
+            "Best fig 73 competitive",
+            "Trainer 22% small sample"
           ],
           "negatives": [
-            "Trainer 0-0 this season",
-            "Long layoff concerns"
+            "3 poor recent efforts",
+            "Trainer 0% last 365 with jockey"
           ]
         }
       ],
-      "analysis": "Curlin's Magic is the class of the field but is severely underlaid at 1-1; Floge offers comparable form at better value.",
-      "exoticPlay": "Exacta 1,6 / 1,6,3",
-      "betType": "Place",
-      "valueSummary": "Curlin's Magic is too short; Floge at 7-2 represents fair value for the place.",
+      "analysis": "Curlin's Magic is the class horse but is a terrible overlay at 1-1; Floge has proven ability at this level and Whistler's Style offers value at 8-1 with best career fig.",
+      "exoticPlay": "Exacta 1,6 / 1,6,5 trifecta key",
+      "betType": "VALUE PLAY: Whistler's Style Win + Exacta box 1/6",
+      "valueSummary": "Avoid Curlin's Magic at 1-1; Whistler's Style at 8-1 offers the best value with competitive figures.",
       "topToss": {
         "pp": 8,
         "name": "Brooklyn Dantz",
-        "brennyScore": 16,
-        "reason": "Post 8 sprint penalty and declining figures make her a toss despite prior wins at level"
+        "brennyScore": 14,
+        "reason": "Declining form trend, post 8 sprint penalty (-3), trainer 4% win rate"
       }
     },
     {
       "track": "AQU",
       "race": 5,
-      "type": "CLM $55,000 Inner Turf",
-      "distance": "1-1/16 Miles",
+      "type": "Claiming $55,000",
+      "distance": "1 Mile 1/16 Inner Turf",
       "surface": "Turf",
       "purse": 53000,
       "raceRating": 87,
@@ -542,243 +524,117 @@
       "fieldLeaderFig": 95,
       "picks": {
         "win": {
-          "pp": 7,
-          "name": "Kulapat",
-          "ml": "3-1",
-          "brennyScore": 31,
-          "impliedWinPct": 25,
-          "fairOdds": 3,
-          "valueRating": "➡️ FAIR",
-          "valueCeiling": 3,
-          "confidence": "★★",
-          "keyFactors": [
-            "Best turf fig 95 (+9 within-3 of leader)",
-            "Maker trainer 33% recent (+3)",
-            "Improving trend with Santana Jr (+2)"
-          ],
-          "negatives": [
-            "0 distance experience at 1-1/16 on turf (-1)",
-            "Last start poor at Keene"
-          ]
-        },
-        "place": {
           "pp": 1,
           "name": "Sandborn",
           "ml": "5-2",
-          "brennyScore": 33,
+          "brennyScore": 30,
           "impliedWinPct": 28.6,
           "fairOdds": 2.5,
           "valueRating": "➡️ FAIR",
           "valueCeiling": 2.5,
           "confidence": "★★",
           "keyFactors": [
-            "Figure leader at 93 (+10)",
-            "Won last start at distance/surface (+2)",
-            "Claiming waived signals confidence (+2)"
+            "Best turf fig 93 (+10 as leader)",
+            "Won last start impressively (+3)",
+            "Franco 28% jockey (+2)"
           ],
           "negatives": [
-            "Long layoff 347 days (-2 concern)",
-            "Trainer 0% with jockey Franco"
+            "180+ days off layoff concern",
+            "0 AQU starts, 0 distance experience (-1)"
+          ]
+        },
+        "place": {
+          "pp": 7,
+          "name": "Kulapat",
+          "ml": "3-1",
+          "brennyScore": 27,
+          "impliedWinPct": 25,
+          "fairOdds": 3,
+          "valueRating": "➡️ FAIR",
+          "valueCeiling": 3,
+          "confidence": "★★",
+          "keyFactors": [
+            "7 turf starts, 3+ surface experience (+6)",
+            "Maker 33% trainer last 365 (+3)",
+            "Santana 14% jockey, claimed into better care"
+          ],
+          "negatives": [
+            "0 wins in 2026",
+            "Claimed off poor Dec effort, rebuilding"
           ]
         },
         "show": {
           "pp": 4,
-          "name": "Fitz Right",
-          "ml": "9-2",
-          "brennyScore": 27,
-          "impliedWinPct": 18.2,
-          "fairOdds": 4.5,
+          "name": "Three Percent",
+          "ml": "8-1",
+          "brennyScore": 24,
+          "impliedWinPct": 11.1,
+          "fairOdds": 8,
           "valueRating": "➡️ FAIR",
-          "valueCeiling": 4.5,
-          "confidence": "★★",
+          "valueCeiling": 8,
+          "confidence": "◑",
           "keyFactors": [
-            "Brown trainer 24% allowance (+3)",
-            "Won last start (+2)",
-            "Prat 50% this meet (+2)"
+            "Won last turf start Jan 2026 (+3)",
+            "Blinkers on change with trainer stats (+1)",
+            "3 turf starts, improving trend (+3)"
           ],
           "negatives": [
-            "0 turf starts previously (-4 surface+debut penalty)",
-            "Distance question at 1-1/16"
+            "Blinkers on first time adds risk",
+            "Trainer 12% overall"
           ]
         }
       },
       "otherContenders": [
         {
           "pp": 11,
-          "name": "Point of Reference",
+          "name": "Point of Reference (MTO)",
           "ml": "3-1",
-          "brennyScore": 26,
-          "impliedWinPct": 25,
-          "fairOdds": 3,
+          "brennyScore": 25,
+          "impliedWinPct": 23.1,
+          "fairOdds": 3.33,
           "valueRating": "➡️ FAIR",
-          "valueCeiling": 3,
+          "valueCeiling": 3.33,
           "confidence": "★★",
           "keyFactors": [
-            "Brown trainer 24% (+3)",
-            "Won maiden impressively (+2)",
-            "First turf with good dirt form (+2)"
+            "Won last dirt start impressively (+3)",
+            "Brown 24% trainer (+3)",
+            "First turf start, trainer 25% first turf"
           ],
           "negatives": [
-            "0 turf experience (-4)",
-            "First time stretching to 1-1/16"
+            "0 turf starts, first time surface (-4 penalty)",
+            "No route experience"
           ]
         },
         {
           "pp": 13,
           "name": "Shellac (MTO)",
           "ml": "2-1",
-          "brennyScore": 28,
+          "brennyScore": 26,
           "impliedWinPct": 33.3,
           "fairOdds": 2,
           "valueRating": "⛔ UNDERLAID",
           "valueCeiling": 2,
           "confidence": "★★",
           "keyFactors": [
-            "Rice trainer 22% (+3)",
-            "Won last sprint convincingly (+2)",
-            "First turf with strong works (+1)"
+            "Won last dirt start convincingly",
+            "Rice/Prat combo 30% with jockey",
+            "Off claim trainer 20%"
           ],
           "negatives": [
-            "0 turf starts (-4)",
-            "Sprint to route first time on grass"
+            "0 turf starts, first time surface (-4)",
+            "2-1 vs 2.0 fair at best - no value"
           ]
         }
       ],
-      "analysis": "Sandborn has the best figures and won at this course/distance but the massive layoff is a concern; Kulapat and Fitz Right offer better value angles.",
-      "exoticPlay": "Exacta 1,7 / 4,7,11",
-      "betType": "Win",
-      "valueSummary": "Kulapat at 3-1 with Maker hot and improving form represents best value in a wide-open turf field.",
+      "analysis": "This turf route is wide open with many first-time turf runners; Sandborn's best turf fig gives him an edge but the 180+ day layoff is concerning in a competitive field.",
+      "exoticPlay": "Trifecta 1,7/1,7,4,11/1,7,4,11,13",
+      "betType": "SMALL WIN: Sandborn + Exacta 1 over 7,4",
+      "valueSummary": "No standout value play; avoid Shellac MTO at 2-1 on first turf try; small play on Sandborn who has proven turf ability.",
       "topToss": {
-        "pp": 3,
-        "name": "Wind Dancer",
-        "brennyScore": 14,
-        "reason": "Despite a win at this course, consistently empty performances since and poor works make him a clear toss"
-      }
-    },
-    {
-      "track": "AQU",
-      "race": 6,
-      "type": "CLM $55,000 Outer Turf",
-      "distance": "6 Furlongs",
-      "surface": "Turf",
-      "purse": 53000,
-      "raceRating": 83,
-      "fieldSize": 10,
-      "postTime": "3:48PM",
-      "fieldLeaderFig": 90,
-      "picks": {
-        "win": {
-          "pp": 9,
-          "name": "Heads in Beds (FR)",
-          "ml": "4-1",
-          "brennyScore": 32,
-          "impliedWinPct": 20,
-          "fairOdds": 4,
-          "valueRating": "➡️ FAIR",
-          "valueCeiling": 4,
-          "confidence": "★★",
-          "keyFactors": [
-            "Best turf fig 90 near leader (+9)",
-            "Joseph trainer 33% with Franco 28% (+3)",
-            "Won MSW at Del Mar vs strong company (+2)"
-          ],
-          "negatives": [
-            "Long layoff 150 days (+2 but risky)",
-            "0 starts at Aqueduct"
-          ]
-        },
-        "place": {
-          "pp": 1,
-          "name": "Artistic Success",
-          "ml": "3-1",
-          "brennyScore": 33,
-          "impliedWinPct": 25,
-          "fairOdds": 3,
-          "valueRating": "➡️ FAIR",
-          "valueCeiling": 3,
-          "confidence": "★★",
-          "keyFactors": [
-            "Consistent turf form 3 seconds (+3)",
-            "NY-bred allowance runner (+2)",
-            "Sharp 3 workouts Bel tr (+2)"
-          ],
-          "negatives": [
-            "Has not won in 7 career starts",
-            "Class question stepping up"
-          ]
-        },
-        "show": {
-          "pp": 10,
-          "name": "Brokealltherules",
-          "ml": "7-2",
-          "brennyScore": 29,
-          "impliedWinPct": 22.2,
-          "fairOdds": 3.5,
-          "valueRating": "➡️ FAIR",
-          "valueCeiling": 3.5,
-          "confidence": "★★",
-          "keyFactors": [
-            "Dutrow trainer 25% (+3)",
-            "Won turf sprint convincingly (+2)",
-            "Prat 50% this meet at 6f (+2)"
-          ],
-          "negatives": [
-            "Only 2 turf starts lifetime",
-            "Claimed off route suggests distance preference unclear"
-          ]
-        }
-      },
-      "otherContenders": [
-        {
-          "pp": 7,
-          "name": "Boston's Phinest",
-          "ml": "9-2",
-          "brennyScore": 25,
-          "impliedWinPct": 18.2,
-          "fairOdds": 4.5,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 4.5,
-          "confidence": "◑",
-          "keyFactors": [
-            "Strong stakes form vs better (+2)",
-            "Castellano 33% (+3)",
-            "Multiple turf graded placed (+2)"
-          ],
-          "negatives": [
-            "180+ day layoff",
-            "Last start poor in stakes"
-          ]
-        },
-        {
-          "pp": 4,
-          "name": "Blame the Banker",
-          "ml": "6-1",
-          "brennyScore": 24,
-          "impliedWinPct": 14.3,
-          "fairOdds": 6,
-          "valueRating": "➡️ FAIR",
-          "valueCeiling": 6,
-          "confidence": "◑",
-          "keyFactors": [
-            "Multiple Monmouth wins at 5f-6f turf (+2)",
-            "Synnefias trainer improving (+2)",
-            "Post 4 favorable (+3)"
-          ],
-          "negatives": [
-            "Last 2 starts off the pace and empty",
-            "Route to sprint turf question"
-          ]
-        }
-      ],
-      "analysis": "Heads in Beds ships from Mott/Joseph with strong Del Mar turf credentials and the best figures; Artistic Success is the value play underneath with consistent placings.",
-      "exoticPlay": "Exacta 1,9,10 / 1,9",
-      "betType": "Win",
-      "valueSummary": "Heads in Beds at 4-1 with top figures and elite connections offers the best risk-reward in a field of question marks.",
-      "topToss": {
-        "pp": 2,
-        "name": "Saucy Six",
-        "brennyScore": 8,
-        "reason": "0 wins in 34 career starts, declining figures, and a 0% trainer record make her an obvious toss"
+        "pp": 6,
+        "name": "You're Lookin Good",
+        "brennyScore": 11,
+        "reason": "Poor 2026 form (0-3), trainer 0% claiming, 30-1 reflects true ability"
       }
     },
     {
@@ -794,371 +650,65 @@
       "fieldLeaderFig": 112,
       "picks": {
         "win": {
-          "pp": 7,
-          "name": "Bourbon Day",
-          "ml": "7-2",
-          "brennyScore": 38,
-          "impliedWinPct": 21.3,
-          "fairOdds": 3.7,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 4.1,
-          "confidence": "★★",
-          "keyFactors": [
-            "Won last at Clm 100k +10 speed fig (110) (+10)",
-            "E/P style post 7 sprint (+5)",
-            "Rice/Lezcano both 20%+ (+3)"
-          ],
-          "negatives": [
-            "Fig gap -2 pts to leader",
-            "Slight class drop concern"
-          ]
-        },
-        "place": {
           "pp": 6,
           "name": "Ignite the Light",
           "ml": "3-1",
           "brennyScore": 36,
-          "impliedWinPct": 20.5,
-          "fairOdds": 3.9,
+          "impliedWinPct": 21.5,
+          "fairOdds": 3.65,
           "valueRating": "➡️ FAIR",
-          "valueCeiling": 3.5,
+          "valueCeiling": 4,
           "confidence": "★★",
           "keyFactors": [
-            "Best recent fig 107 leader class (+10)",
-            "E/P style post 6 (+5)",
-            "Won last at AOC 75k (+2)"
+            "Best fig leader at 107 (+10 pts)",
+            "E/P style +5, post 6 +3",
+            "Both T/J 20%+ Dutrow/Velazquez +3"
           ],
           "negatives": [
-            "Trainer 0% with Velazquez",
-            "Faded in last two beyond 7F"
+            "0 distance experience -1",
+            "Trainer 0% with jockey this meet"
           ]
         },
-        "show": {
+        "place": {
           "pp": 3,
           "name": "Raise the Bar",
           "ml": "5-2",
-          "brennyScore": 35,
-          "impliedWinPct": 19.8,
-          "fairOdds": 4.1,
-          "valueRating": "⛔ UNDERLAID",
-          "valueCeiling": 3.2,
-          "confidence": "★★",
-          "keyFactors": [
-            "High fig 106 on board (+9)",
-            "Brown/Prat 50% jockey (+3)",
-            "Improving trend (+4)"
-          ],
-          "negatives": [
-            "0 starts at AQU distance (-1)",
-            "Last race showed regression"
-          ]
-        }
-      },
-      "otherContenders": [
-        {
-          "pp": 2,
-          "name": "Toxic Gray",
-          "ml": "5-1",
-          "brennyScore": 32,
-          "impliedWinPct": 14.2,
-          "fairOdds": 6.1,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 5.5,
-          "confidence": "◑",
-          "keyFactors": [
-            "Fig 101 competitive (+6)",
-            "Won last at AOC 75k (+2)",
-            "E style +5"
-          ],
-          "negatives": [
-            "Trainer 0% WonLastStart",
-            "1-14 days off (-2)"
-          ]
-        },
-        {
-          "pp": 4,
-          "name": "Quick to Accuse",
-          "ml": "10-1",
-          "brennyScore": 29,
-          "impliedWinPct": 11.8,
-          "fairOdds": 7.5,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 9.2,
-          "confidence": "◑",
-          "keyFactors": [
-            "Fig 108 competitive (+9)",
-            "Dist exp 7 starts (+3)",
-            "Consistent (+3)"
-          ],
-          "negatives": [
-            "Trainer 0% with Rodriguez",
-            "Post 4 sprint +3 only"
-          ]
-        }
-      ],
-      "analysis": "Bourbon Day steps back into his best conditions with 110 fig winner's circle form and Lezcano aboard for a barn firing at 22%.",
-      "exoticPlay": "$1 Exacta 7/6,3 box",
-      "betType": "WIN",
-      "valueSummary": "Bourbon Day at 7-2 offers value over fair odds of 3.7 with proven class edge.",
-      "topToss": {
-        "pp": 1,
-        "name": "Donegal Surges",
-        "brennyScore": 22,
-        "reason": "Blinkers off, faded badly in last, trainer only 15% and stumbled in last two routes"
-      }
-    },
-    {
-      "track": "AQU",
-      "race": 8,
-      "type": "STK Memories of Silver S. (Listed)",
-      "distance": "1M",
-      "surface": "Turf (Inner)",
-      "purse": 150000,
-      "raceRating": 92,
-      "fieldSize": 11,
-      "postTime": "4:53PM",
-      "fieldLeaderFig": 102,
-      "picks": {
-        "win": {
-          "pp": 3,
-          "name": "Ultimate Love",
-          "ml": "2-1",
-          "brennyScore": 37,
-          "impliedWinPct": 24.1,
-          "fairOdds": 3.2,
-          "valueRating": "⛔ UNDERLAID",
-          "valueCeiling": 2.8,
-          "confidence": "★★",
-          "keyFactors": [
-            "Best fig 102 class leader (+10)",
-            "3-for-4 lifetime on turf (+6)",
-            "Trombetta 25% stakes trainer (+3)"
-          ],
-          "negatives": [
-            "0 distance experience (-1)",
-            "ML 2-1 below fair odds"
-          ]
-        },
-        "place": {
-          "pp": 11,
-          "name": "Point of Reference",
-          "ml": "3-1",
-          "brennyScore": 36,
-          "impliedWinPct": 20.8,
-          "fairOdds": 3.8,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 4.2,
-          "confidence": "★★",
-          "keyFactors": [
-            "Won last impressively at MSW (+2)",
-            "Brown/Prat connection 50% (+3)",
-            "Improving trend +4"
-          ],
-          "negatives": [
-            "0 turf starts (0 surf exp 0)",
-            "First time turf risk (-4 null surf)"
-          ]
-        },
-        "show": {
-          "pp": 4,
-          "name": "Fitz Right",
-          "ml": "9-2",
           "brennyScore": 34,
-          "impliedWinPct": 19.2,
-          "fairOdds": 4.2,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 5,
+          "impliedWinPct": 28.6,
+          "fairOdds": 2.5,
+          "valueRating": "⛔ UNDERLAID",
+          "valueCeiling": 3,
           "confidence": "★★",
           "keyFactors": [
-            "Won last AOC 75k Tampa (+10 fig 80)",
-            "Brown/Prat 50% (+3)",
-            "3 turf starts 2-1-0 (+5 surface exp)"
+            "Won last, improving trend +3",
+            "Best fig+improving booster +3",
+            "Brown 24% trainer +3 T/J"
           ],
           "negatives": [
-            "0 starts at this distance (-1)",
-            "Class jump to listed stakes"
+            "0 AQU starts, shipping in",
+            "Dec-fast last (Keenee turf rained off)"
           ]
         }
       },
-      "otherContenders": [
-        {
-          "pp": 6,
-          "name": "Piper's Gift",
-          "ml": "6-1",
-          "brennyScore": 33,
-          "impliedWinPct": 15.1,
-          "fairOdds": 5.6,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 6.5,
-          "confidence": "◑",
-          "keyFactors": [
-            "Fig 96 on AW competitive (+6)",
-            "Won last at WO stakes (+2)",
-            "E/P style +5"
-          ],
-          "negatives": [
-            "0 inner turf experience",
-            "180+ days off"
-          ]
-        },
-        {
-          "pp": 10,
-          "name": "Hot Gossip",
-          "ml": "4-1",
-          "brennyScore": 31,
-          "impliedWinPct": 13.8,
-          "fairOdds": 6.2,
-          "valueRating": "⛔ UNDERLAID",
-          "valueCeiling": 3.5,
-          "confidence": "◑",
-          "keyFactors": [
-            "Rice 22% trainer (+2)",
-            "Won last at SOC 75k (+2)",
-            "Franco 28% jockey (+3)"
-          ],
-          "negatives": [
-            "0 turf starts entering turf stakes (-4)",
-            "Scratched from Gazelle"
-          ]
-        }
-      ],
-      "analysis": "Ultimate Love is the class of this field but is underlaid at 2-1; Point of Reference and Fitz Right offer better angles for exotic play.",
-      "exoticPlay": "$1 Exacta 3,4,11 wheel over 4,11",
-      "betType": "PLACE",
-      "valueSummary": "Fitz Right at 9-2 exceeds fair odds for place; Point of Reference first-time turf with Brown is the value win play.",
-      "topToss": {
+      "show": {
         "pp": 7,
-        "name": "Quiet Street",
-        "ml": "4-1",
-        "brennyScore": 22,
-        "reason": "Lost by 8+ lengths in last Keenee stakes G3, 0 distance experience, trainer only 22% dist/surf"
-      }
-    },
-    {
-      "track": "AQU",
-      "race": 9,
-      "type": "MCL $50,000 NY-bred",
-      "distance": "6F",
-      "surface": "Turf (Outer)",
-      "purse": 49000,
-      "raceRating": 73,
-      "fieldSize": 15,
-      "postTime": "5:25PM",
-      "fieldLeaderFig": 82,
-      "picks": {
-        "win": {
-          "pp": 10,
-          "name": "Twenty One Red",
-          "ml": "5-2",
-          "brennyScore": 33,
-          "impliedWinPct": 22.4,
-          "fairOdds": 3.5,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 3.8,
-          "confidence": "★★",
-          "keyFactors": [
-            "Best dirt fig 82 field leader (+10)",
-            "Consistent placings 3 seconds (+3)",
-            "Weaver/Prat 50% jockey (+3)"
-          ],
-          "negatives": [
-            "0 turf starts entering turf race",
-            "MTO runner risk if turf off"
-          ]
-        },
-        "place": {
-          "pp": 8,
-          "name": "Ryan's Shadow",
-          "ml": "3-1",
-          "brennyScore": 31,
-          "impliedWinPct": 18.5,
-          "fairOdds": 4.4,
-          "valueRating": "⛔ UNDERLAID",
-          "valueCeiling": 2.8,
-          "confidence": "★★",
-          "keyFactors": [
-            "Cox 27%+ trainer hot (+3)",
-            "Franco 28% jockey (+3)",
-            "Improving trend shown (+4)"
-          ],
-          "negatives": [
-            "ML 3-1 below fair odds of 4.4",
-            "0 turf starts"
-          ]
-        },
-        "show": {
-          "pp": 7,
-          "name": "Alzero",
-          "ml": "6-1",
-          "brennyScore": 29,
-          "impliedWinPct": 16.1,
-          "fairOdds": 5.2,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 7,
-          "confidence": "◑",
-          "keyFactors": [
-            "Fig 73 competitive for field (+3)",
-            "3rd in last at MSW 75k (+2)",
-            "Castellano 33% jockey (+3)"
-          ],
-          "negatives": [
-            "Trainer 0% last 30 days",
-            "Post 7 sprint 0 pts"
-          ]
-        }
-      },
-      "otherContenders": [
-        {
-          "pp": 13,
-          "name": "Golden Joker",
-          "ml": "9-2",
-          "brennyScore": 30,
-          "impliedWinPct": 14.8,
-          "fairOdds": 5.8,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 6.5,
-          "confidence": "◑",
-          "keyFactors": [
-            "Clement 27% trainer debut (+3)",
-            "Franco 28% jockey (+3)",
-            "First timer fresh workouts (+2)"
-          ],
-          "negatives": [
-            "0 career starts",
-            "No fig benchmark"
-          ]
-        },
-        {
-          "pp": 1,
-          "name": "Out of the Fog",
-          "ml": "6-1",
-          "brennyScore": 28,
-          "impliedWinPct": 13.2,
-          "fairOdds": 6.6,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 7.5,
-          "confidence": "◑",
-          "keyFactors": [
-            "4 turf starts field-best exp (+6)",
-            "Second last at MCL 30k (+2)",
-            "Antonucci 22% trainer (+2)"
-          ],
-          "negatives": [
-            "Best fig only 69 below field",
-            "MTO listed, main track switch risk"
-          ]
-        }
-      ],
-      "analysis": "Wide-open NY-bred maiden claimer on turf with many first-timers; Twenty One Red has the best form figures but switches to turf for the first time.",
-      "exoticPlay": "$0.50 Trifecta 10/7,8/1,7,8,13 part wheel",
-      "betType": "WIN",
-      "valueSummary": "Twenty One Red at 5-2 is near fair value; Golden Joker at 9-2 is the best overlay for win tickets.",
-      "topToss": {
-        "pp": 2,
-        "name": "Tony Hooks",
-        "ml": "30-1",
-        "brennyScore": 8,
-        "reason": "0 career starts, trainer 0% MdnClaim, unproven debut at 30-1 with no benchmark figures"
+        "name": "Bourbon Day",
+        "ml": "7-2",
+        "brennyScore": 30,
+        "impliedWinPct": 17.5,
+        "fairOdds": 4.71,
+        "valueRating": "✅ VALUE",
+        "valueCeiling": 5.5,
+        "confidence": "◑",
+        "keyFactors": [
+          "Won last at $100k class +2",
+          "Fig 110-112 range, within 3 of leader +9",
+          "Rice 22% T, Lezcano 19% J +2"
+        ],
+        "negatives": [
+          "0 sprint distance experience -1",
+          "Erratic recent form, eased last stakes"
+        ]
       }
     },
     {
@@ -1177,246 +727,246 @@
           "pp": 2,
           "name": "Spoiler",
           "ml": "2-1",
-          "brennyScore": 32,
-          "impliedWinPct": 27.1,
-          "fairOdds": 2.69,
-          "valueRating": "⛔ UNDERLAID",
-          "valueCeiling": 2.7,
+          "brennyScore": 34,
+          "impliedWinPct": 29.1,
+          "fairOdds": 2.44,
+          "valueRating": "➡️ FAIR",
+          "valueCeiling": 2.44,
           "confidence": "★★",
           "keyFactors": [
             "Fig gap within-3 of leader +9",
-            "Won last start, trainer 22% WonLastStart (+3 booster)",
-            "E/P style +5, post 1 +4"
+            "Won last start, trainer 24% WLS +2",
+            "E/P style +5"
           ],
           "negatives": [
-            "0 distance starts -1",
-            "Trainer 0% with jockey Arrieta"
+            "0 distance exp -1",
+            "Trainer 18% but 0% with jockey"
           ]
         },
         "place": {
           "pp": 3,
           "name": "Glen Airy",
           "ml": "9-5",
-          "brennyScore": 34,
-          "impliedWinPct": 28.8,
-          "fairOdds": 2.47,
+          "brennyScore": 32,
+          "impliedWinPct": 27.5,
+          "fairOdds": 2.64,
           "valueRating": "⛔ UNDERLAID",
-          "valueCeiling": 2.5,
+          "valueCeiling": 1.9,
           "confidence": "★★",
           "keyFactors": [
-            "Best recent fig 101 matches leader (+10)",
-            "Won last, trainer 25% WonLastStart (+3 booster)",
-            "E/P style +5, post 1 +4"
+            "Won last start at class level +2",
+            "Best fig leader +10",
+            "Strong dist/surf record 20% trainer"
           ],
           "negatives": [
-            "180+ days off -1 days off score",
-            "0 starts at OP distance -1"
+            "Off Lasix concerns after big win",
+            "Trainer 0% with Bejarano in 4 starts"
           ]
         },
         "show": {
           "pp": 1,
           "name": "Classic Legacy",
           "ml": "3-1",
-          "brennyScore": 29,
-          "impliedWinPct": 24.6,
-          "fairOdds": 3.07,
+          "brennyScore": 28,
+          "impliedWinPct": 24.1,
+          "fairOdds": 3.15,
           "valueRating": "➡️ FAIR",
-          "valueCeiling": 3.1,
-          "confidence": "◑",
+          "valueCeiling": 3.15,
+          "confidence": "★★",
           "keyFactors": [
-            "High fig 108 is field leader +10",
-            "12 starts at distance +3",
-            "Trainer Contreras 17% +2 T/J"
+            "Fig gap within-3 +9",
+            "E/P style +5",
+            "Class drop +2"
           ],
           "negatives": [
-            "Dec-mild trend -1",
-            "Post 8 sprint penalty 0"
+            "4 starts this year 0 wins -dec trend",
+            "Post 8+ sprint -3"
           ]
         }
       },
       "otherContenders": [
         {
-          "pp": 6,
-          "name": "Midnight West",
-          "ml": "6-1",
-          "brennyScore": 21,
-          "impliedWinPct": 17.8,
-          "fairOdds": 4.62,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 4.6,
-          "confidence": "◑",
-          "keyFactors": [
-            "High fig 110 matches top",
-            "Won last at class -1 dist exp",
-            "30-60 days rest +4"
-          ],
-          "negatives": [
-            "Trainer Shorter 2% overall at OP claiming -3 trend",
-            "Post 6 +3 route"
-          ]
-        },
-        {
           "pp": 4,
           "name": "Speed Bias",
           "ml": "8-1",
           "brennyScore": 22,
-          "impliedWinPct": 18.6,
-          "fairOdds": 4.37,
+          "impliedWinPct": 18.9,
+          "fairOdds": 4.29,
           "valueRating": "✅ VALUE",
-          "valueCeiling": 4.4,
+          "valueCeiling": 8,
           "confidence": "◑",
           "keyFactors": [
-            "High fig 110 field co-leader",
-            "9 distance starts +3",
-            "E/P style +5"
+            "High fig 110 career +10",
+            "E/P style +5",
+            "Dist exp 3+ starts +3"
           ],
           "negatives": [
-            "Dec-fast trend -3",
-            "31-60 days trainer 9% -1"
+            "Dec-fast trend last 2 -3",
+            "Post 4-6 +3 only"
+          ]
+        },
+        {
+          "pp": 6,
+          "name": "Midnight West",
+          "ml": "6-1",
+          "brennyScore": 19,
+          "impliedWinPct": 16.3,
+          "fairOdds": 5.13,
+          "valueRating": "⛔ UNDERLAID",
+          "valueCeiling": 5.13,
+          "confidence": "◑",
+          "keyFactors": [
+            "High fig 110 career +10",
+            "Won 2 straight in 2025",
+            "Trainer 2% claiming awful"
+          ],
+          "negatives": [
+            "Trainer 2% claiming -3",
+            "Dec-fast trend 0-4 in 2026"
           ]
         }
       ],
-      "analysis": "Glen Airy is the narrow morning line pick but Spoiler's wire-to-wire win last out at this exact track/distance combo makes it a short-price overlay.",
-      "exoticPlay": "Exacta 2/3, Trifecta 2/3/1",
-      "betType": "Win/Place on #2 Spoiler",
-      "valueSummary": "Spoiler is the class dropper with a recent win but underlaid at 2-1; Midnight West and Speed Bias offer value in exotics at 6-1 and 8-1.",
+      "analysis": "Spoiler won last out vs similar and trainer Maker 24% WLS makes him the play despite jockey concern.",
+      "exoticPlay": "Exacta 2-3, Trifecta 2/3/1",
+      "betType": "Win on #2, Exacta 2-3",
+      "valueSummary": "Spoiler at 2-1 is roughly fair but best bet; Glen Airy underlaid at 9-5.",
       "topToss": {
-        "pp": 5,
-        "name": "Protonic Power",
-        "brennyScore": 18,
-        "reason": "Figure gap of 15+ (-2), dec-fast form (-3), trainer 6% at distance"
+        "pp": 6,
+        "name": "Midnight West",
+        "brennyScore": 19,
+        "reason": "Career-best figs on distance but trainer 2% claiming and 0-5 in 2026 makes him untrustworthy"
       }
     },
     {
       "track": "Oaklawn Park",
       "race": 2,
-      "type": "Claiming $25,000-$20,000 (AR-Bred)",
-      "distance": "6 Furlongs",
+      "type": "Maiden Claiming $25,000-$20,000",
+      "distance": "Six Furlongs",
       "surface": "Dirt",
       "purse": 38000,
       "raceRating": 65,
       "fieldSize": 10,
       "postTime": "1:19PM",
-      "fieldLeaderFig": 72,
+      "fieldLeaderFig": 65,
       "picks": {
         "win": {
           "pp": 7,
           "name": "Bossoftheblock",
           "ml": "2-1",
-          "brennyScore": 29,
-          "impliedWinPct": 24.6,
-          "fairOdds": 3.07,
-          "valueRating": "⛔ UNDERLAID",
-          "valueCeiling": 3.1,
-          "confidence": "◑",
+          "brennyScore": 31,
+          "impliedWinPct": 26.5,
+          "fairOdds": 2.77,
+          "valueRating": "➡️ FAIR",
+          "valueCeiling": 2.77,
+          "confidence": "★★",
           "keyFactors": [
-            "Won last (fig 65, improving trend +4)",
-            "E/P style +5, post 7 sprint +0",
-            "Trainer Morse 17%, Bejarano 18% T/J +3"
+            "Best fig in field 65 tied leader +10",
+            "Won last start +2 (maiden win)",
+            "E/P style +5"
           ],
           "negatives": [
-            "Only 3 lifetime starts, limited dist exp -1",
-            "0 wins since Feb 26 allowance -1"
+            "Only 3 career starts, limited sample",
+            "Trainer 17% but 1stLasix 12% concern"
           ]
         },
         "place": {
           "pp": 4,
           "name": "Texas Sequoia",
           "ml": "3-1",
-          "brennyScore": 31,
-          "impliedWinPct": 26.3,
-          "fairOdds": 2.8,
-          "valueRating": "⛔ UNDERLAID",
-          "valueCeiling": 2.8,
+          "brennyScore": 27,
+          "impliedWinPct": 23.1,
+          "fairOdds": 3.33,
+          "valueRating": "➡️ FAIR",
+          "valueCeiling": 3.33,
           "confidence": "★★",
           "keyFactors": [
-            "Most distance starts in field (17) +3",
-            "Flat-improving trend +2",
-            "Consistent runner std 3-5 +2"
+            "Multiple seconds at this level +2 within-3 consistent",
+            "Distance expert 17 starts +3",
+            "Closer style suits 10-horse field +3"
           ],
           "negatives": [
-            "0 wins in 17 distance starts -2",
-            "Trainer Cates 11%, jockey Bealmear 8% T/J 0"
+            "No win in 20 career starts flagged",
+            "Trainer 17% but Bealmear 8% jockey"
           ]
         },
         "show": {
           "pp": 1,
           "name": "Not for Everyone",
           "ml": "8-1",
-          "brennyScore": 27,
-          "impliedWinPct": 22.9,
-          "fairOdds": 3.37,
+          "brennyScore": 24,
+          "impliedWinPct": 20.5,
+          "fairOdds": 3.87,
           "valueRating": "✅ VALUE",
-          "valueCeiling": 3.4,
-          "confidence": "◑",
+          "valueCeiling": 8,
+          "confidence": "★★",
           "keyFactors": [
-            "Fig gap within-3 of leader +9",
-            "E/P style post 3 sprint +4",
-            "Trainer Asmussen 16% overall +2"
+            "Won last start at level +2",
+            "Class drop from clm 20k +2",
+            "Asmussen 16% barn +3"
           ],
           "negatives": [
-            "5 starts 0 wins, consistency -1",
-            "Closer in small field penalty -3"
+            "1-14 days off -2",
+            "Trainer off-claim 11% modest"
           ]
         }
       },
       "otherContenders": [
         {
-          "pp": 3,
-          "name": "Mspunkinsperegrine",
-          "ml": "8-1",
-          "brennyScore": 25,
-          "impliedWinPct": 21.2,
-          "fairOdds": 3.72,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 3.7,
-          "confidence": "◑",
-          "keyFactors": [
-            "Won on Mar 20 at 5f +3 improving",
-            "Trainer Loy 15% +1",
-            "First Lasix today +1"
-          ],
-          "negatives": [
-            "Limited distance exp at 6f -1",
-            "Post 3, 0 wins in 8 starts -1"
-          ]
-        },
-        {
           "pp": 6,
           "name": "Doubledaddy Issues",
           "ml": "5-1",
-          "brennyScore": 24,
-          "impliedWinPct": 20.3,
-          "fairOdds": 3.93,
-          "valueRating": "➡️ FAIR",
-          "valueCeiling": 3.9,
+          "brennyScore": 22,
+          "impliedWinPct": 18.9,
+          "fairOdds": 4.29,
+          "valueRating": "✅ VALUE",
+          "valueCeiling": 5.1,
           "confidence": "◑",
           "keyFactors": [
-            "Won MSW March 25 at this distance",
-            "E/P style +5",
-            "Trainer Cates 17% WonLastStart +2"
+            "Won maiden in 2025 +2",
+            "Distance specialist 6 starts +3",
+            "E/P style +5"
           ],
           "negatives": [
-            "62-day layoff -1 days score",
-            "Jockey Vazquez 0% with trainer 0"
+            "0-2 in 2026 declining",
+            "Trainer 17% but off-claim 0-10 concern"
+          ]
+        },
+        {
+          "pp": 9,
+          "name": "Charmit",
+          "ml": "15-1",
+          "brennyScore": 18,
+          "impliedWinPct": 15.4,
+          "fairOdds": 5.49,
+          "valueRating": "🔥 STRONG VALUE",
+          "valueCeiling": 15,
+          "confidence": "◑",
+          "keyFactors": [
+            "Won last start maiden convincingly +2",
+            "E/P style front runner +5",
+            "Distance specialist +3"
+          ],
+          "negatives": [
+            "Trainer 7% overall poor",
+            "Jockey Castillo 3% alarm"
           ]
         }
       ],
-      "analysis": "Bossoftheblock is improving and won last but is underlaid at 2-1 in a weak AR-bred field; Texas Sequoia has the most local distance experience.",
-      "exoticPlay": "Exacta 4/7, Trifecta 7/4/1",
-      "betType": "Win on #1 Not for Everyone (VALUE at 8-1)",
-      "valueSummary": "Not for Everyone at 8-1 offers the best value given her pace style and proximity to the field leader figure in a weak AR-bred sprint.",
+      "analysis": "Bossoftheblock exits a maiden win with best figures but only 3 starts; Texas Sequoia is the consistent type that hits the board repeatedly.",
+      "exoticPlay": "Exacta 7-4, Trifecta 7/4/1",
+      "betType": "Win #7, Exacta 7-4",
+      "valueSummary": "Bossoftheblock at 2-1 is fair value; Not for Everyone at 8-1 is the best value play.",
       "topToss": {
-        "pp": 2,
-        "name": "Maximum to Excel",
-        "brennyScore": 14,
-        "reason": "Fig gap 15+ back (-2), post 9+ sprint -3, trainer 7% overall"
+        "pp": 9,
+        "name": "Charmit",
+        "brennyScore": 18,
+        "reason": "Won last start convincingly and looms as strong value at 15-1 but trainer/jockey combo too weak to trust"
       }
     },
     {
       "track": "Oaklawn Park",
       "race": 3,
-      "type": "AOC $62,500 (NW2x) - Listed",
+      "type": "Allowance Optional Claiming $62,500",
       "distance": "5 1/2 Furlongs",
       "surface": "Dirt",
       "purse": 126000,
@@ -1429,40 +979,40 @@
           "pp": 2,
           "name": "Itzel",
           "ml": "2-1",
-          "brennyScore": 35,
-          "impliedWinPct": 29.7,
-          "fairOdds": 2.37,
-          "valueRating": "⛔ UNDERLAID",
-          "valueCeiling": 2.4,
+          "brennyScore": 36,
+          "impliedWinPct": 30.8,
+          "fairOdds": 2.25,
+          "valueRating": "➡️ FAIR",
+          "valueCeiling": 2.25,
           "confidence": "★★★",
           "keyFactors": [
-            "Fig leader 99 +10, won last 5 1/4f dominant",
-            "5 distance starts +3, E/P style +5",
-            "T/J Miller 27%/Vazquez 18% both 20%+ +3"
+            "Best fig 99 field leader +10",
+            "Won last start wire-to-wire +3",
+            "Miller 27% trainer + Vazquez 18% jockey both 20%+ +3"
           ],
           "negatives": [
-            "2-1 underlaid vs fair odds 2.37",
-            "Off Lasix today flag"
+            "Within-3 but no booster for dist (0 starts at 5.5f) -1",
+            "Off Lasix flag"
           ]
         },
         "place": {
           "pp": 6,
           "name": "Kelly's Girl",
           "ml": "3-1",
-          "brennyScore": 32,
-          "impliedWinPct": 27.1,
-          "fairOdds": 2.69,
-          "valueRating": "⛔ UNDERLAID",
-          "valueCeiling": 2.7,
+          "brennyScore": 33,
+          "impliedWinPct": 28.2,
+          "fairOdds": 2.55,
+          "valueRating": "✅ VALUE",
+          "valueCeiling": 3.1,
           "confidence": "★★",
           "keyFactors": [
-            "Won last Apr 17, improving trend +4",
-            "E/P style +5, 5 distance starts +3",
-            "Trainer Robertson 14%, Cedillo 12% T/J +1"
+            "Won last start Aoc at same level +2",
+            "E/P style +5",
+            "Distance specialist 5 wins at dist +3"
           ],
           "negatives": [
-            "Short 9-day layoff -2",
-            "Trainer 0% with jockey Cedillo in last 365"
+            "Trainer Robertson 11% modest",
+            "Closer bias in small field -3"
           ]
         },
         "show": {
@@ -1470,18 +1020,18 @@
           "name": "Mo for Us",
           "ml": "7-2",
           "brennyScore": 30,
-          "impliedWinPct": 25.4,
-          "fairOdds": 2.94,
-          "valueRating": "⛔ UNDERLAID",
-          "valueCeiling": 2.9,
+          "impliedWinPct": 25.7,
+          "fairOdds": 2.89,
+          "valueRating": "✅ VALUE",
+          "valueCeiling": 3.5,
           "confidence": "★★",
           "keyFactors": [
-            "High fig 97 within-3 of leader +9",
-            "Won 3 of last 4, improving trend +3",
-            "Trainer Asmussen 15% +2 T/J"
+            "Fig 97 within-3 of leader +9",
+            "Asmussen 15% monster barn +3",
+            "E/P style fast +5"
           ],
           "negatives": [
-            "73-day layoff scores +2 but recency concern",
+            "73 days off -2 (60-90 range)",
             "0 distance starts at 5.5f -1"
           ]
         }
@@ -1492,51 +1042,51 @@
           "name": "Kant Believe It",
           "ml": "5-1",
           "brennyScore": 26,
-          "impliedWinPct": 22,
-          "fairOdds": 3.55,
+          "impliedWinPct": 22.3,
+          "fairOdds": 3.49,
           "valueRating": "✅ VALUE",
-          "valueCeiling": 3.6,
+          "valueCeiling": 5.1,
           "confidence": "◑",
           "keyFactors": [
-            "82-day layoff, fresh angles trainer DiVito 17%",
-            "Fig within-3 of leader +9",
-            "Won last OP Oct 2024 at similar class"
+            "Won April 2025 at this level +2",
+            "High career fig 93 +6",
+            "E/P style +5"
           ],
           "negatives": [
-            "82-day layoff -1 score",
-            "Post 4 +3 but 0% trainer/jockey combo"
+            "82 days off -1",
+            "Trainer DiVito 9% modest"
           ]
         },
         {
           "pp": 5,
           "name": "Blue Squall",
           "ml": "8-1",
-          "brennyScore": 25,
-          "impliedWinPct": 21.2,
-          "fairOdds": 3.72,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 3.7,
+          "brennyScore": 24,
+          "impliedWinPct": 20.5,
+          "fairOdds": 3.87,
+          "valueRating": "🔥 STRONG VALUE",
+          "valueCeiling": 8,
           "confidence": "◑",
           "keyFactors": [
-            "Fig within-3 +9, placed last Feb",
-            "Trainer Morse 17% +2 T/J",
-            "4 distance starts +3"
+            "Fig 94 close to leader +9",
+            "Second last out at this level",
+            "E/P or closer style +3"
           ],
           "negatives": [
-            "Dec-mild form last out -1",
-            "65-day layoff neutral"
+            "Dec-mild trend last 2 starts",
+            "Trainer Morse 14% at dist/surf"
           ]
         }
       ],
-      "analysis": "Itzel is the dominant class/figure horse here and won last decisively but is correctly installed as a short favorite leaving no value.",
-      "exoticPlay": "Exacta 2/6, Trifecta 2/6/7 at larger prices",
-      "betType": "Small exacta box 2/6/7, pass win",
-      "valueSummary": "Itzel is the best horse but underlaid; Kant Believe It and Blue Squall at 5-1 and 8-1 offer legitimate value in the exacta/trifecta.",
+      "analysis": "Itzel is the dominant figure horse who set fractions and won last out; Kelly's Girl looms as the main pace threat and value play.",
+      "exoticPlay": "Exacta 2-6, Trifecta 2/6/7",
+      "betType": "Win #2, Exacta 2-6",
+      "valueSummary": "Itzel at 2-1 is fair; Kelly's Girl at 3-1 offers slight value as likely the strongest closer; Blue Squall at 8-1 is the overlay.",
       "topToss": {
         "pp": 1,
         "name": "Carson Bay",
-        "brennyScore": 15,
-        "reason": "0 OP starts, figure 15+ off leader (-2), trainer 0% at distance, post 1 advantage negated by form"
+        "brennyScore": 14,
+        "reason": "Trainer 0% and jockey combo 0-0-0-0 make this a toss despite figures from Minnesota circuit"
       }
     },
     {
@@ -1555,20 +1105,20 @@
           "pp": 3,
           "name": "Black Powder",
           "ml": "2-1",
-          "brennyScore": 32,
-          "impliedWinPct": 28.6,
-          "fairOdds": 2.5,
-          "valueRating": "⛔ UNDERLAID",
-          "valueCeiling": 2.5,
+          "brennyScore": 34,
+          "impliedWinPct": 28.1,
+          "fairOdds": 2.56,
+          "valueRating": "➡️ FAIR",
+          "valueCeiling": 3,
           "confidence": "★★",
           "keyFactors": [
-            "Leader fig 107 tied (+10pts)",
-            "E/P style suits 1M (+5pts)",
-            "Post 3 inside (+4pts)"
+            "Fig leader 107 (+10pts)",
+            "E/P style cutcorner bid (+5pts)",
+            "Both trainer/jockey 20%+ (+3pts)"
           ],
           "negatives": [
-            "Trainer 13% at distance (-0pts)",
-            "Last 3 races declining form"
+            "15+ pts back in recent starts -2",
+            "Dec-mild trend -1"
           ]
         },
         "place": {
@@ -1576,61 +1126,61 @@
           "name": "Onthestage",
           "ml": "5-2",
           "brennyScore": 28,
-          "impliedWinPct": 18.7,
-          "fairOdds": 4.3,
+          "impliedWinPct": 23.2,
+          "fairOdds": 3.31,
           "valueRating": "✅ VALUE",
-          "valueCeiling": 4.3,
+          "valueCeiling": 4.5,
           "confidence": "★★",
           "keyFactors": [
-            "Improving trend last 2 starts (+4pts)",
-            "Asmussen 16% trainer (+2pts)",
-            "Distance specialist 3 wins at 1M (+3pts)"
+            "Within-3 of leader fig (+9pts)",
+            "30-60 days off sharp (+4pts)",
+            "Distance exp 14 starts (+3pts)"
           ],
           "negatives": [
-            "Fig gap to leader 10+ pts (-0pts)",
-            "Workman Ranch claim drop form"
+            "Trainer 15% Asmussen moderate",
+            "Declining trend from clm drops"
           ]
         },
         "show": {
-          "pp": 2,
-          "name": "Determinedly",
-          "ml": "9-2",
-          "brennyScore": 26,
-          "impliedWinPct": 14.5,
-          "fairOdds": 5.9,
+          "pp": 8,
+          "name": "Hern",
+          "ml": "5-1",
+          "brennyScore": 27,
+          "impliedWinPct": 22.2,
+          "fairOdds": 3.5,
           "valueRating": "✅ VALUE",
-          "valueCeiling": 5.9,
-          "confidence": "◑",
+          "valueCeiling": 6,
+          "confidence": "★★",
           "keyFactors": [
-            "Won last start (+2pts booster)",
-            "Vazquez 18% jockey (+2pts)",
-            "Class drop from $32K (+2pts)"
+            "Fig 99 high, within-3 of leader (+9pts)",
+            "E/P style fits distance (+5pts)",
+            "Asmussen 15% barn (+2pts)"
           ],
           "negatives": [
-            "2 off since Nov 25 poor form",
-            "Trainer Johnston 3% win rate"
+            "Post 9+ sprint penalty NA route, but 2 starts off -2",
+            "Dec-fast recent pattern -3"
           ]
         }
       },
       "otherContenders": [
         {
-          "pp": 8,
-          "name": "Hern",
-          "ml": "5-1",
-          "brennyScore": 24,
-          "impliedWinPct": 12.3,
-          "fairOdds": 7.1,
+          "pp": 2,
+          "name": "Determinedly",
+          "ml": "9-2",
+          "brennyScore": 26,
+          "impliedWinPct": 21.5,
+          "fairOdds": 3.65,
           "valueRating": "✅ VALUE",
-          "valueCeiling": 7.1,
+          "valueCeiling": 5,
           "confidence": "◑",
           "keyFactors": [
-            "High fig 99 at distance (+6pts)",
+            "Won last start (+2 booster)",
             "E/P style (+5pts)",
-            "Asmussen barn (+2pts)"
+            "30-60 days off (+4pts)"
           ],
           "negatives": [
-            "4 off since late 2025",
-            "0-2 in 2026"
+            "Post 2 inside (+4pts) helps",
+            "Trainer 3% win rate concerning"
           ]
         },
         {
@@ -1638,31 +1188,31 @@
           "name": "Conquering Cat",
           "ml": "6-1",
           "brennyScore": 22,
-          "impliedWinPct": 10.8,
-          "fairOdds": 8.3,
+          "impliedWinPct": 18.2,
+          "fairOdds": 4.5,
           "valueRating": "✅ VALUE",
-          "valueCeiling": 8.3,
+          "valueCeiling": 7,
           "confidence": "◑",
           "keyFactors": [
-            "Won at distance Sept 25 (+3pts)",
-            "Young improver profile (+2pts)",
-            "Dropped from $32K (+2pts)"
+            "Distance experience (+3pts)",
+            "E/P style (+5pts)",
+            "Trainer 14% dist/surf (+2pts)"
           ],
           "negatives": [
-            "Weak 2026 form 0-for-3",
-            "Trainer Ortiz 6% win rate"
+            "15+ pts back from leader -2",
+            "Trend flat after drop"
           ]
         }
       ],
-      "analysis": "Black Powder best fig and E/P style but underlaid; Onthestage improving rapidly off two strong efforts and offers value at 5-2.",
-      "exoticPlay": "Exacta 3/5, Trifecta 3/5/2-8",
-      "betType": "Place bet on Onthestage, small win on Black Powder",
-      "valueSummary": "Onthestage at 5-2 offers clear value over fair odds of 4.3 while improving sharply under Asmussen.",
+      "analysis": "Black Powder cut-corners winner fits the class drop perfectly, but Onthestage offers best ML value rallying late at 5-2.",
+      "exoticPlay": "Exacta: 3/5,8; Trifecta: 3/5,8/2,6,8",
+      "betType": "Win/Exacta",
+      "valueSummary": "Onthestage at 5-2 is marginally overlaid vs 3.31 fair odds making it the top value play.",
       "topToss": {
         "pp": 7,
-        "name": "Texas Cyclone",
-        "brennyScore": 15,
-        "reason": "Poor 2026 form, reluctant at start, trainer Haran 4% win rate"
+        "name": "Woodcock Flight",
+        "brennyScore": 14,
+        "reason": "IRE-bred, 0 OP distance experience, trainer 0% win rate last 365 days"
       }
     },
     {
@@ -1681,247 +1231,121 @@
           "pp": 4,
           "name": "Emmallene",
           "ml": "3-1",
-          "brennyScore": 27,
-          "impliedWinPct": 22.6,
-          "fairOdds": 3.4,
+          "brennyScore": 28,
+          "impliedWinPct": 23.3,
+          "fairOdds": 3.29,
           "valueRating": "➡️ FAIR",
-          "valueCeiling": 3.4,
+          "valueCeiling": 4,
           "confidence": "★★",
           "keyFactors": [
-            "Best fig 59 in field (+9pts)",
-            "Consistent 5 seconds/thirds (+2pts)",
-            "30-60 days fresh (+4pts)"
+            "Best fig 55 among experienced runners (+6pts)",
+            "E/P style 5 starts of data (+5pts)",
+            "30-60 days off sharp (+4pts)"
           ],
           "negatives": [
-            "0-for-8 lifetime, pattern of seconds",
-            "Trainer Milligan 2% win rate (-2pts)"
+            "0-for-8 career, chronic maiden -1",
+            "Trainer 2% Milligan concerning"
           ]
         },
         "place": {
+          "pp": 5,
+          "name": "Conniption",
+          "ml": "7-2",
+          "brennyScore": 26,
+          "impliedWinPct": 21.7,
+          "fairOdds": 3.6,
+          "valueRating": "✅ VALUE",
+          "valueCeiling": 5,
+          "confidence": "◑",
+          "keyFactors": [
+            "Blinkers On equipment change +1",
+            "1 start, fig 58 leads field (+6pts)",
+            "Moquett 10% trainer, Asmussen 11% jockey (+2pts)"
+          ],
+          "negatives": [
+            "Only 1 career start, limited data",
+            "0 distance experience -1"
+          ]
+        },
+        "show": {
           "pp": 2,
           "name": "Miss Que Sera",
           "ml": "5-1",
           "brennyScore": 24,
-          "impliedWinPct": 13,
-          "fairOdds": 6.7,
+          "impliedWinPct": 20,
+          "fairOdds": 4,
           "valueRating": "✅ VALUE",
-          "valueCeiling": 6.7,
+          "valueCeiling": 6,
           "confidence": "◑",
           "keyFactors": [
-            "Multiple seconds showing speed (+3pts)",
-            "Arrieta 18% jockey (+2pts)",
-            "Good workout pattern (+1pt)"
+            "3 consecutive seconds/thirds, improving trend (+4pts)",
+            "Post 2 inside (+4pts)",
+            "Arrieta 18% jockey win rate (+2pts)"
           ],
           "negatives": [
-            "0-for-6 winless career",
-            "Trainer Jordan 0% with Arrieta"
-          ]
-        },
-        "show": {
-          "pp": 5,
-          "name": "Conniption",
-          "ml": "7-2",
-          "brennyScore": 23,
-          "impliedWinPct": 13.8,
-          "fairOdds": 6.2,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 6.2,
-          "confidence": "◑",
-          "keyFactors": [
-            "First time blinkers on equipment change (+1pt)",
-            "One race fig of 58 competitive (+6pts)",
-            "Moquett stable 10% win rate (+1pt)"
-          ],
-          "negatives": [
-            "Only 1 career start limited data",
-            "Post 5 middle draw neutral"
+            "0 wins from 6 starts",
+            "Trainer Jordan 0% win rate"
           ]
         }
       },
       "otherContenders": [
+        {
+          "pp": 1,
+          "name": "Highway Seventy",
+          "ml": "15-1",
+          "brennyScore": 18,
+          "impliedWinPct": 15,
+          "fairOdds": 5.67,
+          "valueRating": "✅ VALUE",
+          "valueCeiling": 18,
+          "confidence": "◑",
+          "keyFactors": [
+            "Asmussen 15% barn (+2pts)",
+            "showed improvement last start (+3pts)",
+            "30-60 days off (+4pts)"
+          ],
+          "negatives": [
+            "0-for-5 career",
+            "Declining fig trend"
+          ]
+        },
         {
           "pp": 7,
           "name": "Lonely Woman",
           "ml": "6-1",
-          "brennyScore": 20,
-          "impliedWinPct": 10,
-          "fairOdds": 9,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 9,
-          "confidence": "◑",
-          "keyFactors": [
-            "Asmussen 16% barn (+2pts)",
-            "Improving fig 55 in 2026 (+3pts)",
-            "Fresh angle 31-60 days (+4pts)"
-          ],
-          "negatives": [
-            "0-for-4 career winless",
-            "Weak best fig 55 in field"
-          ]
-        },
-        {
-          "pp": 3,
-          "name": "Santa Luzia",
-          "ml": "9-2",
           "brennyScore": 19,
-          "impliedWinPct": 11,
-          "fairOdds": 8.1,
+          "impliedWinPct": 15.8,
+          "fairOdds": 5.32,
           "valueRating": "✅ VALUE",
-          "valueCeiling": 8.1,
+          "valueCeiling": 8,
           "confidence": "◑",
           "keyFactors": [
-            "Third in maiden debut showed promise (+3pts)",
-            "Torres 17% jockey (+2pts)",
-            "Claimed suggests connections believe (+1pt)"
+            "Asmussen 15% barn (+2pts)",
+            "E/P style (+5pts)",
+            "Active workout pattern (+2pts)"
           ],
           "negatives": [
-            "Trainer Shorter 2% win rate with Torres",
-            "Only 3 starts minimal base"
+            "0-for-4 career",
+            "Retreating late in all starts"
           ]
         }
       ],
-      "analysis": "Emmallene has shown the most consistency with multiple seconds but the 0% trainer win rate is alarming; Conniption with blinkers on first time is the value play.",
-      "exoticPlay": "Exacta 4/2-5, Trifecta 4/2/5-7",
-      "betType": "Small win on Conniption for value, place bet Emmallene",
-      "valueSummary": "Conniption first-time blinkers at 7-2 offers value with competitive fig and established barn despite limited record.",
+      "analysis": "Wide-open maiden claimer where Conniption's first-Lasix plus blinkers change provides best value overlay at 7-2.",
+      "exoticPlay": "Exacta: 4,5/4,5,2; Trifecta: 4,5/4,5,2/1,2,7",
+      "betType": "Exacta Box",
+      "valueSummary": "Conniption at 7-2 with equipment change and first Lasix is the standout overlay in a weak field.",
       "topToss": {
         "pp": 9,
         "name": "Cowboy Killer",
         "brennyScore": 8,
-        "reason": "0-for-7 career with no threatening finishes, Harr 2% jockey, hopeless record"
-      }
-    },
-    {
-      "track": "Oaklawn Park",
-      "race": 6,
-      "type": "Ratings Handicap 74-1",
-      "distance": "6 Furlongs",
-      "surface": "Dirt",
-      "purse": 75000,
-      "raceRating": 96,
-      "fieldSize": 9,
-      "postTime": "3:33PM",
-      "fieldLeaderFig": 100,
-      "picks": {
-        "win": {
-          "pp": 7,
-          "name": "Gloriette",
-          "ml": "7-5",
-          "brennyScore": 31,
-          "impliedWinPct": 25.5,
-          "fairOdds": 2.9,
-          "valueRating": "⛔ UNDERLAID",
-          "valueCeiling": 2.9,
-          "confidence": "★★★",
-          "keyFactors": [
-            "Best fig 100 in field (+10pts)",
-            "E/P style 6F specialist (+5pts)",
-            "Won last at class level (+2pts booster)"
-          ],
-          "negatives": [
-            "ML 7-5 below fair odds threshold",
-            "4-for-2026 winless prior to last"
-          ]
-        },
-        "place": {
-          "pp": 9,
-          "name": "Misty Muppet",
-          "ml": "9-2",
-          "brennyScore": 29,
-          "impliedWinPct": 16,
-          "fairOdds": 5.3,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 5.3,
-          "confidence": "★★",
-          "keyFactors": [
-            "Won last start claimed for $32K (+3pts booster)",
-            "Improving trend 2026 (+4pts)",
-            "Pish trainer 17% win rate (+2pts)"
-          ],
-          "negatives": [
-            "Claimed off win may be vulnerable",
-            "Figure 87 gap to leader"
-          ]
-        },
-        "show": {
-          "pp": 2,
-          "name": "Miranda's Rocky",
-          "ml": "8-1",
-          "brennyScore": 27,
-          "impliedWinPct": 10.3,
-          "fairOdds": 8.7,
-          "valueRating": "➡️ FAIR",
-          "valueCeiling": 8.7,
-          "confidence": "◑",
-          "keyFactors": [
-            "Best fig 94 second in field (+9pts)",
-            "Won last two starts improving trend (+4pts)",
-            "Vance trainer 15% (+2pts)"
-          ],
-          "negatives": [
-            "Slow start from post 2 questionable",
-            "6-1 to 8-1 wide swing in odds"
-          ]
-        }
-      },
-      "otherContenders": [
-        {
-          "pp": 6,
-          "name": "Tell Me When",
-          "ml": "12-1",
-          "brennyScore": 22,
-          "impliedWinPct": 6.7,
-          "fairOdds": 13.9,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 13.9,
-          "confidence": "◑",
-          "keyFactors": [
-            "Fig 87 competitive in field (+6pts)",
-            "E/P style suits 6F (+5pts)",
-            "Won at OP in Feb (+2pts)"
-          ],
-          "negatives": [
-            "Faded last two starts form concern",
-            "Trainer Puhl 5% win rate"
-          ]
-        },
-        {
-          "pp": 4,
-          "name": "Hideki",
-          "ml": "20-1",
-          "brennyScore": 20,
-          "impliedWinPct": 4.8,
-          "fairOdds": 19.8,
-          "valueRating": "➡️ FAIR",
-          "valueCeiling": 19.8,
-          "confidence": "◑",
-          "keyFactors": [
-            "Won Jan 26 rallying late (+3pts)",
-            "Asmussen 16% barn (+2pts)",
-            "Off-pace style could benefit pace scenario (+3pts)"
-          ],
-          "negatives": [
-            "Rating 50 lowest in field disadvantage",
-            "2-for-2026 no recent dirt form"
-          ]
-        }
-      ],
-      "analysis": "Gloriette is the class of the field but severely underlaid at 7-5; Misty Muppet off a fresh win and improving is the value play against the favorite.",
-      "exoticPlay": "Exacta 7/9, Exacta 9/7, Trifecta 7/9/2-6",
-      "betType": "Win bet Misty Muppet 9-2 value, against Gloriette in exactas",
-      "valueSummary": "Misty Muppet at 9-2 offers clear value at fair odds 5.3 off a winning effort while Gloriette is significantly underlaid at 7-5.",
-      "topToss": {
-        "pp": 1,
-        "name": "Austrian Navy",
-        "brennyScore": 10,
-        "reason": "Rating 73 bottom of field, trainer Puhl 5% win rate, 0% with Castillo jockey"
+        "reason": "0-for-7 lifetime, consistently finishing 6th-10th with no encouraging form"
       }
     },
     {
       "track": "Oaklawn Park",
       "race": 7,
-      "type": "Maiden Special Weight",
-      "distance": "6 Furlongs",
+      "type": "Maiden",
+      "distance": "6F",
       "surface": "Dirt",
       "purse": 110000,
       "raceRating": 85,
@@ -1933,60 +1357,60 @@
           "pp": 5,
           "name": "Splendid Song",
           "ml": "7-2",
-          "brennyScore": 28,
-          "impliedWinPct": 22.1,
-          "fairOdds": 3.52,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 3.52,
+          "brennyScore": 31,
+          "impliedWinPct": 28.6,
+          "fairOdds": 2.5,
+          "valueRating": "➡️ FAIR",
+          "valueCeiling": 3.5,
           "confidence": "★★",
           "keyFactors": [
-            "Fig within-3 of leader +9",
-            "E/P style +5",
-            "1st Lasix angle with Robertson 33% 1stLasix (+1)"
+            "Best recent fig 78 (+9 fig gap)",
+            "E/P style suits 6F sprint (+5)",
+            "Robertson barn 14% MDN, 1st Lasix boost (+1)"
           ],
           "negatives": [
-            "0 distance experience starts -1",
-            "Only 2 career starts, limited data"
+            "0 distance experience penalty (-1)",
+            "Only 2 career starts, limited form line"
           ]
         },
         "place": {
           "pp": 1,
           "name": "Bet the Gray",
           "ml": "4-1",
-          "brennyScore": 26,
-          "impliedWinPct": 20.2,
-          "fairOdds": 3.95,
-          "valueRating": "✅ VALUE",
-          "valueCeiling": 3.95,
-          "confidence": "◑",
+          "brennyScore": 28,
+          "impliedWinPct": 20,
+          "fairOdds": 4,
+          "valueRating": "➡️ FAIR",
+          "valueCeiling": 5,
+          "confidence": "★★",
           "keyFactors": [
-            "Best fig 82 leader +10",
-            "Post 1-3 +4",
-            "30-60 days rest +4"
+            "Multiple seconds, class drop to open maiden (+2)",
+            "Post 1-3 (+4)",
+            "30-60 days off 8% trainer, fresh angle"
           ],
           "negatives": [
-            "Steered wide in recent starts",
-            "0 distance experience -1"
+            "Trainer only 11% overall, 0% MDN special",
+            "Dec in form trend"
           ]
         },
         "show": {
-          "pp": 9,
-          "name": "Paynterpretty",
-          "ml": "6-1",
-          "brennyScore": 24,
-          "impliedWinPct": 16,
-          "fairOdds": 5.25,
+          "pp": 6,
+          "name": "Mi Amiga",
+          "ml": "5-1",
+          "brennyScore": 26,
+          "impliedWinPct": 14.3,
+          "fairOdds": 6,
           "valueRating": "✅ VALUE",
-          "valueCeiling": 6,
+          "valueCeiling": 8,
           "confidence": "◑",
           "keyFactors": [
-            "Strong trainer 1stTimer 19% +0",
-            "E/P style +5",
-            "Post 9+ sprint -3 offset by first-timer freshness"
+            "Asmussen barn 16% MDN (+3 T/J)",
+            "Best figure 78 matches field leaders",
+            "30-60 days fresh (+4)"
           ],
           "negatives": [
-            "First career start",
-            "Post 9 sprint -3"
+            "0 wins in 2 tries, modest efforts",
+            "Trainer 0% with E. Asmussen jockey combo here"
           ]
         }
       },
@@ -1995,59 +1419,59 @@
           "pp": 3,
           "name": "Bodacious Bay",
           "ml": "9-2",
-          "brennyScore": 22,
-          "impliedWinPct": 15,
-          "fairOdds": 5.67,
-          "valueRating": "➡️ FAIR",
-          "valueCeiling": 5.67,
+          "brennyScore": 24,
+          "impliedWinPct": 11,
+          "fairOdds": 8,
+          "valueRating": "✅ VALUE",
+          "valueCeiling": 10,
           "confidence": "◑",
           "keyFactors": [
-            "25% trainer first-timer Brisset +0",
-            "Not This Time pedigree for sprint",
-            "Good works 36.80/49.80 Keeneland"
+            "First-timer with sharp works, Brisset 25% trainer (+3)",
+            "$350K purchase price suggests talent",
+            "Post 3 favorable (+4)"
           ],
           "negatives": [
-            "First career start",
-            "RegVet-Unsound scratch history"
+            "0 career starts, complete unknown",
+            "Trainer 9% first timers in MDN special"
           ]
         },
         {
-          "pp": 6,
-          "name": "Mi Amiga",
-          "ml": "5-1",
-          "brennyScore": 23,
-          "impliedWinPct": 17.5,
-          "fairOdds": 4.71,
-          "valueRating": "➡️ FAIR",
-          "valueCeiling": 4.71,
+          "pp": 9,
+          "name": "Paynterpretty",
+          "ml": "6-1",
+          "brennyScore": 22,
+          "impliedWinPct": 10,
+          "fairOdds": 9,
+          "valueRating": "✅ VALUE",
+          "valueCeiling": 12,
           "confidence": "◑",
           "keyFactors": [
-            "Fig 78 within-3 of leader +9",
-            "Asmussen 16% MSW +0",
-            "Improved last out at this distance"
+            "Schultz 19% first timers, blazing 1:01 work (+3)",
+            "$70K purchase, first Lasix (+1)",
+            "Post favorable"
           ],
           "negatives": [
-            "0 wins in 2 starts",
-            "Off slow tendency noted"
+            "0 career starts",
+            "Jockey Cedillo only 12% overall"
           ]
         }
       ],
-      "analysis": "Splendid Song offers 1stLasix angle with Robertson's strong 33% stat and sharp recent works at OP, making 7-2 a value price in a wide-open maiden field.",
-      "exoticPlay": "Exacta 5-1, Trifecta 5/1/3-9",
-      "betType": "Win + Exacta",
-      "valueSummary": "Splendid Song at 7-2 offers fair value over implied odds with key equipment/Lasix angle.",
+      "analysis": "Splendid Song showed speed and placed at Keyes in maiden before changing trainers; Robertson 1st Lasix angle is a live angle in wide-open field.",
+      "exoticPlay": "$1 Exacta 5-1, $0.50 Trifecta 5/1,3/1,6,3,9",
+      "betType": "Win/Exacta",
+      "valueSummary": "Splendid Song at fair odds with Lasix angle; Bodacious Bay and Paynterpretty offer first-timer value in weak field.",
       "topToss": {
-        "pp": 3,
-        "name": "Bodacious Bay",
-        "brennyScore": 22,
-        "reason": "Brisset 25% trainer with expensive pedigree could easily outrun 9-2 if breaks cleanly"
+        "pp": 2,
+        "name": "The Long Embrace",
+        "brennyScore": 18,
+        "reason": "Pure debut, no works beyond acceptable, 0% jockey, trainer 8% first timers"
       }
     },
     {
       "track": "Oaklawn Park",
       "race": 8,
       "type": "Overnight Stakes - Majestic Overnight S.",
-      "distance": "6 Furlongs",
+      "distance": "6F",
       "surface": "Dirt",
       "purse": 135000,
       "raceRating": 100,
@@ -2059,121 +1483,121 @@
           "pp": 6,
           "name": "Ervadean",
           "ml": "3-1",
-          "brennyScore": 33,
-          "impliedWinPct": 25,
-          "fairOdds": 3,
-          "valueRating": "➡️ FAIR",
+          "brennyScore": 36,
+          "impliedWinPct": 33.3,
+          "fairOdds": 2,
+          "valueRating": "⛔ UNDERLAID",
           "valueCeiling": 3,
           "confidence": "★★★",
           "keyFactors": [
-            "Best fig 99 within-3 of leader +9",
-            "Won last at class level +2",
-            "Post 1-3 +4"
+            "Best fig 99 in field, within 1 of leader (+9)",
+            "Won last out vs NW3/L (+2 won last at class)",
+            "E/P style, 6F specialist (+5)"
           ],
           "negatives": [
-            "Post 6 -1",
-            "Trainer Stewart 0% WonLastStart stakes"
+            "ML 3-1 below fair value at 2-1",
+            "Trainer 13% WonLastStart limits confidence"
           ]
         },
         "place": {
-          "pp": 5,
-          "name": "Anakarina",
-          "ml": "5-2",
-          "brennyScore": 32,
-          "impliedWinPct": 28.6,
-          "fairOdds": 2.5,
-          "valueRating": "➡️ FAIR",
-          "valueCeiling": 2.5,
-          "confidence": "★★★",
-          "keyFactors": [
-            "Fig 96 leader +10",
-            "E/P style +5",
-            "30-60 days +4"
-          ],
-          "negatives": [
-            "Post 5 +3 only",
-            "Weakened badly in Bugler S"
-          ]
-        },
-        "show": {
           "pp": 4,
           "name": "Spring Dancer",
           "ml": "5-1",
+          "brennyScore": 34,
+          "impliedWinPct": 25,
+          "fairOdds": 3,
+          "valueRating": "✅ VALUE",
+          "valueCeiling": 6,
+          "confidence": "★★",
+          "keyFactors": [
+            "Won last 2, best improving trend (+4 trend boost)",
+            "Best fig+improving booster (+3)",
+            "5-1 vs 3-1 fair = strong value"
+          ],
+          "negatives": [
+            "Slightly below top field fig (-0)",
+            "Trainer 14% WonLastStart"
+          ]
+        },
+        "show": {
+          "pp": 2,
+          "name": "R Pretty Kitty",
+          "ml": "7-2",
           "brennyScore": 30,
-          "impliedWinPct": 16.7,
-          "fairOdds": 5,
+          "impliedWinPct": 20,
+          "fairOdds": 4,
           "valueRating": "➡️ FAIR",
           "valueCeiling": 5,
           "confidence": "★★",
           "keyFactors": [
-            "Fig 95 within-3 +9",
-            "Won last 2 in 2026 +3",
-            "Trainer Morse 29% WonLastStart +0"
+            "Best fig 100 ties field leader (+10)",
+            "E/P style suits distance (+5)",
+            "Manley 26% dist/surf trainer"
           ],
           "negatives": [
-            "Post 4 +3 only",
-            "Beaten in Bugler S field"
+            "7-2 slightly below fair value",
+            "Within-3 but flat 2026 form after last win"
           ]
         }
       },
       "otherContenders": [
         {
-          "pp": 2,
-          "name": "R Pretty Kitty",
-          "ml": "7-2",
+          "pp": 5,
+          "name": "Anakarina",
+          "ml": "5-2",
           "brennyScore": 28,
-          "impliedWinPct": 22.2,
-          "fairOdds": 3.5,
+          "impliedWinPct": 20.5,
+          "fairOdds": 3.9,
           "valueRating": "➡️ FAIR",
-          "valueCeiling": 3.5,
-          "confidence": "◑",
+          "valueCeiling": 4,
+          "confidence": "★★",
           "keyFactors": [
-            "Fig 100 leader +10",
-            "Won nw1x convincingly",
-            "Post 1-3 +4"
+            "Won last (Apr 4) stomping 9-filly field (+2)",
+            "Best fig 96, within range",
+            "Stewart 21% trainer"
           ],
           "negatives": [
-            "0% trainer stakes stat Manley",
-            "Steps up in class"
+            "Backed up badly in Bugler stakes (-3 dec-fast)",
+            "Short field size closer concern"
           ]
         },
         {
           "pp": 1,
           "name": "Dream Concert",
           "ml": "9-2",
-          "brennyScore": 25,
-          "impliedWinPct": 18,
-          "fairOdds": 4.56,
-          "valueRating": "➡️ FAIR",
-          "valueCeiling": 4.56,
+          "brennyScore": 24,
+          "impliedWinPct": 13,
+          "fairOdds": 6.7,
+          "valueRating": "✅ VALUE",
+          "valueCeiling": 9,
           "confidence": "◑",
           "keyFactors": [
-            "Fig 84 within range",
-            "Shows up in key spots",
-            "30-60 days freshened"
+            "Placed in last 2, 84 top fig (+3 dist exp)",
+            "9-2 vs 6-7 fair = value",
+            "Stall trainer 21% dist/surf"
           ],
           "negatives": [
-            "Two back finishes soft",
-            "6% trainer stakes stat"
+            "Hasn't won since 2025",
+            "Trainer 6% in stakes"
           ]
         }
       ],
-      "analysis": "Ervadean just won an open allowance and has the best recent form in this spot; Anakarina is the speed of the race but has a history of weakening late against top competition.",
-      "exoticPlay": "Exacta 6-5, Trifecta 6/5/4",
-      "betType": "Win",
-      "valueSummary": "Ervadean at 3-1 is fairly priced as the form horse; Spring Dancer at 5-1 offers mild value as the single overlay.",
+      "analysis": "Ervadean is the deserving chalk having won her last out going this distance and surface, but Spring Dancer is the best value at 5-1 with back-to-back wins.",
+      "exoticPlay": "$2 Win Spring Dancer, $1 Exacta 4-6, $0.50 Trifecta 4,6/2,4,6/1,2,4,5,6",
+      "betType": "Win (Spring Dancer) + Exacta",
+      "valueSummary": "Spring Dancer at 5-1 with two straight wins is the standout value; Ervadean is the most likely winner but underlaid.",
       "topToss": {
         "pp": 3,
         "name": "Pistol",
-        "brennyScore": 24,
-        "reason": "Pistol was sharp winning at CD in November and is 61-180 days fresh with best lifetime fig 106 — could fire big at 6-1"
+        "brennyScore": 19,
+        "reason": "Supplemental entrant, 0-2 in 2026, backed up badly in Bugler, wide trip pattern repeating"
       }
     },
     {
       "track": "Oaklawn Park",
       "race": 9,
       "type": "Claiming $25,000-$20,000",
-      "distance": "6 Furlongs",
+      "distance": "6F",
       "surface": "Dirt",
       "purse": 38000,
       "raceRating": 76,
@@ -2185,114 +1609,114 @@
           "pp": 10,
           "name": "Extract's Arrow",
           "ml": "3-1",
-          "brennyScore": 30,
-          "impliedWinPct": 25,
-          "fairOdds": 3,
-          "valueRating": "➡️ FAIR",
+          "brennyScore": 32,
+          "impliedWinPct": 30,
+          "fairOdds": 2.3,
+          "valueRating": "⛔ UNDERLAID",
           "valueCeiling": 3.5,
           "confidence": "★★",
           "keyFactors": [
-            "Won maiden convincingly Jan 2026 +2",
-            "E/P style +5",
-            "30-60 days rest +4"
+            "Won maiden Jan 4 romping 9 wide (+2 won last)",
+            "Best fig 74 matches field (+6 fig gap range)",
+            "3-year-old freshness angle, 61 days off (+2)"
           ],
           "negatives": [
-            "Trainer Johnston 3% win rate -0",
-            "0 dirt sprint surface wins beyond maiden"
+            "ML 3-1 below fair 2.3-1",
+            "Trainer Johnston only 3% overall, 0% claiming"
           ]
         },
         "place": {
           "pp": 4,
           "name": "Time Andbeyond",
           "ml": "7-2",
-          "brennyScore": 29,
-          "impliedWinPct": 22.2,
-          "fairOdds": 3.5,
-          "valueRating": "➡️ FAIR",
-          "valueCeiling": 3.5,
-          "confidence": "★★",
-          "keyFactors": [
-            "Fig 76 within-3 +9",
-            "E/P style +5",
-            "Strong late-run pattern vs tougher"
-          ],
-          "negatives": [
-            "1 win in 23 career starts",
-            "Moquett 14% claiming"
-          ]
-        },
-        "show": {
-          "pp": 3,
-          "name": "Task",
-          "ml": "4-1",
-          "brennyScore": 28,
+          "brennyScore": 30,
           "impliedWinPct": 20,
           "fairOdds": 4,
           "valueRating": "➡️ FAIR",
-          "valueCeiling": 4,
-          "confidence": "◑",
+          "valueCeiling": 5,
+          "confidence": "★★",
           "keyFactors": [
-            "Fig 75 field competitive +9",
-            "6 seconds in career shows consistency +2",
-            "Dropping into ideal spot"
+            "Multiple seconds and consistent efforts (+3 consistency)",
+            "Post 4 favorable (+3)",
+            "Moquett 14% claiming trainer"
           ],
           "negatives": [
-            "1 win in 11 career starts",
-            "Trainer Witt 9% win rate"
+            "Has not won in 23 career starts",
+            "Flat to mildly declining 2026 form"
+          ]
+        },
+        "show": {
+          "pp": 1,
+          "name": "Gray Taps",
+          "ml": "5-1",
+          "brennyScore": 29,
+          "impliedWinPct": 18,
+          "fairOdds": 4.6,
+          "valueRating": "✅ VALUE",
+          "valueCeiling": 7,
+          "confidence": "★★",
+          "keyFactors": [
+            "Won last Mar 20 at this level (+2)",
+            "Best fig 76 ties field (+9)",
+            "Morse 16% WonLastStart trainer"
+          ],
+          "negatives": [
+            "Allowance/route starts sandwiched winner, inconsistency",
+            "Days off 37 days, trainer 12% 31-60 days"
           ]
         }
       },
       "otherContenders": [
         {
-          "pp": 1,
-          "name": "Gray Taps",
-          "ml": "5-1",
+          "pp": 3,
+          "name": "Task",
+          "ml": "4-1",
           "brennyScore": 27,
-          "impliedWinPct": 16.7,
-          "fairOdds": 5,
-          "valueRating": "➡️ FAIR",
-          "valueCeiling": 5,
-          "confidence": "◑",
-          "keyFactors": [
-            "Won last start at this class +2",
-            "Trainer Morse 21% WonLastStart",
-            "Post 1-3 +4"
-          ],
-          "negatives": [
-            "Only 4 career starts — limited sample",
-            "Long freshening since March"
-          ]
-        },
-        {
-          "pp": 7,
-          "name": "Butch",
-          "ml": "8-1",
-          "brennyScore": 24,
-          "impliedWinPct": 10.5,
-          "fairOdds": 8.5,
+          "impliedWinPct": 15.5,
+          "fairOdds": 5.5,
           "valueRating": "✅ VALUE",
           "valueCeiling": 8,
           "confidence": "◑",
           "keyFactors": [
-            "Won last start sprinting +2",
-            "20% trainer McKellar",
-            "Fig improving trend"
+            "Multiple 2nds in similar company, consistent closer (+3)",
+            "Witt trainer 9% with Torres 17% jockey combo",
+            "4-1 vs 5.5 fair = mild value"
           ],
           "negatives": [
-            "Post 7 sprint -0",
-            "Trainer small sample"
+            "0 wins in 11 starts lifetime",
+            "Closing style in small field concern (-3)"
+          ]
+        },
+        {
+          "pp": 8,
+          "name": "Midnight Whirl",
+          "ml": "10-1",
+          "brennyScore": 22,
+          "impliedWinPct": 8,
+          "fairOdds": 11.5,
+          "valueRating": "✅ VALUE",
+          "valueCeiling": 15,
+          "confidence": "◑",
+          "keyFactors": [
+            "Won only start at OP Dec 26 (+2)",
+            "1st Lasix today (+1)",
+            "Morse 12% 1stLasix trainer"
+          ],
+          "negatives": [
+            "Only 2 career starts, durability unknown",
+            "Long layoff 180+ days since win"
           ]
         }
       ],
-      "analysis": "Extract's Arrow broke maiden wire-to-wire in January and gets a logical class drop to $25k NW2L; Time Andbeyond has been knocking on the door with several near-misses and belongs at this level.",
-      "exoticPlay": "Exacta 10-4, Trifecta 10/4/3",
-      "betType": "Win + Exacta",
-      "valueSummary": "Butch at 8-1 is the lone overlay worth small exposure; top three are all fairly priced at current morning lines.",
+      "analysis": "Extract's Arrow won his debut impressively but is underlaid at 3-1; Gray Taps is the best value angle having won last out with the top figure.",
+      "exoticPlay": "$2 Win Gray Taps, $1 Exacta 1-10, $0.50 Trifecta 1,10/4,3/3,4,8",
+      "betType": "Win (Gray Taps) + Exacta",
+      "valueSummary": "Gray Taps at 5-1 with a win last out and top figure offers the best value in a competitive Arkansas-bred sprint.",
       "topToss": {
-        "pp": 7,
-        "name": "Butch",
-        "brennyScore": 24,
-        "reason": "Won last start routing, shows improving trend, trainer McKellar 20% win rate — could easily outrun 8-1 if class drop clicks"
+        "pp": 9,
+        "name": "Stormbender",
+        "brennyScore": 14,
+        "reason": "0-3 in 2026 with poor figures, reluctant loader, trainer 0% last 31-60 days, no viable path to win"
       }
     }
   ]

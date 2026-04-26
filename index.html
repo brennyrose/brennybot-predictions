@@ -366,6 +366,37 @@
         .ponies-legend .legend-items { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; font-size: 12px; color: var(--text-dim); }
         .ponies-legend .legend-note { font-size: 10px; color: var(--text-muted); margin-top: 10px; line-height: 1.6; }
 
+        .wps-score { font-size: 11px; color: var(--blue); font-family: 'IBM Plex Mono', monospace; margin-top: 3px; font-weight: 600; }
+        .wps-prob { font-size: 10px; color: var(--text-dim); font-family: 'IBM Plex Mono', monospace; margin-top: 1px; }
+        .wps-value { font-size: 10px; font-weight: 700; margin-top: 4px; padding: 2px 6px; border-radius: 3px; display: inline-block; }
+        .wps-ceiling { font-size: 10px; color: var(--silver); margin-top: 3px; font-style: italic; }
+        .val-strong { color: #fb923c; background: rgba(251,146,60,0.1); }
+        .val-good { color: var(--green); background: rgba(74,222,128,0.1); }
+        .val-fair { color: var(--text-dim); background: rgba(107,122,150,0.08); }
+        .val-under { color: var(--red); background: rgba(248,113,113,0.08); }
+        .wps-negatives { margin-top: 4px; list-style: none; }
+        .wps-negatives li { font-size: 10px; color: #f87171; line-height: 1.5; }
+        .wps-negatives li::before { content: "✗ "; color: rgba(248,113,113,0.5); }
+
+        .value-summary {
+            margin-top: 14px; padding: 10px 12px;
+            background: rgba(96,165,250,0.06); border: 1px solid rgba(96,165,250,0.12);
+            border-radius: 6px; font-size: 12px; color: var(--silver); line-height: 1.6;
+        }
+
+        .contenders-section { margin-top: 14px; }
+        .contenders-title { font-size: 10px; font-weight: 700; color: var(--text-dim); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+        .contender-row {
+            padding: 8px 12px; margin-bottom: 6px;
+            background: rgba(0,0,0,0.12); border-radius: 6px; border: 1px solid var(--border);
+        }
+        .contender-header { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+        .contender-name { font-size: 13px; font-weight: 600; color: var(--text); }
+        .contender-ml { font-size: 11px; color: var(--text-dim); font-family: 'IBM Plex Mono', monospace; }
+        .contender-score { font-size: 11px; color: var(--blue); font-family: 'IBM Plex Mono', monospace; }
+        .contender-value { font-size: 10px; font-weight: 700; padding: 1px 5px; border-radius: 3px; }
+        .contender-ceiling { font-size: 10px; color: var(--silver); margin-top: 3px; font-style: italic; }
+
         /* ── Under Construction ── */
         .under-construction {
             text-align: center;
@@ -565,7 +596,7 @@
         NBA Model v2.1 — Backtested: 1,231 games, February 2026<br>
         NHL Model v2.1 — Backtested: 2,542 games, February 2026<br>
         NCAAB Model v1.1 — Backtested: 4,078 games, February 2026<br>
-        Ponies Model v1.0 — Backtested: 82,536 entrants / 10,619 races, 2023 Equibase<br>
+        Ponies Model v2.0 — Backtested: 82,536 entrants / 10,619 races, 2023 Equibase<br>
         <br>
         Auto-refreshes on cron: NBA 10 AM + 6:15 PM + 8:45 PM · NHL 6:20 PM + 8:10 PM · NCAAB 11 AM + 6:25 PM EST<br>
         For personal use only. Not financial advice.
@@ -779,7 +810,8 @@ function renderPonies() {
         document.getElementById('ponies-top-plays').style.display = 'block';
         document.getElementById('ponies-top-list').innerHTML = topPlays.map(function(r) {
             var w = r.picks.win;
-            return '<div class="pick-line"><span class="pick-rec">R' + r.race + ' #' + w.pp + ' ' + w.name + ' (' + w.ml + ')</span><span class="pick-edge conf-high">' + (r.betType || 'WIN') + '</span></div>';
+            var detail = r.valueSummary || r.betType || 'WIN';
+            return '<div class="pick-line"><span class="pick-rec">R' + r.race + ' #' + w.pp + ' ' + w.name + ' (' + w.ml + ')</span><span class="pick-edge" style="font-size:11px;color:var(--silver);max-width:55%;text-align:right">' + detail + '</span></div>';
         }).join('');
     } else {
         document.getElementById('ponies-top-plays').style.display = 'none';
@@ -792,6 +824,7 @@ function renderPonies() {
         var id = 'ponies-r' + r.track + r.race;
         var surface = r.surface || '';
         var surfColor = surface.toLowerCase() === 'turf' ? 'color:var(--green)' : '';
+        var vr = w && w.valueRating ? ' · ' + w.valueRating : '';
 
         return '<div class="race-card" id="' + id + '">' +
             '<div class="race-header" onclick="togglePoniesRace(\'' + id + '\')">' +
@@ -802,12 +835,15 @@ function renderPonies() {
                     '</span>' +
                 '</div>' +
                 '<div class="race-pick-preview">' +
-                    (w ? '<span class="race-pick-name">' + w.name + '</span><span class="race-pick-ml">(' + w.ml + ')</span><span class="' + confCls + '">' + (w.confidence || '') + '</span>' : '') +
+                    (w ? '<span class="race-pick-name">' + w.name + '</span><span class="race-pick-ml">(' + w.ml + ')</span><span class="' + confCls + '">' + (w.confidence || '') + '</span>' +
+                    (w.valueRating ? '<span class="wps-value ' + valClass(w.valueRating) + '" style="margin-left:4px;font-size:9px">' + w.valueRating + '</span>' : '') : '') +
                     '<span class="race-chevron" id="chev-' + id + '">▼</span>' +
                 '</div>' +
             '</div>' +
             '<div class="race-detail" id="detail-' + id + '">' +
+                (r.valueSummary ? '<div class="value-summary">' + r.valueSummary + '</div>' : '') +
                 renderWPS(r.picks) +
+                renderContenders(r.otherContenders) +
                 (r.analysis ? '<div class="race-analysis">' + r.analysis + '</div>' : '') +
                 (r.exoticPlay ? '<div class="exotic-bar"><div class="exotic-label">Exotic Play</div><div class="exotic-play">' + r.exoticPlay + '</div></div>' : '') +
                 (r.betType ? '<div class="bet-badge">' + r.betType + '</div>' : '') +
@@ -817,11 +853,11 @@ function renderPonies() {
     '<div class="ponies-legend">' +
         '<div class="legend-title">Confidence Key</div>' +
         '<div class="legend-items">' +
-            '<span><span class="conf-high">★★★</span> Strong (4+ factors)</span>' +
-            '<span><span class="conf-medium">★★</span> Moderate (2-3)</span>' +
+            '<span><span class="conf-high">★★★</span> Strong (30+ pts)</span>' +
+            '<span><span class="conf-medium">★★</span> Moderate (22-29)</span>' +
             '<span><span class="conf-none">◑</span> Lean / Volatile</span>' +
         '</div>' +
-        '<div class="legend-note">Speed Fig Gap · Surface Exp · Running Style · Post Position · Days Off · Fig Trend · Trainer/Jockey</div>' +
+        '<div class="legend-note">BrennyScore (44 max): Fig Gap 10 · Surface Exp 6 · Style 5 · Post 4 · Trend 4 · Days Off 4 · Dist Exp 3 · Consistency 3 · T/J Combo 3 · Class 2 · Boosters/Negatives</div>' +
     '</div>';
 }
 
@@ -834,14 +870,50 @@ function renderWPS(picks) {
         var cls = slot === 'win' ? 'w' : slot === 'place' ? 'p' : 's';
         var label = slot.toUpperCase();
         var factors = (p.keyFactors || []).map(function(f) { return '<li>' + f + '</li>'; }).join('');
+        var scoreHtml = p.brennyScore != null ? '<div class="wps-score">BS: ' + p.brennyScore + '/44</div>' : '';
+        var valueHtml = p.valueRating ? '<div class="wps-value ' + valClass(p.valueRating) + '">' + p.valueRating + '</div>' : '';
+        var ceilingHtml = p.valueCeiling ? '<div class="wps-ceiling">' + p.valueCeiling + '</div>' : '';
+        var probHtml = p.impliedWinPct != null ? '<div class="wps-prob">Win%: ' + p.impliedWinPct.toFixed(1) + '% · Fair: ' + (p.fairOdds || '—') + '</div>' : '';
         html += '<div class="wps-box ' + cls + '">' +
             '<div class="wps-label">' + label + '</div>' +
             '<div class="wps-horse">#' + p.pp + ' ' + p.name + '</div>' +
             '<div class="wps-ml">ML: ' + p.ml + '</div>' +
+            scoreHtml + probHtml + valueHtml + ceilingHtml +
             (factors ? '<ul class="wps-factors">' + factors + '</ul>' : '') +
+            (p.negatives && p.negatives.length ? '<ul class="wps-negatives">' + p.negatives.map(function(n){return '<li>' + n + '</li>';}).join('') + '</ul>' : '') +
         '</div>';
     });
     return html + '</div>';
+}
+
+function renderContenders(contenders) {
+    if (!contenders || !contenders.length) return '';
+    var html = '<div class="contenders-section"><div class="contenders-title">Other Contenders</div>';
+    contenders.forEach(function(c) {
+        var factors = (c.keyFactors || []).map(function(f) { return '<li>' + f + '</li>'; }).join('');
+        var negs = (c.negatives || []).map(function(n) { return '<li>' + n + '</li>'; }).join('');
+        html += '<div class="contender-row">' +
+            '<div class="contender-header">' +
+                '<span class="contender-name">#' + c.pp + ' ' + c.name + '</span>' +
+                '<span class="contender-ml">ML: ' + c.ml + '</span>' +
+                (c.brennyScore != null ? '<span class="contender-score">BS: ' + c.brennyScore + '</span>' : '') +
+                (c.valueRating ? '<span class="contender-value ' + valClass(c.valueRating) + '">' + c.valueRating + '</span>' : '') +
+            '</div>' +
+            (c.valueCeiling ? '<div class="contender-ceiling">' + c.valueCeiling + '</div>' : '') +
+            (factors ? '<ul class="wps-factors">' + factors + '</ul>' : '') +
+            (negs ? '<ul class="wps-negatives">' + negs + '</ul>' : '') +
+        '</div>';
+    });
+    return html + '</div>';
+}
+
+function valClass(vr) {
+    if (!vr) return '';
+    if (vr.indexOf('STRONG') >= 0) return 'val-strong';
+    if (vr.indexOf('VALUE') >= 0) return 'val-good';
+    if (vr.indexOf('FAIR') >= 0) return 'val-fair';
+    if (vr.indexOf('UNDERLAID') >= 0) return 'val-under';
+    return '';
 }
 
 function switchPoniesTrack(t) {

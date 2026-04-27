@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27 10:00:26",
+  "generated_at": "2026-04-27 18:20:03",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -41,19 +41,20 @@
       "kelly_pct": 0.0801,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "PIT ML (-130) \u2014 3.0u | EV: 12.3% | Kelly: 8.0%"
+      "recommendation": "PIT ML (-130) \u2014 3.0u | EV: 12.3% | Kelly: 8.0%",
+      "_locked": true
     },
     {
       "away_team": "VGK",
       "home_team": "UTA",
-      "away_win_prob": 0.4718,
-      "home_win_prob": 0.5282,
-      "model_away_odds": 112,
-      "model_home_odds": -112,
-      "goalie_adj": 0.1188,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "away_win_prob": 0.4419,
+      "home_win_prob": 0.5581,
+      "model_away_odds": 126,
+      "model_home_odds": -126,
+      "goalie_adj": 0.3,
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Carter Hart",
+      "home_goalie": "Karel Vejmelka",
       "away_b2b": false,
       "home_b2b": false,
       "away_gp": 56,
@@ -71,18 +72,18 @@
       "home_luck_adj": 0.0036,
       "rest_effect": 0.0,
       "model_version": "v2.2",
-      "vegas_away_odds": -113,
-      "vegas_home_odds": 102,
-      "away_ev": -0.1107,
-      "home_ev": 0.067,
+      "vegas_away_odds": -122,
+      "vegas_home_odds": 110,
+      "away_ev": -0.1959,
+      "home_ev": 0.172,
       "best_bet_team": "UTA",
-      "best_bet_odds": 102,
-      "best_bet_ev": 0.067,
-      "kelly_pct": 0.0328,
-      "recommended_units": 2.0,
-      "confidence": "MEDIUM",
-      "recommendation": "UTA ML (+102) \u2014 2.0u | EV: 6.7% | Kelly: 3.3%"
+      "best_bet_odds": 110,
+      "best_bet_ev": 0.172,
+      "kelly_pct": 0.0782,
+      "recommended_units": 3.0,
+      "confidence": "HIGH",
+      "recommendation": "UTA ML (+110) \u2014 3.0u | EV: 17.2% | Kelly: 7.8%"
     }
   ],
-  "odds_api_remaining": 390
+  "odds_api_remaining": 388
 }

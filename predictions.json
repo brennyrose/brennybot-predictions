@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27 18:15",
+  "generated_at": "2026-04-27 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 389,
@@ -98,7 +98,8 @@
       "dt_away_score": 111.0,
       "dt_win_prob": 0.294,
       "home_abbrev": "PHX",
-      "away_abbrev": "OKC"
+      "away_abbrev": "OKC",
+      "_locked": true
     },
     {
       "home_team": "Orlando Magic",
@@ -138,7 +139,8 @@
       "dt_away_score": 110.0,
       "dt_win_prob": 0.429,
       "home_abbrev": "ORL",
-      "away_abbrev": "DET"
+      "away_abbrev": "DET",
+      "_locked": true
     }
   ],
   "summary": {

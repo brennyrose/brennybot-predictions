@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03 18:15",
+  "generated_at": "2026-05-03 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 491,
@@ -58,7 +58,8 @@
       "dt_away_score": 106.6,
       "dt_win_prob": 0.726,
       "home_abbrev": "CLE",
-      "away_abbrev": "TOR"
+      "away_abbrev": "TOR",
+      "_locked": true
     },
     {
       "home_team": "Detroit Pistons",

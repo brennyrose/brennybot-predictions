@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05 10:00:32",
+  "generated_at": "2026-05-05 18:20:10",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -11,9 +11,9 @@
       "model_away_odds": 297,
       "model_home_odds": -297,
       "goalie_adj": 0.0,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Jesper Wallstedt",
+      "home_goalie": "Scott Wedgewood",
       "away_b2b": false,
       "home_b2b": false,
       "away_gp": 58,
@@ -31,18 +31,18 @@
       "home_luck_adj": 0.009,
       "rest_effect": 0.0,
       "model_version": "v2.2",
-      "vegas_away_odds": 170,
-      "vegas_home_odds": -190,
-      "away_ev": -0.3191,
-      "home_ev": 0.1414,
+      "vegas_away_odds": 171,
+      "vegas_home_odds": -196,
+      "away_ev": -0.3165,
+      "home_ev": 0.1293,
       "best_bet_team": "COL",
-      "best_bet_odds": -190,
-      "best_bet_ev": 0.1414,
-      "kelly_pct": 0.1343,
+      "best_bet_odds": -196,
+      "best_bet_ev": 0.1293,
+      "kelly_pct": 0.1267,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "COL ML (-190) \u2014 3.0u | EV: 14.1% | Kelly: 13.4%"
+      "recommendation": "COL ML (-196) \u2014 3.0u | EV: 12.9% | Kelly: 12.7%"
     }
   ],
-  "odds_api_remaining": 484
+  "odds_api_remaining": 482
 }

@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-06 10:00",
+  "generated_at": "2026-05-06 18:15",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
-  "odds_api_remaining": 481,
+  "odds_api_remaining": 479,
   "parameters": {
     "home_court_advantage": 2.5,
     "hca_variance_enabled": true,
@@ -58,7 +58,8 @@
       "dt_away_score": 107.2,
       "dt_win_prob": 0.668,
       "home_abbrev": "NYK",
-      "away_abbrev": "PHI"
+      "away_abbrev": "PHI",
+      "_locked": true
     },
     {
       "home_team": "San Antonio Spurs",
@@ -66,7 +67,7 @@
       "date": "2026-05-06",
       "commence": "2026-05-07T01:40:00Z",
       "vegas_spread": -10.5,
-      "consensus_spread": -10.0,
+      "consensus_spread": -10.1,
       "model_spread": -11.0,
       "ratings_spread": -11.1,
       "edge": 0.5,

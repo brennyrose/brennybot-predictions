@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06 18:15",
+  "generated_at": "2026-05-06 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 479,
@@ -99,7 +99,8 @@
       "dt_away_score": 101.6,
       "dt_win_prob": 0.869,
       "home_abbrev": "SAS",
-      "away_abbrev": "MIN"
+      "away_abbrev": "MIN",
+      "_locked": true
     }
   ],
   "summary": {

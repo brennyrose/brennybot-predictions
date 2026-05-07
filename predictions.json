@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-07 10:00",
+  "generated_at": "2026-05-07 18:15",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
-  "odds_api_remaining": 477,
+  "odds_api_remaining": 475,
   "parameters": {
     "home_court_advantage": 2.5,
     "hca_variance_enabled": true,
@@ -58,7 +58,8 @@
       "dt_away_score": 109.0,
       "dt_win_prob": 0.698,
       "home_abbrev": "DET",
-      "away_abbrev": "CLE"
+      "away_abbrev": "CLE",
+      "_locked": true
     },
     {
       "home_team": "Oklahoma City Thunder",

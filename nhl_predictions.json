@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-05-07 10:00:18",
+  "generated_at": "2026-05-07 18:20:10",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
     {
       "away_team": "CAR",
       "home_team": "PHI",
-      "away_win_prob": 0.6994,
-      "home_win_prob": 0.3006,
-      "model_away_odds": -233,
-      "model_home_odds": 233,
-      "goalie_adj": -0.1163,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "away_win_prob": 0.6841,
+      "home_win_prob": 0.3159,
+      "model_away_odds": -217,
+      "model_home_odds": 217,
+      "goalie_adj": 0.0,
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Frederik Andersen",
+      "home_goalie": "Dan Vladar",
       "away_b2b": false,
       "home_b2b": false,
       "away_gp": 56,
@@ -32,17 +32,17 @@
       "rest_effect": 0.0,
       "model_version": "v2.2",
       "vegas_away_odds": -160,
-      "vegas_home_odds": 142,
-      "away_ev": 0.1365,
-      "home_ev": -0.2725,
+      "vegas_home_odds": 145,
+      "away_ev": 0.1117,
+      "home_ev": -0.226,
       "best_bet_team": "CAR",
       "best_bet_odds": -160,
-      "best_bet_ev": 0.1365,
-      "kelly_pct": 0.1092,
+      "best_bet_ev": 0.1117,
+      "kelly_pct": 0.0893,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "CAR ML (-160) \u2014 3.0u | EV: 13.7% | Kelly: 10.9%"
+      "recommendation": "CAR ML (-160) \u2014 3.0u | EV: 11.2% | Kelly: 8.9%"
     }
   ],
-  "odds_api_remaining": 476
+  "odds_api_remaining": 474
 }

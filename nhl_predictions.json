@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08 10:00:19",
+  "generated_at": "2026-05-08 18:20:04",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -41,19 +41,20 @@
       "kelly_pct": 0.017,
       "recommended_units": 0,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     },
     {
       "away_team": "VGK",
       "home_team": "ANA",
-      "away_win_prob": 0.5141,
-      "home_win_prob": 0.4859,
-      "model_away_odds": -106,
-      "model_home_odds": 106,
-      "goalie_adj": 0.075,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "away_win_prob": 0.477,
+      "home_win_prob": 0.523,
+      "model_away_odds": 110,
+      "model_home_odds": -110,
+      "goalie_adj": 0.3,
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Carter Hart",
+      "home_goalie": "Lukas Dostal",
       "away_b2b": false,
       "home_b2b": false,
       "away_gp": 56,
@@ -71,18 +72,18 @@
       "home_luck_adj": -0.0019,
       "rest_effect": 0.0,
       "model_version": "v2.2",
-      "vegas_away_odds": -105,
+      "vegas_away_odds": -106,
       "vegas_home_odds": -105,
-      "away_ev": 0.0037,
-      "home_ev": -0.0513,
-      "best_bet_team": null,
-      "best_bet_odds": null,
-      "best_bet_ev": null,
-      "kelly_pct": null,
-      "recommended_units": null,
+      "away_ev": -0.073,
+      "home_ev": 0.0211,
+      "best_bet_team": "ANA",
+      "best_bet_odds": -105,
+      "best_bet_ev": 0.0211,
+      "kelly_pct": 0.0111,
+      "recommended_units": 0,
       "confidence": "NO_EDGE",
       "recommendation": ""
     }
   ],
-  "odds_api_remaining": 472
+  "odds_api_remaining": 470
 }

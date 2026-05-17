@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-16 18:20:09",
+  "generated_at": "2026-05-16 20:10:08",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -41,7 +41,8 @@
       "kelly_pct": 0.045,
       "recommended_units": 2.0,
       "confidence": "MEDIUM",
-      "recommendation": "BUF ML (+153) \u2014 2.0u | EV: 13.8% | Kelly: 4.5%"
+      "recommendation": "BUF ML (+153) \u2014 2.0u | EV: 13.8% | Kelly: 4.5%",
+      "_locked": true
     }
   ],
   "odds_api_remaining": 462

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18 10:00:15",
+  "generated_at": "2026-05-18 18:20:08",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -11,9 +11,9 @@
       "model_away_odds": 109,
       "model_home_odds": -109,
       "goalie_adj": 0.0,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Jakub Dobes",
+      "home_goalie": "Alex Lyon",
       "away_b2b": false,
       "home_b2b": false,
       "away_gp": 57,
@@ -31,9 +31,9 @@
       "home_luck_adj": 0.0025,
       "rest_effect": 0.0,
       "model_version": "v2.2",
-      "vegas_away_odds": 105,
+      "vegas_away_odds": 110,
       "vegas_home_odds": -112,
-      "away_ev": -0.0176,
+      "away_ev": 0.0063,
       "home_ev": -0.0142,
       "best_bet_team": null,
       "best_bet_odds": null,
@@ -44,5 +44,5 @@
       "recommendation": ""
     }
   ],
-  "odds_api_remaining": 458
+  "odds_api_remaining": 456
 }

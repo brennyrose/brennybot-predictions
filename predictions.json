@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-18 10:00",
+  "generated_at": "2026-05-18 18:15",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
-  "odds_api_remaining": 459,
+  "odds_api_remaining": 457,
   "parameters": {
     "home_court_advantage": 2.5,
     "hca_variance_enabled": true,
@@ -26,7 +26,7 @@
       "date": "2026-05-18",
       "commence": "2026-05-19T00:40:00Z",
       "vegas_spread": -6.5,
-      "consensus_spread": -6.5,
+      "consensus_spread": -6.7,
       "model_spread": -8.4,
       "ratings_spread": -8.5,
       "edge": 1.9,

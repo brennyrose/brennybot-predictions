@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18 18:20:08",
+  "generated_at": "2026-05-18 20:10:09",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
@@ -41,7 +41,8 @@
       "kelly_pct": null,
       "recommended_units": null,
       "confidence": "NO_EDGE",
-      "recommendation": ""
+      "recommendation": "",
+      "_locked": true
     }
   ],
   "odds_api_remaining": 456

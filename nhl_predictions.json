@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-05-21 10:00:14",
+  "generated_at": "2026-05-21 18:20:09",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
     {
       "away_team": "MTL",
       "home_team": "CAR",
-      "away_win_prob": 0.2148,
-      "home_win_prob": 0.7852,
-      "model_away_odds": 366,
-      "model_home_odds": -366,
-      "goalie_adj": -0.0237,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "away_win_prob": 0.2116,
+      "home_win_prob": 0.7884,
+      "model_away_odds": 373,
+      "model_home_odds": -373,
+      "goalie_adj": 0.0,
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Jakub Dobes",
+      "home_goalie": "Frederik Andersen",
       "away_b2b": false,
       "home_b2b": false,
       "away_gp": 57,
@@ -31,18 +31,18 @@
       "home_luck_adj": 0.0037,
       "rest_effect": 0.01,
       "model_version": "v2.2",
-      "vegas_away_odds": 171,
-      "vegas_home_odds": -195,
-      "away_ev": -0.4179,
-      "home_ev": 0.1879,
+      "vegas_away_odds": 170,
+      "vegas_home_odds": -190,
+      "away_ev": -0.4287,
+      "home_ev": 0.2033,
       "best_bet_team": "CAR",
-      "best_bet_odds": -195,
-      "best_bet_ev": 0.1879,
-      "kelly_pct": 0.1832,
+      "best_bet_odds": -190,
+      "best_bet_ev": 0.2033,
+      "kelly_pct": 0.1932,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "CAR ML (-195) \u2014 3.0u | EV: 18.8% | Kelly: 18.3%"
+      "recommendation": "CAR ML (-190) \u2014 3.0u | EV: 20.3% | Kelly: 19.3%"
     }
   ],
-  "odds_api_remaining": 448
+  "odds_api_remaining": 446
 }

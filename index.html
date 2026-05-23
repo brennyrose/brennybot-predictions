@@ -313,7 +313,8 @@
 
         .race-pick-preview { display: flex; align-items: center; gap: 8px; }
         .race-pick-name { font-size: 14px; font-weight: 600; color: var(--white); }
-        .race-pick-ml { font-size: 11px; color: var(--text-dim); font-family: 'IBM Plex Mono', monospace; }
+        .race-pick-fair { font-size: 11px; color: var(--text-dim); font-family: 'IBM Plex Mono', monospace; }
+        .race-pick-rank { font-size: 9px; font-weight: 700; color: var(--blue); background: rgba(96,165,250,0.1); padding: 1px 5px; border-radius: 3px; }
         .race-chevron { font-size: 14px; color: var(--text-muted); transition: transform 0.2s; }
         .race-chevron.open { transform: rotate(180deg); }
 
@@ -324,6 +325,13 @@
         }
         .race-detail.open { display: block; }
 
+        .odds-ranking {
+            margin-top: 14px; padding: 10px 12px;
+            background: rgba(96,165,250,0.06); border: 1px solid rgba(96,165,250,0.12);
+            border-radius: 6px; font-size: 12px; color: var(--silver); line-height: 1.6;
+        }
+        .odds-ranking .odds-label { font-size: 10px; font-weight: 700; color: var(--blue); letter-spacing: 0.5px; margin-bottom: 2px; }
+
         .wps-row { display: flex; gap: 8px; margin-top: 14px; }
         .wps-box { border-radius: 6px; padding: 10px 14px; flex: 1; min-width: 0; }
         .wps-box.w { background: #122b1e; border: 1px solid #1a4a2e; }
@@ -331,10 +339,15 @@
         .wps-box.s { background: #1f1a0b; border: 1px solid #3a2e0e; }
         .wps-label { font-size: 9px; font-weight: 700; color: rgba(255,255,255,0.35); letter-spacing: 1.5px; text-transform: uppercase; }
         .wps-horse { font-size: 14px; font-weight: 700; color: var(--white); margin-top: 2px; }
-        .wps-ml { font-size: 11px; color: var(--text-dim); font-family: 'IBM Plex Mono', monospace; margin-top: 1px; }
+        .wps-score { font-size: 11px; color: var(--blue); font-family: 'IBM Plex Mono', monospace; margin-top: 2px; font-weight: 600; }
+        .wps-fair { font-size: 11px; color: var(--blue); font-family: 'IBM Plex Mono', monospace; margin-top: 1px; }
+        .wps-prob { font-size: 10px; color: var(--text-dim); font-family: 'IBM Plex Mono', monospace; margin-top: 1px; }
         .wps-factors { margin-top: 6px; list-style: none; }
         .wps-factors li { font-size: 10px; color: var(--text-dim); line-height: 1.5; }
         .wps-factors li::before { content: "· "; color: var(--text-muted); }
+        .wps-negatives { margin-top: 4px; list-style: none; }
+        .wps-negatives li { font-size: 10px; color: #f87171; line-height: 1.5; }
+        .wps-negatives li::before { content: "✗ "; color: rgba(248,113,113,0.5); }
 
         .race-analysis {
             font-size: 12px; color: var(--text); line-height: 1.65;
@@ -357,6 +370,15 @@
             font-family: 'IBM Plex Mono', monospace;
         }
 
+        .toss-bar {
+            margin-top: 10px; padding: 8px 12px;
+            background: rgba(248,113,113,0.05); border: 1px solid rgba(248,113,113,0.12);
+            border-radius: 6px;
+        }
+        .toss-label { font-size: 10px; font-weight: 700; color: var(--red); letter-spacing: 0.5px; text-transform: uppercase; }
+        .toss-detail { font-size: 11px; color: #fca5a5; margin-top: 2px; }
+        .toss-reason { font-size: 10px; color: var(--text-muted); margin-top: 1px; font-style: italic; }
+
         .ponies-legend {
             margin-top: 16px; padding: 14px 16px;
             background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
@@ -366,24 +388,6 @@
         .ponies-legend .legend-items { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; font-size: 12px; color: var(--text-dim); }
         .ponies-legend .legend-note { font-size: 10px; color: var(--text-muted); margin-top: 10px; line-height: 1.6; }
 
-        .wps-score { font-size: 11px; color: var(--blue); font-family: 'IBM Plex Mono', monospace; margin-top: 3px; font-weight: 600; }
-        .wps-prob { font-size: 10px; color: var(--text-dim); font-family: 'IBM Plex Mono', monospace; margin-top: 1px; }
-        .wps-value { font-size: 10px; font-weight: 700; margin-top: 4px; padding: 2px 6px; border-radius: 3px; display: inline-block; }
-        .wps-ceiling { font-size: 10px; color: var(--silver); margin-top: 3px; font-style: italic; }
-        .val-strong { color: #fb923c; background: rgba(251,146,60,0.1); }
-        .val-good { color: var(--green); background: rgba(74,222,128,0.1); }
-        .val-fair { color: var(--text-dim); background: rgba(107,122,150,0.08); }
-        .val-under { color: var(--red); background: rgba(248,113,113,0.08); }
-        .wps-negatives { margin-top: 4px; list-style: none; }
-        .wps-negatives li { font-size: 10px; color: #f87171; line-height: 1.5; }
-        .wps-negatives li::before { content: "✗ "; color: rgba(248,113,113,0.5); }
-
-        .value-summary {
-            margin-top: 14px; padding: 10px 12px;
-            background: rgba(96,165,250,0.06); border: 1px solid rgba(96,165,250,0.12);
-            border-radius: 6px; font-size: 12px; color: var(--silver); line-height: 1.6;
-        }
-
         .contenders-section { margin-top: 14px; }
         .contenders-title { font-size: 10px; font-weight: 700; color: var(--text-dim); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
         .contender-row {
@@ -392,10 +396,9 @@
         }
         .contender-header { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
         .contender-name { font-size: 13px; font-weight: 600; color: var(--text); }
-        .contender-ml { font-size: 11px; color: var(--text-dim); font-family: 'IBM Plex Mono', monospace; }
+        .contender-odds { font-size: 11px; color: var(--blue); font-family: 'IBM Plex Mono', monospace; }
         .contender-score { font-size: 11px; color: var(--blue); font-family: 'IBM Plex Mono', monospace; }
-        .contender-value { font-size: 10px; font-weight: 700; padding: 1px 5px; border-radius: 3px; }
-        .contender-ceiling { font-size: 10px; color: var(--silver); margin-top: 3px; font-style: italic; }
+        .contender-conf { font-size: 11px; }
 
         /* ── Under Construction ── */
         .under-construction {
@@ -596,7 +599,7 @@
         NBA Model v2.1 — Backtested: 1,231 games, February 2026<br>
         NHL Model v2.1 — Backtested: 2,542 games, February 2026<br>
         NCAAB Model v1.1 — Backtested: 4,078 games, February 2026<br>
-        Ponies Model v2.0 — Backtested: 82,536 entrants / 10,619 races, 2023 Equibase<br>
+        Ponies Model v2.2 — Backtested: 82,536 entrants / 10,619 races, 2023 Equibase<br>
         <br>
         Auto-refreshes on cron: NBA 10 AM + 6:15 PM + 8:45 PM · NHL 6:20 PM + 8:10 PM · NCAAB 11 AM + 6:25 PM EST<br>
         For personal use only. Not financial advice.
@@ -810,8 +813,8 @@ function renderPonies() {
         document.getElementById('ponies-top-plays').style.display = 'block';
         document.getElementById('ponies-top-list').innerHTML = topPlays.map(function(r) {
             var w = r.picks.win;
-            var detail = r.valueSummary || r.betType || 'WIN';
-            return '<div class="pick-line"><span class="pick-rec">R' + r.race + ' #' + w.pp + ' ' + w.name + ' (' + w.ml + ')</span><span class="pick-edge" style="font-size:11px;color:var(--silver);max-width:55%;text-align:right">' + detail + '</span></div>';
+            var detail = r.betType || 'WIN';
+            return '<div class="pick-line"><span class="pick-rec">R' + r.race + ' #' + w.pp + ' ' + w.name + ' (' + (w.fairOdds || '?') + ' fair)</span><span class="pick-edge" style="font-size:11px;color:var(--silver);max-width:55%;text-align:right">' + detail + '</span></div>';
         }).join('');
     } else {
         document.getElementById('ponies-top-plays').style.display = 'none';
@@ -824,7 +827,6 @@ function renderPonies() {
         var id = 'ponies-r' + r.track + r.race;
         var surface = r.surface || '';
         var surfColor = surface.toLowerCase() === 'turf' ? 'color:var(--green)' : '';
-        var vr = w && w.valueRating ? ' · ' + w.valueRating : '';
 
         return '<div class="race-card" id="' + id + '">' +
             '<div class="race-header" onclick="togglePoniesRace(\'' + id + '\')">' +
@@ -835,18 +837,21 @@ function renderPonies() {
                     '</span>' +
                 '</div>' +
                 '<div class="race-pick-preview">' +
-                    (w ? '<span class="race-pick-name">' + w.name + '</span><span class="race-pick-ml">(' + w.ml + ')</span><span class="' + confCls + '">' + (w.confidence || '') + '</span>' +
-                    (w.valueRating ? '<span class="wps-value ' + valClass(w.valueRating) + '" style="margin-left:4px;font-size:9px">' + w.valueRating + '</span>' : '') : '') +
+                    (w ? '<span class="race-pick-name">' + w.name + '</span>' +
+                    '<span class="race-pick-fair">(' + (w.fairOdds || '?') + ')</span>' +
+                    '<span class="race-pick-rank">#' + (w.fairOddsRank != null ? w.fairOddsRank : '?') + '</span>' +
+                    '<span class="' + confCls + '">' + (w.confidence || '') + '</span>' : '') +
                     '<span class="race-chevron" id="chev-' + id + '">▼</span>' +
                 '</div>' +
             '</div>' +
             '<div class="race-detail" id="detail-' + id + '">' +
-                (r.valueSummary ? '<div class="value-summary">' + r.valueSummary + '</div>' : '') +
+                (r.oddsRanking ? '<div class="odds-ranking"><div class="odds-label">📊 FAIR ODDS RANKING</div>' + r.oddsRanking + '</div>' : '') +
                 renderWPS(r.picks) +
-                renderContenders(r.otherContenders) +
                 (r.analysis ? '<div class="race-analysis">' + r.analysis + '</div>' : '') +
+                renderContenders(r.otherContenders) +
                 (r.exoticPlay ? '<div class="exotic-bar"><div class="exotic-label">Exotic Play</div><div class="exotic-play">' + r.exoticPlay + '</div></div>' : '') +
                 (r.betType ? '<div class="bet-badge">' + r.betType + '</div>' : '') +
+                renderTopToss(r.topToss) +
             '</div>' +
         '</div>';
     }).join('') +
@@ -870,17 +875,16 @@ function renderWPS(picks) {
         var cls = slot === 'win' ? 'w' : slot === 'place' ? 'p' : 's';
         var label = slot.toUpperCase();
         var factors = (p.keyFactors || []).map(function(f) { return '<li>' + f + '</li>'; }).join('');
+        var negs = (p.negatives || []).map(function(n) { return '<li>' + n + '</li>'; }).join('');
         var scoreHtml = p.brennyScore != null ? '<div class="wps-score">BS: ' + p.brennyScore + '/44</div>' : '';
-        var valueHtml = p.valueRating ? '<div class="wps-value ' + valClass(p.valueRating) + '">' + p.valueRating + '</div>' : '';
-        var ceilingHtml = p.valueCeiling ? '<div class="wps-ceiling">' + p.valueCeiling + '</div>' : '';
-        var probHtml = p.impliedWinPct != null ? '<div class="wps-prob">Win%: ' + p.impliedWinPct.toFixed(1) + '% · Fair: ' + (p.fairOdds || '—') + '</div>' : '';
+        var fairHtml = '<div class="wps-fair">Fair: ' + (p.fairOdds || '—') + ' · Rank #' + (p.fairOddsRank != null ? p.fairOddsRank : '?') + '</div>';
+        var probHtml = p.impliedWinPct != null ? '<div class="wps-prob">Win: ' + (typeof p.impliedWinPct === 'number' ? p.impliedWinPct.toFixed(1) : p.impliedWinPct) + '%</div>' : '';
         html += '<div class="wps-box ' + cls + '">' +
             '<div class="wps-label">' + label + '</div>' +
             '<div class="wps-horse">#' + p.pp + ' ' + p.name + '</div>' +
-            '<div class="wps-ml">ML: ' + p.ml + '</div>' +
-            scoreHtml + probHtml + valueHtml + ceilingHtml +
+            scoreHtml + fairHtml + probHtml +
             (factors ? '<ul class="wps-factors">' + factors + '</ul>' : '') +
-            (p.negatives && p.negatives.length ? '<ul class="wps-negatives">' + p.negatives.map(function(n){return '<li>' + n + '</li>';}).join('') + '</ul>' : '') +
+            (negs ? '<ul class="wps-negatives">' + negs + '</ul>' : '') +
         '</div>';
     });
     return html + '</div>';
@@ -890,16 +894,17 @@ function renderContenders(contenders) {
     if (!contenders || !contenders.length) return '';
     var html = '<div class="contenders-section"><div class="contenders-title">Other Contenders</div>';
     contenders.forEach(function(c) {
+        var conf = c.confidence || '';
+        var confCls = conf === '★★★' ? 'conf-high' : conf === '★★' ? 'conf-medium' : 'conf-none';
         var factors = (c.keyFactors || []).map(function(f) { return '<li>' + f + '</li>'; }).join('');
         var negs = (c.negatives || []).map(function(n) { return '<li>' + n + '</li>'; }).join('');
         html += '<div class="contender-row">' +
             '<div class="contender-header">' +
                 '<span class="contender-name">#' + c.pp + ' ' + c.name + '</span>' +
-                '<span class="contender-ml">ML: ' + c.ml + '</span>' +
-                (c.brennyScore != null ? '<span class="contender-score">BS: ' + c.brennyScore + '</span>' : '') +
-                (c.valueRating ? '<span class="contender-value ' + valClass(c.valueRating) + '">' + c.valueRating + '</span>' : '') +
+                '<span class="contender-odds">Fair: ' + (c.fairOdds || '?') + ' #' + (c.fairOddsRank != null ? c.fairOddsRank : '?') + '</span>' +
+                (c.brennyScore != null ? '<span class="contender-score">BS: ' + c.brennyScore + '/44</span>' : '') +
+                '<span class="' + confCls + '">' + conf + '</span>' +
             '</div>' +
-            (c.valueCeiling ? '<div class="contender-ceiling">' + c.valueCeiling + '</div>' : '') +
             (factors ? '<ul class="wps-factors">' + factors + '</ul>' : '') +
             (negs ? '<ul class="wps-negatives">' + negs + '</ul>' : '') +
         '</div>';
@@ -907,13 +912,13 @@ function renderContenders(contenders) {
     return html + '</div>';
 }
 
-function valClass(vr) {
-    if (!vr) return '';
-    if (vr.indexOf('STRONG') >= 0) return 'val-strong';
-    if (vr.indexOf('VALUE') >= 0) return 'val-good';
-    if (vr.indexOf('FAIR') >= 0) return 'val-fair';
-    if (vr.indexOf('UNDERLAID') >= 0) return 'val-under';
-    return '';
+function renderTopToss(toss) {
+    if (!toss) return '';
+    return '<div class="toss-bar">' +
+        '<div class="toss-label">TOP TOSS</div>' +
+        '<div class="toss-detail">#' + toss.pp + ' ' + toss.name + (toss.brennyScore != null ? ' · BS: ' + toss.brennyScore + '/44' : '') + '</div>' +
+        (toss.reason ? '<div class="toss-reason">' + toss.reason + '</div>' : '') +
+    '</div>';
 }
 
 function switchPoniesTrack(t) {

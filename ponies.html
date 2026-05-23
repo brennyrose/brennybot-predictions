@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BrennyPonies — Race Day Picks</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,400&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0b1120;
+  --card: #1e293b;
+  --border: #334155;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --dim: #64748b;
+  --accent: #3b82f6;
+  --green: #22c55e;
+  --yellow: #facc15;
+  --orange: #f59e0b;
+  --red: #ef4444;
+  --purple: #a78bfa;
+  --win-bg: #166534;
+  --place-bg: #1e40af;
+  --show-bg: #713f12;
+  --mono: 'IBM Plex Mono', monospace;
+  --sans: 'DM Sans', system-ui, sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--sans); background: var(--bg); color: var(--text); min-height: 100vh; }
+
+/* ── Header ── */
+.header { padding: 32px 20px 0; text-align: center; }
+.header h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.5px; }
+.header h1 span { color: var(--accent); }
+.header .sub { color: var(--muted); font-size: 13px; margin-top: 4px; }
+.header .model-tag {
+  display: inline-block; margin-top: 10px; padding: 4px 14px;
+  background: #1e293b; border: 1px solid var(--border); border-radius: 20px;
+  font-family: var(--mono); font-size: 11px; color: var(--dim);
+}
+
+/* ── Track Tabs ── */
+.track-tabs { display: flex; justify-content: center; gap: 8px; margin: 24px 0; padding: 0 20px; }
+.track-tab {
+  padding: 10px 32px; border-radius: 8px; border: 1px solid var(--border);
+  font-weight: 700; font-size: 14px; cursor: pointer; transition: all .15s;
+  background: var(--card); color: var(--muted); font-family: var(--sans);
+}
+.track-tab:hover { border-color: var(--accent); color: var(--text); }
+.track-tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+/* ── Stats Bar ── */
+.stats-bar {
+  display: flex; justify-content: center; gap: 16px; padding: 0 20px; margin-bottom: 24px; flex-wrap: wrap;
+}
+.stat-box {
+  background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+  padding: 12px 20px; text-align: center; min-width: 100px;
+}
+.stat-box .val { font-size: 22px; font-weight: 800; font-family: var(--mono); }
+.stat-box .lbl { font-size: 11px; color: var(--dim); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* ── Race Cards ── */
+.races { max-width: 800px; margin: 0 auto; padding: 0 16px 40px; }
+
+.race-card {
+  background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+  margin-bottom: 14px; overflow: hidden; transition: border-color .15s;
+}
+.race-card:hover { border-color: #475569; }
+
+.race-header {
+  padding: 16px 18px; cursor: pointer; display: flex; justify-content: space-between;
+  align-items: center; user-select: none;
+}
+.race-header:hover { background: rgba(255,255,255,.02); }
+.race-meta { display: flex; align-items: center; gap: 10px; }
+.race-num {
+  font-family: var(--mono); font-weight: 700; font-size: 13px; color: var(--accent);
+  background: rgba(59,130,246,.12); padding: 3px 10px; border-radius: 6px;
+}
+.race-info { font-size: 13px; color: var(--dim); }
+.race-info .surface { color: var(--muted); }
+
+.race-pick { display: flex; align-items: center; gap: 10px; }
+.pick-name { font-size: 15px; font-weight: 800; }
+.pick-fair { font-size: 12px; color: var(--muted); font-family: var(--mono); }
+.pick-conf { font-size: 14px; }
+.conf-high { color: var(--green); }
+.conf-med { color: var(--yellow); }
+.conf-low { color: var(--muted); }
+.rank-badge { font-size: 9px; font-weight: 700; color: var(--accent); background: rgba(59,130,246,.12); padding: 1px 6px; border-radius: 3px; }
+.chevron { font-size: 16px; color: var(--dim); transition: transform .2s; }
+.chevron.open { transform: rotate(180deg); }
+
+/* ── Expanded Detail ── */
+.race-detail { padding: 0 18px 18px; border-top: 1px solid var(--border); display: none; }
+.race-detail.open { display: block; }
+
+/* ── Odds Ranking Bar ── */
+.odds-ranking {
+  margin-top: 14px; padding: 10px 14px;
+  background: rgba(59,130,246,.06); border: 1px solid rgba(59,130,246,.12);
+  border-radius: 8px; font-size: 12px; color: var(--muted); line-height: 1.6;
+}
+.odds-ranking .label { font-size: 10px; font-weight: 700; color: var(--accent); letter-spacing: 0.5px; margin-bottom: 2px; }
+
+.picks-row { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+.pick-box {
+  border-radius: 10px; padding: 10px 16px; min-width: 140px; flex: 1;
+}
+.pick-box.win { background: var(--win-bg); }
+.pick-box.place { background: var(--place-bg); }
+.pick-box.show { background: var(--show-bg); }
+.pick-label { font-size: 10px; font-weight: 700; color: rgba(255,255,255,.5); letter-spacing: 1.5px; }
+.pick-horse { font-size: 16px; font-weight: 700; margin-top: 2px; }
+.pick-score { font-size: 12px; color: rgba(255,255,255,.7); font-family: var(--mono); margin-top: 1px; }
+.pick-fair-odds { font-size: 11px; color: var(--accent); font-family: var(--mono); margin-top: 1px; }
+.pick-prob { font-size: 10px; color: rgba(255,255,255,.5); font-family: var(--mono); margin-top: 1px; }
+.pick-factors { margin-top: 6px; }
+.pick-factors li {
+  font-size: 11px; color: rgba(255,255,255,.65); list-style: none;
+  padding: 1px 0; line-height: 1.4;
+}
+.pick-factors li::before { content: "• "; color: rgba(255,255,255,.3); }
+.pick-negatives li {
+  font-size: 10px; color: #f87171; list-style: none; line-height: 1.4;
+}
+.pick-negatives li::before { content: "✗ "; color: rgba(248,113,113,.5); }
+
+/* ── Contenders ── */
+.contenders-section { margin-top: 14px; }
+.contenders-title { font-size: 10px; font-weight: 700; color: var(--dim); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+.contender-row {
+  padding: 8px 12px; margin-bottom: 6px;
+  background: rgba(0,0,0,.12); border-radius: 6px; border: 1px solid var(--border);
+}
+.contender-header { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.contender-name { font-size: 13px; font-weight: 600; color: var(--text); }
+.contender-odds { font-size: 11px; color: var(--accent); font-family: var(--mono); }
+.contender-score { font-size: 11px; color: var(--accent); font-family: var(--mono); }
+.contender-conf { font-size: 11px; }
+
+.analysis-text {
+  font-size: 13px; color: #cbd5e1; line-height: 1.65; margin-top: 16px;
+  padding: 14px; background: rgba(0,0,0,.2); border-radius: 10px;
+}
+
+.exotic-bar {
+  margin-top: 12px; padding: 10px 14px; background: rgba(167,139,250,.08);
+  border: 1px solid rgba(167,139,250,.15); border-radius: 8px;
+}
+.exotic-label { font-size: 11px; font-weight: 700; color: var(--purple); letter-spacing: 0.5px; }
+.exotic-play { font-size: 12px; color: #c4b5fd; margin-top: 3px; font-family: var(--mono); }
+
+.bet-type {
+  margin-top: 10px; display: inline-block; padding: 4px 12px;
+  background: rgba(34,197,94,.1); border: 1px solid rgba(34,197,94,.2);
+  border-radius: 6px; font-size: 12px; font-weight: 700; color: var(--green);
+  font-family: var(--mono);
+}
+
+/* ── Top Toss ── */
+.toss-bar {
+  margin-top: 12px; padding: 8px 14px;
+  background: rgba(248,113,113,.05); border: 1px solid rgba(248,113,113,.12);
+  border-radius: 8px;
+}
+.toss-label { font-size: 10px; font-weight: 700; color: var(--red); letter-spacing: 0.5px; text-transform: uppercase; }
+.toss-detail { font-size: 11px; color: #fca5a5; margin-top: 2px; }
+.toss-reason { font-size: 10px; color: var(--dim); margin-top: 1px; font-style: italic; }
+
+/* ── Legend ── */
+.legend {
+  max-width: 800px; margin: 0 auto 40px; padding: 20px;
+  background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+  text-align: center;
+}
+.legend h3 { font-size: 11px; color: var(--dim); letter-spacing: 1px; margin-bottom: 10px; }
+.legend-items { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+.legend-item { font-size: 13px; }
+.legend .note { font-size: 11px; color: var(--dim); margin-top: 12px; line-height: 1.5; }
+
+/* ── Empty State ── */
+.empty-state { text-align: center; padding: 60px 20px; color: var(--dim); }
+.empty-state .icon { font-size: 48px; margin-bottom: 12px; }
+.empty-state p { font-size: 14px; max-width: 400px; margin: 0 auto; line-height: 1.6; }
+
+/* ── Loading ── */
+.loading { text-align: center; padding: 60px; color: var(--muted); }
+.loading .spinner { display: inline-block; width: 24px; height: 24px; border: 3px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin .8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 600px) {
+  .header h1 { font-size: 24px; }
+  .picks-row { flex-direction: column; }
+  .stats-bar { gap: 8px; }
+  .stat-box { min-width: 80px; padding: 10px 14px; }
+  .stat-box .val { font-size: 18px; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🏇 <span>BrennyPonies</span></h1>
+  <div class="sub">Factor-weighted race picks • Validated on 82,536 entrants</div>
+  <div class="model-tag" id="modelTag">loading...</div>
+</div>
+
+<div class="track-tabs" id="trackTabs"></div>
+<div class="stats-bar" id="statsBar"></div>
+<div class="races" id="racesContainer">
+  <div class="loading"><div class="spinner"></div><p style="margin-top:12px">Loading picks...</p></div>
+</div>
+
+<div class="legend">
+  <h3>CONFIDENCE KEY</h3>
+  <div class="legend-items">
+    <div class="legend-item"><span class="conf-high">★★★</span> Strong Play (30+ pts)</div>
+    <div class="legend-item"><span class="conf-med">★★</span> Moderate (22-29 pts)</div>
+    <div class="legend-item"><span class="conf-low">◑</span> Lean / Volatile</div>
+  </div>
+  <div class="note">
+    BrennyScore (44 max): Fig Gap 10 · Surface Exp 6 · Style 5 · Post 4 · Trend 4 · Days Off 4 · Dist Exp 3 · Consistency 3 · T/J Combo 3 · Class 2 · Boosters/Negatives<br>
+    Model back-tested on full 2023 Equibase dataset (82,536 entrants / 10,619 races / 14 major tracks)
+  </div>
+</div>
+
+<script>
+const DATA_URL = 'ponies_predictions.json';
+const POLL_INTERVAL = 300000;
+
+let data = null;
+let activeTrack = null;
+
+async function loadData() {
+  try {
+    const resp = await fetch(DATA_URL + '?t=' + Date.now());
+    if (!resp.ok) throw new Error('No data');
+    data = await resp.json();
+    render();
+  } catch (e) {
+    document.getElementById('racesContainer').innerHTML =
+      '<div class="empty-state"><div class="icon">📋</div>' +
+      '<p>No picks available yet. Upload an Equibase PP PDF to generate today\'s picks.</p></div>';
+    document.getElementById('modelTag').textContent = 'awaiting PP upload';
+  }
+}
+
+function render() {
+  if (!data || !data.races || !data.races.length) return;
+
+  document.getElementById('modelTag').textContent =
+    (data.model || 'BrennyPonies') + ' • ' + data.date;
+
+  const tracks = [...new Set(data.races.map(r => r.track))];
+  if (!activeTrack) activeTrack = tracks[0];
+
+  const trackNames = {AQU:'Aqueduct',OP:'Oaklawn',SAR:'Saratoga',CD:'Churchill',GP:'Gulfstream',KEE:'Keeneland',BEL:'Belmont',PIM:'Pimlico',DMR:'Del Mar',MTH:'Monmouth',TAM:'Tampa Bay',LRL:'Laurel',FG:'Fair Grounds',PRX:'Parx',SA:'Santa Anita',HAW:'Hawthorne'};
+  const tabsEl = document.getElementById('trackTabs');
+  tabsEl.innerHTML = tracks.map(t => {
+    const count = data.races.filter(r => r.track === t).length;
+    const label = trackNames[t] || t;
+    return '<button class="track-tab ' + (t === activeTrack ? 'active' : '') +
+           '" onclick="switchTrack(\'' + t + '\')">' + label + ' (' + count + 'R)</button>';
+  }).join('');
+
+  const filtered = data.races.filter(r => r.track === activeTrack);
+  const highConf = filtered.filter(r => r.picks && r.picks.win && r.picks.win.confidence === '★★★').length;
+  const totalField = filtered.reduce((s, r) => s + (r.fieldSize || 0), 0);
+  const rank1Count = filtered.filter(r => r.picks && r.picks.win && r.picks.win.fairOddsRank === 1).length;
+
+  document.getElementById('statsBar').innerHTML =
+    '<div class="stat-box"><div class="val" style="color:var(--accent)">' + filtered.length + '</div><div class="lbl">Races</div></div>' +
+    '<div class="stat-box"><div class="val" style="color:var(--green)">' + highConf + '</div><div class="lbl">★★★ Plays</div></div>' +
+    '<div class="stat-box"><div class="val">' + totalField + '</div><div class="lbl">Total Entries</div></div>' +
+    '<div class="stat-box"><div class="val" style="color:var(--orange)">' + rank1Count + '</div><div class="lbl">Rank #1</div></div>';
+
+  const container = document.getElementById('racesContainer');
+  if (!filtered.length) {
+    container.innerHTML = '<div class="empty-state"><div class="icon">🏇</div><p>No races for ' + activeTrack + ' today.</p></div>';
+    return;
+  }
+
+  container.innerHTML = filtered.map(function(r, i) {
+    var w = r.picks ? r.picks.win : null;
+    if (!w) return '';
+    var conf = w.confidence || '';
+    var confClass = conf === '★★★' ? 'conf-high' : conf === '★★' ? 'conf-med' : 'conf-low';
+    var id = 'race-' + r.track + '-' + r.race;
+    var surfColor = (r.surface || '').toLowerCase() === 'turf' ? 'color:var(--green)' : '';
+
+    return '<div class="race-card" id="' + id + '">' +
+      '<div class="race-header" onclick="toggleRace(\'' + id + '\')">' +
+        '<div class="race-meta">' +
+          '<span class="race-num">R' + r.race + '</span>' +
+          '<span class="race-info">' + (r.type || '') + ' • ' + (r.distance || '') + ' <span class="surface" style="' + surfColor + '">' + (r.surface || '') + '</span>' +
+            (r.raceRating ? ' <span style="color:var(--dim);margin-left:6px">RR:' + r.raceRating + '</span>' : '') +
+          '</span>' +
+        '</div>' +
+        '<div class="race-pick">' +
+          '<span class="pick-name" style="color:' + (conf === '★★★' ? 'var(--green)' : conf === '★★' ? 'var(--yellow)' : 'var(--muted)') + '">' + w.name + '</span>' +
+          '<span class="pick-fair">(' + (w.fairOdds || '?') + ')</span>' +
+          '<span class="rank-badge">#' + (w.fairOddsRank != null ? w.fairOddsRank : '?') + '</span>' +
+          '<span class="pick-conf ' + confClass + '">' + conf + '</span>' +
+          '<span class="chevron" id="chev-' + id + '">▼</span>' +
+        '</div>' +
+      '</div>' +
+      '<div class="race-detail" id="detail-' + id + '">' +
+        (r.oddsRanking ? '<div class="odds-ranking"><div class="label">📊 FAIR ODDS RANKING</div>' + r.oddsRanking + '</div>' : '') +
+        '<div class="picks-row">' +
+          renderPickBox('WIN', r.picks.win, 'win') +
+          renderPickBox('PLACE', r.picks.place, 'place') +
+          renderPickBox('SHOW', r.picks.show, 'show') +
+        '</div>' +
+        (r.analysis ? '<div class="analysis-text">' + r.analysis + '</div>' : '') +
+        renderContenders(r.otherContenders) +
+        (r.exoticPlay ? '<div class="exotic-bar"><div class="exotic-label">EXOTIC PLAY</div><div class="exotic-play">' + r.exoticPlay + '</div></div>' : '') +
+        (r.betType ? '<div class="bet-type">' + r.betType + '</div>' : '') +
+        renderTopToss(r.topToss) +
+      '</div>' +
+    '</div>';
+  }).join('');
+}
+
+function renderPickBox(label, pick, type) {
+  if (!pick) return '';
+  var factors = (pick.keyFactors || []).map(function(f) { return '<li>' + f + '</li>'; }).join('');
+  var negatives = (pick.negatives || []).map(function(n) { return '<li>' + n + '</li>'; }).join('');
+  return '<div class="pick-box ' + type + '">' +
+    '<div class="pick-label">' + label + '</div>' +
+    '<div class="pick-horse">#' + pick.pp + ' ' + pick.name + '</div>' +
+    '<div class="pick-score">BS: ' + (pick.brennyScore != null ? pick.brennyScore : '?') + '/44</div>' +
+    '<div class="pick-fair-odds">Fair: ' + (pick.fairOdds || '?') + ' · Rank #' + (pick.fairOddsRank != null ? pick.fairOddsRank : '?') + '</div>' +
+    (pick.impliedWinPct != null ? '<div class="pick-prob">Win: ' + (typeof pick.impliedWinPct === 'number' ? pick.impliedWinPct.toFixed(1) : pick.impliedWinPct) + '%</div>' : '') +
+    (factors ? '<ul class="pick-factors">' + factors + '</ul>' : '') +
+    (negatives ? '<ul class="pick-negatives">' + negatives + '</ul>' : '') +
+  '</div>';
+}
+
+function renderContenders(contenders) {
+  if (!contenders || !contenders.length) return '';
+  var html = '<div class="contenders-section"><div class="contenders-title">Other Contenders</div>';
+  contenders.forEach(function(c) {
+    var conf = c.confidence || '';
+    var confClass = conf === '★★★' ? 'conf-high' : conf === '★★' ? 'conf-med' : 'conf-low';
+    var factors = (c.keyFactors || []).map(function(f) { return '<li>' + f + '</li>'; }).join('');
+    var negatives = (c.negatives || []).map(function(n) { return '<li>' + n + '</li>'; }).join('');
+    html += '<div class="contender-row">' +
+      '<div class="contender-header">' +
+        '<span class="contender-name">#' + c.pp + ' ' + c.name + '</span>' +
+        '<span class="contender-odds">Fair: ' + (c.fairOdds || '?') + ' #' + (c.fairOddsRank != null ? c.fairOddsRank : '?') + '</span>' +
+        (c.brennyScore != null ? '<span class="contender-score">BS: ' + c.brennyScore + '/44</span>' : '') +
+        '<span class="contender-conf ' + confClass + '">' + conf + '</span>' +
+      '</div>' +
+      (factors ? '<ul class="pick-factors">' + factors + '</ul>' : '') +
+      (negatives ? '<ul class="pick-negatives">' + negatives + '</ul>' : '') +
+    '</div>';
+  });
+  return html + '</div>';
+}
+
+function renderTopToss(toss) {
+  if (!toss) return '';
+  return '<div class="toss-bar">' +
+    '<div class="toss-label">TOP TOSS</div>' +
+    '<div class="toss-detail">#' + toss.pp + ' ' + toss.name + (toss.brennyScore != null ? ' · BS: ' + toss.brennyScore + '/44' : '') + '</div>' +
+    (toss.reason ? '<div class="toss-reason">' + toss.reason + '</div>' : '') +
+  '</div>';
+}
+
+function switchTrack(t) {
+  activeTrack = t;
+  render();
+}
+
+function toggleRace(id) {
+  var detail = document.getElementById('detail-' + id);
+  var chev = document.getElementById('chev-' + id);
+  var isOpen = detail.classList.contains('open');
+  document.querySelectorAll('.race-detail').forEach(function(d) { d.classList.remove('open'); });
+  document.querySelectorAll('.chevron').forEach(function(c) { c.classList.remove('open'); });
+  if (!isOpen) {
+    detail.classList.add('open');
+    chev.classList.add('open');
+  }
+}
+
+loadData();
+setInterval(loadData, POLL_INTERVAL);
+</script>
+</body>
+</html>

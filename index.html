@@ -776,7 +776,7 @@ function renderPonies() {
     if (!d || !d.races || !d.races.length) return;
 
     // Meta
-    document.getElementById('ponies-meta').innerHTML = 'Model: <span>' + (d.model || 'BrennyPonies v1.0') + '</span> · Generated: <span>' + (d.generatedAt || d.date || '—') + '</span>';
+    document.getElementById('ponies-meta').innerHTML = 'Model: <span>' + (d.model || 'BrennyPonies v1.0') + '</span> · Generated: <span>' + (d.generatedAt || d.date || '—').substring(0, 10) + '</span>';
 
     // Track tabs
     var tracks = [];

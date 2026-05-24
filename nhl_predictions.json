@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-05-24 10:00:19",
+  "generated_at": "2026-05-24 18:20:09",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
     {
       "away_team": "COL",
       "home_team": "VGK",
-      "away_win_prob": 0.6223,
-      "home_win_prob": 0.3777,
-      "model_away_odds": -165,
-      "model_home_odds": 165,
-      "goalie_adj": -0.155,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "away_win_prob": 0.6427,
+      "home_win_prob": 0.3573,
+      "model_away_odds": -180,
+      "model_home_odds": 180,
+      "goalie_adj": -0.3,
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Scott Wedgewood",
+      "home_goalie": "Carter Hart",
       "away_b2b": false,
       "home_b2b": false,
       "away_gp": 55,
@@ -31,18 +31,18 @@
       "home_luck_adj": 0.0013,
       "rest_effect": 0.0,
       "model_version": "v2.2",
-      "vegas_away_odds": -142,
-      "vegas_home_odds": 125,
-      "away_ev": 0.0605,
-      "home_ev": -0.1502,
+      "vegas_away_odds": -145,
+      "vegas_home_odds": 132,
+      "away_ev": 0.0859,
+      "home_ev": -0.1711,
       "best_bet_team": "COL",
-      "best_bet_odds": -142,
-      "best_bet_ev": 0.0605,
-      "kelly_pct": 0.043,
-      "recommended_units": 2.0,
-      "confidence": "MEDIUM",
-      "recommendation": "COL ML (-142) \u2014 2.0u | EV: 6.1% | Kelly: 4.3%"
+      "best_bet_odds": -145,
+      "best_bet_ev": 0.0859,
+      "kelly_pct": 0.0623,
+      "recommended_units": 3.0,
+      "confidence": "HIGH",
+      "recommendation": "COL ML (-145) \u2014 3.0u | EV: 8.6% | Kelly: 6.2%"
     }
   ],
-  "odds_api_remaining": 440
+  "odds_api_remaining": 438
 }

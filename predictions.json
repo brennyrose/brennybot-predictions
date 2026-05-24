@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-23 18:15",
+  "generated_at": "2026-05-23 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 443,
@@ -58,7 +58,8 @@
       "dt_away_score": 112.9,
       "dt_win_prob": 0.539,
       "home_abbrev": "CLE",
-      "away_abbrev": "NYK"
+      "away_abbrev": "NYK",
+      "_locked": true
     }
   ],
   "summary": {

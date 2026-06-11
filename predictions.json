@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10 18:15",
+  "generated_at": "2026-06-10 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
   "odds_api_remaining": 490,
@@ -58,7 +58,8 @@
       "dt_away_score": 109.6,
       "dt_win_prob": 0.54,
       "home_abbrev": "NYK",
-      "away_abbrev": "SAS"
+      "away_abbrev": "SAS",
+      "_locked": true
     }
   ],
   "summary": {

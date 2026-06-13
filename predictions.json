@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-13 10:00",
+  "generated_at": "2026-06-13 18:15",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.1 (Backtested)",
-  "odds_api_remaining": 483,
+  "odds_api_remaining": 482,
   "parameters": {
     "home_court_advantage": 2.5,
     "hca_variance_enabled": true,
@@ -26,7 +26,7 @@
       "date": "2026-06-13",
       "commence": "2026-06-14T00:40:00Z",
       "vegas_spread": -5.5,
-      "consensus_spread": -5.3,
+      "consensus_spread": -5.5,
       "model_spread": -6.7,
       "ratings_spread": -6.9,
       "edge": 1.2,
@@ -51,7 +51,7 @@
       "home_ml": null,
       "away_ml": null,
       "spread_book": "BetMGM",
-      "books_count": 8,
+      "books_count": 9,
       "dt_spread": -9.7,
       "dt_total": 218.3,
       "dt_home_score": 114.0,

@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-14 10:00:15",
+  "generated_at": "2026-06-14 18:20:09",
   "sport": "NHL",
   "model_version": "v2.2",
   "predictions": [
     {
       "away_team": "CAR",
       "home_team": "VGK",
-      "away_win_prob": 0.61,
-      "home_win_prob": 0.39,
-      "model_away_odds": -156,
-      "model_home_odds": 156,
-      "goalie_adj": -0.1313,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "away_win_prob": 0.634,
+      "home_win_prob": 0.366,
+      "model_away_odds": -173,
+      "model_home_odds": 173,
+      "goalie_adj": -0.3,
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Brandon Bussi",
+      "home_goalie": "Carter Hart",
       "away_b2b": false,
       "home_b2b": false,
       "away_gp": 56,
@@ -32,17 +32,17 @@
       "rest_effect": 0.0,
       "model_version": "v2.2",
       "vegas_away_odds": -113,
-      "vegas_home_odds": 101,
-      "away_ev": 0.1498,
-      "home_ev": -0.2161,
+      "vegas_home_odds": 100,
+      "away_ev": 0.1951,
+      "home_ev": -0.268,
       "best_bet_team": "CAR",
       "best_bet_odds": -113,
-      "best_bet_ev": 0.1498,
-      "kelly_pct": 0.0847,
+      "best_bet_ev": 0.1951,
+      "kelly_pct": 0.1102,
       "recommended_units": 3.0,
       "confidence": "HIGH",
-      "recommendation": "CAR ML (-113) \u2014 3.0u | EV: 15.0% | Kelly: 8.5%"
+      "recommendation": "CAR ML (-113) \u2014 3.0u | EV: 19.5% | Kelly: 11.0%"
     }
   ],
-  "odds_api_remaining": 481
+  "odds_api_remaining": 480
 }

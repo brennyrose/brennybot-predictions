@@ -370,14 +370,35 @@
             font-family: 'IBM Plex Mono', monospace;
         }
 
-        .toss-bar {
-            margin-top: 10px; padding: 8px 12px;
-            background: rgba(248,113,113,0.05); border: 1px solid rgba(248,113,113,0.12);
-            border-radius: 6px;
+        /* v3: tier badges, value zones, kernel bar, field table, FTS */
+        .tier-badge { font-size: 9px; font-weight: 800; padding: 1px 6px; border-radius: 3px; font-family: 'IBM Plex Mono', monospace; letter-spacing: 0.5px; }
+        .tier-WIN { background: rgba(74,222,128,0.12); color: var(--green); border: 1px solid rgba(74,222,128,0.3); }
+        .tier-A { background: rgba(96,165,250,0.12); color: #60a5fa; border: 1px solid rgba(96,165,250,0.3); }
+        .tier-B { background: rgba(250,204,21,0.1); color: var(--yellow); border: 1px solid rgba(250,204,21,0.25); }
+        .tier-C { background: rgba(148,163,184,0.1); color: var(--text-dim); border: 1px solid var(--border); }
+        .vz { font-size: 9px; font-weight: 700; padding: 1px 7px; border-radius: 3px; letter-spacing: 0.3px; }
+        .vz-prime { background: rgba(74,222,128,0.1); color: var(--green); }
+        .vz-caution { background: rgba(245,158,11,0.12); color: #f59e0b; }
+        .vz-short { background: rgba(148,163,184,0.1); color: var(--text-dim); }
+        .kernel-bar {
+            margin-top: 12px; padding: 8px 12px; border-radius: 6px;
+            background: rgba(167,139,250,0.06); border: 1px solid rgba(167,139,250,0.14);
+            font-size: 11px; color: var(--text-muted);
         }
-        .toss-label { font-size: 10px; font-weight: 700; color: var(--red); letter-spacing: 0.5px; text-transform: uppercase; }
-        .toss-detail { font-size: 11px; color: #fca5a5; margin-top: 2px; }
-        .toss-reason { font-size: 10px; color: var(--text-muted); margin-top: 1px; font-style: italic; }
+        .kernel-bar .kkey { font-family: 'IBM Plex Mono', monospace; color: #a78bfa; font-weight: 600; }
+        .kernel-bar .kflag { color: #f59e0b; font-weight: 600; }
+        .kernel-bar .kconf { font-size: 9px; padding: 1px 5px; border-radius: 3px; background: rgba(167,139,250,0.12); color: #a78bfa; text-transform: uppercase; letter-spacing: 0.5px; }
+        .field-table { margin-top: 12px; width: 100%; border-collapse: collapse; font-size: 12px; }
+        .field-table th { font-size: 9px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.8px; text-align: left; padding: 4px 8px; border-bottom: 1px solid var(--border); }
+        .field-table td { padding: 5px 8px; border-bottom: 1px solid rgba(51,65,85,0.4); font-family: 'IBM Plex Mono', monospace; color: var(--text-muted); }
+        .field-table td.hname { font-family: inherit; color: var(--text); font-weight: 600; }
+        .field-table tr.rank1 td, .field-table tr.rank1 td.hname { color: var(--green); }
+        .field-title { font-size: 10px; font-weight: 700; color: var(--text-dim); letter-spacing: 1px; text-transform: uppercase; margin-top: 14px; }
+        .field-hint { font-size: 10px; color: var(--text-dim); margin-top: 2px; font-style: italic; }
+        .fts-bar { margin-top: 10px; padding: 8px 12px; background: rgba(148,163,184,0.06); border: 1px solid var(--border); border-radius: 6px; }
+        .fts-label { font-size: 10px; font-weight: 700; color: var(--text-dim); letter-spacing: 0.5px; text-transform: uppercase; }
+        .fts-item { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+        .thin-badge { font-size: 9px; font-weight: 700; padding: 1px 6px; border-radius: 3px; background: rgba(245,158,11,0.12); color: #f59e0b; }
 
         .ponies-legend {
             margin-top: 16px; padding: 14px 16px;
@@ -599,7 +620,7 @@
         NBA Model v2.1 — Backtested: 1,231 games, February 2026<br>
         NHL Model v2.1 — Backtested: 2,542 games, February 2026<br>
         NCAAB Model v1.1 — Backtested: 4,078 games, February 2026<br>
-        Ponies Model v2.2 — Backtested: 82,536 entrants / 10,619 races, 2023 Equibase<br>
+        Ponies Model v3.0 — BrennyPower conditional logit fitted on 41,986 races (2023 Equibase, odds-blind) · 26 Saratoga bias kernels (2023 meet)<br>
         <br>
         Auto-refreshes on cron: NBA 10 AM + 6:15 PM + 8:45 PM · NHL 6:20 PM + 8:10 PM · NCAAB 11 AM + 6:25 PM EST<br>
         For personal use only. Not financial advice.
@@ -800,12 +821,13 @@ function renderPonies() {
     // Summary
     var highConf = filtered.filter(function(r) { return r.picks && r.picks.win && r.picks.win.confidence === '★★★'; }).length;
     var medConf = filtered.filter(function(r) { return r.picks && r.picks.win && r.picks.win.confidence === '★★'; }).length;
-    var totalEntries = filtered.reduce(function(s, r) { return s + (r.fieldSize || 0); }, 0);
+    var primeCount = filtered.filter(function(r) { return r.picks && r.picks.win && r.picks.win.valueZone === 'prime'; }).length;
+    var cautionCount = filtered.filter(function(r) { return r.picks && r.picks.win && r.picks.win.valueZone === 'caution'; }).length;
     document.getElementById('ponies-summary').innerHTML =
         '<div class="summary-box"><div class="label">Races</div><div class="value white">' + filtered.length + '</div></div>' +
         '<div class="summary-box"><div class="label">★★★</div><div class="value green">' + highConf + '</div></div>' +
-        '<div class="summary-box"><div class="label">★★</div><div class="value yellow">' + medConf + '</div></div>' +
-        '<div class="summary-box"><div class="label">Entries</div><div class="value dim">' + totalEntries + '</div></div>';
+        '<div class="summary-box"><div class="label">Prime Zone</div><div class="value green">' + primeCount + '</div></div>' +
+        '<div class="summary-box"><div class="label">⚠ Caution</div><div class="value yellow">' + cautionCount + '</div></div>';
 
     // Top plays
     var topPlays = filtered.filter(function(r) { return r.picks && r.picks.win && r.picks.win.confidence === '★★★'; });
@@ -833,36 +855,39 @@ function renderPonies() {
                 '<div class="race-meta-row">' +
                     '<span class="race-num">R' + r.race + '</span>' +
                     '<span class="race-info-text">' + (r.type || '') + ' · ' + (r.distance || '') + ' <span style="' + surfColor + '">' + surface + '</span>' +
-                        (r.raceRating ? ' <span style="color:var(--text-muted)">RR:' + r.raceRating + '</span>' : '') +
+                        (r.directionalOnly ? ' <span class="thin-badge">THIN DATA</span>' : '') +
                     '</span>' +
                 '</div>' +
                 '<div class="race-pick-preview">' +
                     (w ? '<span class="race-pick-name">' + w.name + '</span>' +
                     '<span class="race-pick-fair">(' + (w.fairOdds || '?') + ')</span>' +
-                    '<span class="race-pick-rank">#' + (w.fairOddsRank != null ? w.fairOddsRank : '?') + '</span>' +
+                    (w.valueZone ? '<span class="vz vz-' + w.valueZone + '">' + (w.valueZone === 'caution' ? '⚠ ' : '') + w.valueZone.toUpperCase() + '</span>' : '') +
                     '<span class="' + confCls + '">' + (w.confidence || '') + '</span>' : '') +
                     '<span class="race-chevron" id="chev-' + id + '">▼</span>' +
                 '</div>' +
             '</div>' +
             '<div class="race-detail" id="detail-' + id + '">' +
-                (r.oddsRanking ? '<div class="odds-ranking"><div class="odds-label">📊 FAIR ODDS RANKING</div>' + r.oddsRanking + '</div>' : '') +
+                renderKernel(r.kernel) +
                 renderWPS(r.picks) +
                 (r.analysis ? '<div class="race-analysis">' + r.analysis + '</div>' : '') +
                 renderContenders(r.otherContenders) +
                 (r.exoticPlay ? '<div class="exotic-bar"><div class="exotic-label">Exotic Play</div><div class="exotic-play">' + r.exoticPlay + '</div></div>' : '') +
                 (r.betType ? '<div class="bet-badge">' + r.betType + '</div>' : '') +
-                renderTopToss(r.topToss) +
+                renderFullField(r.fullField) +
+                renderFTS(r.ftsRunners) +
             '</div>' +
         '</div>';
     }).join('') +
     '<div class="ponies-legend">' +
         '<div class="legend-title">Confidence Key</div>' +
         '<div class="legend-items">' +
-            '<span><span class="conf-high">★★★</span> Strong (30+ pts)</span>' +
-            '<span><span class="conf-medium">★★</span> Moderate (22-29)</span>' +
-            '<span><span class="conf-none">◑</span> Lean / Volatile</span>' +
+            '<span><span class="conf-high">★★★</span> Clear top (8%+ edge)</span>' +
+            '<span><span class="conf-medium">★★</span> Solid top (4-8%)</span>' +
+            '<span><span class="conf-none">◑</span> Bunched race</span>' +
+            '<span><span class="vz vz-prime">PRIME</span> fair 2-5, proven band</span>' +
+            '<span><span class="vz vz-caution">⚠</span> fair 5+, board usually knows</span>' +
         '</div>' +
-        '<div class="legend-note">BrennyScore (44 max): Fig Gap 10 · Surface Exp 6 · Style 5 · Post 4 · Trend 4 · Days Off 4 · Dist Exp 3 · Consistency 3 · T/J Combo 3 · Class 2 · Boosters/Negatives</div>' +
+        '<div class="legend-note">BrennyScore (0-100, field-relative): fig trend · fig gap · consistency · pace fig · style/post kernel fit · class · form — weights fitted on 41,986 real races, tiers assigned no-override</div>' +
     '</div>';
 }
 
@@ -876,12 +901,12 @@ function renderWPS(picks) {
         var label = slot.toUpperCase();
         var factors = (p.keyFactors || []).map(function(f) { return '<li>' + f + '</li>'; }).join('');
         var negs = (p.negatives || []).map(function(n) { return '<li>' + n + '</li>'; }).join('');
-        var scoreHtml = p.brennyScore != null ? '<div class="wps-score">BS: ' + p.brennyScore + '/44</div>' : '';
+        var scoreHtml = p.brennyScore != null ? '<div class="wps-score">BS: ' + p.brennyScore + '/100' + (p.tier ? ' · <span class="tier-badge tier-' + p.tier + '">' + p.tier + '</span>' : '') + '</div>' : '';
         var fairHtml = '<div class="wps-fair">Fair: ' + (p.fairOdds || '—') + ' · Rank #' + (p.fairOddsRank != null ? p.fairOddsRank : '?') + '</div>';
         var probHtml = p.impliedWinPct != null ? '<div class="wps-prob">Win: ' + (typeof p.impliedWinPct === 'number' ? p.impliedWinPct.toFixed(1) : p.impliedWinPct) + '%</div>' : '';
         html += '<div class="wps-box ' + cls + '">' +
             '<div class="wps-label">' + label + '</div>' +
-            '<div class="wps-horse">#' + p.pp + ' ' + p.name + '</div>' +
+            '<div class="wps-horse">#' + p.pp + ' ' + p.name + (p.style ? ' <span style="font-size:10px;opacity:.55;font-family:\'IBM Plex Mono\', monospace">' + p.style + '</span>' : '') + '</div>' +
             scoreHtml + fairHtml + probHtml +
             (factors ? '<ul class="wps-factors">' + factors + '</ul>' : '') +
             (negs ? '<ul class="wps-negatives">' + negs + '</ul>' : '') +
@@ -902,7 +927,8 @@ function renderContenders(contenders) {
             '<div class="contender-header">' +
                 '<span class="contender-name">#' + c.pp + ' ' + c.name + '</span>' +
                 '<span class="contender-odds">Fair: ' + (c.fairOdds || '?') + ' #' + (c.fairOddsRank != null ? c.fairOddsRank : '?') + '</span>' +
-                (c.brennyScore != null ? '<span class="contender-score">BS: ' + c.brennyScore + '/44</span>' : '') +
+                (c.brennyScore != null ? '<span class="contender-score">BS: ' + c.brennyScore + '/100</span>' : '') +
+                (c.tier ? '<span class="tier-badge tier-' + c.tier + '">' + c.tier + '</span>' : '') +
                 '<span class="' + confCls + '">' + conf + '</span>' +
             '</div>' +
             (factors ? '<ul class="wps-factors">' + factors + '</ul>' : '') +
@@ -912,13 +938,39 @@ function renderContenders(contenders) {
     return html + '</div>';
 }
 
-function renderTopToss(toss) {
-    if (!toss) return '';
-    return '<div class="toss-bar">' +
-        '<div class="toss-label">TOP TOSS</div>' +
-        '<div class="toss-detail">#' + toss.pp + ' ' + toss.name + (toss.brennyScore != null ? ' · BS: ' + toss.brennyScore + '/44' : '') + '</div>' +
-        (toss.reason ? '<div class="toss-reason">' + toss.reason + '</div>' : '') +
+function renderKernel(k) {
+    if (!k) return '';
+    var flags = (k.flags || []).map(function(f) { return '<span class="kflag">' + f + '</span>'; }).join(' · ');
+    return '<div class="kernel-bar">🧭 <span class="kkey">' + (k.key || '') + '</span> ' +
+        '<span class="kconf">' + (k.confidence || '') + '</span> ' +
+        '<span style="color:var(--text-dim)">' + (k.races != null ? k.races + ' races (2023 meet)' : '') + '</span>' +
+        (flags ? ' — ' + flags : '') +
     '</div>';
+}
+
+function renderFullField(field) {
+    if (!field || !field.length) return '';
+    var rows = field.map(function(h) {
+        return '<tr class="' + (h.fairOddsRank === 1 ? 'rank1' : '') + '">' +
+            '<td>' + (h.fairOddsRank != null ? h.fairOddsRank : '') + '</td>' +
+            '<td class="hname">#' + h.pp + ' ' + h.name + '</td>' +
+            '<td>' + (h.style || '—') + '</td>' +
+            '<td>' + (h.brennyScore != null ? h.brennyScore : '?') + '</td>' +
+            '<td>' + (h.impliedWinPct != null ? h.impliedWinPct + '%' : '?') + '</td>' +
+            '<td style="color:#60a5fa">' + (h.fairOdds != null ? h.fairOdds : '?') + '</td>' +
+        '</tr>';
+    }).join('');
+    return '<div class="field-title">📊 Full Field — Fair Odds Board</div>' +
+        '<div class="field-hint">Compare fair odds vs the live board — value lives where the board pays more than fair; weigh ⚠ caution-zone prices carefully.</div>' +
+        '<table class="field-table"><thead><tr><th>#</th><th>Horse</th><th>Style</th><th>BS</th><th>Win%</th><th>Fair</th></tr></thead><tbody>' + rows + '</tbody></table>';
+}
+
+function renderFTS(fts) {
+    if (!fts || !fts.length) return '';
+    var items = fts.map(function(h) {
+        return '<div class="fts-item">#' + h.pp + ' ' + h.name + (h.workoutNote ? ' — ' + h.workoutNote : '') + '</div>';
+    }).join('');
+    return '<div class="fts-bar"><div class="fts-label">First-Time Starters — no engine score by rule</div>' + items + '</div>';
 }
 
 function switchPoniesTrack(t) {

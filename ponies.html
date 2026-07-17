@@ -160,15 +160,43 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); min-
   font-family: var(--mono);
 }
 
-/* ── Top Toss ── */
-.toss-bar {
-  margin-top: 12px; padding: 8px 14px;
-  background: rgba(248,113,113,.05); border: 1px solid rgba(248,113,113,.12);
-  border-radius: 8px;
+/* ── v3: Tier badges ── */
+.tier-badge { font-size: 9px; font-weight: 800; padding: 1px 6px; border-radius: 3px; font-family: var(--mono); letter-spacing: 0.5px; }
+.tier-WIN { background: rgba(34,197,94,.15); color: var(--green); border: 1px solid rgba(34,197,94,.3); }
+.tier-A { background: rgba(59,130,246,.15); color: var(--accent); border: 1px solid rgba(59,130,246,.3); }
+.tier-B { background: rgba(250,204,21,.12); color: var(--yellow); border: 1px solid rgba(250,204,21,.25); }
+.tier-C { background: rgba(100,116,139,.15); color: var(--dim); border: 1px solid var(--border); }
+
+/* ── v3: Value zones ── */
+.vz { font-size: 9px; font-weight: 700; padding: 1px 7px; border-radius: 3px; letter-spacing: 0.3px; }
+.vz-prime { background: rgba(34,197,94,.12); color: var(--green); }
+.vz-caution { background: rgba(245,158,11,.12); color: var(--orange); }
+.vz-short { background: rgba(100,116,139,.12); color: var(--dim); }
+
+/* ── v3: Kernel banner ── */
+.kernel-bar {
+  margin-top: 14px; padding: 8px 14px; border-radius: 8px;
+  background: rgba(167,139,250,.06); border: 1px solid rgba(167,139,250,.14);
+  font-size: 11px; color: var(--muted);
 }
-.toss-label { font-size: 10px; font-weight: 700; color: var(--red); letter-spacing: 0.5px; text-transform: uppercase; }
-.toss-detail { font-size: 11px; color: #fca5a5; margin-top: 2px; }
-.toss-reason { font-size: 10px; color: var(--dim); margin-top: 1px; font-style: italic; }
+.kernel-bar .kkey { font-family: var(--mono); color: var(--purple); font-weight: 600; }
+.kernel-bar .kflag { color: var(--orange); font-weight: 600; }
+.kernel-bar .kconf { font-size: 9px; padding: 1px 5px; border-radius: 3px; background: rgba(167,139,250,.12); color: var(--purple); text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* ── v3: Full-field board table ── */
+.field-table { margin-top: 14px; width: 100%; border-collapse: collapse; font-size: 12px; }
+.field-table th { font-size: 9px; color: var(--dim); text-transform: uppercase; letter-spacing: 0.8px; text-align: left; padding: 4px 8px; border-bottom: 1px solid var(--border); }
+.field-table td { padding: 5px 8px; border-bottom: 1px solid rgba(51,65,85,.4); font-family: var(--mono); color: var(--muted); }
+.field-table td.hname { font-family: var(--sans); color: var(--text); font-weight: 600; }
+.field-table tr.rank1 td { color: var(--green); } .field-table tr.rank1 td.hname { color: var(--green); }
+.field-title { font-size: 10px; font-weight: 700; color: var(--dim); letter-spacing: 1px; text-transform: uppercase; margin-top: 16px; }
+.field-hint { font-size: 10px; color: var(--dim); margin-top: 2px; font-style: italic; }
+
+/* ── v3: FTS runners ── */
+.fts-bar { margin-top: 12px; padding: 8px 14px; background: rgba(100,116,139,.08); border: 1px solid var(--border); border-radius: 8px; }
+.fts-label { font-size: 10px; font-weight: 700; color: var(--dim); letter-spacing: 0.5px; text-transform: uppercase; }
+.fts-item { font-size: 11px; color: var(--muted); margin-top: 2px; }
+.thin-badge { font-size: 9px; font-weight: 700; padding: 1px 6px; border-radius: 3px; background: rgba(245,158,11,.12); color: var(--orange); }
 
 /* ── Legend ── */
 .legend {
@@ -204,7 +232,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); min-
 
 <div class="header">
   <h1>🏇 <span>BrennyPonies</span></h1>
-  <div class="sub">Factor-weighted race picks • Validated on 82,536 entrants</div>
+  <div class="sub">Deterministic BrennyPower engine • Fitted on 41,986 races • Saratoga bias kernels (2023 meet)</div>
   <div class="model-tag" id="modelTag">loading...</div>
 </div>
 
@@ -215,15 +243,17 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); min-
 </div>
 
 <div class="legend">
-  <h3>CONFIDENCE KEY</h3>
+  <h3>READING THE BOARD</h3>
   <div class="legend-items">
-    <div class="legend-item"><span class="conf-high">★★★</span> Strong Play (30+ pts)</div>
-    <div class="legend-item"><span class="conf-med">★★</span> Moderate (22-29 pts)</div>
-    <div class="legend-item"><span class="conf-low">◑</span> Lean / Volatile</div>
+    <div class="legend-item"><span class="conf-high">★★★</span> Clear top (8%+ prob edge)</div>
+    <div class="legend-item"><span class="conf-med">★★</span> Solid top (4-8%)</div>
+    <div class="legend-item"><span class="conf-low">◑</span> Bunched race</div>
+    <div class="legend-item"><span class="vz vz-prime">PRIME</span> fair odds 2-5, model's proven band</div>
+    <div class="legend-item"><span class="vz vz-caution">⚠ CAUTION</span> fair odds 5+, board usually knows</div>
   </div>
   <div class="note">
-    BrennyScore (44 max): Fig Gap 10 · Surface Exp 6 · Style 5 · Post 4 · Trend 4 · Days Off 4 · Dist Exp 3 · Consistency 3 · T/J Combo 3 · Class 2 · Boosters/Negatives<br>
-    Model back-tested on full 2023 Equibase dataset (82,536 entrants / 10,619 races / 14 major tracks)
+    BrennyScore (0-100, field-relative): fig trend · fig gap · consistency · pace fig · style/post kernel fit · class · form — weights fitted on real outcomes, not authored<br>
+    BrennyPower: conditional-logit model fitted on 41,986 races (2023 Equibase, odds-blind) · Bias layer: 26 empirical Saratoga kernels (406 races, 2023 meet) · Tiers assigned no-override: top engine score is the pick, every time
   </div>
 </div>
 
@@ -269,13 +299,15 @@ function render() {
   const filtered = data.races.filter(r => r.track === activeTrack);
   const highConf = filtered.filter(r => r.picks && r.picks.win && r.picks.win.confidence === '★★★').length;
   const totalField = filtered.reduce((s, r) => s + (r.fieldSize || 0), 0);
-  const rank1Count = filtered.filter(r => r.picks && r.picks.win && r.picks.win.fairOddsRank === 1).length;
+  const primeCount = filtered.filter(r => r.picks && r.picks.win && r.picks.win.valueZone === 'prime').length;
+  const cautionCount = filtered.filter(r => r.picks && r.picks.win && r.picks.win.valueZone === 'caution').length;
 
   document.getElementById('statsBar').innerHTML =
     '<div class="stat-box"><div class="val" style="color:var(--accent)">' + filtered.length + '</div><div class="lbl">Races</div></div>' +
     '<div class="stat-box"><div class="val" style="color:var(--green)">' + highConf + '</div><div class="lbl">★★★ Plays</div></div>' +
     '<div class="stat-box"><div class="val">' + totalField + '</div><div class="lbl">Total Entries</div></div>' +
-    '<div class="stat-box"><div class="val" style="color:var(--orange)">' + rank1Count + '</div><div class="lbl">Rank #1</div></div>';
+    '<div class="stat-box"><div class="val" style="color:var(--green)">' + primeCount + '</div><div class="lbl">Prime Zone</div></div>' +
+    '<div class="stat-box"><div class="val" style="color:var(--orange)">' + cautionCount + '</div><div class="lbl">⚠ Caution</div></div>';
 
   const container = document.getElementById('racesContainer');
   if (!filtered.length) {
@@ -296,19 +328,19 @@ function render() {
         '<div class="race-meta">' +
           '<span class="race-num">R' + r.race + '</span>' +
           '<span class="race-info">' + (r.type || '') + ' • ' + (r.distance || '') + ' <span class="surface" style="' + surfColor + '">' + (r.surface || '') + '</span>' +
-            (r.raceRating ? ' <span style="color:var(--dim);margin-left:6px">RR:' + r.raceRating + '</span>' : '') +
+            (r.directionalOnly ? ' <span class="thin-badge">THIN DATA</span>' : '') +
           '</span>' +
         '</div>' +
         '<div class="race-pick">' +
           '<span class="pick-name" style="color:' + (conf === '★★★' ? 'var(--green)' : conf === '★★' ? 'var(--yellow)' : 'var(--muted)') + '">' + w.name + '</span>' +
           '<span class="pick-fair">(' + (w.fairOdds || '?') + ')</span>' +
-          '<span class="rank-badge">#' + (w.fairOddsRank != null ? w.fairOddsRank : '?') + '</span>' +
+          (w.valueZone ? '<span class="vz vz-' + w.valueZone + '">' + (w.valueZone === 'caution' ? '⚠ ' : '') + w.valueZone.toUpperCase() + '</span>' : '') +
           '<span class="pick-conf ' + confClass + '">' + conf + '</span>' +
           '<span class="chevron" id="chev-' + id + '">▼</span>' +
         '</div>' +
       '</div>' +
       '<div class="race-detail" id="detail-' + id + '">' +
-        (r.oddsRanking ? '<div class="odds-ranking"><div class="label">📊 FAIR ODDS RANKING</div>' + r.oddsRanking + '</div>' : '') +
+        renderKernel(r.kernel) +
         '<div class="picks-row">' +
           renderPickBox('WIN', r.picks.win, 'win') +
           renderPickBox('PLACE', r.picks.place, 'place') +
@@ -318,7 +350,8 @@ function render() {
         renderContenders(r.otherContenders) +
         (r.exoticPlay ? '<div class="exotic-bar"><div class="exotic-label">EXOTIC PLAY</div><div class="exotic-play">' + r.exoticPlay + '</div></div>' : '') +
         (r.betType ? '<div class="bet-type">' + r.betType + '</div>' : '') +
-        renderTopToss(r.topToss) +
+        renderFullField(r.fullField) +
+        renderFTS(r.ftsRunners) +
       '</div>' +
     '</div>';
   }).join('');
@@ -330,8 +363,8 @@ function renderPickBox(label, pick, type) {
   var negatives = (pick.negatives || []).map(function(n) { return '<li>' + n + '</li>'; }).join('');
   return '<div class="pick-box ' + type + '">' +
     '<div class="pick-label">' + label + '</div>' +
-    '<div class="pick-horse">#' + pick.pp + ' ' + pick.name + '</div>' +
-    '<div class="pick-score">BS: ' + (pick.brennyScore != null ? pick.brennyScore : '?') + '/44</div>' +
+    '<div class="pick-horse">#' + pick.pp + ' ' + pick.name + (pick.style ? ' <span style="font-size:10px;color:rgba(255,255,255,.45);font-family:var(--mono)">' + pick.style + '</span>' : '') + '</div>' +
+    '<div class="pick-score">BS: ' + (pick.brennyScore != null ? pick.brennyScore : '?') + '/100' + (pick.tier ? ' · <span class="tier-badge tier-' + pick.tier + '">' + pick.tier + '</span>' : '') + '</div>' +
     '<div class="pick-fair-odds">Fair: ' + (pick.fairOdds || '?') + ' · Rank #' + (pick.fairOddsRank != null ? pick.fairOddsRank : '?') + '</div>' +
     (pick.impliedWinPct != null ? '<div class="pick-prob">Win: ' + (typeof pick.impliedWinPct === 'number' ? pick.impliedWinPct.toFixed(1) : pick.impliedWinPct) + '%</div>' : '') +
     (factors ? '<ul class="pick-factors">' + factors + '</ul>' : '') +
@@ -351,7 +384,8 @@ function renderContenders(contenders) {
       '<div class="contender-header">' +
         '<span class="contender-name">#' + c.pp + ' ' + c.name + '</span>' +
         '<span class="contender-odds">Fair: ' + (c.fairOdds || '?') + ' #' + (c.fairOddsRank != null ? c.fairOddsRank : '?') + '</span>' +
-        (c.brennyScore != null ? '<span class="contender-score">BS: ' + c.brennyScore + '/44</span>' : '') +
+        (c.brennyScore != null ? '<span class="contender-score">BS: ' + c.brennyScore + '/100</span>' : '') +
+        (c.tier ? '<span class="tier-badge tier-' + c.tier + '">' + c.tier + '</span>' : '') +
         '<span class="contender-conf ' + confClass + '">' + conf + '</span>' +
       '</div>' +
       (factors ? '<ul class="pick-factors">' + factors + '</ul>' : '') +
@@ -361,13 +395,39 @@ function renderContenders(contenders) {
   return html + '</div>';
 }
 
-function renderTopToss(toss) {
-  if (!toss) return '';
-  return '<div class="toss-bar">' +
-    '<div class="toss-label">TOP TOSS</div>' +
-    '<div class="toss-detail">#' + toss.pp + ' ' + toss.name + (toss.brennyScore != null ? ' · BS: ' + toss.brennyScore + '/44' : '') + '</div>' +
-    (toss.reason ? '<div class="toss-reason">' + toss.reason + '</div>' : '') +
+function renderKernel(k) {
+  if (!k) return '';
+  var flags = (k.flags || []).map(function(f) { return '<span class="kflag">' + f + '</span>'; }).join(' · ');
+  return '<div class="kernel-bar">🧭 <span class="kkey">' + (k.key || '') + '</span> ' +
+    '<span class="kconf">' + (k.confidence || '') + '</span> ' +
+    '<span style="color:var(--dim)">' + (k.races != null ? k.races + ' races (2023 meet)' : '') + '</span>' +
+    (flags ? ' — ' + flags : '') +
   '</div>';
+}
+
+function renderFullField(field) {
+  if (!field || !field.length) return '';
+  var rows = field.map(function(h) {
+    return '<tr class="' + (h.fairOddsRank === 1 ? 'rank1' : '') + '">' +
+      '<td>' + (h.fairOddsRank != null ? h.fairOddsRank : '') + '</td>' +
+      '<td class="hname">#' + h.pp + ' ' + h.name + '</td>' +
+      '<td>' + (h.style || '—') + '</td>' +
+      '<td>' + (h.brennyScore != null ? h.brennyScore : '?') + '</td>' +
+      '<td>' + (h.impliedWinPct != null ? h.impliedWinPct + '%' : '?') + '</td>' +
+      '<td style="color:var(--accent)">' + (h.fairOdds != null ? h.fairOdds : '?') + '</td>' +
+    '</tr>';
+  }).join('');
+  return '<div class="field-title">📊 Full Field — Fair Odds Board</div>' +
+    '<div class="field-hint">Compare fair odds against the live board — value lives where the board pays more than fair, but weigh ⚠ caution-zone prices carefully.</div>' +
+    '<table class="field-table"><thead><tr><th>#</th><th>Horse</th><th>Style</th><th>BS</th><th>Win%</th><th>Fair</th></tr></thead><tbody>' + rows + '</tbody></table>';
+}
+
+function renderFTS(fts) {
+  if (!fts || !fts.length) return '';
+  var items = fts.map(function(h) {
+    return '<div class="fts-item">#' + h.pp + ' ' + h.name + (h.workoutNote ? ' — ' + h.workoutNote : '') + '</div>';
+  }).join('');
+  return '<div class="fts-bar"><div class="fts-label">First-Time Starters — no engine score by rule</div>' + items + '</div>';
 }
 
 function switchTrack(t) {

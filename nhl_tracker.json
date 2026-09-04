@@ -1,9 +1,1433 @@
 {
-  "generated_at": "2026-09-04 16:11:35",
+  "generated_at": "2026-09-04 20:42:00",
   "season": "20252026",
+  "season_label": "2025-26",
+  "model_version": "v3",
   "disclaimer": "Fair-line results price every bet at the no-vig number, which isolates model skill from execution. They are a benchmark, not a P&L \u2014 real results depend on the prices you actually get, when you bet, and whether you take every suggestion. The actual-price column uses the odds the pipeline logged.",
   "games_logged": 403,
   "games_graded": 403,
+  "career": {
+    "status": "ok",
+    "note": "All-time pools every bet the pipeline has ever logged, across model versions. The combined line is the record of the process; the by-version table is the record of each model. A version change means a different model choosing a different set of games, so the versions are not interchangeable and the pooled ROI should never be read as the current model's edge.",
+    "span": [
+      "2026-02-26",
+      "2026-06-14"
+    ],
+    "n_versions": 1,
+    "n_seasons": 1,
+    "versions": [
+      "v2.2"
+    ],
+    "current_version": "v3",
+    "combined": {
+      "fair": {
+        "bets": 325,
+        "wins": 177,
+        "losses": 148,
+        "win_pct": 0.5446,
+        "flat_roi": 0.0677,
+        "flat_profit": 22.0,
+        "units_staked": 610.79,
+        "units_pl": 44.53,
+        "roi_on_turnover": 0.0729,
+        "avg_odds": -26
+      },
+      "actual": {
+        "bets": 325,
+        "wins": 177,
+        "losses": 148,
+        "win_pct": 0.5446,
+        "flat_roi": 0.0432,
+        "flat_profit": 14.05,
+        "units_staked": 610.79,
+        "units_pl": 29.55,
+        "roi_on_turnover": 0.0484,
+        "avg_odds": -26
+      },
+      "fair_roi_ci": [
+        -0.0424,
+        0.1797
+      ],
+      "p_roi_positive": 0.894
+    },
+    "by_version": [
+      {
+        "label": "v2.2",
+        "key": "v2.2",
+        "span": [
+          "2026-02-26",
+          "2026-06-14"
+        ],
+        "bets": 325,
+        "wins": 177,
+        "losses": 148,
+        "win_pct": 0.5446,
+        "flat_roi": 0.0677,
+        "flat_profit": 22.0,
+        "units_staked": 610.79,
+        "units_pl": 44.53,
+        "roi_on_turnover": 0.0729,
+        "avg_odds": -26,
+        "actual_flat_roi": 0.0432,
+        "actual_units_pl": 29.55,
+        "clv": {
+          "n": 0
+        }
+      }
+    ],
+    "by_season": [
+      {
+        "label": "2025-26 regular season",
+        "key": "('20252026', 'regular')",
+        "span": [
+          "2026-02-26",
+          "2026-04-19"
+        ],
+        "bets": 285,
+        "wins": 152,
+        "losses": 133,
+        "win_pct": 0.5333,
+        "flat_roi": 0.0512,
+        "flat_profit": 14.59,
+        "units_staked": 535.09,
+        "units_pl": 30.42,
+        "roi_on_turnover": 0.0569,
+        "avg_odds": -22,
+        "actual_flat_roi": 0.0256,
+        "actual_units_pl": 16.67,
+        "clv": {
+          "n": 0
+        }
+      },
+      {
+        "label": "2025-26 playoffs",
+        "key": "('20252026', 'post')",
+        "span": [
+          "2026-04-20",
+          "2026-06-14"
+        ],
+        "bets": 40,
+        "wins": 25,
+        "losses": 15,
+        "win_pct": 0.625,
+        "flat_roi": 0.1855,
+        "flat_profit": 7.42,
+        "units_staked": 75.7,
+        "units_pl": 14.11,
+        "roi_on_turnover": 0.1863,
+        "avg_odds": -50,
+        "actual_flat_roi": 0.1688,
+        "actual_units_pl": 12.89,
+        "clv": {
+          "n": 0
+        }
+      }
+    ],
+    "series": [
+      {
+        "date": "2026-02-26",
+        "bets": 10,
+        "wins": 6,
+        "day_fair": 1.23,
+        "cum_fair": 1.23,
+        "cum_actual": 0.76,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-02-27",
+        "bets": 1,
+        "wins": 0,
+        "day_fair": -2.0,
+        "cum_fair": -0.77,
+        "cum_actual": -1.24,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-02-28",
+        "bets": 10,
+        "wins": 6,
+        "day_fair": 1.61,
+        "cum_fair": 0.84,
+        "cum_actual": -0.04,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-01",
+        "bets": 4,
+        "wins": 1,
+        "day_fair": -2.84,
+        "cum_fair": -2.0,
+        "cum_actual": -3.0,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-02",
+        "bets": 3,
+        "wins": 1,
+        "day_fair": -1.64,
+        "cum_fair": -3.64,
+        "cum_actual": -4.76,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-03",
+        "bets": 6,
+        "wins": 2,
+        "day_fair": -4.32,
+        "cum_fair": -7.96,
+        "cum_actual": -9.27,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-04",
+        "bets": 3,
+        "wins": 2,
+        "day_fair": 2.84,
+        "cum_fair": -5.12,
+        "cum_actual": -6.6,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-05",
+        "bets": 6,
+        "wins": 3,
+        "day_fair": -0.64,
+        "cum_fair": -5.76,
+        "cum_actual": -7.51,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-06",
+        "bets": 5,
+        "wins": 4,
+        "day_fair": 5.69,
+        "cum_fair": -0.07,
+        "cum_actual": -2.19,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-07",
+        "bets": 10,
+        "wins": 4,
+        "day_fair": -4.9,
+        "cum_fair": -4.98,
+        "cum_actual": -7.45,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-08",
+        "bets": 5,
+        "wins": 3,
+        "day_fair": 0.82,
+        "cum_fair": -4.15,
+        "cum_actual": -6.89,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-09",
+        "bets": 3,
+        "wins": 1,
+        "day_fair": -2.06,
+        "cum_fair": -6.22,
+        "cum_actual": -9.01,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-10",
+        "bets": 9,
+        "wins": 4,
+        "day_fair": -2.98,
+        "cum_fair": -9.19,
+        "cum_actual": -12.35,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-11",
+        "bets": 2,
+        "wins": 1,
+        "day_fair": 0.44,
+        "cum_fair": -8.75,
+        "cum_actual": -12.03,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-12",
+        "bets": 8,
+        "wins": 5,
+        "day_fair": 6.9,
+        "cum_fair": -1.85,
+        "cum_actual": -5.64,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-13",
+        "bets": 2,
+        "wins": 1,
+        "day_fair": 1.29,
+        "cum_fair": -0.56,
+        "cum_actual": -4.47,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-14",
+        "bets": 12,
+        "wins": 4,
+        "day_fair": -6.38,
+        "cum_fair": -6.94,
+        "cum_actual": -11.23,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-15",
+        "bets": 4,
+        "wins": 3,
+        "day_fair": 2.69,
+        "cum_fair": -4.25,
+        "cum_actual": -8.79,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-16",
+        "bets": 4,
+        "wins": 2,
+        "day_fair": -0.67,
+        "cum_fair": -4.92,
+        "cum_actual": -9.62,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-17",
+        "bets": 6,
+        "wins": 3,
+        "day_fair": -1.79,
+        "cum_fair": -6.71,
+        "cum_actual": -11.66,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-18",
+        "bets": 4,
+        "wins": 3,
+        "day_fair": 4.56,
+        "cum_fair": -2.15,
+        "cum_actual": -7.37,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-19",
+        "bets": 7,
+        "wins": 4,
+        "day_fair": 1.63,
+        "cum_fair": -0.52,
+        "cum_actual": -6.11,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-20",
+        "bets": 4,
+        "wins": 4,
+        "day_fair": 4.94,
+        "cum_fair": 4.42,
+        "cum_actual": -1.48,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-21",
+        "bets": 9,
+        "wins": 6,
+        "day_fair": 2.91,
+        "cum_fair": 7.33,
+        "cum_actual": 0.95,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-22",
+        "bets": 7,
+        "wins": 5,
+        "day_fair": 6.39,
+        "cum_fair": 13.71,
+        "cum_actual": 6.86,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-23",
+        "bets": 1,
+        "wins": 1,
+        "day_fair": 1.18,
+        "cum_fair": 14.89,
+        "cum_actual": 7.94,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-24",
+        "bets": 12,
+        "wins": 8,
+        "day_fair": 9.56,
+        "cum_fair": 24.45,
+        "cum_actual": 16.68,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-26",
+        "bets": 6,
+        "wins": 2,
+        "day_fair": -5.12,
+        "cum_fair": 19.33,
+        "cum_actual": 11.44,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-27",
+        "bets": 2,
+        "wins": 2,
+        "day_fair": 4.02,
+        "cum_fair": 23.35,
+        "cum_actual": 15.24,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-28",
+        "bets": 9,
+        "wins": 3,
+        "day_fair": -7.24,
+        "cum_fair": 16.12,
+        "cum_actual": 7.78,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-29",
+        "bets": 5,
+        "wins": 2,
+        "day_fair": -1.81,
+        "cum_fair": 14.31,
+        "cum_actual": 5.76,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-30",
+        "bets": 3,
+        "wins": 2,
+        "day_fair": 1.45,
+        "cum_fair": 15.76,
+        "cum_actual": 7.03,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-03-31",
+        "bets": 5,
+        "wins": 4,
+        "day_fair": 5.71,
+        "cum_fair": 21.47,
+        "cum_actual": 12.3,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-04-01",
+        "bets": 3,
+        "wins": 1,
+        "day_fair": -2.46,
+        "cum_fair": 19.01,
+        "cum_actual": 9.75,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-04-02",
+        "bets": 9,
+        "wins": 5,
+        "day_fair": 1.43,
+        "cum_fair": 20.44,
+        "cum_actual": 10.76,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-04-03",
+        "bets": 1,
+        "wins": 0,
+        "day_fair": -2.0,
+        "cum_fair": 18.44,
+        "cum_actual": 8.76,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-04-04",
+        "bets": 13,
+        "wins": 8,
+        "day_fair": 5.32,
+        "cum_fair": 23.76,
+        "cum_actual": 13.25,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-04-05",
+        "bets": 6,
+        "wins": 2,
+        "day_fair": -3.69,
+        "cum_fair": 20.07,
+        "cum_actual": 9.36,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-04-06",
+        "bets": 4,
+        "wins": 2,
+        "day_fair": -0.9,
+        "cum_fair": 19.17,
+        "cum_actual": 8.26,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-04-07",
+        "bets": 8,
+        "wins": 3,
+        "day_fair": -5.55,
+        "cum_fair": 13.63,
+        "cum_actual": 2.46,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-04-08",
+        "bets": 2,
+        "wins": 1,
+        "day_fair": -0.09,
+        "cum_fair": 13.54,
+        "cum_actual": 2.28,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-04-09",
+        "bets": 11,
+        "wins": 6,
+        "day_fair": -0.3,
+        "cum_fair": 13.23,
+        "cum_actual": 1.54,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-04-11",
+        "bets": 11,
+        "wins": 7,
+        "day_fair": 9.77,
+        "cum_fair": 23.01,
+        "cum_actual": 10.81,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-04-12",
+        "bets": 4,
+        "wins": 2,
+        "day_fair": 5.32,
+        "cum_fair": 28.33,
+        "cum_actual": 15.82,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-04-13",
+        "bets": 7,
+        "wins": 2,
+        "day_fair": -4.59,
+        "cum_fair": 23.74,
+        "cum_actual": 11.06,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-04-14",
+        "bets": 7,
+        "wins": 5,
+        "day_fair": 8.26,
+        "cum_fair": 31.99,
+        "cum_actual": 18.77,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-04-15",
+        "bets": 3,
+        "wins": 2,
+        "day_fair": 1.67,
+        "cum_fair": 33.67,
+        "cum_actual": 20.24,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-04-16",
+        "bets": 5,
+        "wins": 2,
+        "day_fair": -1.75,
+        "cum_fair": 31.91,
+        "cum_actual": 18.28,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-04-18",
+        "bets": 2,
+        "wins": 1,
+        "day_fair": -0.12,
+        "cum_fair": 31.8,
+        "cum_actual": 18.08,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-04-19",
+        "bets": 2,
+        "wins": 1,
+        "day_fair": -1.38,
+        "cum_fair": 30.42,
+        "cum_actual": 16.67,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "regular"
+      },
+      {
+        "date": "2026-04-20",
+        "bets": 3,
+        "wins": 1,
+        "day_fair": -1.92,
+        "cum_fair": 28.5,
+        "cum_actual": 14.65,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-04-22",
+        "bets": 1,
+        "wins": 0,
+        "day_fair": -2.0,
+        "cum_fair": 26.5,
+        "cum_actual": 12.65,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-04-23",
+        "bets": 2,
+        "wins": 2,
+        "day_fair": 3.14,
+        "cum_fair": 29.64,
+        "cum_actual": 15.62,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-04-24",
+        "bets": 3,
+        "wins": 2,
+        "day_fair": 1.55,
+        "cum_fair": 31.19,
+        "cum_actual": 16.99,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-04-25",
+        "bets": 2,
+        "wins": 2,
+        "day_fair": 4.89,
+        "cum_fair": 36.08,
+        "cum_actual": 22.65,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-04-26",
+        "bets": 2,
+        "wins": 2,
+        "day_fair": 4.32,
+        "cum_fair": 40.4,
+        "cum_actual": 26.73,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-04-27",
+        "bets": 2,
+        "wins": 1,
+        "day_fair": -0.37,
+        "cum_fair": 40.03,
+        "cum_actual": 26.27,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-04-29",
+        "bets": 3,
+        "wins": 0,
+        "day_fair": -5.59,
+        "cum_fair": 34.44,
+        "cum_actual": 20.68,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-04-30",
+        "bets": 1,
+        "wins": 1,
+        "day_fair": 2.37,
+        "cum_fair": 36.81,
+        "cum_actual": 22.92,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-05-01",
+        "bets": 2,
+        "wins": 1,
+        "day_fair": 0.71,
+        "cum_fair": 37.52,
+        "cum_actual": 23.51,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-05-02",
+        "bets": 1,
+        "wins": 1,
+        "day_fair": 0.88,
+        "cum_fair": 38.4,
+        "cum_actual": 24.33,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-05-03",
+        "bets": 2,
+        "wins": 1,
+        "day_fair": -0.94,
+        "cum_fair": 37.47,
+        "cum_actual": 23.36,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-05-04",
+        "bets": 2,
+        "wins": 1,
+        "day_fair": -1.13,
+        "cum_fair": 36.34,
+        "cum_actual": 22.16,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-05-05",
+        "bets": 1,
+        "wins": 1,
+        "day_fair": 1.11,
+        "cum_fair": 37.46,
+        "cum_actual": 23.18,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-05-06",
+        "bets": 1,
+        "wins": 1,
+        "day_fair": 1.77,
+        "cum_fair": 39.23,
+        "cum_actual": 24.9,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-05-07",
+        "bets": 1,
+        "wins": 1,
+        "day_fair": 1.33,
+        "cum_fair": 40.55,
+        "cum_actual": 26.15,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-05-11",
+        "bets": 1,
+        "wins": 1,
+        "day_fair": 1.52,
+        "cum_fair": 42.07,
+        "cum_actual": 27.62,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-05-13",
+        "bets": 1,
+        "wins": 1,
+        "day_fair": 1.03,
+        "cum_fair": 43.1,
+        "cum_actual": 28.59,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-05-16",
+        "bets": 1,
+        "wins": 1,
+        "day_fair": 3.19,
+        "cum_fair": 46.28,
+        "cum_actual": 31.65,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-05-20",
+        "bets": 1,
+        "wins": 0,
+        "day_fair": -2.0,
+        "cum_fair": 44.28,
+        "cum_actual": 29.65,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-05-21",
+        "bets": 1,
+        "wins": 0,
+        "day_fair": -2.0,
+        "cum_fair": 42.28,
+        "cum_actual": 27.65,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-05-22",
+        "bets": 1,
+        "wins": 0,
+        "day_fair": -2.0,
+        "cum_fair": 40.28,
+        "cum_actual": 25.65,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-05-23",
+        "bets": 1,
+        "wins": 1,
+        "day_fair": 1.12,
+        "cum_fair": 41.4,
+        "cum_actual": 26.74,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-05-24",
+        "bets": 1,
+        "wins": 0,
+        "day_fair": -2.0,
+        "cum_fair": 39.4,
+        "cum_actual": 24.74,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-06-09",
+        "bets": 1,
+        "wins": 1,
+        "day_fair": 1.87,
+        "cum_fair": 41.27,
+        "cum_actual": 26.49,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-06-11",
+        "bets": 1,
+        "wins": 1,
+        "day_fair": 1.37,
+        "cum_fair": 42.64,
+        "cum_actual": 27.78,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      },
+      {
+        "date": "2026-06-14",
+        "bets": 1,
+        "wins": 1,
+        "day_fair": 1.89,
+        "cum_fair": 44.53,
+        "cum_actual": 29.55,
+        "version": "v2.2",
+        "season": "20252026",
+        "phase": "post"
+      }
+    ],
+    "clv": {
+      "n": 0
+    },
+    "splits": [
+      {
+        "name": "By confidence (all-time)",
+        "rows": [
+          {
+            "label": "HIGH",
+            "key": "HIGH",
+            "span": [
+              "2026-02-26",
+              "2026-06-14"
+            ],
+            "bets": 211,
+            "wins": 118,
+            "losses": 93,
+            "win_pct": 0.5592,
+            "flat_roi": 0.0637,
+            "flat_profit": 13.44,
+            "units_staked": 422.0,
+            "units_pl": 26.88,
+            "roi_on_turnover": 0.0637,
+            "avg_odds": -43,
+            "actual_flat_roi": 0.0404,
+            "actual_units_pl": 17.07,
+            "clv": {
+              "n": 0
+            }
+          },
+          {
+            "label": "MEDIUM",
+            "key": "MEDIUM",
+            "span": [
+              "2026-02-26",
+              "2026-05-16"
+            ],
+            "bets": 114,
+            "wins": 59,
+            "losses": 55,
+            "win_pct": 0.5175,
+            "flat_roi": 0.0751,
+            "flat_profit": 8.56,
+            "units_staked": 188.79,
+            "units_pl": 17.64,
+            "roi_on_turnover": 0.0934,
+            "avg_odds": 7,
+            "actual_flat_roi": 0.0484,
+            "actual_units_pl": 12.48,
+            "clv": {
+              "n": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "By price (all-time)",
+        "rows": [
+          {
+            "label": "-200 to -130",
+            "key": "-200 to -130",
+            "span": [
+              "2026-02-26",
+              "2026-06-11"
+            ],
+            "bets": 94,
+            "wins": 60,
+            "losses": 34,
+            "win_pct": 0.6383,
+            "flat_roi": 0.0743,
+            "flat_profit": 6.99,
+            "units_staked": 175.5,
+            "units_pl": 17.15,
+            "roi_on_turnover": 0.0977,
+            "avg_odds": -157,
+            "actual_flat_roi": 0.0486,
+            "actual_units_pl": 12.52,
+            "clv": {
+              "n": 0
+            }
+          },
+          {
+            "label": "+100 to +150",
+            "key": "+100 to +150",
+            "span": [
+              "2026-02-26",
+              "2026-05-06"
+            ],
+            "bets": 93,
+            "wins": 50,
+            "losses": 43,
+            "win_pct": 0.5376,
+            "flat_roi": 0.2341,
+            "flat_profit": 21.77,
+            "units_staked": 177.48,
+            "units_pl": 39.86,
+            "roi_on_turnover": 0.2246,
+            "avg_odds": 123,
+            "actual_flat_roi": 0.2048,
+            "actual_units_pl": 34.7,
+            "clv": {
+              "n": 0
+            }
+          },
+          {
+            "label": "-130 to +100",
+            "key": "-130 to +100",
+            "span": [
+              "2026-02-26",
+              "2026-06-14"
+            ],
+            "bets": 68,
+            "wins": 39,
+            "losses": 29,
+            "win_pct": 0.5735,
+            "flat_roi": 0.1105,
+            "flat_profit": 7.51,
+            "units_staked": 127.27,
+            "units_pl": 11.79,
+            "roi_on_turnover": 0.0926,
+            "avg_odds": -113,
+            "actual_flat_roi": 0.0808,
+            "actual_units_pl": 8.09,
+            "clv": {
+              "n": 0
+            }
+          },
+          {
+            "label": "+150 or longer",
+            "key": "+150 or longer",
+            "span": [
+              "2026-03-01",
+              "2026-05-16"
+            ],
+            "bets": 46,
+            "wins": 11,
+            "losses": 35,
+            "win_pct": 0.2391,
+            "flat_roi": -0.3279,
+            "flat_profit": -15.08,
+            "units_staked": 83.09,
+            "units_pl": -25.7,
+            "roi_on_turnover": -0.3093,
+            "avg_odds": 190,
+            "actual_flat_roi": -0.3328,
+            "actual_units_pl": -26.06,
+            "clv": {
+              "n": 0
+            }
+          },
+          {
+            "label": "\u2264 -200",
+            "key": "\u2264 -200",
+            "span": [
+              "2026-02-28",
+              "2026-05-13"
+            ],
+            "bets": 24,
+            "wins": 17,
+            "losses": 7,
+            "win_pct": 0.7083,
+            "flat_roi": 0.0342,
+            "flat_profit": 0.82,
+            "units_staked": 47.45,
+            "units_pl": 1.42,
+            "roi_on_turnover": 0.03,
+            "avg_odds": -251,
+            "actual_flat_roi": 0.0103,
+            "actual_units_pl": 0.3,
+            "clv": {
+              "n": 0
+            }
+          }
+        ]
+      }
+    ],
+    "recent": [
+      {
+        "date": "2026-06-14",
+        "matchup": "CAR@VGK",
+        "team": "CAR",
+        "odds": -113,
+        "units": 2.0,
+        "won": 1,
+        "confidence": "HIGH",
+        "version": "v2.2",
+        "pl_fair": 1.89
+      },
+      {
+        "date": "2026-06-11",
+        "matchup": "VGK@CAR",
+        "team": "CAR",
+        "odds": -155,
+        "units": 2.0,
+        "won": 1,
+        "confidence": "HIGH",
+        "version": "v2.2",
+        "pl_fair": 1.37
+      },
+      {
+        "date": "2026-06-09",
+        "matchup": "CAR@VGK",
+        "team": "CAR",
+        "odds": -114,
+        "units": 2.0,
+        "won": 1,
+        "confidence": "HIGH",
+        "version": "v2.2",
+        "pl_fair": 1.87
+      },
+      {
+        "date": "2026-05-24",
+        "matchup": "COL@VGK",
+        "team": "COL",
+        "odds": -145,
+        "units": 2.0,
+        "won": 0,
+        "confidence": "HIGH",
+        "version": "v2.2",
+        "pl_fair": -2.0
+      },
+      {
+        "date": "2026-05-23",
+        "matchup": "MTL@CAR",
+        "team": "CAR",
+        "odds": -185,
+        "units": 2.0,
+        "won": 1,
+        "confidence": "HIGH",
+        "version": "v2.2",
+        "pl_fair": 1.12
+      },
+      {
+        "date": "2026-05-22",
+        "matchup": "VGK@COL",
+        "team": "COL",
+        "odds": -193,
+        "units": 2.0,
+        "won": 0,
+        "confidence": "HIGH",
+        "version": "v2.2",
+        "pl_fair": -2.0
+      },
+      {
+        "date": "2026-05-21",
+        "matchup": "MTL@CAR",
+        "team": "CAR",
+        "odds": -190,
+        "units": 2.0,
+        "won": 0,
+        "confidence": "HIGH",
+        "version": "v2.2",
+        "pl_fair": -2.0
+      },
+      {
+        "date": "2026-05-20",
+        "matchup": "VGK@COL",
+        "team": "COL",
+        "odds": -167,
+        "units": 2.0,
+        "won": 0,
+        "confidence": "HIGH",
+        "version": "v2.2",
+        "pl_fair": -2.0
+      },
+      {
+        "date": "2026-05-16",
+        "matchup": "BUF@MTL",
+        "team": "BUF",
+        "odds": 153,
+        "units": 2.0,
+        "won": 1,
+        "confidence": "MEDIUM",
+        "version": "v2.2",
+        "pl_fair": 3.19
+      },
+      {
+        "date": "2026-05-13",
+        "matchup": "MIN@COL",
+        "team": "COL",
+        "odds": -205,
+        "units": 2.0,
+        "won": 1,
+        "confidence": "HIGH",
+        "version": "v2.2",
+        "pl_fair": 1.03
+      },
+      {
+        "date": "2026-05-11",
+        "matchup": "COL@MIN",
+        "team": "COL",
+        "odds": -136,
+        "units": 2.0,
+        "won": 1,
+        "confidence": "HIGH",
+        "version": "v2.2",
+        "pl_fair": 1.52
+      },
+      {
+        "date": "2026-05-07",
+        "matchup": "CAR@PHI",
+        "team": "CAR",
+        "odds": -160,
+        "units": 2.0,
+        "won": 1,
+        "confidence": "HIGH",
+        "version": "v2.2",
+        "pl_fair": 1.33
+      },
+      {
+        "date": "2026-05-06",
+        "matchup": "ANA@VGK",
+        "team": "ANA",
+        "odds": 140,
+        "units": 1.23,
+        "won": 1,
+        "confidence": "MEDIUM",
+        "version": "v2.2",
+        "pl_fair": 1.77
+      },
+      {
+        "date": "2026-05-05",
+        "matchup": "MIN@COL",
+        "team": "COL",
+        "odds": -196,
+        "units": 2.0,
+        "won": 1,
+        "confidence": "HIGH",
+        "version": "v2.2",
+        "pl_fair": 1.11
+      },
+      {
+        "date": "2026-05-04",
+        "matchup": "ANA@VGK",
+        "team": "ANA",
+        "odds": 146,
+        "units": 2.0,
+        "won": 0,
+        "confidence": "MEDIUM",
+        "version": "v2.2",
+        "pl_fair": -2.0
+      },
+      {
+        "date": "2026-05-04",
+        "matchup": "PHI@CAR",
+        "team": "CAR",
+        "odds": -251,
+        "units": 2.0,
+        "won": 1,
+        "confidence": "HIGH",
+        "version": "v2.2",
+        "pl_fair": 0.87
+      },
+      {
+        "date": "2026-05-03",
+        "matchup": "MIN@COL",
+        "team": "COL",
+        "odds": -194,
+        "units": 2.0,
+        "won": 1,
+        "confidence": "HIGH",
+        "version": "v2.2",
+        "pl_fair": 1.06
+      },
+      {
+        "date": "2026-05-03",
+        "matchup": "MTL@T.B",
+        "team": "T.B",
+        "odds": -157,
+        "units": 2.0,
+        "won": 0,
+        "confidence": "HIGH",
+        "version": "v2.2",
+        "pl_fair": -2.0
+      },
+      {
+        "date": "2026-05-02",
+        "matchup": "PHI@CAR",
+        "team": "CAR",
+        "odds": -245,
+        "units": 2.0,
+        "won": 1,
+        "confidence": "HIGH",
+        "version": "v2.2",
+        "pl_fair": 0.88
+      },
+      {
+        "date": "2026-05-01",
+        "matchup": "VGK@UTA",
+        "team": "UTA",
+        "odds": -102,
+        "units": 1.18,
+        "won": 0,
+        "confidence": "MEDIUM",
+        "version": "v2.2",
+        "pl_fair": -1.18
+      },
+      {
+        "date": "2026-05-01",
+        "matchup": "T.B@MTL",
+        "team": "T.B",
+        "odds": -113,
+        "units": 2.0,
+        "won": 1,
+        "confidence": "HIGH",
+        "version": "v2.2",
+        "pl_fair": 1.89
+      },
+      {
+        "date": "2026-04-30",
+        "matchup": "EDM@ANA",
+        "team": "ANA",
+        "odds": 112,
+        "units": 2.0,
+        "won": 1,
+        "confidence": "HIGH",
+        "version": "v2.2",
+        "pl_fair": 2.37
+      },
+      {
+        "date": "2026-04-29",
+        "matchup": "UTA@VGK",
+        "team": "UTA",
+        "odds": 140,
+        "units": 1.59,
+        "won": 0,
+        "confidence": "MEDIUM",
+        "version": "v2.2",
+        "pl_fair": -1.59
+      },
+      {
+        "date": "2026-04-29",
+        "matchup": "PIT@PHI",
+        "team": "PIT",
+        "odds": 115,
+        "units": 2.0,
+        "won": 0,
+        "confidence": "HIGH",
+        "version": "v2.2",
+        "pl_fair": -2.0
+      },
+      {
+        "date": "2026-04-29",
+        "matchup": "MTL@T.B",
+        "team": "T.B",
+        "odds": 152,
+        "units": 2.0,
+        "won": 0,
+        "confidence": "HIGH",
+        "version": "v2.2",
+        "pl_fair": -2.0
+      }
+    ],
+    "version_marks": [],
+    "season_marks": []
+  },
   "status": "ok",
   "predictions": {
     "n": 403,
@@ -96,7 +1520,10 @@
       -0.0627,
       0.1713
     ],
-    "p_roi_positive": 0.809
+    "p_roi_positive": 0.809,
+    "versions": [
+      "v2.2"
+    ]
   },
   "series": [
     {

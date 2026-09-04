@@ -452,6 +452,47 @@
         }
 
         /* ── Mobile ── */
+        .fairline { display:block; font-size:9px; color:var(--text-muted); margin-top:1px; line-height:1.3; }
+        .stake-cell { font-variant-numeric: tabular-nums; }
+
+        /* ── Bet tracker ─────────────────────────────────────────── */
+        /* Series colors validated against the #111b2e card surface:
+           lightness band, chroma floor, CVD separation (ΔE 24.7 protan),
+           normal-vision floor (ΔE 27.7) and 3:1 contrast all pass. */
+        :root { --series-fair: #3a8ede; --series-actual: #c9812c; }
+        .trk-h { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+                 color: var(--silver); margin: 26px 0 4px; font-weight: 600; }
+        .section-note { font-size: 11px; color: var(--text-muted); margin-bottom: 10px;
+                        line-height: 1.5; max-width: 620px; }
+        .trk-callout { background: var(--surface-2); border: 1px solid var(--border);
+                       border-left: 3px solid var(--accent); border-radius: 4px;
+                       padding: 10px 12px; font-size: 12px; color: var(--text);
+                       margin-bottom: 4px; line-height: 1.55; }
+        .chart-card { background: var(--surface); border: 1px solid var(--border);
+                      border-radius: 6px; padding: 14px 14px 6px; margin: 14px 0 6px; }
+        .chart-head { display: flex; justify-content: space-between; align-items: baseline;
+                      flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+        .chart-title { font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
+                       color: var(--text-dim); }
+        .chart-legend { display: flex; gap: 14px; font-size: 11px; color: var(--text-dim); }
+        .chart-legend span.k { display: inline-block; width: 10px; height: 2px;
+                               vertical-align: middle; margin-right: 5px; }
+        .trk-svg { width: 100%; height: auto; display: block; overflow: visible; }
+        .trk-svg .grid { stroke: var(--border); stroke-width: 1; }
+        .trk-svg .zero { stroke: var(--border-light); stroke-width: 1;
+                         stroke-dasharray: 3 3; }
+        .trk-svg .axis-t { fill: var(--text-muted); font-size: 9px;
+                           font-family: ui-monospace, Menlo, monospace; }
+        .trk-svg .lbl { font-size: 10px; font-weight: 600;
+                        font-family: ui-monospace, Menlo, monospace; }
+        .trk-tip { position: absolute; pointer-events: none; background: var(--navy);
+                   border: 1px solid var(--border-light); border-radius: 4px;
+                   padding: 7px 9px; font-size: 11px; color: var(--text);
+                   white-space: nowrap; z-index: 40; display: none; line-height: 1.5; }
+        .calib-bar { display: inline-block; height: 7px; border-radius: 2px;
+                     vertical-align: middle; }
+        .trk-pos { color: var(--green); } .trk-neg { color: var(--red); }
+
         @media (max-width: 600px) {
             .container { padding: 16px 12px; }
             .header h1 { font-size: 18px; letter-spacing: 2px; }
@@ -499,17 +540,53 @@
                 </div>
                 <div class="table-wrap"><table>
                     <thead><tr>
-                        <th>Time</th><th>Matchup</th><th>Win %</th><th>Vegas ML</th><th>Kelly</th><th>Conf</th><th>Pick</th>
+                        <th>Time</th><th>Matchup</th><th>Win %</th><th>Vegas ML</th><th>Edge &middot; Stake</th><th>Conf</th><th>Pick</th>
                     </tr></thead>
                     <tbody id="nhl-table"></tbody>
                 </table></div>
             </div>
         </div>
         <div id="nhl-tracker-panel" style="display:none">
-            <div class="tracker-empty">
-                Bet tracker monitors NHL picks where Kelly % &ge; 3%.<br>
-                Results will accumulate here as tracked picks resolve.<br><br>
-                <span style="color:var(--text-muted)">Coming soon — data pipeline in development</span>
+            <div id="trk-loading" class="loading">Loading tracker...</div>
+            <div id="trk-content" style="display:none">
+                <div class="section-meta" id="trk-meta"></div>
+
+                <h3 class="trk-h">How the predictions are doing</h3>
+                <div class="section-note">Every graded game, not just the ones we bet.</div>
+                <div class="summary-row" id="trk-pred"></div>
+                <div id="trk-market" class="trk-callout"></div>
+
+                <h3 class="trk-h">How the bet suggestions are doing</h3>
+                <div class="section-note" id="trk-disclaimer"></div>
+                <div class="summary-row" id="trk-bet"></div>
+
+                <div class="chart-card">
+                    <div class="chart-head">
+                        <div class="chart-title">Cumulative units</div>
+                        <div class="chart-legend" id="trk-legend"></div>
+                    </div>
+                    <div id="trk-chart"></div>
+                </div>
+
+                <div id="trk-clv"></div>
+
+                <h3 class="trk-h">Calibration</h3>
+                <div class="section-note">When the model says X%, how often does it happen?
+                    Positive gap = overconfident.</div>
+                <div class="table-wrap"><table>
+                    <thead><tr><th>Model says</th><th>Games</th><th>Predicted</th>
+                        <th>Actual</th><th>Gap</th></tr></thead>
+                    <tbody id="trk-calib"></tbody>
+                </table></div>
+
+                <div id="trk-splits"></div>
+
+                <h3 class="trk-h">Recent settled bets</h3>
+                <div class="table-wrap"><table>
+                    <thead><tr><th>Date</th><th>Matchup</th><th>Bet</th><th>Stake</th>
+                        <th>Result</th><th>Fair P/L</th></tr></thead>
+                    <tbody id="trk-recent"></tbody>
+                </table></div>
             </div>
         </div>
     </div>
@@ -618,11 +695,11 @@
     <div class="footer">
         <div class="api-credits" id="footer-credits"></div>
         NBA Model v2.1 — Backtested: 1,231 games, February 2026<br>
-        NHL Model v2.1 — Backtested: 2,542 games, February 2026<br>
+        NHL Model v3.0 — 1,299-game holdout (2025-26), September 2026<br>
         NCAAB Model v1.1 — Backtested: 4,078 games, February 2026<br>
         Ponies Model v3.0 — BrennyPower conditional logit fitted on 41,986 races (2023 Equibase, odds-blind) · 26 Saratoga bias kernels (2023 meet)<br>
         <br>
-        Auto-refreshes on cron: NBA 10 AM + 6:15 PM + 8:45 PM · NHL 6:20 PM + 8:10 PM · NCAAB 11 AM + 6:25 PM EST<br>
+        Auto-refreshes on cron: NBA 10 AM + 6:15 PM + 8:45 PM · NHL 10 AM + 6:20 PM + 8:10 PM (+ closing-line capture) · NCAAB 11 AM + 6:25 PM EST<br>
         For personal use only. Not financial advice.
     </div>
 </div>
@@ -652,6 +729,51 @@ function fmt(n) {
 function fmtOdds(n) {
     if (n == null || isNaN(n)) return '\u2014';
     return n > 0 ? '+' + n : '' + n;
+}
+
+function impliedProb(american) {
+    if (american == null || isNaN(american)) return null;
+    return american > 0 ? 100 / (american + 100) : Math.abs(american) / (Math.abs(american) + 100);
+}
+
+// Fair (no-vig) probabilities. v3 supplies these directly; for older JSON we
+// derive them so the column still renders instead of showing dashes.
+function noVig(x) {
+    if (x.vegas_home_prob_novig != null && x.vegas_away_prob_novig != null) {
+        return { home: x.vegas_home_prob_novig, away: x.vegas_away_prob_novig,
+                 hold: x.market_overround };
+    }
+    var ih = impliedProb(x.vegas_home_odds), ia = impliedProb(x.vegas_away_odds);
+    if (ih == null || ia == null) return null;
+    var t = ih + ia;
+    return { home: ih / t, away: ia / t, hold: t - 1 };
+}
+
+// Model edge over the fair line for the selected side, in percentage points.
+function betEdgePP(x) {
+    if (x.best_bet_edge_vs_novig != null) return x.best_bet_edge_vs_novig * 100;
+    var nv = noVig(x);
+    if (!nv || !x.best_bet_team) return null;
+    var isHome = x.best_bet_team === x.home_team;
+    var modelP = isHome ? x.home_win_prob : x.away_win_prob;
+    if (modelP == null) return null;
+    return (modelP - (isHome ? nv.home : nv.away)) * 100;
+}
+
+// Stake as a percentage of bankroll. v3 sizes at quarter-Kelly capped at 2%.
+// Pre-v3 JSON carried 3.0u / 2.0u on a different unit definition, so it is
+// converted rather than shown as-is — otherwise old and new rows would look
+// like wildly different bet sizes when only the unit changed.
+function stakeUnits(x) {
+    if (x.stake_pct_bankroll != null) return x.stake_pct_bankroll * 100;
+    if (x.full_kelly_pct != null) return Math.min(0.25 * x.full_kelly_pct, 0.02) * 100;
+    if (x.kelly_pct != null) return Math.min(0.25 * (x.kelly_pct * 2), 0.02) * 100;
+    return null;
+}
+
+function edgePPClass(e) {
+    if (e == null) return 'edge-none';
+    return e >= 6 ? 'edge-positive' : e >= 3 ? 'edge-small' : 'edge-none';
 }
 
 function confClass(c) { return c === 'HIGH' ? 'conf-high' : c === 'MEDIUM' ? 'conf-medium' : 'conf-none'; }
@@ -725,12 +847,12 @@ async function loadNHL() {
         document.getElementById('nhl-loading').style.display = 'none';
         document.getElementById('nhl-content').style.display = 'block';
         var nhlGenAt = (d.generated_at||'\u2014').replace(/:\d{2}$/, '');
-        document.getElementById('nhl-meta').innerHTML = 'Model: <span>' + (d.model_version||'v2.1') + '</span> \u00b7 Generated: <span>' + nhlGenAt + '</span>';
+        document.getElementById('nhl-meta').innerHTML = 'Model: <span>' + (d.model_version||'\u2014') + '</span> \u00b7 Generated: <span>' + nhlGenAt + '</span>';
         nhlCredits = d.odds_api_remaining; updateCredits();
         var p = d.predictions || [];
         p.sort(function(a,b){
-            var ak=a.kelly_pct||0, bk=b.kelly_pct||0;
-            if(bk!==ak) return bk-ak;
+            var as=stakeUnits(a)||0, bs=stakeUnits(b)||0;
+            if(bs!==as) return bs-as;
             return (a.game_time||'').localeCompare(b.game_time||'');
         });
         var hi=p.filter(function(x){return x.confidence==='HIGH';}), md=p.filter(function(x){return x.confidence==='MEDIUM';}), no=p.filter(function(x){return x.confidence==='NO_EDGE';});
@@ -738,16 +860,22 @@ async function loadNHL() {
             '<div class="summary-box"><div class="label">Games</div><div class="value white">'+p.length+'</div></div>' +
             '<div class="summary-box"><div class="label">High</div><div class="value green">'+hi.length+'</div></div>' +
             '<div class="summary-box"><div class="label">Medium</div><div class="value yellow">'+md.length+'</div></div>' +
-            '<div class="summary-box"><div class="label">No Edge</div><div class="value dim">'+no.length+'</div></div>';
+            '<div class="summary-box"><div class="label">No Edge</div><div class="value dim">'+no.length+'</div></div>' +
+            '<div class="summary-box"><div class="label">Total Stake</div><div class="value white">'+
+                p.reduce(function(t,x){return t + (x.confidence!=='NO_EDGE' ? (stakeUnits(x)||0) : 0);},0).toFixed(2)+'u</div></div>';
         var ac = p.filter(function(x){return x.confidence==='HIGH'||x.confidence==='MEDIUM';});
         if (ac.length > 0) {
             document.getElementById('nhl-picks').style.display = 'block';
             document.getElementById('nhl-picks-list').innerHTML = ac.map(function(x){
-                var ky = x.kelly_pct!=null ? 'Kelly: '+(x.kelly_pct*100).toFixed(1)+'%' : '';
-                var pick=x.recommendation||'';
-                pick=pick.replace(/ ML/g,'').replace(/\s*\|\s*EV:.*?(?=\s*\||$)/g,'');
-                var detail = [ky,x.confidence].filter(Boolean).join(' \u00b7 ');
-                return '<div class="pick-line"><span class="pick-rec">'+pick+'</span><span class="pick-edge '+confClass(x.confidence)+'">'+detail+'</span></div>';
+                // Built from fields rather than parsed out of the recommendation
+                // string, so it survives the v3 format change and any future one.
+                var pick = x.best_bet_team ? x.best_bet_team+' '+fmtOdds(x.best_bet_odds) : (x.recommendation||'');
+                var su = stakeUnits(x), ed = betEdgePP(x);
+                var bits = [];
+                if (su != null) bits.push(su.toFixed(2)+'u');
+                if (ed != null) bits.push((ed>=0?'+':'')+ed.toFixed(1)+'pp vs fair');
+                bits.push(x.confidence);
+                return '<div class="pick-line"><span class="pick-rec">'+pick+'</span><span class="pick-edge '+confClass(x.confidence)+'">'+bits.join(' \u00b7 ')+'</span></div>';
             }).join('');
         }
         document.getElementById('nhl-table').innerHTML = p.map(function(x){
@@ -756,24 +884,231 @@ async function loadNHL() {
             var awp=x.away_win_prob!=null?(x.away_win_prob*100).toFixed(0)+'%':'\u2014';
             var hwp=x.home_win_prob!=null?(x.home_win_prob*100).toFixed(0)+'%':'\u2014';
             var wp=aw+' '+awp+' / '+hm+' '+hwp;
-            var vml=x.vegas_away_odds!=null ? aw+' '+fmtOdds(x.vegas_away_odds)+' / '+hm+' '+fmtOdds(x.vegas_home_odds) : '\u2014';
-            var kys=x.kelly_pct!=null?(x.kelly_pct*100).toFixed(1)+'%':'\u2014';
-            var kyc=x.kelly_pct!=null&&x.kelly_pct>=0.03?'edge-positive':(x.kelly_pct!=null&&x.kelly_pct>0?'edge-small':'edge-none');
-            var pick=x.recommendation||'';
-            pick=pick.replace(/ ML/g,'').replace(/\s*\|\s*EV:.*?(?=\s*\||$)/g,'');
+            var vml='\u2014';
+            if (x.vegas_away_odds!=null) {
+                vml = aw+' '+fmtOdds(x.vegas_away_odds)+' / '+hm+' '+fmtOdds(x.vegas_home_odds);
+                var nv = noVig(x);
+                if (nv) {
+                    vml += '<span class="fairline">fair '+(nv.away*100).toFixed(1)+'% / '+
+                           (nv.home*100).toFixed(1)+'%'+
+                           (nv.hold!=null ? ' \u00b7 hold '+(nv.hold*100).toFixed(1)+'%' : '')+'</span>';
+                }
+            }
+            var ed = betEdgePP(x);
+            var eds = ed!=null ? (ed>=0?'+':'')+ed.toFixed(1)+'pp' : '\u2014';
+            var su = stakeUnits(x);
+            var sus = (su!=null && x.confidence!=='NO_EDGE') ? su.toFixed(2)+'u' : '\u2014';
+            var suc = (su!=null && x.confidence!=='NO_EDGE') ? (su>=1.5?'edge-positive':'edge-small') : 'edge-none';
+            var pick = x.best_bet_team ? x.best_bet_team+' '+fmtOdds(x.best_bet_odds) : '';
             return '<tr><td class="spread">'+gt+'</td><td><span class="matchup-away">'+aw+'</span><span class="matchup-at"> @ </span><span class="matchup-home">'+hm+'</span></td>'+
                 '<td class="spread" style="font-size:10px">'+wp+'</td><td class="spread" style="font-size:10px">'+vml+'</td>'+
-                '<td class="'+kyc+'">'+kys+'</td>'+
+                '<td class="'+edgePPClass(ed)+'" style="white-space:nowrap">'+eds+
+                    '<span class="fairline stake-cell '+suc+'" style="font-size:10px">'+sus+'</span></td>'+
                 '<td class="'+confClass(x.confidence)+'">'+confLabel(x.confidence)+'</td>'+
-                '<td>'+(x.confidence!=='NO_EDGE'?'<span class="bet-team">'+pick+'</span>':'<span class="conf-none">\u2014</span>')+'</td></tr>';
+                '<td>'+(x.confidence!=='NO_EDGE'&&pick?'<span class="bet-team">'+pick+'</span>':'<span class="conf-none">\u2014</span>')+'</td></tr>';
         }).join('');
     } catch(e) {
         document.getElementById('nhl-loading').innerHTML = '<div class="error">NHL predictions not available \u2014 waiting for next cron run<br><small>'+e.message+'</small></div>';
     }
 }
 
-loadNBA(); loadNHL(); loadNCAAB(); loadPonies();
-setInterval(function(){ loadNBA(); loadNHL(); loadNCAAB(); loadPonies(); }, 5*60*1000);
+
+// ══════════════════════════════════════════════════════════════
+//  NHL Bet Tracker
+// ══════════════════════════════════════════════════════════════
+var trkData = null;
+
+function box(label, value, cls, sub) {
+    return '<div class="summary-box"><div class="label">' + label + '</div>' +
+           '<div class="value ' + (cls || 'white') + '">' + value + '</div>' +
+           (sub ? '<div class="label" style="margin-top:3px;text-transform:none;letter-spacing:0">' + sub + '</div>' : '') +
+           '</div>';
+}
+function pct(x, d) { return (x == null) ? '—' : (x * 100).toFixed(d == null ? 1 : d) + '%'; }
+function signed(x, d) { if (x == null) return '—'; var v = x.toFixed(d == null ? 2 : d); return (x >= 0 ? '+' : '') + v; }
+
+// Cumulative-units line chart. Two series, so a legend is always present and
+// both are direct-labelled at their final point — identity is never colour-alone.
+function trkChart(series) {
+    var host = document.getElementById('trk-chart');
+    if (!series || series.length < 2) {
+        host.innerHTML = '<div class="tracker-empty" style="padding:24px">Not enough settled bets to plot yet.</div>';
+        return;
+    }
+    var W = 720, H = 240, PL = 44, PR = 58, PT = 12, PB = 26;
+    var iw = W - PL - PR, ih = H - PT - PB;
+    var vals = [];
+    series.forEach(function (d) { vals.push(d.cum_fair, d.cum_actual); });
+    vals.push(0);
+    var lo = Math.min.apply(null, vals), hi = Math.max.apply(null, vals);
+    var pad = Math.max(1, (hi - lo) * 0.12); lo -= pad; hi += pad;
+    var X = function (i) { return PL + (series.length === 1 ? iw / 2 : iw * i / (series.length - 1)); };
+    var Y = function (v) { return PT + ih * (1 - (v - lo) / (hi - lo)); };
+
+    var ticks = 4, g = '';
+    for (var t = 0; t <= ticks; t++) {
+        var v = lo + (hi - lo) * t / ticks, y = Y(v);
+        g += '<line class="grid" x1="' + PL + '" y1="' + y + '" x2="' + (PL + iw) + '" y2="' + y + '"/>' +
+             '<text class="axis-t" x="' + (PL - 7) + '" y="' + (y + 3) + '" text-anchor="end">' + v.toFixed(0) + 'u</text>';
+    }
+    if (lo < 0 && hi > 0) g += '<line class="zero" x1="' + PL + '" y1="' + Y(0) + '" x2="' + (PL + iw) + '" y2="' + Y(0) + '"/>';
+
+    function path(key) {
+        return series.map(function (d, i) { return (i ? 'L' : 'M') + X(i).toFixed(1) + ' ' + Y(d[key]).toFixed(1); }).join(' ');
+    }
+    var last = series[series.length - 1];
+    var nTick = Math.min(5, series.length);
+    var xa = '';
+    for (var i = 0; i < nTick; i++) {
+        var idx = Math.round(i * (series.length - 1) / Math.max(1, nTick - 1));
+        xa += '<text class="axis-t" x="' + X(idx) + '" y="' + (H - 8) + '" text-anchor="middle">' +
+              series[idx].date.slice(5) + '</text>';
+    }
+    var svg =
+        '<svg class="trk-svg" viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="xMidYMid meet" role="img" ' +
+        'aria-label="Cumulative units at the fair line and at the actual price">' + g + xa +
+        '<path d="' + path('cum_actual') + '" fill="none" stroke="var(--series-actual)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>' +
+        '<path d="' + path('cum_fair') + '" fill="none" stroke="var(--series-fair)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>' +
+        '<circle cx="' + X(series.length - 1) + '" cy="' + Y(last.cum_fair) + '" r="3.5" fill="var(--series-fair)" stroke="var(--surface)" stroke-width="2"/>' +
+        '<circle cx="' + X(series.length - 1) + '" cy="' + Y(last.cum_actual) + '" r="3.5" fill="var(--series-actual)" stroke="var(--surface)" stroke-width="2"/>' +
+        '<text class="lbl" fill="var(--series-fair)" x="' + (X(series.length - 1) + 8) + '" y="' + (Y(last.cum_fair) + 3) + '">' + signed(last.cum_fair) + 'u</text>' +
+        '<text class="lbl" fill="var(--series-actual)" x="' + (X(series.length - 1) + 8) + '" y="' + (Y(last.cum_actual) + 3) + '">' + signed(last.cum_actual) + 'u</text>' +
+        '<line id="trk-cross" class="zero" x1="0" y1="' + PT + '" x2="0" y2="' + (PT + ih) + '" style="display:none"/>' +
+        '<rect id="trk-hit" x="' + PL + '" y="' + PT + '" width="' + iw + '" height="' + ih + '" fill="transparent"/>' +
+        '</svg><div class="trk-tip" id="trk-tip"></div>';
+    host.style.position = 'relative';
+    host.innerHTML = svg;
+
+    var hit = document.getElementById('trk-hit'), tip = document.getElementById('trk-tip'),
+        cross = document.getElementById('trk-cross'), svgEl = host.querySelector('svg');
+    function move(ev) {
+        var r = svgEl.getBoundingClientRect();
+        var sx = (ev.clientX - r.left) * (W / r.width);
+        var i = Math.round((sx - PL) / (iw || 1) * (series.length - 1));
+        i = Math.max(0, Math.min(series.length - 1, i));
+        var d = series[i];
+        cross.style.display = ''; cross.setAttribute('x1', X(i)); cross.setAttribute('x2', X(i));
+        tip.style.display = 'block';
+        tip.innerHTML = '<strong>' + d.date + '</strong><br>' + d.bets + ' bet' + (d.bets === 1 ? '' : 's') +
+            ', ' + d.wins + ' won<br>day ' + signed(d.day_fair) + 'u<br>' +
+            '<span style="color:var(--series-fair)">fair ' + signed(d.cum_fair) + 'u</span> · ' +
+            '<span style="color:var(--series-actual)">actual ' + signed(d.cum_actual) + 'u</span>';
+        var px = X(i) * (r.width / W);
+        tip.style.left = Math.min(Math.max(px - 60, 0), r.width - 150) + 'px';
+        tip.style.top = '6px';
+    }
+    hit.addEventListener('mousemove', move);
+    hit.addEventListener('mouseleave', function () { tip.style.display = 'none'; cross.style.display = 'none'; });
+}
+
+async function loadTracker() {
+    try {
+        var r = await fetch('nhl_tracker.json?t=' + Date.now());
+        if (!r.ok) throw new Error('No tracker data');
+        var d = await r.json();
+        trkData = d;
+        document.getElementById('trk-loading').style.display = 'none';
+        document.getElementById('trk-content').style.display = 'block';
+        document.getElementById('trk-meta').innerHTML =
+            'Season <span>' + d.season + '</span> · ' + d.games_graded + ' of ' +
+            d.games_logged + ' logged games settled · Updated <span>' + (d.generated_at || '') + '</span>';
+
+        if (d.status !== 'ok') {
+            document.getElementById('trk-pred').innerHTML =
+                '<div class="tracker-empty" style="width:100%">' + (d.message || 'Waiting for results.') + '</div>';
+            return;
+        }
+
+        var p = d.predictions;
+        document.getElementById('trk-pred').innerHTML =
+            box('Games', p.n, 'white') +
+            box('Accuracy', pct(p.accuracy), 'white') +
+            box('Log Loss', p.log_loss.toFixed(4), 'white', 'Brier ' + p.brier.toFixed(4)) +
+            box('Calib. Error', pct(p.ece), p.ece < 0.03 ? 'green' : 'yellow',
+                p.ece < 0.03 ? 'well calibrated' : 'overconfident');
+
+        var vm = p.vs_market;
+        document.getElementById('trk-market').innerHTML = vm
+            ? ('<strong>Versus the market</strong> on the same ' + vm.n + ' games — model log loss <strong>' +
+               vm.model_log_loss.toFixed(4) + '</strong>, market <strong>' + vm.market_log_loss.toFixed(4) + '</strong>. ' +
+               (vm.beating_market
+                 ? '<span class="trk-pos">The model is ahead of the closing market here.</span>'
+                 : '<span class="trk-neg">The market is ahead.</span>') +
+               ' Beating the market on log loss is the real test of whether the model knows something — ' +
+               'win rate alone does not answer it.')
+            : '';
+
+        var bf = d.betting.fair, ba = d.betting.actual;
+        var ci = d.betting.fair_roi_ci;
+        document.getElementById('trk-disclaimer').textContent = d.disclaimer;
+        document.getElementById('trk-bet').innerHTML =
+            box('Bets', bf.bets, 'white', bf.wins + '-' + bf.losses) +
+            box('Win Rate', pct(bf.win_pct), 'white') +
+            box('Fair-line ROI', signed(bf.flat_roi * 100, 2) + '%',
+                bf.flat_roi > 0 ? 'green' : 'red',
+                ci ? '95% CI ' + signed(ci[0] * 100, 1) + '% to ' + signed(ci[1] * 100, 1) + '%' : '') +
+            box('Fair-line Units', signed(bf.units_pl) + 'u', bf.units_pl > 0 ? 'green' : 'red',
+                bf.units_staked + 'u staked');
+
+        document.getElementById('trk-legend').innerHTML =
+            '<div><span class="k" style="background:var(--series-fair)"></span>Fair (no-vig) line</div>' +
+            '<div><span class="k" style="background:var(--series-actual)"></span>Actual logged price ' +
+            signed(ba.units_pl) + 'u (' + signed(ba.flat_roi * 100, 2) + '%)</div>';
+        trkChart(d.series);
+
+        var c = d.clv;
+        document.getElementById('trk-clv').innerHTML = (c && c.n)
+            ? ('<h3 class="trk-h">Closing line value</h3><div class="trk-callout">' +
+               'Mean CLV <strong>' + signed(c.mean, 2) + 'pp</strong> · median ' + signed(c.median, 2) +
+               'pp · beat the close on <strong>' + pct(c.beat_close_pct) + '</strong> of ' + c.n + ' bets.<br>' +
+               'CLV converges far faster than P&amp;L — consistently positive CLV over a few hundred bets is ' +
+               'real evidence of edge, where ROI needs thousands.' +
+               (c.thin ? ' <span class="trk-neg">Still thin at ' + c.n + ' bets — directional only.</span>' : '') +
+               '</div>')
+            : ('<h3 class="trk-h">Closing line value</h3><div class="trk-callout">' +
+               'No closing lines captured yet. CLV is the fastest read on whether the model has a ' +
+               'real edge; it fills in once the closing-capture job has run through some game nights.</div>');
+
+        document.getElementById('trk-calib').innerHTML = (d.calibration || []).map(function (b) {
+            var gap = b.gap, w = Math.min(Math.abs(gap) * 320, 46);
+            var bar = '<span class="calib-bar" style="width:' + w + 'px;background:' +
+                      (gap >= 0 ? 'var(--series-actual)' : 'var(--series-fair)') + '"></span>';
+            return '<tr><td>' + b.label + '</td><td class="spread">' + b.n + '</td>' +
+                   '<td class="spread">' + pct(b.model) + '</td><td class="spread">' + pct(b.actual) + '</td>' +
+                   '<td class="spread">' + (gap >= 0 ? '+' : '') + (gap * 100).toFixed(1) + 'pp ' + bar + '</td></tr>';
+        }).join('');
+
+        document.getElementById('trk-splits').innerHTML = (d.splits || []).filter(function (s) {
+            return s.rows && s.rows.length;
+        }).map(function (s) {
+            return '<h3 class="trk-h">' + s.name + '</h3><div class="table-wrap"><table>' +
+                '<thead><tr><th>Segment</th><th>Bets</th><th>Win%</th><th>Fair ROI</th><th>Units</th></tr></thead><tbody>' +
+                s.rows.map(function (r) {
+                    return '<tr><td>' + r.label + '</td><td class="spread">' + r.bets + '</td>' +
+                        '<td class="spread">' + pct(r.win_pct) + '</td>' +
+                        '<td class="' + (r.flat_roi > 0 ? 'edge-positive' : 'edge-none') + '">' +
+                        signed(r.flat_roi * 100, 1) + '%</td>' +
+                        '<td class="' + (r.units_pl > 0 ? 'edge-positive' : 'edge-none') + '">' +
+                        signed(r.units_pl) + 'u</td></tr>';
+                }).join('') + '</tbody></table></div>';
+        }).join('');
+
+        document.getElementById('trk-recent').innerHTML = (d.recent || []).map(function (x) {
+            return '<tr><td class="spread">' + x.date.slice(5) + '</td><td>' + x.matchup + '</td>' +
+                '<td><span class="bet-team">' + x.team + ' ' + fmtOdds(x.odds) + '</span></td>' +
+                '<td class="spread">' + x.units.toFixed(2) + 'u</td>' +
+                '<td class="' + (x.won ? 'conf-high' : 'conf-none') + '">' + (x.won ? 'WON' : 'LOST') + '</td>' +
+                '<td class="' + (x.pl_fair > 0 ? 'edge-positive' : 'edge-none') + '">' + signed(x.pl_fair) + 'u</td></tr>';
+        }).join('');
+    } catch (e) {
+        document.getElementById('trk-loading').innerHTML =
+            '<div class="tracker-empty">Tracker data not available yet.<br>' +
+            '<small>It is generated nightly once games settle.</small></div>';
+    }
+}
+
+loadNBA(); loadNHL(); loadNCAAB(); loadPonies(); loadTracker();
+setInterval(function(){ loadNBA(); loadNHL(); loadNCAAB(); loadPonies(); loadTracker(); }, 5*60*1000);
 
 // ── Ponies ──
 var poniesTrack = null;

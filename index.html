@@ -537,6 +537,42 @@
             .wps-row { flex-direction: column; }
             .race-pick-preview .race-pick-name { font-size: 12px; }
         }
+
+        /* -- NFL tab -- */
+        .nfl-calc { background: var(--surface); border: 1px solid var(--border);
+            border-radius: 8px; padding: 16px; margin-bottom: 14px; }
+        .nfl-calc-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+        .nfl-calc-row label { font-size: 10px; color: var(--text-dim); text-transform: uppercase;
+            letter-spacing: 0.8px; width: 44px; flex-shrink: 0; font-weight: 600; }
+        .nfl-calc select { flex: 1; min-width: 0; background: var(--surface-2); color: var(--text);
+            border: 1px solid var(--border-light); border-radius: 6px; padding: 8px 10px;
+            font-family: 'DM Sans', sans-serif; font-size: 13px; cursor: pointer; }
+        .nfl-calc select:focus { outline: none; border-color: var(--accent); }
+        .nfl-swap { background: none; border: 1px solid var(--border); color: var(--text-dim);
+            border-radius: 6px; padding: 5px 10px; font-family: 'DM Sans', sans-serif;
+            font-size: 11px; cursor: pointer; letter-spacing: 0.5px; }
+        .nfl-swap:hover { color: var(--silver); border-color: var(--border-light); }
+        .nfl-check { display: inline-flex; align-items: center; gap: 7px; font-size: 12px;
+            color: var(--text-dim); cursor: pointer; }
+        .nfl-check input { accent-color: var(--accent); cursor: pointer; }
+        .nfl-calc-foot { display: flex; align-items: center; justify-content: space-between;
+            gap: 12px; margin-top: 4px; }
+        .nfl-line-out { background: var(--surface-2); border: 1px solid var(--border-light);
+            border-radius: 8px; padding: 18px 16px; text-align: center; margin-bottom: 16px; }
+        .nfl-line-big { font-size: 30px; font-weight: 700; color: var(--white);
+            font-family: 'IBM Plex Mono', monospace; letter-spacing: 1px; line-height: 1.2; }
+        .nfl-line-sub { font-size: 11px; color: var(--text-dim); margin-top: 6px; }
+        .nfl-line-math { font-size: 11px; color: var(--text-muted); font-family: 'IBM Plex Mono', monospace;
+            margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+        .nfl-num { font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums;
+            font-size: 12px; color: var(--text-muted); }
+        .nfl-comp { font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums;
+            font-size: 13px; color: var(--white); font-weight: 600; }
+        .nfl-rank { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--text-muted); }
+        .nfl-div { font-size: 10px; color: var(--text-muted); letter-spacing: 0.5px; }
+        .nfl-warn { background: rgba(250,204,21,0.07); border: 1px solid var(--yellow-dim);
+            border-radius: 6px; padding: 9px 12px; font-size: 11px; color: var(--yellow);
+            margin-bottom: 14px; }
     </style>
 </head>
 <body>
@@ -670,12 +706,73 @@
         </div>
     </div>
 
-    <!-- ═══ NFL ═══ -->
+    <!-- === NFL === -->
     <div class="section" id="section-nfl">
-        <div class="under-construction">
-            <div class="icon">🏈</div>
-            <h3>NFL Predictions</h3>
-            <p>Under construction — expected later in 2026</p>
+        <div class="sub-nav">
+            <button class="active" onclick="switchNflTab('ratings')">Base Ratings</button>
+            <button onclick="switchNflTab('lines')">Line Calculator</button>
+            <button onclick="switchNflTab('trench')">Trench Report</button>
+        </div>
+        <div id="nfl-loading" class="loading">Loading NFL ratings...</div>
+        <div id="nfl-content" style="display:none">
+            <div class="section-meta" id="nfl-meta"></div>
+            <div id="nfl-missing"></div>
+
+            <!-- Base ratings -->
+            <div id="nfl-ratings-panel">
+                <div class="summary-row" id="nfl-summary"></div>
+                <div class="section-note" id="nfl-weight-note"></div>
+                <div class="table-wrap"><table>
+                    <thead><tr>
+                        <th>#</th><th>Team</th><th>Div</th>
+                        <th>Hoppen</th><th>Fezzik</th><th>Cole</th><th>Composite</th>
+                    </tr></thead>
+                    <tbody id="nfl-ratings-table"></tbody>
+                </table></div>
+                <div class="section-note">Each source is shifted to a league mean of zero before
+                    blending, so a source published on a different baseline can't drag the
+                    composite. Published values are shown as-is; the composite column is the
+                    weighted blend of the centered versions.</div>
+            </div>
+
+            <!-- Line calculator -->
+            <div id="nfl-lines-panel" style="display:none">
+                <div class="nfl-calc">
+                    <div class="nfl-calc-row">
+                        <label>Away</label><select id="nfl-away" onchange="nflComputeLine()"></select>
+                    </div>
+                    <div class="nfl-calc-row">
+                        <label>Home</label><select id="nfl-home" onchange="nflComputeLine()"></select>
+                    </div>
+                    <div class="nfl-calc-foot">
+                        <label class="nfl-check">
+                            <input type="checkbox" id="nfl-neutral" onchange="nflComputeLine()">
+                            Neutral site
+                        </label>
+                        <button type="button" class="nfl-swap" onclick="nflSwap()">Swap sides</button>
+                    </div>
+                </div>
+                <div class="nfl-line-out" id="nfl-line-out"></div>
+                <div class="section-note">Line is the difference in composite ratings plus home
+                    field: 2.0 non-divisional, 1.5 divisional, 0 at a neutral site. Rounded to the
+                    nearest half point, with the unrounded number shown underneath so you can see
+                    how close a game sits to a key number. This is a base number only &mdash; no
+                    injuries, rest, weather, or market input.</div>
+            </div>
+
+            <!-- Trench report (reference only) -->
+            <div id="nfl-trench-panel" style="display:none">
+                <div class="section-note">Reference only. The Trench Report is a line-play
+                    efficiency metric on its own scale, not a points-based power rating, so it
+                    is <strong>not</strong> part of the composite above. Rank in parentheses.</div>
+                <div class="table-wrap"><table>
+                    <thead><tr>
+                        <th>Team</th><th>Overall</th><th>Run Blk</th><th>Run Def</th>
+                        <th>Pass Blk</th><th>Pass Def</th>
+                    </tr></thead>
+                    <tbody id="nfl-trench-table"></tbody>
+                </table></div>
+            </div>
         </div>
     </div>
 
@@ -745,6 +842,7 @@
         NHL Model v3.0 — 1,299-game holdout (2025-26), September 2026<br>
         NCAAB Model v1.1 — Backtested: 4,078 games, February 2026<br>
         Ponies Model v3.0 — BrennyPower conditional logit fitted on 41,986 races (2023 Equibase, odds-blind) · 26 Saratoga bias kernels (2023 meet)<br>
+        NFL Base v1.0 — 50/25/25 composite of Hoppen / Fezzik / Kevin Cole · ratings and base lines only, no betting output<br>
         <br>
         Auto-refreshes on cron: NBA 10 AM + 6:15 PM + 8:45 PM · NHL 10 AM + 6:20 PM + 8:10 PM (+ closing-line capture) · NCAAB 11 AM + 6:25 PM EST<br>
         For personal use only. Not financial advice.
@@ -1310,8 +1408,182 @@ function recordTable(title, rows, liveVersion) {
         body + '</tbody></table></div>';
 }
 
-loadNBA(); loadNHL(); loadNCAAB(); loadPonies(); loadTracker();
-setInterval(function(){ loadNBA(); loadNHL(); loadNCAAB(); loadPonies(); loadTracker(); }, 5*60*1000);
+
+// ============================ NFL ============================
+var nflData = null;
+
+function switchNflTab(sub) {
+    var section = document.getElementById('section-nfl');
+    section.querySelectorAll('.sub-nav button').forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+    ['ratings', 'lines', 'trench'].forEach(function (p) {
+        document.getElementById('nfl-' + p + '-panel').style.display = (p === sub) ? 'block' : 'none';
+    });
+}
+
+// Signed number for display. Kept separate from fmt() because ratings want two
+// decimals while the rest of the site works in one.
+function nflSigned(n, dp) {
+    if (n == null || isNaN(n)) return '\u2014';
+    var v = Number(n).toFixed(dp == null ? 2 : dp);
+    return Number(n) > 0 ? '+' + v : v;
+}
+
+function nflHalf(x) { return Math.round(x * 2) / 2; }
+
+function nflSwap() {
+    var a = document.getElementById('nfl-away'), h = document.getElementById('nfl-home');
+    var t = a.value; a.value = h.value; h.value = t;
+    nflComputeLine();
+}
+
+function nflComputeLine() {
+    if (!nflData) return;
+    var by = {};
+    nflData.teams.forEach(function (t) { by[t.abbr] = t; });
+    var away = by[document.getElementById('nfl-away').value];
+    var home = by[document.getElementById('nfl-home').value];
+    var out = document.getElementById('nfl-line-out');
+    if (!away || !home) return;
+
+    if (away.abbr === home.abbr) {
+        out.innerHTML = '<div class="nfl-line-big">\u2014</div>' +
+            '<div class="nfl-line-sub">Pick two different teams.</div>';
+        return;
+    }
+
+    var neutral = document.getElementById('nfl-neutral').checked;
+    var divisional = away.division_full === home.division_full;
+    var hfa = neutral ? nflData.hfa.neutral
+                      : (divisional ? nflData.hfa.divisional : nflData.hfa.standard);
+
+    var raw = (home.composite - away.composite) + hfa;
+    var line = nflHalf(raw);
+
+    var big;
+    if (line > 0)      big = home.abbr + ' -' + line.toFixed(1);
+    else if (line < 0) big = away.abbr + ' -' + Math.abs(line).toFixed(1);
+    else               big = 'PK';
+
+    var ctx = neutral ? 'Neutral site'
+                      : (divisional ? 'Divisional \u00b7 ' + home.division_full : 'Non-divisional');
+
+    out.innerHTML =
+        '<div class="nfl-line-big">' + big + '</div>' +
+        '<div class="nfl-line-sub">' + away.name + ' at ' + home.name +
+            ' \u00b7 ' + ctx + ' \u00b7 HFA ' + hfa.toFixed(1) + '</div>' +
+        '<div class="nfl-line-math">' +
+            home.abbr + ' ' + nflSigned(home.composite) + '   \u2212   ' +
+            away.abbr + ' ' + nflSigned(away.composite) + '   +   ' + hfa.toFixed(1) +
+            '   =   ' + nflSigned(raw) + '   \u2192   ' + nflSigned(line, 1) +
+        '</div>';
+}
+
+async function loadNFL() {
+    var d;
+    try {
+        var r = await fetch('nfl_predictions.json?t=' + Date.now());
+        if (!r.ok) throw new Error('No data');
+        d = await r.json();
+    } catch (e) {
+        document.getElementById('nfl-loading').textContent =
+            'NFL ratings unavailable \u2014 run build_nfl.py to generate nfl_predictions.json.';
+        return;
+    }
+    nflData = d;
+
+    document.getElementById('nfl-loading').style.display = 'none';
+    document.getElementById('nfl-content').style.display = 'block';
+
+    var used = d.sources_used || [], gone = d.sources_missing || [];
+
+    // ---- meta + summary ----
+    var when = d.generated_at ? new Date(d.generated_at).toLocaleDateString('en-US',
+        { month: 'short', day: 'numeric', year: 'numeric' }) : '\u2014';
+    document.getElementById('nfl-meta').innerHTML =
+        'Base power ratings \u00b7 updated <span>' + when + '</span> \u00b7 ' +
+        '<span>' + (d.model_version || '') + '</span>';
+
+    var top = d.teams[0];
+    document.getElementById('nfl-summary').innerHTML =
+        '<div class="summary-box"><div class="label">Sources</div>' +
+            '<div class="value white">' + used.length + '<span style="font-size:13px;color:var(--text-muted)">/' +
+            (used.length + gone.length) + '</span></div></div>' +
+        '<div class="summary-box"><div class="label">Home Field</div>' +
+            '<div class="value white">' + d.hfa.standard.toFixed(1) + '</div></div>' +
+        '<div class="summary-box"><div class="label">Divisional</div>' +
+            '<div class="value white">' + d.hfa.divisional.toFixed(1) + '</div></div>' +
+        '<div class="summary-box"><div class="label">Top Rated</div>' +
+            '<div class="value green">' + (top ? top.abbr : '\u2014') + '</div></div>';
+
+    document.getElementById('nfl-weight-note').innerHTML = 'Weights: ' +
+        used.map(function (s) {
+            return s.label + ' ' + Math.round(s.applied_weight * 100) + '%';
+        }).join(' \u00b7 ');
+
+    // A missing source silently changes what every number on this page means,
+    // so it gets called out rather than buried in the weights line.
+    var warn = document.getElementById('nfl-missing');
+    if (gone.length) {
+        warn.className = 'nfl-warn';
+        warn.innerHTML = gone.map(function (s) {
+            return s.label + ' (' + Math.round(s.intended_weight * 100) + '% intended) is ' +
+                s.reason + ' \u2014 its weight is redistributed across the remaining sources.';
+        }).join('<br>');
+    } else {
+        warn.className = '';
+        warn.innerHTML = '';
+    }
+
+    // ---- ratings table ----
+    document.getElementById('nfl-ratings-table').innerHTML = d.teams.map(function (t) {
+        return '<tr>' +
+            '<td class="nfl-rank">' + t.rank + '</td>' +
+            '<td class="bet-team">' + t.name + '</td>' +
+            '<td class="nfl-div">' + t.division_full + '</td>' +
+            '<td class="nfl-num">' + nflSigned(t.hoppen) + '</td>' +
+            '<td class="nfl-num">' + nflSigned(t.fezzik) + '</td>' +
+            '<td class="nfl-num">' + nflSigned(t.cole) + '</td>' +
+            '<td class="nfl-comp">' + nflSigned(t.composite) + '</td>' +
+        '</tr>';
+    }).join('');
+
+    // ---- calculator dropdowns ----
+    var alpha = d.teams.slice().sort(function (a, b) { return a.name < b.name ? -1 : 1; });
+    var opts = alpha.map(function (t) {
+        return '<option value="' + t.abbr + '">' + t.name + '</option>';
+    }).join('');
+    var aw = document.getElementById('nfl-away'), hm = document.getElementById('nfl-home');
+    aw.innerHTML = opts; hm.innerHTML = opts;
+    aw.value = alpha[0].abbr;
+    hm.value = alpha[1].abbr;
+    nflComputeLine();
+
+    // ---- trench report ----
+    var tr = d.trench || {};
+    var cell = function (e, k) {
+        if (!e || e[k] == null) return '<td class="nfl-num">\u2014</td>';
+        var rk = e[k + '_rank'] != null ? ' <span class="nfl-rank">(' + e[k + '_rank'] + ')</span>' : '';
+        return '<td class="nfl-num">' + nflSigned(e[k]) + rk + '</td>';
+    };
+    var order = Object.keys(tr).sort(function (a, b) {
+        var ra = tr[a].overall_rank, rb = tr[b].overall_rank;
+        if (ra == null) return 1;
+        if (rb == null) return -1;
+        return ra - rb;
+    });
+    var names = {};
+    d.teams.forEach(function (t) { names[t.abbr] = t.name; });
+    document.getElementById('nfl-trench-table').innerHTML = order.map(function (ab) {
+        var e = tr[ab];
+        return '<tr><td class="bet-team">' + (names[ab] || ab) + '</td>' +
+            cell(e, 'overall') + cell(e, 'run_block') + cell(e, 'run_defense') +
+            cell(e, 'pass_block') + cell(e, 'pass_defense') + '</tr>';
+    }).join('');
+}
+
+loadNBA(); loadNHL(); loadNCAAB(); loadPonies(); loadTracker(); loadNFL();
+setInterval(function(){ loadNBA(); loadNHL(); loadNCAAB(); loadPonies(); loadTracker(); loadNFL(); }, 5*60*1000);
 
 // ── Ponies ──
 var poniesTrack = null;

@@ -556,6 +556,8 @@
         .nfl-rank { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--text-muted); }
         .nfl-div { font-size: 10px; color: var(--text-muted); letter-spacing: 0.5px; }
         .nfl-dim { color: var(--text-muted); }
+        .nfl-trench-cell { font-family: 'IBM Plex Mono', monospace;
+            font-variant-numeric: tabular-nums; font-size: 12px; color: var(--silver); }
         .nfl-byes { font-size: 11px; color: var(--text-muted); margin-bottom: 14px; }
         .nfl-byes span { color: var(--text-dim); font-family: 'IBM Plex Mono', monospace; }
         .nfl-warn { background: rgba(250, 204, 21, 0.07); border: 1px solid var(--yellow-dim);
@@ -729,12 +731,12 @@
                 <div id="nfl-week-conflicts"></div>
                 <div class="table-wrap"><table>
                     <thead><tr>
-                        <th>Matchup</th><th>Type</th><th>Base Line</th><th>Raw (home)</th>
+                        <th>Matchup</th><th>Type</th><th>Base Line</th><th>Raw (home)</th><th>Trench</th>
                     </tr></thead>
                     <tbody id="nfl-week-table"></tbody>
                 </table></div>
                 <div class="nfl-byes" id="nfl-week-byes"></div>
-                <div class="section-note">Current week, selected automatically by date &mdash; it rolls over the morning after the last game. Base line is the difference in composite ratings plus home field: 2.0 non-divisional, 1.5 divisional, 0 at a neutral site. The Raw column is the unrounded margin from the home team's perspective, so you can see how close a game sits to a key number. No injuries, rest, weather, or market input.</div>
+                <div class="section-note">Current week, selected automatically by date &mdash; it rolls over the morning after the last game. Base line is the difference in composite ratings plus home field: 2.0 non-divisional, 1.5 divisional, 0 at a neutral site. The Raw column is the unrounded margin from the home team's perspective, so you can see how close a game sits to a key number. No injuries, rest, weather, or market input. The Trench column is the line-play matchup &mdash; each team's blocking measured against the front it actually faces &mdash; shown as reference context only; it does not affect the line.</div>
             </div>
 
             <!-- Lookahead -->
@@ -743,12 +745,12 @@
                 <div id="nfl-next-conflicts"></div>
                 <div class="table-wrap"><table>
                     <thead><tr>
-                        <th>Matchup</th><th>Type</th><th>Base Line</th><th>Raw (home)</th>
+                        <th>Matchup</th><th>Type</th><th>Base Line</th><th>Raw (home)</th><th>Trench</th>
                     </tr></thead>
                     <tbody id="nfl-next-table"></tbody>
                 </table></div>
                 <div class="nfl-byes" id="nfl-next-byes"></div>
-                <div class="section-note">Next week's slate, on the same ratings as this week. Those ratings will move before these games are played, so treat these as provisional. Base line is the difference in composite ratings plus home field: 2.0 non-divisional, 1.5 divisional, 0 at a neutral site. The Raw column is the unrounded margin from the home team's perspective, so you can see how close a game sits to a key number. No injuries, rest, weather, or market input.</div>
+                <div class="section-note">Next week's slate, on the same ratings as this week. Those ratings will move before these games are played, so treat these as provisional. Base line is the difference in composite ratings plus home field: 2.0 non-divisional, 1.5 divisional, 0 at a neutral site. The Raw column is the unrounded margin from the home team's perspective, so you can see how close a game sits to a key number. No injuries, rest, weather, or market input. The Trench column is the line-play matchup &mdash; each team's blocking measured against the front it actually faces &mdash; shown as reference context only; it does not affect the line.</div>
             </div>
 
             <!-- Trench report (reference only) -->
@@ -833,7 +835,7 @@
         NHL Model v3.0 — 1,299-game holdout (2025-26), September 2026<br>
         NCAAB Model v1.1 — Backtested: 4,078 games, February 2026<br>
         Ponies Model v3.0 — BrennyPower conditional logit fitted on 41,986 races (2023 Equibase, odds-blind) · 26 Saratoga bias kernels (2023 meet)<br>
-        NFL Base v1.0 — composite ratings and base lines only, no betting output<br>
+        NFL Base v1.1 — composite ratings and base lines only, no betting output<br>
         <br>
         Auto-refreshes on cron: NBA 10 AM + 6:15 PM + 8:45 PM · NHL 10 AM + 6:20 PM + 8:10 PM (+ closing-line capture) · NCAAB 11 AM + 6:25 PM EST<br>
         For personal use only. Not financial advice.
@@ -1448,7 +1450,7 @@ function nflRenderWeek(w, key) {
 
     if (!w) {
         head.innerHTML = '<span class="nfl-week-num">—</span>';
-        body.innerHTML = '<tr><td colspan="4" class="nfl-dim">' +
+        body.innerHTML = '<tr><td colspan="5" class="nfl-dim">' +
             'No further weeks in the regular season.</td></tr>';
         byes.innerHTML = '';
         warn.className = ''; warn.innerHTML = '';
@@ -1469,6 +1471,15 @@ function nflRenderWeek(w, key) {
         } else {
             tag = '<span class="nfl-dim">—</span>';
         }
+        // Line-play matchup, reference context only -- it never moves the line.
+        var trench;
+        if (!g.trench_display) {
+            trench = '<span class="nfl-dim">—</span>';
+        } else if (g.trench_display === 'EVEN') {
+            trench = '<span class="nfl-dim">even</span>';
+        } else {
+            trench = '<span class="nfl-trench-cell">' + g.trench_display + '</span>';
+        }
         return '<tr>' +
             '<td><span class="matchup-away">' + shortName(g.away_name) + '</span>' +
                 '<span class="matchup-at"> ' + sep + ' </span>' +
@@ -1476,6 +1487,7 @@ function nflRenderWeek(w, key) {
             '<td>' + tag + '</td>' +
             '<td class="nfl-line-cell">' + g.display + '</td>' +
             '<td class="nfl-num">' + nflSigned(g.raw) + '</td>' +
+            '<td>' + trench + '</td>' +
         '</tr>';
     }).join('');
 

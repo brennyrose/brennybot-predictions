@@ -556,6 +556,10 @@
         .nfl-rank { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--text-muted); }
         .nfl-div { font-size: 10px; color: var(--text-muted); letter-spacing: 0.5px; }
         .nfl-dim { color: var(--text-muted); }
+        .nfl-divrow td { background: var(--surface); color: var(--silver); font-size: 10px;
+            letter-spacing: 1px; text-transform: uppercase; font-weight: 600;
+            padding: 6px 10px; border-bottom: 1px solid var(--border-light); }
+        .nfl-divrow:hover td { background: var(--surface); }
         .nfl-trench-cell { font-family: 'IBM Plex Mono', monospace;
             font-variant-numeric: tabular-nums; font-size: 12px; color: var(--silver); }
         .nfl-byes { font-size: 11px; color: var(--text-muted); margin-bottom: 14px; }
@@ -702,6 +706,7 @@
             <button class="active" onclick="switchNflTab('ratings')">Base Ratings</button>
             <button onclick="switchNflTab('week')">This Week</button>
             <button onclick="switchNflTab('next')">Lookahead</button>
+            <button onclick="switchNflTab('wt')">Live Win Total</button>
             <button onclick="switchNflTab('trench')">Trench Report</button>
         </div>
         <div id="nfl-loading" class="loading">Loading NFL ratings...</div>
@@ -751,6 +756,28 @@
                 </table></div>
                 <div class="nfl-byes" id="nfl-next-byes"></div>
                 <div class="section-note">Next week's slate, on the same ratings as this week. Those ratings will move before these games are played, so treat these as provisional. Base line is the difference in composite ratings plus home field: 2.0 non-divisional, 1.5 divisional, 0 at a neutral site. The Raw column is the unrounded margin from the home team's perspective, so you can see how close a game sits to a key number. No injuries, rest, weather, or market input. The Trench column is the line-play matchup &mdash; each team's blocking measured against the front it actually faces &mdash; shown as reference context only; it does not affect the line.</div>
+            </div>
+
+            <!-- Live win total -->
+            <div id="nfl-wt-panel" style="display:none">
+                <div class="nfl-week-head">
+                    <span class="nfl-week-num">Projected Win Totals</span>
+                    <span class="nfl-week-dates" id="nfl-wt-sub"></span>
+                </div>
+                <div id="nfl-wt-note" class="section-note"></div>
+                <div class="table-wrap"><table>
+                    <thead><tr>
+                        <th>Team</th><th>Record</th><th>Rem</th><th>Projected</th><th>Lg</th>
+                    </tr></thead>
+                    <tbody id="nfl-wt-table"></tbody>
+                </table></div>
+                <div class="section-note">Each remaining game is converted from its base line to a
+                    win probability and summed. The conversion holds the key number at 3 rather than
+                    smoothing it &mdash; a 3-point favourite is 59%, a 3.5-point favourite 64% &mdash;
+                    because roughly a tenth of NFL games land on exactly that margin. Above 3.5 it
+                    follows a normal on the margin (&sigma; 10.1), putting 7-point favourites at 75.6%
+                    and 10-point favourites at 83.9%. Ratings are held flat for the rest of the season,
+                    so these move as the ratings move.</div>
             </div>
 
             <!-- Trench report (reference only) -->
@@ -835,7 +862,7 @@
         NHL Model v3.0 — 1,299-game holdout (2025-26), September 2026<br>
         NCAAB Model v1.1 — Backtested: 4,078 games, February 2026<br>
         Ponies Model v3.0 — BrennyPower conditional logit fitted on 41,986 races (2023 Equibase, odds-blind) · 26 Saratoga bias kernels (2023 meet)<br>
-        NFL Base v1.1 — composite ratings and base lines only, no betting output<br>
+        NFL Base v1.2 — composite ratings and base lines only, no betting output<br>
         <br>
         Auto-refreshes on cron: NBA 10 AM + 6:15 PM + 8:45 PM · NHL 10 AM + 6:20 PM + 8:10 PM (+ closing-line capture) · NCAAB 11 AM + 6:25 PM EST<br>
         For personal use only. Not financial advice.
@@ -1409,7 +1436,7 @@ function switchNflTab(sub) {
     var section = document.getElementById('section-nfl');
     section.querySelectorAll('.sub-nav button').forEach(b => b.classList.remove('active'));
     event.target.classList.add('active');
-    ['ratings', 'week', 'next', 'trench'].forEach(function (p) {
+    ['ratings', 'week', 'next', 'wt', 'trench'].forEach(function (p) {
         document.getElementById('nfl-' + p + '-panel').style.display = (p === sub) ? 'block' : 'none';
     });
 }
@@ -1508,6 +1535,45 @@ function nflRenderWeek(w, key) {
     }
 }
 
+
+var NFL_DIV_ORDER = ['AFC East', 'AFC North', 'AFC South', 'AFC West',
+                     'NFC East', 'NFC North', 'NFC South', 'NFC West'];
+
+function nflRenderWinTotals(d) {
+    var wt = d.win_totals;
+    if (!wt) return;
+
+    document.getElementById('nfl-wt-sub').textContent =
+        wt.total_projected.toFixed(0) + ' wins across ' + wt.teams.length + ' teams';
+
+    // Whether real records are loaded changes what this whole table means, so
+    // it is stated rather than left to be inferred from a column of 0-0s.
+    document.getElementById('nfl-wt-note').innerHTML = (wt.records_source === 'espn')
+        ? 'Records live from ESPN. Projected = games already won plus the summed win probability of every game still to play.'
+        : 'No live records loaded — every team is treated as 0-0. Correct before Week 1; stale after it. Projected = summed win probability across all 17 games.';
+
+    var byDiv = {};
+    wt.teams.forEach(function (t) {
+        (byDiv[t.division_full] = byDiv[t.division_full] || []).push(t);
+    });
+
+    document.getElementById('nfl-wt-table').innerHTML = NFL_DIV_ORDER.map(function (dv) {
+        var list = (byDiv[dv] || []).slice().sort(function (a, b) {
+            return b.projected_wins - a.projected_wins;
+        });
+        return '<tr class="nfl-divrow"><td colspan="5">' + dv + '</td></tr>' +
+            list.map(function (t) {
+                return '<tr>' +
+                    '<td class="bet-team">' + t.name + '</td>' +
+                    '<td class="nfl-num">' + t.record + '</td>' +
+                    '<td class="nfl-num">' + t.remaining_wins.toFixed(1) + '</td>' +
+                    '<td class="nfl-comp">' + t.projected_wins.toFixed(1) + '</td>' +
+                    '<td class="nfl-rank">' + t.rank + '</td>' +
+                '</tr>';
+            }).join('');
+    }).join('');
+}
+
 async function loadNFL() {
     var d;
     try {
@@ -1568,6 +1634,9 @@ async function loadNFL() {
     var i = nflCurrentIndex(weeks);
     nflRenderWeek(weeks[i], 'week');
     nflRenderWeek(weeks[i + 1], 'next');
+
+    // ---- win totals ----
+    nflRenderWinTotals(d);
 
     // ---- trench report ----
     var tr = d.trench || {};

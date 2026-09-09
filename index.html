@@ -716,18 +716,12 @@
 
             <!-- Base ratings -->
             <div id="nfl-ratings-panel">
-                <div class="section-note" id="nfl-weight-note"></div>
                 <div class="table-wrap"><table>
                     <thead><tr>
-                        <th>#</th><th>Team</th><th>Div</th>
-                        <th>Hoppen</th><th>Fezzik</th><th>Cole</th><th>Composite</th>
+                        <th>#</th><th>Team</th><th>Div</th><th>Rating</th>
                     </tr></thead>
                     <tbody id="nfl-ratings-table"></tbody>
                 </table></div>
-                <div class="section-note">Each source is shifted to a league mean of zero before
-                    blending, so a source published on a different baseline can't drag the
-                    composite. Published values are shown as-is; the composite column is the
-                    weighted blend of the centered versions.</div>
             </div>
 
             <!-- This week -->
@@ -741,7 +735,9 @@
                     <tbody id="nfl-week-table"></tbody>
                 </table></div>
                 <div class="nfl-byes" id="nfl-week-byes"></div>
-                <div class="section-note">Current week, selected automatically by date &mdash; it rolls over the morning after the last game. Base line is the difference in composite ratings plus home field: 2.0 non-divisional, 1.5 divisional, 0 at a neutral site. The Raw column is the unrounded margin from the home team's perspective, so you can see how close a game sits to a key number. No injuries, rest, weather, or market input. The Trench column is the line-play matchup &mdash; each team's blocking measured against the front it actually faces &mdash; shown as reference context only; it does not affect the line.</div>
+                <div class="section-note">Current week, selected automatically by date. Raw is the
+                    unrounded margin from the home side. Trench is reference only and does not
+                    affect the line.</div>
             </div>
 
             <!-- Lookahead -->
@@ -755,7 +751,8 @@
                     <tbody id="nfl-next-table"></tbody>
                 </table></div>
                 <div class="nfl-byes" id="nfl-next-byes"></div>
-                <div class="section-note">Next week's slate, on the same ratings as this week. Those ratings will move before these games are played, so treat these as provisional. Base line is the difference in composite ratings plus home field: 2.0 non-divisional, 1.5 divisional, 0 at a neutral site. The Raw column is the unrounded margin from the home team's perspective, so you can see how close a game sits to a key number. No injuries, rest, weather, or market input. The Trench column is the line-play matchup &mdash; each team's blocking measured against the front it actually faces &mdash; shown as reference context only; it does not affect the line.</div>
+                <div class="section-note">Next week on current ratings &mdash; provisional until the
+                    ratings update.</div>
             </div>
 
             <!-- Live win total -->
@@ -771,20 +768,15 @@
                     </tr></thead>
                     <tbody id="nfl-wt-table"></tbody>
                 </table></div>
-                <div class="section-note">Each remaining game is converted from its base line to a
-                    win probability and summed. The conversion holds the key number at 3 rather than
-                    smoothing it &mdash; a 3-point favourite is 59%, a 3.5-point favourite 64% &mdash;
-                    because roughly a tenth of NFL games land on exactly that margin. Above 3.5 it
-                    follows a normal on the margin (&sigma; 10.1), putting 7-point favourites at 75.6%
-                    and 10-point favourites at 83.9%. Ratings are held flat for the rest of the season,
-                    so these move as the ratings move.</div>
+                <div class="section-note">Projected wins = games already won plus the summed win
+                    probability of every remaining game. Ratings are held flat for the rest of the
+                    season.</div>
             </div>
 
             <!-- Trench report (reference only) -->
             <div id="nfl-trench-panel" style="display:none">
-                <div class="section-note">Reference only. The Trench Report is a line-play
-                    efficiency metric on its own scale, not a points-based power rating, so it
-                    is <strong>not</strong> part of the composite above. Rank in parentheses.</div>
+                <div class="section-note">Reference only &mdash; not part of the ratings.
+                    Rank in parentheses.</div>
                 <div class="table-wrap"><table>
                     <thead><tr>
                         <th>Team</th><th>Overall</th><th>Run Blk</th><th>Run Def</th>
@@ -862,7 +854,7 @@
         NHL Model v3.0 — 1,299-game holdout (2025-26), September 2026<br>
         NCAAB Model v1.1 — Backtested: 4,078 games, February 2026<br>
         Ponies Model v3.0 — BrennyPower conditional logit fitted on 41,986 races (2023 Equibase, odds-blind) · 26 Saratoga bias kernels (2023 meet)<br>
-        NFL Base v1.2 — composite ratings and base lines only, no betting output<br>
+        NFL Base v1.2 — base ratings and lines only, no betting output<br>
         <br>
         Auto-refreshes on cron: NBA 10 AM + 6:15 PM + 8:45 PM · NHL 10 AM + 6:20 PM + 8:10 PM (+ closing-line capture) · NCAAB 11 AM + 6:25 PM EST<br>
         For personal use only. Not financial advice.
@@ -1548,9 +1540,9 @@ function nflRenderWinTotals(d) {
 
     // Whether real records are loaded changes what this whole table means, so
     // it is stated rather than left to be inferred from a column of 0-0s.
-    document.getElementById('nfl-wt-note').innerHTML = (wt.records_source === 'espn')
-        ? 'Records live from ESPN. Projected = games already won plus the summed win probability of every game still to play.'
-        : 'No live records loaded — every team is treated as 0-0. Correct before Week 1; stale after it. Projected = summed win probability across all 17 games.';
+    document.getElementById('nfl-wt-note').innerHTML = wt.has_records
+        ? ''
+        : 'No live records loaded — every team is treated as 0-0.';
 
     var byDiv = {};
     wt.teams.forEach(function (t) {
@@ -1590,28 +1582,22 @@ async function loadNFL() {
     document.getElementById('nfl-loading').style.display = 'none';
     document.getElementById('nfl-content').style.display = 'block';
 
-    var used = d.sources_used || [], gone = d.sources_missing || [];
-
     var when = d.generated_at ? new Date(d.generated_at).toLocaleDateString('en-US',
         { month: 'short', day: 'numeric', year: 'numeric' }) : '—';
     document.getElementById('nfl-meta').innerHTML =
         'Base power ratings · updated <span>' + when + '</span> · ' +
         '<span>' + (d.model_version || '') + '</span>';
 
-    document.getElementById('nfl-weight-note').innerHTML = 'Weights: ' +
-        used.map(function (s) {
-            return s.label + ' ' + Math.round(s.applied_weight * 100) + '%';
-        }).join(' · ');
-
     // A missing source silently changes what every number on this page means,
     // so it gets called out rather than buried in the weights line.
+    // Flagged because a missing input changes what every rating on the page
+    // means. Which input, and by how much, stays off a public page.
     var warn = document.getElementById('nfl-missing');
-    if (gone.length) {
+    if (d.inputs_missing) {
         warn.className = 'nfl-warn';
-        warn.innerHTML = gone.map(function (s) {
-            return s.label + ' (' + Math.round(s.intended_weight * 100) + '% intended) is ' +
-                s.reason + ' — its weight is redistributed across the remaining sources.';
-        }).join('<br>');
+        warn.innerHTML = d.inputs_missing === 1
+            ? 'One rating input is currently unavailable.'
+            : d.inputs_missing + ' rating inputs are currently unavailable.';
     } else {
         warn.className = ''; warn.innerHTML = '';
     }
@@ -1622,9 +1608,6 @@ async function loadNFL() {
             '<td class="nfl-rank">' + t.rank + '</td>' +
             '<td class="bet-team">' + t.name + '</td>' +
             '<td class="nfl-div">' + t.division_full + '</td>' +
-            '<td class="nfl-num">' + nflSigned(t.hoppen) + '</td>' +
-            '<td class="nfl-num">' + nflSigned(t.fezzik) + '</td>' +
-            '<td class="nfl-num">' + nflSigned(t.cole) + '</td>' +
             '<td class="nfl-comp">' + nflSigned(t.composite) + '</td>' +
         '</tr>';
     }).join('');

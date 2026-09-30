@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-29 18:20:04",
+  "generated_at": "2026-09-29 20:10:04",
   "sport": "NHL",
   "model_version": "v3",
   "predictions": [
@@ -153,7 +153,8 @@
       "away_edge_vs_novig": -0.0343,
       "best_bet_edge_vs_novig": 0.0343,
       "full_kelly_pct": 0.0384,
-      "stake_pct_bankroll": 0.0096
+      "stake_pct_bankroll": 0.0096,
+      "_locked": true
     },
     {
       "away_team": "VAN",

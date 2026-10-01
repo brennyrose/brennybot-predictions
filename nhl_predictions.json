@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30 18:20:04",
+  "generated_at": "2026-09-30 20:10:03",
   "sport": "NHL",
   "model_version": "v3",
   "predictions": [
@@ -48,7 +48,8 @@
       "vegas_away_prob_novig": 0.431,
       "market_overround": 0.0312,
       "home_edge_vs_novig": -0.0009,
-      "away_edge_vs_novig": 0.0009
+      "away_edge_vs_novig": 0.0009,
+      "_locked": true
     },
     {
       "away_team": "NYI",
@@ -98,7 +99,8 @@
       "away_edge_vs_novig": 0.0898,
       "best_bet_edge_vs_novig": 0.0898,
       "full_kelly_pct": 0.1484,
-      "stake_pct_bankroll": 0.02
+      "stake_pct_bankroll": 0.02,
+      "_locked": true
     },
     {
       "away_team": "L.A",

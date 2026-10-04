@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03 18:20:09",
+  "generated_at": "2026-10-03 20:10:08",
   "sport": "NHL",
   "model_version": "v3",
   "predictions": [
@@ -390,7 +390,8 @@
       "away_edge_vs_novig": -0.0415,
       "best_bet_edge_vs_novig": 0.0415,
       "full_kelly_pct": 0.0539,
-      "stake_pct_bankroll": 0.0135
+      "stake_pct_bankroll": 0.0135,
+      "_locked": true
     },
     {
       "away_team": "DAL",
@@ -437,7 +438,8 @@
       "vegas_away_prob_novig": 0.5657,
       "market_overround": 0.0187,
       "home_edge_vs_novig": -0.0183,
-      "away_edge_vs_novig": 0.0183
+      "away_edge_vs_novig": 0.0183,
+      "_locked": true
     },
     {
       "away_team": "BOS",
@@ -484,7 +486,8 @@
       "vegas_away_prob_novig": 0.3478,
       "market_overround": 0.0306,
       "home_edge_vs_novig": 0.0144,
-      "away_edge_vs_novig": -0.0144
+      "away_edge_vs_novig": -0.0144,
+      "_locked": true
     },
     {
       "away_team": "STL",
@@ -531,7 +534,8 @@
       "vegas_away_prob_novig": 0.2775,
       "market_overround": 0.015,
       "home_edge_vs_novig": -0.0037,
-      "away_edge_vs_novig": 0.0037
+      "away_edge_vs_novig": 0.0037,
+      "_locked": true
     },
     {
       "away_team": "CGY",

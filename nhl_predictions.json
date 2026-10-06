@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05 18:20:03",
+  "generated_at": "2026-10-05 20:10:04",
   "sport": "NHL",
   "model_version": "v3",
   "predictions": [
@@ -99,7 +99,8 @@
       "away_edge_vs_novig": -0.0725,
       "best_bet_edge_vs_novig": 0.0725,
       "full_kelly_pct": 0.1171,
-      "stake_pct_bankroll": 0.02
+      "stake_pct_bankroll": 0.02,
+      "_locked": true
     },
     {
       "away_team": "WPG",
@@ -149,7 +150,8 @@
       "away_edge_vs_novig": 0.0214,
       "best_bet_edge_vs_novig": 0.0214,
       "full_kelly_pct": 0.0173,
-      "stake_pct_bankroll": 0.0043
+      "stake_pct_bankroll": 0.0043,
+      "_locked": true
     },
     {
       "away_team": "S.J",
@@ -199,7 +201,8 @@
       "away_edge_vs_novig": -0.0422,
       "best_bet_edge_vs_novig": 0.0422,
       "full_kelly_pct": 0.0874,
-      "stake_pct_bankroll": 0.02
+      "stake_pct_bankroll": 0.02,
+      "_locked": true
     }
   ],
   "odds_api_remaining": 462

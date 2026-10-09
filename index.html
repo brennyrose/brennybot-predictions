@@ -502,6 +502,9 @@
                      font-variant-numeric: tabular-nums; }
         .blend-row .bt { width: 26px; flex: none; color: var(--text-dim); }
         .blend-row .bv { width: 56px; flex: none; text-align: right; }
+        .blend-row .bg { flex: 1 1 auto; min-width: 0; overflow: hidden;
+                         text-overflow: ellipsis; white-space: nowrap;
+                         color: var(--text-dim); padding-left: 6px; }
         .blend-meter { position: relative; width: 44px; height: 4px; flex: none;
                        border-radius: 2px; background: rgba(58,142,222,0.22); }
         .blend-meter > i { position: absolute; left: 0; top: 0; bottom: 0;
@@ -1101,22 +1104,42 @@ function blendPct(x, side) {
     return Math.max(0, Math.min(100, (1 - w) * 100));   // the share that is THIS season
 }
 
-function blendRow(abbr, gp, pct) {
+// Surname only — the feed mixes full names ("Jacob Markstrom") with initials
+// ("U. Luukkonen") depending on which endpoint answered.
+function goalieShort(name) {
+    if (!name) return '';
+    var t = String(name).trim().split(/\s+/);
+    return t[t.length - 1] || '';
+}
+
+function blendRow(abbr, gp, pct, goalie) {
     if (pct == null) return '';
     var g = (gp == null ? '\u2014' : gp + 'gp');
-    return '<span class="blend-row" title="' + abbr + ': ' + g + ' played \u2014 rating is ' +
-           pct.toFixed(0) + '% this season, ' + (100 - pct).toFixed(0) +
-           '% preseason projection. Reaches 100% this-season at 30 games.">' +
+    var gn = goalieShort(goalie);
+    // Blank, not a dash: before the evening refresh no starter is published,
+    // and an em-dash on every row reads as missing data rather than "not yet".
+    // Omit the element entirely rather than hiding a placeholder character —
+    // a transparent glyph still lands in a copy-paste.
+    var gcell = gn ? '<span class="bg">' + gn + '</span>' : '';
+    var tip = abbr + ': ' + g + ' played \u2014 rating is ' + pct.toFixed(0) +
+              '% this season, ' + (100 - pct).toFixed(0) +
+              '% preseason projection. Reaches 100% this-season at 30 games.' +
+              (gn
+                ? ' Probable starter ' + goalie + ' \u2014 the model is using his individual rating.'
+                : ' No starter published yet, so the model is using this team\'s average goalie rating.');
+    return '<span class="blend-row" title="' + tip + '">' +
            '<span class="bt">' + abbr + '</span>' +
            '<span class="blend-meter"><i style="width:' + pct.toFixed(0) + '%"></i></span>' +
-           '<span class="bv">' + g + ' \u00b7 ' + pct.toFixed(0) + '%</span></span>';
+           '<span class="bv">' + g + ' \u00b7 ' + pct.toFixed(0) + '%</span>' +
+           gcell + '</span>';
 }
 
 function blendCell(x) {
     var a = blendPct(x, 'away'), h = blendPct(x, 'home');
     if (a == null && h == null) return '';          // pre-v3 JSON — show nothing
-    return '<span class="blend">' + blendRow(x.away_team, x.away_gp, a) +
-           blendRow(x.home_team, x.home_gp, h) + '</span>';
+    return '<span class="blend">' +
+           blendRow(x.away_team, x.away_gp, a, x.away_goalie) +
+           blendRow(x.home_team, x.home_gp, h, x.home_goalie) + '</span>';
 }
 
 function renderBlendNote(p) {
@@ -1141,6 +1164,20 @@ function renderBlendNote(p) {
           ? 'Early-season numbers lean on the preseason file by design \u2014 a handful of games is not yet evidence.'
           : 'This season\'s play now carries most of the weight.') +
         ' The mix is set by games played, not the date, and reaches 100% this-season at 30 games.';
+    var named = 0, slots = 0;
+    p.forEach(function (x) {
+        ['away', 'home'].forEach(function (side) {
+            slots++; if (x[side + '_goalie']) named++;
+        });
+    });
+    if (slots) {
+        el.innerHTML += '<br><strong>Starters</strong> \u2014 ' + (named
+            ? named + ' of ' + slots + ' probable starters published; the model uses each ' +
+              'named goalie\'s own rating and the team average for the rest.'
+            : 'none published yet \u2014 the model is on team-average goalie ratings. ' +
+              'Names usually appear on the 6:20pm and 8:10pm refreshes.') +
+            ' These are the NHL API\'s likeliest starters, not confirmed lineups.';
+    }
 }
 
 // ══════════════════════════════════════════════════════════════

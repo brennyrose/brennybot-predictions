@@ -491,6 +491,22 @@
                    white-space: nowrap; z-index: 40; display: none; line-height: 1.5; }
         .calib-bar { display: inline-block; height: 7px; border-radius: 2px;
                      vertical-align: middle; }
+
+        /* ── preseason / in-season blend meter ──────────────────────────
+           A single ratio against a limit, so: a meter, not a two-colour
+           composition. One hue, fill against a lighter step of the same ramp.
+           #3a8ede is the series hue already validated against this surface. */
+        .blend { display: block; margin-top: 3px; line-height: 1.5; }
+        .blend-row { display: flex; align-items: center; gap: 5px;
+                     font-size: 9px; color: var(--text-muted);
+                     font-variant-numeric: tabular-nums; }
+        .blend-row .bt { width: 26px; flex: none; color: var(--text-dim); }
+        .blend-row .bv { width: 56px; flex: none; text-align: right; }
+        .blend-meter { position: relative; width: 44px; height: 4px; flex: none;
+                       border-radius: 2px; background: rgba(58,142,222,0.22); }
+        .blend-meter > i { position: absolute; left: 0; top: 0; bottom: 0;
+                           border-radius: 2px; background: var(--series-fair);
+                           display: block; }
         .trk-pos { color: var(--green); } .trk-neg { color: var(--red); }
 
         /* sub-heading inside a tracker section — one step down from .trk-h */
@@ -596,6 +612,7 @@
             <div id="nhl-content" style="display:none">
                 <div class="section-meta" id="nhl-meta"></div>
                 <div class="summary-row" id="nhl-summary"></div>
+                <div class="trk-callout" id="nhl-blend-note" style="display:none;margin-bottom:10px"></div>
                 <div class="picks-section" id="nhl-picks" style="display:none">
                     <h3>Recommended Picks</h3>
                     <div id="nhl-picks-list"></div>
@@ -1035,6 +1052,7 @@ async function loadNHL() {
                 return '<div class="pick-line"><span class="pick-rec">'+pick+'</span><span class="pick-edge '+confClass(x.confidence)+'">'+bits.join(' \u00b7 ')+'</span></div>';
             }).join('');
         }
+        renderBlendNote(p);
         document.getElementById('nhl-table').innerHTML = p.map(function(x){
             var aw=x.away_team, hm=x.home_team;
             var gt=gameTimeEST(x.game_time);
@@ -1057,7 +1075,8 @@ async function loadNHL() {
             var sus = (su!=null && x.confidence!=='NO_EDGE') ? su.toFixed(2)+'u' : '\u2014';
             var suc = (su!=null && x.confidence!=='NO_EDGE') ? (su>=1.5?'edge-positive':'edge-small') : 'edge-none';
             var pick = x.best_bet_team ? x.best_bet_team+' '+fmtOdds(x.best_bet_odds) : '';
-            return '<tr><td class="spread">'+gt+'</td><td><span class="matchup-away">'+aw+'</span><span class="matchup-at"> @ </span><span class="matchup-home">'+hm+'</span></td>'+
+            var blend = blendCell(x);
+            return '<tr><td class="spread">'+gt+'</td><td><span class="matchup-away">'+aw+'</span><span class="matchup-at"> @ </span><span class="matchup-home">'+hm+'</span>'+blend+'</td>'+
                 '<td class="spread" style="font-size:10px">'+wp+'</td><td class="spread" style="font-size:10px">'+vml+'</td>'+
                 '<td class="'+edgePPClass(ed)+'" style="white-space:nowrap">'+eds+
                     '<span class="fairline stake-cell '+suc+'" style="font-size:10px">'+sus+'</span></td>'+
@@ -1069,6 +1088,60 @@ async function loadNHL() {
     }
 }
 
+
+
+// ── Preseason / in-season blend ───────────────────────────────────────────
+// A team's rating is a weighted mix of its preseason projection and its play
+// this season. The mix is driven by GAMES PLAYED, not the calendar: 100%
+// preseason at 0 games, sliding to 100% in-season by 30. Showing it lets a
+// surprising number be read against how much real evidence sits behind it.
+function blendPct(x, side) {
+    var w = x[side + '_pre_weight'];
+    if (w == null) return null;
+    return Math.max(0, Math.min(100, (1 - w) * 100));   // the share that is THIS season
+}
+
+function blendRow(abbr, gp, pct) {
+    if (pct == null) return '';
+    var g = (gp == null ? '\u2014' : gp + 'gp');
+    return '<span class="blend-row" title="' + abbr + ': ' + g + ' played \u2014 rating is ' +
+           pct.toFixed(0) + '% this season, ' + (100 - pct).toFixed(0) +
+           '% preseason projection. Reaches 100% this-season at 30 games.">' +
+           '<span class="bt">' + abbr + '</span>' +
+           '<span class="blend-meter"><i style="width:' + pct.toFixed(0) + '%"></i></span>' +
+           '<span class="bv">' + g + ' \u00b7 ' + pct.toFixed(0) + '%</span></span>';
+}
+
+function blendCell(x) {
+    var a = blendPct(x, 'away'), h = blendPct(x, 'home');
+    if (a == null && h == null) return '';          // pre-v3 JSON — show nothing
+    return '<span class="blend">' + blendRow(x.away_team, x.away_gp, a) +
+           blendRow(x.home_team, x.home_gp, h) + '</span>';
+}
+
+function renderBlendNote(p) {
+    var el = document.getElementById('nhl-blend-note');
+    if (!el) return;
+    var pcts = [], gps = [];
+    p.forEach(function (x) {
+        ['away', 'home'].forEach(function (s) {
+            var v = blendPct(x, s);
+            if (v != null) { pcts.push(v); gps.push(x[s + '_gp'] || 0); }
+        });
+    });
+    if (!pcts.length) { el.style.display = 'none'; return; }
+    var avg = pcts.reduce(function (t, v) { return t + v; }, 0) / pcts.length;
+    var lo = Math.min.apply(null, gps), hi = Math.max.apply(null, gps);
+    el.style.display = 'block';
+    el.innerHTML = '<strong>Ratings blend</strong> \u2014 teams on tonight\'s card have played ' +
+        (lo === hi ? lo + ' game' + (lo === 1 ? '' : 's') : lo + '\u2013' + hi + ' games') +
+        ', so their ratings average <strong>' + avg.toFixed(0) + '% this season</strong> and ' +
+        (100 - avg).toFixed(0) + '% preseason projection. ' +
+        (avg < 50
+          ? 'Early-season numbers lean on the preseason file by design \u2014 a handful of games is not yet evidence.'
+          : 'This season\'s play now carries most of the weight.') +
+        ' The mix is set by games played, not the date, and reaches 100% this-season at 30 games.';
+}
 
 // ══════════════════════════════════════════════════════════════
 //  NHL Bet Tracker

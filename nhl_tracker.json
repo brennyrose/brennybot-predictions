@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-09 03:00:01",
+  "generated_at": "2026-10-10 03:00:02",
   "season": "20262027",
   "season_label": "2026-27",
   "model_version": "v3",
   "disclaimer": "Fair-line results price every bet at the no-vig number, which isolates model skill from execution. They are a benchmark, not a P&L \u2014 real results depend on the prices you actually get, when you bet, and whether you take every suggestion. The actual-price column uses the odds the pipeline logged.",
-  "games_logged": 65,
-  "games_graded": 65,
+  "games_logged": 69,
+  "games_graded": 69,
   "career": {
     "status": "ok",
     "note": "All-time pools every bet the pipeline has ever logged, across model versions. The combined line is the record of the process; the by-version table is the record of each model. A version change means a different model choosing a different set of games, so the versions are not interchangeable and the pooled ROI should never be read as the current model's edge.",
@@ -1628,20 +1628,20 @@
   },
   "status": "ok",
   "predictions": {
-    "n": 65,
-    "accuracy": 0.5385,
-    "log_loss": 0.6626,
-    "brier": 0.235,
-    "ece": 0.1435,
-    "home_win_rate": 0.5692,
+    "n": 69,
+    "accuracy": 0.5362,
+    "log_loss": 0.6646,
+    "brier": 0.236,
+    "ece": 0.1382,
+    "home_win_rate": 0.5652,
     "vs_market": {
-      "n": 65,
-      "model_log_loss": 0.6626,
-      "market_log_loss": 0.6521,
-      "model_brier": 0.235,
-      "market_brier": 0.2303,
-      "model_accuracy": 0.5385,
-      "market_accuracy": 0.5846,
+      "n": 69,
+      "model_log_loss": 0.6646,
+      "market_log_loss": 0.655,
+      "model_brier": 0.236,
+      "market_brier": 0.2317,
+      "model_accuracy": 0.5362,
+      "market_accuracy": 0.5797,
       "beating_market": false
     }
   },
@@ -1662,17 +1662,17 @@
     },
     {
       "label": "50-55%",
-      "n": 9,
-      "model": 0.5207,
-      "actual": 0.3333,
-      "gap": 0.1874
+      "n": 10,
+      "model": 0.5216,
+      "actual": 0.3,
+      "gap": 0.2216
     },
     {
       "label": "55-65%",
-      "n": 24,
-      "model": 0.5914,
-      "actual": 0.5833,
-      "gap": 0.0081
+      "n": 27,
+      "model": 0.5877,
+      "actual": 0.5926,
+      "gap": -0.0049
     },
     {
       "label": "65-100%",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09 18:20:04",
+  "generated_at": "2026-10-09 20:10:04",
   "sport": "NHL",
   "model_version": "v3",
   "predictions": [
@@ -192,7 +192,8 @@
       "vegas_away_prob_novig": 0.4661,
       "market_overround": 0.0216,
       "home_edge_vs_novig": -0.0038,
-      "away_edge_vs_novig": 0.0038
+      "away_edge_vs_novig": 0.0038,
+      "_locked": true
     }
   ],
   "odds_api_remaining": 431

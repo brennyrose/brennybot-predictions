@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10 18:20:10",
+  "generated_at": "2026-10-10 20:10:10",
   "sport": "NHL",
   "model_version": "v3",
   "predictions": [
@@ -592,7 +592,8 @@
       "best_bet_edge_vs_novig": 0.0242,
       "full_kelly_pct": 0.0314,
       "full_kelly_exec": 0.0362,
-      "stake_pct_bankroll": 0.0091
+      "stake_pct_bankroll": 0.0091,
+      "_locked": true
     },
     {
       "away_team": "ANA",

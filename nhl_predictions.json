@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16 18:20:02",
+  "generated_at": "2026-10-16 20:10:03",
   "sport": "NHL",
   "model_version": "v3",
   "predictions": [
@@ -48,7 +48,8 @@
       "vegas_away_prob_novig": 0.3437,
       "market_overround": 0.0208,
       "home_edge_vs_novig": 0.0048,
-      "away_edge_vs_novig": -0.0048
+      "away_edge_vs_novig": -0.0048,
+      "_locked": true
     },
     {
       "away_team": "BOS",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17 18:20:05",
+  "generated_at": "2026-10-17 20:10:03",
   "sport": "NHL",
   "model_version": "v3",
   "predictions": [
@@ -568,7 +568,8 @@
       "best_bet_edge_vs_novig": 0.0675,
       "full_kelly_pct": 0.1058,
       "full_kelly_exec": 0.1286,
-      "stake_pct_bankroll": 0.02
+      "stake_pct_bankroll": 0.02,
+      "_locked": true
     },
     {
       "away_team": "BOS",
@@ -623,7 +624,8 @@
       "best_bet_edge_vs_novig": 0.105,
       "full_kelly_pct": 0.2088,
       "full_kelly_exec": 0.2329,
-      "stake_pct_bankroll": 0.02
+      "stake_pct_bankroll": 0.02,
+      "_locked": true
     },
     {
       "away_team": "EDM",

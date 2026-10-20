@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19 18:20:04",
+  "generated_at": "2026-10-19 20:10:03",
   "sport": "NHL",
   "model_version": "v3",
   "predictions": [
@@ -152,7 +152,8 @@
       "vegas_away_prob_novig": 0.448,
       "market_overround": 0.0239,
       "home_edge_vs_novig": 0.0131,
-      "away_edge_vs_novig": -0.0131
+      "away_edge_vs_novig": -0.0131,
+      "_locked": true
     },
     {
       "away_team": "PIT",
@@ -199,7 +200,8 @@
       "vegas_away_prob_novig": 0.3703,
       "market_overround": 0.0269,
       "home_edge_vs_novig": 0.025,
-      "away_edge_vs_novig": -0.025
+      "away_edge_vs_novig": -0.025,
+      "_locked": true
     }
   ],
   "odds_api_remaining": 357

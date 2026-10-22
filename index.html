@@ -730,7 +730,8 @@
                 <h4 class="trk-h4">Does a bigger edge cover more often?</h4>
                 <div class="section-note">Every graded game, taking the model's side against
                     Vegas, grouped by how far apart they were. If the model knows something,
-                    win rate should climb with edge. 52.4% breaks even at -110.</div>
+                    win rate should climb with edge. 52.4% breaks even at -110. Bets are
+                    2&ndash;4 pts; 4+ is flagged, not bet.</div>
                 <div class="table-wrap"><table>
                     <thead><tr><th>Edge</th><th>Games</th><th>ATS win%</th><th>ROI at -110</th></tr></thead>
                     <tbody id="nbt-edge"></tbody>
@@ -759,6 +760,7 @@
                 </div>
 
                 <div id="nbt-move"></div>
+                <div id="nbt-flags"></div>
                 <div id="nbt-career-tables"></div>
                 <div id="nbt-splits"></div>
 
@@ -1033,34 +1035,50 @@ async function loadNBA() {
         var d = await r.json();
         document.getElementById('nba-loading').style.display = 'none';
         document.getElementById('nba-content').style.display = 'block';
-        document.getElementById('nba-meta').innerHTML = 'Model: <span>v2.1</span> \u00b7 Generated: <span>' + (d.generated_at||'\u2014') + '</span>';
+        var nbaVer = ((d.model_version||'').match(/v[\d.]+/)||['v2.1'])[0];
+        document.getElementById('nba-meta').innerHTML = 'Model: <span>' + nbaVer + '</span> \u00b7 Generated: <span>' + (d.generated_at||'\u2014') + '</span>' +
+            ' \u00b7 Picks: 2\u20134 pt edge \u00b7 4+ = \u26a0 check the news';
         nbaCredits = d.odds_api_remaining; updateCredits();
         var p = d.predictions || [], s = d.summary || {};
         document.getElementById('nba-summary').innerHTML =
             '<div class="summary-box"><div class="label">Games</div><div class="value white">'+(s.total_games||p.length)+'</div></div>' +
-            '<div class="summary-box"><div class="label">High</div><div class="value green">'+(s.high_confidence||0)+'</div></div>' +
-            '<div class="summary-box"><div class="label">Medium</div><div class="value yellow">'+(s.medium_confidence||0)+'</div></div>' +
+            '<div class="summary-box"><div class="label">Picks</div><div class="value green">'+(s.medium_confidence||0)+'</div></div>' +
+            '<div class="summary-box"><div class="label">Flagged</div><div class="value yellow">'+(s.flagged!=null?s.flagged:(s.high_confidence||0))+'</div></div>' +
             '<div class="summary-box"><div class="label">No Edge</div><div class="value dim">'+(s.no_edge||0)+'</div></div>';
-        var ac = p.filter(function(x){return x.confidence==='HIGH'||x.confidence==='MEDIUM';});
-        if (ac.length > 0) {
+        // v2.2: MEDIUM (2-4 pt edge) is the only bet. FLAG (4+; HIGH on older
+        // files) is shown as "check the news" — the lean, not a recommendation.
+        var isFlag = function(x){ return x.confidence==='FLAG'||x.confidence==='HIGH'; };
+        var ac = p.filter(function(x){return x.confidence==='MEDIUM';});
+        var fl = p.filter(isFlag);
+        var abbrOf = function(x, team){ return team===x.home_team ? (x.home_abbrev||shortName(x.home_team)) : (x.away_abbrev||shortName(x.away_team)); };
+        if (ac.length > 0 || fl.length > 0) {
             document.getElementById('nba-picks').style.display = 'block';
             document.getElementById('nba-picks-list').innerHTML = ac.map(function(x){
-                var abbr = x.bet_team===x.home_team ? (x.home_abbrev||shortName(x.home_team)) : (x.away_abbrev||shortName(x.away_team));
-                var pickText = abbr + ' ' + (x.bet_spread>=0?'+':'') + x.bet_spread.toFixed(1);
-                return '<div class="pick-line"><span class="pick-rec">'+pickText+'</span><span class="pick-edge '+edgeClass(x.edge)+'">+'+x.edge.toFixed(1)+' pts \u00b7 <span class="'+confClass(x.confidence)+'">'+x.confidence+'</span></span></div>';
-            }).join('');
+                var pickText = abbrOf(x, x.bet_team) + ' ' + (x.bet_spread>=0?'+':'') + x.bet_spread.toFixed(1) +
+                    (x.spread_price ? ' <span style="color:var(--text-dim);font-weight:400">' + fmtOdds(x.spread_price) + (x.spread_book ? ' ' + x.spread_book : '') + '</span>' : '');
+                return '<div class="pick-line"><span class="pick-rec">'+pickText+'</span><span class="pick-edge edge-small">+'+x.edge.toFixed(1)+' pts \u00b7 <span class="conf-high">PICK</span></span></div>';
+            }).join('') + (fl.length ? '<div class="section-note" style="margin:10px 0 4px">\u26a0 Flagged \u2014 4+ point disagreements with Vegas. Not bets: historically these meant the market knew something (injury, rest) the ratings didn\'t yet. Check the news.</div>' +
+                fl.map(function(x){
+                    var t = x.lean_team || x.bet_team, sp = x.lean_team ? x.lean_spread : x.bet_spread;
+                    var lean = t ? 'model leans ' + abbrOf(x, t) + ' ' + (sp>=0?'+':'') + Number(sp).toFixed(1) : '';
+                    return '<div class="pick-line"><span class="pick-rec" style="color:var(--text-dim)">\u26a0 ' + (x.away_abbrev||shortName(x.away_team)) + ' @ ' + (x.home_abbrev||shortName(x.home_team)) +
+                        ' <span style="font-weight:400">' + lean + '</span></span><span class="pick-edge conf-medium">+'+x.edge.toFixed(1)+' pts \u00b7 FLAG</span></div>';
+                }).join('') : '');
         }
         document.getElementById('nba-table').innerHTML = p.map(function(x){
             var aw=x.away_abbrev||shortName(x.away_team), hm=x.home_abbrev||shortName(x.home_team);
             var gt=gameTimeEST(x.commence);
             var pickText='\u2014';
-            if(x.confidence!=='NO_EDGE'&&x.bet_team!=null){
+            if(x.confidence==='MEDIUM'&&x.bet_team!=null){
                 var pAbbr=x.bet_team===x.home_team?hm:aw;
                 pickText='<span class="bet-team">'+pAbbr+' '+(x.bet_spread>=0?'+':'')+x.bet_spread.toFixed(1)+'</span>';
+            } else if (isFlag(x)) {
+                var lt=x.lean_team||x.bet_team, ls=x.lean_team?x.lean_spread:x.bet_spread;
+                pickText='<span class="conf-medium">\u26a0</span> <span style="color:var(--text-dim)">'+(lt?(lt===x.home_team?hm:aw)+' '+(ls>=0?'+':'')+Number(ls).toFixed(1):'')+'</span>';
             } else { pickText='<span class="conf-none">\u2014</span>'; }
             return '<tr><td class="spread">'+gt+'</td><td><span class="matchup-away">'+aw+'</span><span class="matchup-at"> @ </span><span class="matchup-home">'+hm+'</span></td>'+
                 '<td class="spread">'+fmt(x.model_spread)+'</td><td class="spread">'+fmt(x.vegas_spread)+'</td>'+
-                '<td class="'+edgeClass(x.edge)+'">+'+ x.edge.toFixed(1)+'</td><td class="'+confClass(x.confidence)+'">'+confLabel(x.confidence)+'</td>'+
+                '<td class="'+(isFlag(x)?'edge-none':edgeClass(x.edge))+'">+'+ x.edge.toFixed(1)+'</td><td class="'+(x.confidence==='MEDIUM'?'conf-high':isFlag(x)?'conf-medium':'conf-none')+'">'+(x.confidence==='MEDIUM'?'PICK':isFlag(x)?'FLAG':'\u2014')+'</td>'+
                 '<td>'+pickText+'</td></tr>';
         }).join('');
     } catch(e) {
@@ -1843,18 +1861,24 @@ function nbtChart(series, marks) {
 
 function nbtOpen(d) {
     var el = document.getElementById('nbt-open');
-    var ob = d.open_bets || [];
-    if (!ob.length) { el.innerHTML = ''; return; }
+    var ob = d.open_bets || [], of = d.open_flags || [];
+    if (!ob.length && !of.length) { el.innerHTML = ''; return; }
+    var flagsHtml = of.length ? '<div class="section-note" style="margin-top:8px">\u26a0 Flagged tonight (not bets, tracked separately): ' +
+        of.map(function (x) { var t = x.matchup.split(' @ '); return nbtTeam(t[0]) + ' @ ' + nbtTeam(t[1]) + ' \u2014 leans ' + nbtTeam(x.team) + ' ' + nbtSpread(x.spread) +
+            ' (' + Number(x.edge).toFixed(1) + ')'; }).join(' \u00b7 ') + '</div>' : '';
+    if (!ob.length) { el.innerHTML = '<h4 class="trk-h4" style="margin-top:6px">Open picks</h4>' + flagsHtml; return; }
     el.innerHTML = '<h4 class="trk-h4" style="margin-top:6px">Open picks — waiting on results</h4>' +
         '<div class="table-wrap"><table><thead><tr><th>Date</th><th>Matchup</th><th>Bet</th>' +
         '<th>Edge</th><th>Conf</th></tr></thead><tbody>' +
         ob.map(function (x) {
             return '<tr><td class="spread">' + (x.date || '').slice(5) + (x.locked ? ' 🔒' : '') + '</td>' +
                 '<td>' + x.matchup + '</td>' +
-                '<td><span class="bet-team">' + nbtTeam(x.team) + ' ' + nbtSpread(x.spread) + '</span></td>' +
+                '<td><span class="bet-team">' + nbtTeam(x.team) + ' ' + nbtSpread(x.spread) + '</span>' +
+                (x.price ? ' <span class="spread" style="color:var(--text-dim)">' + fmtOdds(x.price) +
+                 (x.book ? ' ' + x.book : '') + '</span>' : '') + '</td>' +
                 '<td class="spread">' + Number(x.edge).toFixed(1) + '</td>' +
-                '<td class="' + confClass(x.confidence) + '">' + x.confidence + '</td></tr>';
-        }).join('') + '</tbody></table></div>';
+                '<td class="conf-high">PICK</td></tr>';
+        }).join('') + '</tbody></table></div>' + flagsHtml;
 }
 
 async function loadNBATracker() {
@@ -1965,12 +1989,15 @@ function renderNbtBetting() {
     nbtShowVer = isCareer && career.n_versions > 1;
 
     var note = document.getElementById('nbt-scope-note');
+    var ap = isCareer && career.as_published;
     if (isCareer) {
         note.innerHTML = '<strong>All-time</strong> — ' + career.span[0] + ' to ' + career.span[1] + ', ' +
             career.n_seasons + ' season' + (career.n_seasons === 1 ? '' : 's') + ', ' +
             career.versions.map(function (x) {
                 return '<span class="ver-chip' + (x === career.current_version ? ' live' : '') + '">' + x + '</span>';
-            }).join(' ') + '<br>' + career.note;
+            }).join(' ') + '<br>' + career.note +
+            (ap ? '<br><span style="color:var(--text-dim)">As actually published under v2.1 (HIGH + MEDIUM): ' + ap.bets + ' bets, ' +
+                  ap.wins + '-' + ap.losses + (ap.pushes ? '-' + ap.pushes : '') + ', ' + signed(ap.roi * 100, 1) + '%, ' + signed(ap.units_pl) + 'u.</span>' : '');
         note.style.display = 'block';
     } else if ((v.versions || []).length > 1) {
         note.innerHTML = '<strong>Heads up</strong> — this season\'s bets came from more than one model version (' +
@@ -1985,7 +2012,7 @@ function renderNbtBetting() {
         box((isCareer ? 'All-time' : 'Season') + ' Bets', s.bets, 'white',
             s.wins + '-' + s.losses + (s.pushes ? '-' + s.pushes : '')) +
         box('Cover Rate', pct(s.win_pct), s.win_pct > d.breakeven ? 'green' : 'red', 'break-even 52.4%') +
-        box('ROI at -110', signed(s.roi * 100, 2) + '%', s.roi > 0 ? 'green' : 'red',
+        box('ROI', signed(s.roi * 100, 2) + '%', s.roi > 0 ? 'green' : 'red',
             ci ? '95% CI ' + signed(ci[0] * 100, 1) + '% to ' + signed(ci[1] * 100, 1) + '%' : '') +
         box('Units', signed(s.units_pl) + 'u', s.units_pl > 0 ? 'green' : 'red',
             v.streak ? 'streak ' + v.streak.type + v.streak.length : '');
@@ -1993,7 +2020,7 @@ function renderNbtBetting() {
     document.getElementById('nbt-chart-title').textContent =
         isCareer ? 'Cumulative units — all-time' : 'Cumulative units — this season';
     document.getElementById('nbt-legend').innerHTML =
-        '<div><span class="k" style="background:var(--series-fair)"></span>1u flat at -110</div>';
+        '<div><span class="k" style="background:var(--series-fair)"></span>1u flat at the logged price (-110 before Oct 22)</div>';
     nbtChart(v.series, isCareer ? (career.season_marks || []).concat(career.version_marks || []) : []);
 
     var m = v.movement;
@@ -2007,6 +2034,16 @@ function renderNbtBetting() {
             (m.thin ? ' <span class="trk-neg">Still thin at ' + m.n + ' picks — directional only.</span>' : '')
           : 'No line-movement reads yet — they appear once a pick has both a morning and a pre-game line.') +
         '</div>';
+
+    var f = isCareer ? career.flags : d.flags;
+    document.getElementById('nbt-flags').innerHTML = (f && f.summary)
+        ? '<h4 class="trk-h4">Flagged picks — shadow record (not bets)</h4><div class="trk-callout">' +
+          'Edges of 4+ points are shown as \u26a0 "check the news" instead of bets. Taking the model\'s side on them would have gone <strong>' +
+          f.summary.wins + '-' + f.summary.losses + (f.summary.pushes ? '-' + f.summary.pushes : '') + '</strong> (' + pct(f.summary.win_pct) + ', ' +
+          '<span class="' + (f.summary.roi > 0 ? 'trk-pos' : 'trk-neg') + '">' + signed(f.summary.roi * 100, 1) + '%</span>)' +
+          (f.movement && f.movement.n ? '; the line moved toward the model on ' + f.movement.toward + ' and away on ' + f.movement.against : '') +
+          '. Kept so the rule can be reversed if these start winning.</div>'
+        : '';
 
     document.getElementById('nbt-career-tables').innerHTML = isCareer
         ? nbtRecordTable('By model version', career.by_version, career.current_version) +
@@ -2034,9 +2071,9 @@ function renderNbtBetting() {
         var word = x.result === 'W' ? 'WON' : x.result === 'P' ? 'PUSH' : 'LOST';
         return '<tr><td class="spread">' + x.date.slice(5) + '</td><td>' + x.matchup +
             (nbtShowVer ? ' <span class="ver-chip">' + x.version + '</span>' : '') + '</td>' +
-            '<td><span class="bet-team">' + nbtTeam(x.team) + ' ' + nbtSpread(x.spread) + '</span></td>' +
-            '<td class="spread">' + Number(x.edge).toFixed(1) + ' <span class="' + confClass(x.confidence) +
-            '" style="font-size:10px">' + x.confidence.charAt(0) + '</span></td>' +
+            '<td><span class="bet-team">' + nbtTeam(x.team) + ' ' + nbtSpread(x.spread) + '</span>' +
+            (x.price ? ' <span class="spread" style="color:var(--text-dim)">' + fmtOdds(x.price) + '</span>' : '') + '</td>' +
+            '<td class="spread">' + Number(x.edge).toFixed(1) + '</td>' +
             '<td class="spread">' + x.score + '</td>' +
             '<td class="' + cls + '">' + word + '</td>' +
             '<td class="' + (x.pl > 0 ? 'edge-positive' : 'edge-none') + '">' + signed(x.pl) + 'u</td></tr>';

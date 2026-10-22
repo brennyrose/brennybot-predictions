@@ -1,0 +1,1305 @@
+{
+  "generated_at": "2026-10-21 20:47:07",
+  "season": "2026-27",
+  "model_version": "v2.1",
+  "disclaimer": "Every pick is graded against the spread the site showed at tip-off, 1 unit flat, at the standard -110 (52.4% to break even). The pipeline doesn't log the juice, so this is a benchmark, not your P&L: real results depend on the price you got, when you bet, and whether you took every pick.",
+  "breakeven": 0.5238,
+  "games_logged": 14,
+  "games_graded": 3,
+  "open_bets": [
+    {
+      "date": "2026-10-21",
+      "commence": "2026-10-22T00:10:00Z",
+      "matchup": "Utah Jazz @ Memphis Grizzlies",
+      "team": "Memphis Grizzlies",
+      "spread": -1.5,
+      "edge": 5.7,
+      "confidence": "HIGH",
+      "locked": true
+    },
+    {
+      "date": "2026-10-21",
+      "commence": "2026-10-22T02:10:00Z",
+      "matchup": "Phoenix Suns @ Portland Trail Blazers",
+      "team": "Portland Trail Blazers",
+      "spread": -2.5,
+      "edge": 5.1,
+      "confidence": "HIGH",
+      "locked": false
+    },
+    {
+      "date": "2026-10-21",
+      "commence": "2026-10-22T00:40:00Z",
+      "matchup": "Dallas Mavericks @ Houston Rockets",
+      "team": "Houston Rockets",
+      "spread": -9.5,
+      "edge": 4.3,
+      "confidence": "HIGH",
+      "locked": true
+    },
+    {
+      "date": "2026-10-21",
+      "commence": "2026-10-21T23:40:00Z",
+      "matchup": "Chicago Bulls @ Toronto Raptors",
+      "team": "Toronto Raptors",
+      "spread": -10.5,
+      "edge": 3.4,
+      "confidence": "MEDIUM",
+      "locked": true
+    },
+    {
+      "date": "2026-10-21",
+      "commence": "2026-10-21T23:40:00Z",
+      "matchup": "Minnesota Timberwolves @ Miami Heat",
+      "team": "Miami Heat",
+      "spread": -1.5,
+      "edge": 3.4,
+      "confidence": "MEDIUM",
+      "locked": true
+    },
+    {
+      "date": "2026-10-21",
+      "commence": "2026-10-21T23:30:00Z",
+      "matchup": "Charlotte Hornets @ Brooklyn Nets",
+      "team": "Charlotte Hornets",
+      "spread": -1.5,
+      "edge": 3.0,
+      "confidence": "MEDIUM",
+      "locked": true
+    },
+    {
+      "date": "2026-10-21",
+      "commence": "2026-10-21T23:10:00Z",
+      "matchup": "Atlanta Hawks @ Orlando Magic",
+      "team": "Orlando Magic",
+      "spread": -2.5,
+      "edge": 2.8,
+      "confidence": "MEDIUM",
+      "locked": true
+    }
+  ],
+  "career": {
+    "summary": {
+      "bets": 188,
+      "wins": 94,
+      "losses": 94,
+      "pushes": 0,
+      "win_pct": 0.5,
+      "units_pl": -8.55,
+      "roi": -0.0455,
+      "avg_edge": 3.78
+    },
+    "roi_ci": [
+      -0.1876,
+      0.0967
+    ],
+    "p_roi_positive": 0.27,
+    "versions": [
+      "v2.1"
+    ],
+    "series": [
+      {
+        "date": "2026-02-25",
+        "bets": 4,
+        "wins": 3,
+        "day": 1.73,
+        "cum": 1.73,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-02-26",
+        "bets": 1,
+        "wins": 0,
+        "day": -1.0,
+        "cum": 0.73,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-02-27",
+        "bets": 2,
+        "wins": 0,
+        "day": -2.0,
+        "cum": -1.27,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-02-28",
+        "bets": 3,
+        "wins": 1,
+        "day": -1.09,
+        "cum": -2.36,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-01",
+        "bets": 3,
+        "wins": 2,
+        "day": 0.82,
+        "cum": -1.55,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-02",
+        "bets": 2,
+        "wins": 0,
+        "day": -2.0,
+        "cum": -3.55,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-04",
+        "bets": 2,
+        "wins": 2,
+        "day": 1.82,
+        "cum": -1.73,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-05",
+        "bets": 2,
+        "wins": 0,
+        "day": -2.0,
+        "cum": -3.73,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-06",
+        "bets": 4,
+        "wins": 2,
+        "day": -0.18,
+        "cum": -3.91,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-07",
+        "bets": 2,
+        "wins": 2,
+        "day": 1.82,
+        "cum": -2.09,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-08",
+        "bets": 4,
+        "wins": 3,
+        "day": 1.73,
+        "cum": -0.36,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-09",
+        "bets": 3,
+        "wins": 1,
+        "day": -1.09,
+        "cum": -1.45,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-10",
+        "bets": 5,
+        "wins": 3,
+        "day": 0.73,
+        "cum": -0.73,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-11",
+        "bets": 2,
+        "wins": 0,
+        "day": -2.0,
+        "cum": -2.73,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-12",
+        "bets": 1,
+        "wins": 0,
+        "day": -1.0,
+        "cum": -3.73,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-13",
+        "bets": 5,
+        "wins": 2,
+        "day": -1.18,
+        "cum": -4.91,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-14",
+        "bets": 4,
+        "wins": 1,
+        "day": -2.09,
+        "cum": -7.0,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-15",
+        "bets": 3,
+        "wins": 3,
+        "day": 2.73,
+        "cum": -4.27,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-16",
+        "bets": 4,
+        "wins": 3,
+        "day": 1.73,
+        "cum": -2.55,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-17",
+        "bets": 2,
+        "wins": 1,
+        "day": -0.09,
+        "cum": -2.64,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-18",
+        "bets": 5,
+        "wins": 3,
+        "day": 0.73,
+        "cum": -1.91,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-19",
+        "bets": 4,
+        "wins": 2,
+        "day": -0.18,
+        "cum": -2.09,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-21",
+        "bets": 5,
+        "wins": 1,
+        "day": -3.09,
+        "cum": -5.18,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-22",
+        "bets": 1,
+        "wins": 1,
+        "day": 0.91,
+        "cum": -4.27,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-23",
+        "bets": 6,
+        "wins": 3,
+        "day": -0.27,
+        "cum": -4.55,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-24",
+        "bets": 2,
+        "wins": 2,
+        "day": 1.82,
+        "cum": -2.73,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-25",
+        "bets": 4,
+        "wins": 0,
+        "day": -4.0,
+        "cum": -6.73,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-26",
+        "bets": 1,
+        "wins": 1,
+        "day": 0.91,
+        "cum": -5.82,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-27",
+        "bets": 5,
+        "wins": 3,
+        "day": 0.73,
+        "cum": -5.09,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-28",
+        "bets": 3,
+        "wins": 3,
+        "day": 2.73,
+        "cum": -2.36,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-29",
+        "bets": 3,
+        "wins": 1,
+        "day": -1.09,
+        "cum": -3.45,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-30",
+        "bets": 4,
+        "wins": 1,
+        "day": -2.09,
+        "cum": -5.55,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-03-31",
+        "bets": 2,
+        "wins": 1,
+        "day": -0.09,
+        "cum": -5.64,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-04-01",
+        "bets": 2,
+        "wins": 0,
+        "day": -2.0,
+        "cum": -7.64,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-04-02",
+        "bets": 3,
+        "wins": 3,
+        "day": 2.73,
+        "cum": -4.91,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-04-03",
+        "bets": 6,
+        "wins": 3,
+        "day": -0.27,
+        "cum": -5.18,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-04-04",
+        "bets": 1,
+        "wins": 0,
+        "day": -1.0,
+        "cum": -6.18,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-04-05",
+        "bets": 6,
+        "wins": 4,
+        "day": 1.64,
+        "cum": -4.55,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-04-06",
+        "bets": 2,
+        "wins": 1,
+        "day": -0.09,
+        "cum": -4.64,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-04-07",
+        "bets": 5,
+        "wins": 1,
+        "day": -3.09,
+        "cum": -7.73,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-04-08",
+        "bets": 5,
+        "wins": 1,
+        "day": -3.09,
+        "cum": -10.82,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-04-09",
+        "bets": 3,
+        "wins": 0,
+        "day": -3.0,
+        "cum": -13.82,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-04-10",
+        "bets": 8,
+        "wins": 5,
+        "day": 1.55,
+        "cum": -12.27,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-04-12",
+        "bets": 10,
+        "wins": 5,
+        "day": -0.45,
+        "cum": -12.73,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-04-15",
+        "bets": 1,
+        "wins": 0,
+        "day": -1.0,
+        "cum": -13.73,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-04-17",
+        "bets": 1,
+        "wins": 1,
+        "day": 0.91,
+        "cum": -12.82,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-04-18",
+        "bets": 1,
+        "wins": 0,
+        "day": -1.0,
+        "cum": -13.82,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-04-19",
+        "bets": 1,
+        "wins": 1,
+        "day": 0.91,
+        "cum": -12.91,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-04-21",
+        "bets": 1,
+        "wins": 0,
+        "day": -1.0,
+        "cum": -13.91,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-04-22",
+        "bets": 2,
+        "wins": 1,
+        "day": -0.09,
+        "cum": -14.0,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-04-24",
+        "bets": 1,
+        "wins": 0,
+        "day": -1.0,
+        "cum": -15.0,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-04-25",
+        "bets": 2,
+        "wins": 2,
+        "day": 1.82,
+        "cum": -13.18,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-04-26",
+        "bets": 3,
+        "wins": 1,
+        "day": -1.09,
+        "cum": -14.27,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-04-27",
+        "bets": 3,
+        "wins": 2,
+        "day": 0.82,
+        "cum": -13.45,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-04-29",
+        "bets": 2,
+        "wins": 2,
+        "day": 1.82,
+        "cum": -11.64,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-04-30",
+        "bets": 2,
+        "wins": 2,
+        "day": 1.82,
+        "cum": -9.82,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-05-01",
+        "bets": 2,
+        "wins": 1,
+        "day": -0.09,
+        "cum": -9.91,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-05-03",
+        "bets": 1,
+        "wins": 0,
+        "day": -1.0,
+        "cum": -10.91,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-05-04",
+        "bets": 1,
+        "wins": 0,
+        "day": -1.0,
+        "cum": -11.91,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-05-06",
+        "bets": 1,
+        "wins": 1,
+        "day": 0.91,
+        "cum": -11.0,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-05-07",
+        "bets": 1,
+        "wins": 1,
+        "day": 0.91,
+        "cum": -10.09,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-05-08",
+        "bets": 1,
+        "wins": 1,
+        "day": 0.91,
+        "cum": -9.18,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-05-11",
+        "bets": 1,
+        "wins": 0,
+        "day": -1.0,
+        "cum": -10.18,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-05-19",
+        "bets": 1,
+        "wins": 0,
+        "day": -1.0,
+        "cum": -11.18,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-05-22",
+        "bets": 1,
+        "wins": 1,
+        "day": 0.91,
+        "cum": -10.27,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-05-23",
+        "bets": 1,
+        "wins": 1,
+        "day": 0.91,
+        "cum": -9.36,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-05-24",
+        "bets": 1,
+        "wins": 0,
+        "day": -1.0,
+        "cum": -10.36,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-06-08",
+        "bets": 1,
+        "wins": 1,
+        "day": 0.91,
+        "cum": -9.45,
+        "version": "v2.1",
+        "season": "2025-26"
+      },
+      {
+        "date": "2026-06-10",
+        "bets": 1,
+        "wins": 1,
+        "day": 0.91,
+        "cum": -8.55,
+        "version": "v2.1",
+        "season": "2025-26"
+      }
+    ],
+    "movement": {
+      "n": 168,
+      "mean": -0.06,
+      "toward": 31,
+      "against": 34,
+      "flat": 103,
+      "thin": false
+    },
+    "splits": [
+      {
+        "name": "By confidence (all-time)",
+        "rows": [
+          {
+            "label": "HIGH",
+            "key": "HIGH",
+            "span": [
+              "2026-02-25",
+              "2026-05-23"
+            ],
+            "bets": 61,
+            "wins": 23,
+            "losses": 38,
+            "pushes": 0,
+            "win_pct": 0.377,
+            "units_pl": -17.09,
+            "roi": -0.2802,
+            "avg_edge": 5.58
+          },
+          {
+            "label": "MEDIUM",
+            "key": "MEDIUM",
+            "span": [
+              "2026-02-25",
+              "2026-06-10"
+            ],
+            "bets": 127,
+            "wins": 71,
+            "losses": 56,
+            "pushes": 0,
+            "win_pct": 0.5591,
+            "units_pl": 8.55,
+            "roi": 0.0673,
+            "avg_edge": 2.92
+          }
+        ]
+      },
+      {
+        "name": "By edge size (all-time)",
+        "rows": [
+          {
+            "label": "2-3 pts",
+            "key": "2-3",
+            "span": [
+              "2026-02-25",
+              "2026-06-08"
+            ],
+            "bets": 64,
+            "wins": 39,
+            "losses": 25,
+            "pushes": 0,
+            "win_pct": 0.6094,
+            "units_pl": 10.45,
+            "roi": 0.1634,
+            "avg_edge": 2.44
+          },
+          {
+            "label": "3-4 pts",
+            "key": "3-4",
+            "span": [
+              "2026-02-28",
+              "2026-06-10"
+            ],
+            "bets": 60,
+            "wins": 30,
+            "losses": 30,
+            "pushes": 0,
+            "win_pct": 0.5,
+            "units_pl": -2.73,
+            "roi": -0.0455,
+            "avg_edge": 3.37
+          },
+          {
+            "label": "4-5 pts",
+            "key": "4-5",
+            "span": [
+              "2026-03-01",
+              "2026-05-23"
+            ],
+            "bets": 31,
+            "wins": 9,
+            "losses": 22,
+            "pushes": 0,
+            "win_pct": 0.2903,
+            "units_pl": -13.82,
+            "roi": -0.4457,
+            "avg_edge": 4.39
+          },
+          {
+            "label": "5+ pts",
+            "key": "5+",
+            "span": [
+              "2026-02-25",
+              "2026-04-27"
+            ],
+            "bets": 33,
+            "wins": 16,
+            "losses": 17,
+            "pushes": 0,
+            "win_pct": 0.4848,
+            "units_pl": -2.45,
+            "roi": -0.0744,
+            "avg_edge": 6.56
+          }
+        ]
+      },
+      {
+        "name": "By side (all-time)",
+        "rows": [
+          {
+            "label": "Home team",
+            "key": "home",
+            "span": [
+              "2026-02-25",
+              "2026-05-07"
+            ],
+            "bets": 116,
+            "wins": 63,
+            "losses": 53,
+            "pushes": 0,
+            "win_pct": 0.5431,
+            "units_pl": 4.27,
+            "roi": 0.0368,
+            "avg_edge": 3.98
+          },
+          {
+            "label": "Away team",
+            "key": "away",
+            "span": [
+              "2026-02-25",
+              "2026-06-10"
+            ],
+            "bets": 72,
+            "wins": 31,
+            "losses": 41,
+            "pushes": 0,
+            "win_pct": 0.4306,
+            "units_pl": -12.82,
+            "roi": -0.178,
+            "avg_edge": 3.46
+          }
+        ]
+      },
+      {
+        "name": "Favorite vs underdog (all-time)",
+        "rows": [
+          {
+            "label": "Laying points",
+            "key": "fav",
+            "span": [
+              "2026-02-25",
+              "2026-05-07"
+            ],
+            "bets": 57,
+            "wins": 34,
+            "losses": 23,
+            "pushes": 0,
+            "win_pct": 0.5965,
+            "units_pl": 7.91,
+            "roi": 0.1388,
+            "avg_edge": 3.61
+          },
+          {
+            "label": "Getting points",
+            "key": "dog",
+            "span": [
+              "2026-02-25",
+              "2026-06-10"
+            ],
+            "bets": 131,
+            "wins": 60,
+            "losses": 71,
+            "pushes": 0,
+            "win_pct": 0.458,
+            "units_pl": -16.45,
+            "roi": -0.1256,
+            "avg_edge": 3.85
+          }
+        ]
+      }
+    ],
+    "recent": [
+      {
+        "date": "2026-06-10",
+        "matchup": "San Antonio Spurs @ New York Knicks",
+        "team": "San Antonio Spurs",
+        "spread": 2.5,
+        "edge": 3.8,
+        "confidence": "MEDIUM",
+        "score": "106-107",
+        "result": "W",
+        "pl": 0.91,
+        "version": "v2.1"
+      },
+      {
+        "date": "2026-06-08",
+        "matchup": "San Antonio Spurs @ New York Knicks",
+        "team": "San Antonio Spurs",
+        "spread": 1.5,
+        "edge": 2.3,
+        "confidence": "MEDIUM",
+        "score": "115-111",
+        "result": "W",
+        "pl": 0.91,
+        "version": "v2.1"
+      },
+      {
+        "date": "2026-05-24",
+        "matchup": "Oklahoma City Thunder @ San Antonio Spurs",
+        "team": "Oklahoma City Thunder",
+        "spread": 2.5,
+        "edge": 2.6,
+        "confidence": "MEDIUM",
+        "score": "82-103",
+        "result": "L",
+        "pl": -1.0,
+        "version": "v2.1"
+      },
+      {
+        "date": "2026-05-23",
+        "matchup": "New York Knicks @ Cleveland Cavaliers",
+        "team": "New York Knicks",
+        "spread": 3.5,
+        "edge": 4.1,
+        "confidence": "HIGH",
+        "score": "121-108",
+        "result": "W",
+        "pl": 0.91,
+        "version": "v2.1"
+      },
+      {
+        "date": "2026-05-22",
+        "matchup": "Oklahoma City Thunder @ San Antonio Spurs",
+        "team": "Oklahoma City Thunder",
+        "spread": 1.5,
+        "edge": 3.3,
+        "confidence": "MEDIUM",
+        "score": "123-108",
+        "result": "W",
+        "pl": 0.91,
+        "version": "v2.1"
+      },
+      {
+        "date": "2026-05-19",
+        "matchup": "Cleveland Cavaliers @ New York Knicks",
+        "team": "Cleveland Cavaliers",
+        "spread": 6.5,
+        "edge": 2.7,
+        "confidence": "MEDIUM",
+        "score": "104-115",
+        "result": "L",
+        "pl": -1.0,
+        "version": "v2.1"
+      },
+      {
+        "date": "2026-05-11",
+        "matchup": "Detroit Pistons @ Cleveland Cavaliers",
+        "team": "Detroit Pistons",
+        "spread": 3.5,
+        "edge": 3.9,
+        "confidence": "MEDIUM",
+        "score": "103-112",
+        "result": "L",
+        "pl": -1.0,
+        "version": "v2.1"
+      },
+      {
+        "date": "2026-05-08",
+        "matchup": "New York Knicks @ Philadelphia 76ers",
+        "team": "New York Knicks",
+        "spread": 1.5,
+        "edge": 2.7,
+        "confidence": "MEDIUM",
+        "score": "108-94",
+        "result": "W",
+        "pl": 0.91,
+        "version": "v2.1"
+      },
+      {
+        "date": "2026-05-07",
+        "matchup": "Cleveland Cavaliers @ Detroit Pistons",
+        "team": "Detroit Pistons",
+        "spread": -3.5,
+        "edge": 2.3,
+        "confidence": "MEDIUM",
+        "score": "97-107",
+        "result": "W",
+        "pl": 0.91,
+        "version": "v2.1"
+      },
+      {
+        "date": "2026-05-06",
+        "matchup": "Philadelphia 76ers @ New York Knicks",
+        "team": "Philadelphia 76ers",
+        "spread": 7.5,
+        "edge": 2.2,
+        "confidence": "MEDIUM",
+        "score": "102-108",
+        "result": "W",
+        "pl": 0.91,
+        "version": "v2.1"
+      },
+      {
+        "date": "2026-05-04",
+        "matchup": "Philadelphia 76ers @ New York Knicks",
+        "team": "Philadelphia 76ers",
+        "spread": 7.5,
+        "edge": 4.2,
+        "confidence": "HIGH",
+        "score": "98-137",
+        "result": "L",
+        "pl": -1.0,
+        "version": "v2.1"
+      },
+      {
+        "date": "2026-05-03",
+        "matchup": "Toronto Raptors @ Cleveland Cavaliers",
+        "team": "Toronto Raptors",
+        "spread": 8.5,
+        "edge": 3.1,
+        "confidence": "MEDIUM",
+        "score": "102-114",
+        "result": "L",
+        "pl": -1.0,
+        "version": "v2.1"
+      },
+      {
+        "date": "2026-05-01",
+        "matchup": "Los Angeles Lakers @ Houston Rockets",
+        "team": "Houston Rockets",
+        "spread": -3.5,
+        "edge": 4.4,
+        "confidence": "HIGH",
+        "score": "98-78",
+        "result": "L",
+        "pl": -1.0,
+        "version": "v2.1"
+      },
+      {
+        "date": "2026-05-01",
+        "matchup": "Cleveland Cavaliers @ Toronto Raptors",
+        "team": "Toronto Raptors",
+        "spread": 3.5,
+        "edge": 2.9,
+        "confidence": "MEDIUM",
+        "score": "110-112",
+        "result": "W",
+        "pl": 0.91,
+        "version": "v2.1"
+      },
+      {
+        "date": "2026-04-30",
+        "matchup": "Denver Nuggets @ Minnesota Timberwolves",
+        "team": "Minnesota Timberwolves",
+        "spread": 6.5,
+        "edge": 4.0,
+        "confidence": "MEDIUM",
+        "score": "98-110",
+        "result": "W",
+        "pl": 0.91,
+        "version": "v2.1"
+      },
+      {
+        "date": "2026-04-30",
+        "matchup": "Boston Celtics @ Philadelphia 76ers",
+        "team": "Philadelphia 76ers",
+        "spread": 6.5,
+        "edge": 3.2,
+        "confidence": "MEDIUM",
+        "score": "93-106",
+        "result": "W",
+        "pl": 0.91,
+        "version": "v2.1"
+      },
+      {
+        "date": "2026-04-29",
+        "matchup": "Toronto Raptors @ Cleveland Cavaliers",
+        "team": "Cleveland Cavaliers",
+        "spread": -3.5,
+        "edge": 2.8,
+        "confidence": "MEDIUM",
+        "score": "120-125",
+        "result": "W",
+        "pl": 0.91,
+        "version": "v2.1"
+      },
+      {
+        "date": "2026-04-29",
+        "matchup": "Houston Rockets @ Los Angeles Lakers",
+        "team": "Houston Rockets",
+        "spread": 3.5,
+        "edge": 4.0,
+        "confidence": "MEDIUM",
+        "score": "99-93",
+        "result": "W",
+        "pl": 0.91,
+        "version": "v2.1"
+      },
+      {
+        "date": "2026-04-27",
+        "matchup": "Oklahoma City Thunder @ Phoenix Suns",
+        "team": "Phoenix Suns",
+        "spread": 11.5,
+        "edge": 3.3,
+        "confidence": "MEDIUM",
+        "score": "131-122",
+        "result": "W",
+        "pl": 0.91,
+        "version": "v2.1"
+      },
+      {
+        "date": "2026-04-27",
+        "matchup": "Minnesota Timberwolves @ Denver Nuggets",
+        "team": "Minnesota Timberwolves",
+        "spread": 11.5,
+        "edge": 5.1,
+        "confidence": "HIGH",
+        "score": "113-125",
+        "result": "L",
+        "pl": -1.0,
+        "version": "v2.1"
+      },
+      {
+        "date": "2026-04-27",
+        "matchup": "Detroit Pistons @ Orlando Magic",
+        "team": "Orlando Magic",
+        "spread": 3.5,
+        "edge": 2.4,
+        "confidence": "MEDIUM",
+        "score": "88-94",
+        "result": "W",
+        "pl": 0.91,
+        "version": "v2.1"
+      },
+      {
+        "date": "2026-04-26",
+        "matchup": "San Antonio Spurs @ Portland Trail Blazers",
+        "team": "Portland Trail Blazers",
+        "spread": 5.5,
+        "edge": 2.5,
+        "confidence": "MEDIUM",
+        "score": "114-93",
+        "result": "L",
+        "pl": -1.0,
+        "version": "v2.1"
+      },
+      {
+        "date": "2026-04-26",
+        "matchup": "Los Angeles Lakers @ Houston Rockets",
+        "team": "Houston Rockets",
+        "spread": -2.5,
+        "edge": 4.6,
+        "confidence": "HIGH",
+        "score": "96-115",
+        "result": "W",
+        "pl": 0.91,
+        "version": "v2.1"
+      },
+      {
+        "date": "2026-04-26",
+        "matchup": "Boston Celtics @ Philadelphia 76ers",
+        "team": "Philadelphia 76ers",
+        "spread": 7.5,
+        "edge": 4.0,
+        "confidence": "HIGH",
+        "score": "128-96",
+        "result": "L",
+        "pl": -1.0,
+        "version": "v2.1"
+      },
+      {
+        "date": "2026-04-25",
+        "matchup": "Oklahoma City Thunder @ Phoenix Suns",
+        "team": "Phoenix Suns",
+        "spread": 12.5,
+        "edge": 3.7,
+        "confidence": "MEDIUM",
+        "score": "121-109",
+        "result": "W",
+        "pl": 0.91,
+        "version": "v2.1"
+      }
+    ],
+    "streak": {
+      "type": "W",
+      "length": 2
+    },
+    "status": "ok",
+    "note": "All-time pools every pick the pipeline has logged since line logging began (Feb 26, 2026). Regular season and play-in/playoffs are different populations and are split below; a model-version change means a different model picking different games, so the by-version table is the honest read.",
+    "span": [
+      "2026-02-25",
+      "2026-06-10"
+    ],
+    "n_versions": 1,
+    "n_seasons": 1,
+    "current_version": "v2.1",
+    "by_version": [
+      {
+        "label": "v2.1",
+        "key": "v2.1",
+        "span": [
+          "2026-02-25",
+          "2026-06-10"
+        ],
+        "bets": 188,
+        "wins": 94,
+        "losses": 94,
+        "pushes": 0,
+        "win_pct": 0.5,
+        "units_pl": -8.55,
+        "roi": -0.0455,
+        "avg_edge": 3.78
+      }
+    ],
+    "by_season": [
+      {
+        "label": "2025-26 regular season",
+        "key": "('2025-26', 'regular')",
+        "span": [
+          "2026-02-25",
+          "2026-04-12"
+        ],
+        "bets": 154,
+        "wins": 74,
+        "losses": 80,
+        "pushes": 0,
+        "win_pct": 0.4805,
+        "units_pl": -12.73,
+        "roi": -0.0826,
+        "avg_edge": 3.82
+      },
+      {
+        "label": "2025-26 playoffs / play-in",
+        "key": "('2025-26', 'post')",
+        "span": [
+          "2026-04-15",
+          "2026-06-10"
+        ],
+        "bets": 34,
+        "wins": 20,
+        "losses": 14,
+        "pushes": 0,
+        "win_pct": 0.5882,
+        "units_pl": 4.18,
+        "roi": 0.123,
+        "avg_edge": 3.61
+      }
+    ],
+    "season_marks": [],
+    "version_marks": []
+  },
+  "status": "ok",
+  "predictions": {
+    "n": 3,
+    "model_mae": 11.0,
+    "vegas_mae": 10.167,
+    "dt_mae": 10.733,
+    "dt_n": 3,
+    "model_su": 0.3333,
+    "vegas_su": 0.3333,
+    "model_home_bias": 3.33,
+    "vegas_home_bias": 3.83,
+    "avg_home_margin": -3.33,
+    "ats_all": {
+      "n": 3,
+      "wins": 1,
+      "win_pct": 0.3333
+    },
+    "home_side_share": 0.3333,
+    "beating_market": false,
+    "by_edge": []
+  },
+  "betting": null
+}

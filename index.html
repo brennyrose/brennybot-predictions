@@ -615,7 +615,6 @@
             <div id="nhl-content" style="display:none">
                 <div class="section-meta" id="nhl-meta"></div>
                 <div class="summary-row" id="nhl-summary"></div>
-                <div class="trk-callout" id="nhl-blend-note" style="display:none;margin-bottom:10px"></div>
                 <div class="picks-section" id="nhl-picks" style="display:none">
                     <h3>Recommended Picks</h3>
                     <div id="nhl-picks-list"></div>
@@ -712,10 +711,63 @@
             </div>
         </div>
         <div id="nba-tracker-panel" style="display:none">
-            <div class="tracker-empty">
-                Bet tracker monitors NBA HIGH confidence picks (edge &ge; 4 pts).<br>
-                Results will accumulate here as tracked picks resolve.<br><br>
-                <span style="color:var(--text-muted)">Coming soon — data pipeline in development</span>
+            <div id="nbt-loading" class="loading">Loading tracker...</div>
+            <div id="nbt-content" style="display:none">
+                <div class="section-meta" id="nbt-meta"></div>
+
+                <!-- ── open picks — published, not settled ── -->
+                <div id="nbt-open"></div>
+
+                <!-- ── A. prediction quality — always current season ── -->
+                <h3 class="trk-h">How the predictions are doing</h3>
+                <div class="section-note">Every graded game this season, not just the ones
+                    we bet. Error is the gap between a spread and the final margin; the
+                    question that matters is whether the model's number lands closer than
+                    the Vegas line on the same games.</div>
+                <div class="summary-row" id="nbt-pred"></div>
+                <div id="nbt-market" class="trk-callout"></div>
+
+                <h4 class="trk-h4">Does a bigger edge cover more often?</h4>
+                <div class="section-note">Every graded game, taking the model's side against
+                    Vegas, grouped by how far apart they were. If the model knows something,
+                    win rate should climb with edge. 52.4% breaks even at -110.</div>
+                <div class="table-wrap"><table>
+                    <thead><tr><th>Edge</th><th>Games</th><th>ATS win%</th><th>ROI at -110</th></tr></thead>
+                    <tbody id="nbt-edge"></tbody>
+                </table></div>
+
+                <!-- ── B. betting record — season / all-time ── -->
+                <div class="trk-sec-head">
+                    <h3 class="trk-h" style="margin:0">How the bet suggestions are doing</h3>
+                    <div class="scope-toggle" id="nbt-scope">
+                        <button type="button" class="active"
+                                onclick="setNbtScope('season')">This season</button>
+                        <button type="button" id="nbt-scope-career"
+                                onclick="setNbtScope('career')">All-time</button>
+                    </div>
+                </div>
+                <div class="section-note" id="nbt-disclaimer"></div>
+                <div class="trk-callout" id="nbt-scope-note" style="display:none"></div>
+                <div class="summary-row" id="nbt-bet"></div>
+
+                <div class="chart-card">
+                    <div class="chart-head">
+                        <div class="chart-title" id="nbt-chart-title">Cumulative units</div>
+                        <div class="chart-legend" id="nbt-legend"></div>
+                    </div>
+                    <div id="nbt-chart"></div>
+                </div>
+
+                <div id="nbt-move"></div>
+                <div id="nbt-career-tables"></div>
+                <div id="nbt-splits"></div>
+
+                <h4 class="trk-h4" id="nbt-recent-h">Recent settled bets</h4>
+                <div class="table-wrap"><table>
+                    <thead><tr><th>Date</th><th>Matchup</th><th>Bet</th><th>Edge</th>
+                        <th>Final</th><th>Result</th><th>P/L</th></tr></thead>
+                    <tbody id="nbt-recent"></tbody>
+                </table></div>
             </div>
         </div>
     </div>
@@ -1055,7 +1107,6 @@ async function loadNHL() {
                 return '<div class="pick-line"><span class="pick-rec">'+pick+'</span><span class="pick-edge '+confClass(x.confidence)+'">'+bits.join(' \u00b7 ')+'</span></div>';
             }).join('');
         }
-        renderBlendNote(p);
         document.getElementById('nhl-table').innerHTML = p.map(function(x){
             var aw=x.away_team, hm=x.home_team;
             var gt=gameTimeEST(x.game_time);
@@ -1090,8 +1141,6 @@ async function loadNHL() {
         document.getElementById('nhl-loading').innerHTML = '<div class="error">NHL predictions not available \u2014 waiting for next cron run<br><small>'+e.message+'</small></div>';
     }
 }
-
-
 
 // ── Preseason / in-season blend ───────────────────────────────────────────
 // A team's rating is a weighted mix of its preseason projection and its play
@@ -1142,43 +1191,6 @@ function blendCell(x) {
            blendRow(x.home_team, x.home_gp, h, x.home_goalie) + '</span>';
 }
 
-function renderBlendNote(p) {
-    var el = document.getElementById('nhl-blend-note');
-    if (!el) return;
-    var pcts = [], gps = [];
-    p.forEach(function (x) {
-        ['away', 'home'].forEach(function (s) {
-            var v = blendPct(x, s);
-            if (v != null) { pcts.push(v); gps.push(x[s + '_gp'] || 0); }
-        });
-    });
-    if (!pcts.length) { el.style.display = 'none'; return; }
-    var avg = pcts.reduce(function (t, v) { return t + v; }, 0) / pcts.length;
-    var lo = Math.min.apply(null, gps), hi = Math.max.apply(null, gps);
-    el.style.display = 'block';
-    el.innerHTML = '<strong>Ratings blend</strong> \u2014 teams on tonight\'s card have played ' +
-        (lo === hi ? lo + ' game' + (lo === 1 ? '' : 's') : lo + '\u2013' + hi + ' games') +
-        ', so their ratings average <strong>' + avg.toFixed(0) + '% this season</strong> and ' +
-        (100 - avg).toFixed(0) + '% preseason projection. ' +
-        (avg < 50
-          ? 'Early-season numbers lean on the preseason file by design \u2014 a handful of games is not yet evidence.'
-          : 'This season\'s play now carries most of the weight.') +
-        ' The mix is set by games played, not the date, and reaches 100% this-season at 30 games.';
-    var named = 0, slots = 0;
-    p.forEach(function (x) {
-        ['away', 'home'].forEach(function (side) {
-            slots++; if (x[side + '_goalie']) named++;
-        });
-    });
-    if (slots) {
-        el.innerHTML += '<br><strong>Starters</strong> \u2014 ' + (named
-            ? named + ' of ' + slots + ' probable starters published; the model uses each ' +
-              'named goalie\'s own rating and the team average for the rest.'
-            : 'none published yet \u2014 the model is on team-average goalie ratings. ' +
-              'Names usually appear on the 6:20pm and 8:10pm refreshes.') +
-            ' These are the NHL API\'s likeliest starters, not confirmed lineups.';
-    }
-}
 
 // ══════════════════════════════════════════════════════════════
 //  NHL Bet Tracker
@@ -1754,8 +1766,285 @@ async function loadNFL() {
     }).join('');
 }
 
-loadNBA(); loadNHL(); loadNCAAB(); loadPonies(); loadTracker(); loadNFL();
-setInterval(function(){ loadNBA(); loadNHL(); loadNCAAB(); loadPonies(); loadTracker(); loadNFL(); }, 5*60*1000);
+// ══════════════════════════════════════════════════════════════
+//  NBA Bet Tracker  (nba_tracker.json — built by nba_tracker.py)
+//  Spread model: graded against the line shown at tip-off, 1u flat at -110.
+// ══════════════════════════════════════════════════════════════
+var nbtData = null, nbtScope = 'season', nbtShowVer = false;
+
+function nbtSpread(s) { return s == null ? '' : (s > 0 ? '+' : '') + Number(s).toFixed(1); }
+function nbtTeam(name) { return name ? name.split(' ').slice(-1)[0] : ''; }
+
+function nbtChart(series, marks) {
+    var host = document.getElementById('nbt-chart');
+    marks = marks || [];
+    if (!series || series.length < 2) {
+        host.innerHTML = '<div class="tracker-empty" style="padding:24px">Not enough settled bets to plot yet.</div>';
+        return;
+    }
+    var W = 720, H = 240, PL = 44, PR = 58, PT = 12, PB = 26;
+    var iw = W - PL - PR, ih = H - PT - PB;
+    var vals = series.map(function (d) { return d.cum; }); vals.push(0);
+    var lo = Math.min.apply(null, vals), hi = Math.max.apply(null, vals);
+    var pad = Math.max(1, (hi - lo) * 0.12); lo -= pad; hi += pad;
+    var X = function (i) { return PL + iw * i / (series.length - 1); };
+    var Y = function (v) { return PT + ih * (1 - (v - lo) / (hi - lo)); };
+    var g = '';
+    for (var t = 0; t <= 4; t++) {
+        var v = lo + (hi - lo) * t / 4, y = Y(v);
+        g += '<line class="grid" x1="' + PL + '" y1="' + y + '" x2="' + (PL + iw) + '" y2="' + y + '"/>' +
+             '<text class="axis-t" x="' + (PL - 7) + '" y="' + (y + 3) + '" text-anchor="end">' + v.toFixed(0) + 'u</text>';
+    }
+    if (lo < 0 && hi > 0) g += '<line class="zero" x1="' + PL + '" y1="' + Y(0) + '" x2="' + (PL + iw) + '" y2="' + Y(0) + '"/>';
+    var xa = '', nTick = Math.min(5, series.length);
+    for (var i = 0; i < nTick; i++) {
+        var idx = Math.round(i * (series.length - 1) / Math.max(1, nTick - 1));
+        xa += '<text class="axis-t" x="' + X(idx) + '" y="' + (H - 8) + '" text-anchor="middle">' + series[idx].date.slice(5) + '</text>';
+    }
+    var dv = '';
+    marks.forEach(function (m) {
+        if (m.index <= 0 || m.index >= series.length) return;
+        var x = X(m.index);
+        dv += '<line class="divider" x1="' + x + '" y1="' + PT + '" x2="' + x + '" y2="' + (PT + ih) + '"/>' +
+              '<text class="divider-t" x="' + (x + 3) + '" y="' + (PT + 9) + '">' + m.label + '</text>';
+    });
+    var path = series.map(function (d, i) { return (i ? 'L' : 'M') + X(i).toFixed(1) + ' ' + Y(d.cum).toFixed(1); }).join(' ');
+    var last = series[series.length - 1];
+    host.style.position = 'relative';
+    host.innerHTML =
+        '<svg class="trk-svg" viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="xMidYMid meet" role="img" ' +
+        'aria-label="Cumulative units at -110">' + g + xa + dv +
+        '<path d="' + path + '" fill="none" stroke="var(--series-fair)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>' +
+        '<circle cx="' + X(series.length - 1) + '" cy="' + Y(last.cum) + '" r="3.5" fill="var(--series-fair)" stroke="var(--surface)" stroke-width="2"/>' +
+        '<text class="lbl" fill="var(--series-fair)" x="' + (X(series.length - 1) + 8) + '" y="' + (Y(last.cum) + 3) + '">' + signed(last.cum) + 'u</text>' +
+        '<line id="nbt-cross" class="zero" x1="0" y1="' + PT + '" x2="0" y2="' + (PT + ih) + '" style="display:none"/>' +
+        '<rect id="nbt-hit" x="' + PL + '" y="' + PT + '" width="' + iw + '" height="' + ih + '" fill="transparent"/>' +
+        '</svg><div class="trk-tip" id="nbt-tip"></div>';
+    var hit = document.getElementById('nbt-hit'), tip = document.getElementById('nbt-tip'),
+        cross = document.getElementById('nbt-cross'), svgEl = host.querySelector('svg');
+    function move(ev) {
+        var r = svgEl.getBoundingClientRect();
+        var sx = (ev.clientX - r.left) * (W / r.width);
+        var i = Math.max(0, Math.min(series.length - 1, Math.round((sx - PL) / iw * (series.length - 1))));
+        var d = series[i];
+        cross.style.display = ''; cross.setAttribute('x1', X(i)); cross.setAttribute('x2', X(i));
+        tip.style.display = 'block';
+        tip.innerHTML = '<strong>' + d.date + '</strong>' +
+            (nbtShowVer && d.version ? ' <span class="ver-chip">' + d.version + '</span>' : '') +
+            '<br>' + d.bets + ' bet' + (d.bets === 1 ? '' : 's') + ', ' + d.wins + ' covered' +
+            '<br>day ' + signed(d.day) + 'u · total <span style="color:var(--series-fair)">' + signed(d.cum) + 'u</span>';
+        var px = X(i) * (r.width / W);
+        tip.style.left = Math.min(Math.max(px - 60, 0), r.width - 150) + 'px';
+        tip.style.top = '6px';
+    }
+    hit.addEventListener('mousemove', move);
+    hit.addEventListener('mouseleave', function () { tip.style.display = 'none'; cross.style.display = 'none'; });
+}
+
+function nbtOpen(d) {
+    var el = document.getElementById('nbt-open');
+    var ob = d.open_bets || [];
+    if (!ob.length) { el.innerHTML = ''; return; }
+    el.innerHTML = '<h4 class="trk-h4" style="margin-top:6px">Open picks — waiting on results</h4>' +
+        '<div class="table-wrap"><table><thead><tr><th>Date</th><th>Matchup</th><th>Bet</th>' +
+        '<th>Edge</th><th>Conf</th></tr></thead><tbody>' +
+        ob.map(function (x) {
+            return '<tr><td class="spread">' + (x.date || '').slice(5) + (x.locked ? ' 🔒' : '') + '</td>' +
+                '<td>' + x.matchup + '</td>' +
+                '<td><span class="bet-team">' + nbtTeam(x.team) + ' ' + nbtSpread(x.spread) + '</span></td>' +
+                '<td class="spread">' + Number(x.edge).toFixed(1) + '</td>' +
+                '<td class="' + confClass(x.confidence) + '">' + x.confidence + '</td></tr>';
+        }).join('') + '</tbody></table></div>';
+}
+
+async function loadNBATracker() {
+    try {
+        var r = await fetch('nba_tracker.json?t=' + Date.now());
+        if (!r.ok) throw new Error('No tracker data');
+        var d = await r.json();
+        nbtData = d;
+        document.getElementById('nbt-loading').style.display = 'none';
+        document.getElementById('nbt-content').style.display = 'block';
+        document.getElementById('nbt-meta').innerHTML =
+            'Season <span>' + d.season + '</span> · ' + d.games_graded + ' of ' + d.games_logged +
+            ' logged games settled · Model <span>' + d.model_version + '</span> · Updated <span>' +
+            (d.generated_at || '') + '</span>';
+        nbtOpen(d);
+
+        if (d.status !== 'ok') {
+            document.getElementById('nbt-pred').innerHTML =
+                '<div class="tracker-empty" style="width:100%">' + (d.message || 'Waiting for results.') + '</div>';
+            document.getElementById('nbt-market').style.display = 'none';
+            document.getElementById('nbt-edge').innerHTML = '';
+        } else {
+            var p = d.predictions;
+            document.getElementById('nbt-market').style.display = '';
+            document.getElementById('nbt-pred').innerHTML =
+                box('Games', p.n, 'white') +
+                box('Model error', p.model_mae.toFixed(2), p.beating_market ? 'green' : 'white',
+                    'Vegas ' + p.vegas_mae.toFixed(2) + (p.dt_mae != null ? ' · D&amp;T ' + p.dt_mae.toFixed(2) : '')) +
+                box('Picks winner', pct(p.model_su), 'white', 'Vegas fav ' + pct(p.vegas_su)) +
+                box('ATS, every game', pct(p.ats_all.win_pct),
+                    p.ats_all.win_pct > d.breakeven ? 'green' : 'white', p.ats_all.n + ' games, model side');
+            var lean = p.model_home_bias, vlean = p.vegas_home_bias;
+            document.getElementById('nbt-market').innerHTML =
+                '<strong>Versus the market</strong> on the same ' + p.n + ' games — the model\'s spread missed the ' +
+                'final margin by <strong>' + p.model_mae.toFixed(2) + '</strong> points on average, Vegas by <strong>' +
+                p.vegas_mae.toFixed(2) + '</strong>. ' +
+                (p.beating_market ? '<span class="trk-pos">The model is closer than the market so far.</span>'
+                                  : '<span class="trk-neg">The market is closer so far.</span>') +
+                '<br><strong>Home lean</strong> — the model rated home teams <strong>' + signed(lean, 1) +
+                '</strong> pts better than they played (Vegas ' + signed(vlean, 1) + '), and took the home side on ' +
+                pct(p.home_side_share, 0) + ' of games. A lean far from zero is a bias, not an edge.';
+            document.getElementById('nbt-edge').innerHTML = (p.by_edge || []).map(function (b) {
+                return '<tr><td>' + b.label + '</td><td class="spread">' + b.n + '</td>' +
+                    '<td class="spread">' + pct(b.win_pct) + '</td>' +
+                    '<td class="' + (b.roi > 0 ? 'edge-positive' : 'edge-none') + '">' + signed(b.roi * 100, 1) + '%</td></tr>';
+            }).join('');
+        }
+
+        var career = d.career && d.career.status === 'ok';
+        if (!(d.betting && d.betting.summary) && career) {
+            nbtScope = 'career';
+            var sb = document.querySelectorAll('#nbt-scope button');
+            sb[0].classList.remove('active'); sb[1].classList.add('active');
+        }
+        renderNbtBetting();
+    } catch (e) {
+        document.getElementById('nbt-loading').innerHTML =
+            '<div class="tracker-empty">Tracker data not available yet.<br>' +
+            '<small>It is rebuilt each morning once final scores are in.</small></div>';
+    }
+}
+
+function setNbtScope(s) {
+    var d = nbtData;
+    if (s === 'career' && !(d && d.career && d.career.status === 'ok')) return;
+    nbtScope = s;
+    var b = document.querySelectorAll('#nbt-scope button');
+    b[0].classList.toggle('active', s === 'season');
+    b[1].classList.toggle('active', s === 'career');
+    renderNbtBetting();
+}
+
+function nbtRecordTable(title, rows, liveVersion) {
+    if (!rows || !rows.length) return '';
+    return '<h4 class="trk-h4">' + title + '</h4><div class="table-wrap"><table>' +
+        '<thead><tr><th>' + (liveVersion ? 'Version' : 'Season') + '</th><th>Span</th><th>Bets</th>' +
+        '<th>W-L-P</th><th>Win%</th><th>ROI</th><th>Units</th></tr></thead><tbody>' +
+        rows.map(function (r) {
+            var live = liveVersion && r.key === liveVersion;
+            var name = liveVersion ? '<span class="ver-chip' + (live ? ' live' : '') + '">' + r.label + '</span>' +
+                (live ? ' <span style="color:var(--text-muted);font-size:10px">running now</span>' : '') : r.label;
+            return '<tr><td>' + name + '</td><td class="spread" style="color:var(--text-muted);font-size:10px">' +
+                r.span[0].slice(2) + ' → ' + r.span[1].slice(2) + '</td><td class="spread">' + r.bets + '</td>' +
+                '<td class="spread">' + r.wins + '-' + r.losses + '-' + r.pushes + '</td>' +
+                '<td class="spread">' + pct(r.win_pct) + '</td>' +
+                '<td class="' + (r.roi > 0 ? 'edge-positive' : 'edge-none') + '">' + signed(r.roi * 100, 1) + '%</td>' +
+                '<td class="' + (r.units_pl > 0 ? 'edge-positive' : 'edge-none') + '">' + signed(r.units_pl) + 'u</td></tr>';
+        }).join('') + '</tbody></table></div>';
+}
+
+function renderNbtBetting() {
+    var d = nbtData;
+    if (!d) return;
+    var career = d.career && d.career.status === 'ok' ? d.career : null;
+    var cb = document.getElementById('nbt-scope-career');
+    cb.disabled = !career; cb.title = career ? '' : 'No settled bets on file yet';
+    document.getElementById('nbt-disclaimer').textContent = d.disclaimer || '';
+    var isCareer = nbtScope === 'career' && !!career;
+    var v = isCareer ? career : d.betting;
+    var clear = ['nbt-chart', 'nbt-move', 'nbt-career-tables', 'nbt-splits', 'nbt-recent', 'nbt-legend'];
+    if (!v || !v.summary) {
+        document.getElementById('nbt-scope-note').style.display = 'none';
+        document.getElementById('nbt-bet').innerHTML = '<div class="tracker-empty" style="width:100%">' +
+            'No settled bets yet this season.' + (career ? ' The all-time record is on the other tab.' : '') + '</div>';
+        clear.forEach(function (id) { document.getElementById(id).innerHTML = ''; });
+        return;
+    }
+    nbtShowVer = isCareer && career.n_versions > 1;
+
+    var note = document.getElementById('nbt-scope-note');
+    if (isCareer) {
+        note.innerHTML = '<strong>All-time</strong> — ' + career.span[0] + ' to ' + career.span[1] + ', ' +
+            career.n_seasons + ' season' + (career.n_seasons === 1 ? '' : 's') + ', ' +
+            career.versions.map(function (x) {
+                return '<span class="ver-chip' + (x === career.current_version ? ' live' : '') + '">' + x + '</span>';
+            }).join(' ') + '<br>' + career.note;
+        note.style.display = 'block';
+    } else if ((v.versions || []).length > 1) {
+        note.innerHTML = '<strong>Heads up</strong> — this season\'s bets came from more than one model version (' +
+            v.versions.join(', ') + '). The all-time view splits it by version.';
+        note.style.display = 'block';
+    } else {
+        note.style.display = 'none';
+    }
+
+    var s = v.summary, ci = v.roi_ci;
+    document.getElementById('nbt-bet').innerHTML =
+        box((isCareer ? 'All-time' : 'Season') + ' Bets', s.bets, 'white',
+            s.wins + '-' + s.losses + (s.pushes ? '-' + s.pushes : '')) +
+        box('Cover Rate', pct(s.win_pct), s.win_pct > d.breakeven ? 'green' : 'red', 'break-even 52.4%') +
+        box('ROI at -110', signed(s.roi * 100, 2) + '%', s.roi > 0 ? 'green' : 'red',
+            ci ? '95% CI ' + signed(ci[0] * 100, 1) + '% to ' + signed(ci[1] * 100, 1) + '%' : '') +
+        box('Units', signed(s.units_pl) + 'u', s.units_pl > 0 ? 'green' : 'red',
+            v.streak ? 'streak ' + v.streak.type + v.streak.length : '');
+
+    document.getElementById('nbt-chart-title').textContent =
+        isCareer ? 'Cumulative units — all-time' : 'Cumulative units — this season';
+    document.getElementById('nbt-legend').innerHTML =
+        '<div><span class="k" style="background:var(--series-fair)"></span>1u flat at -110</div>';
+    nbtChart(v.series, isCareer ? (career.season_marks || []).concat(career.version_marks || []) : []);
+
+    var m = v.movement;
+    document.getElementById('nbt-move').innerHTML = '<h4 class="trk-h4">Line movement on our picks</h4>' +
+        '<div class="trk-callout">' + (m && m.n
+          ? 'From the 10 AM number to the line at tip-off, the market moved <strong>toward</strong> our side on ' +
+            m.toward + ' picks, <strong>against</strong> on ' + m.against + ', and didn\'t move on ' + m.flat +
+            ' (average ' + signed(m.mean, 2) + ' pts). Consistent movement toward the model is early evidence ' +
+            'it sees something before the market does. This is a stand-in for closing-line value: ' +
+            'the last logged line is close to, but not exactly, the close.' +
+            (m.thin ? ' <span class="trk-neg">Still thin at ' + m.n + ' picks — directional only.</span>' : '')
+          : 'No line-movement reads yet — they appear once a pick has both a morning and a pre-game line.') +
+        '</div>';
+
+    document.getElementById('nbt-career-tables').innerHTML = isCareer
+        ? nbtRecordTable('By model version', career.by_version, career.current_version) +
+          nbtRecordTable('By season', career.by_season, null)
+        : '';
+
+    document.getElementById('nbt-splits').innerHTML = (v.splits || []).filter(function (x) {
+        return x.rows && x.rows.length;
+    }).map(function (x) {
+        return '<h4 class="trk-h4">' + x.name + '</h4><div class="table-wrap"><table>' +
+            '<thead><tr><th>Segment</th><th>Bets</th><th>W-L-P</th><th>Win%</th><th>ROI</th><th>Units</th></tr></thead><tbody>' +
+            x.rows.map(function (r) {
+                return '<tr><td>' + r.label + '</td><td class="spread">' + r.bets + '</td>' +
+                    '<td class="spread">' + r.wins + '-' + r.losses + '-' + r.pushes + '</td>' +
+                    '<td class="spread">' + pct(r.win_pct) + '</td>' +
+                    '<td class="' + (r.roi > 0 ? 'edge-positive' : 'edge-none') + '">' + signed(r.roi * 100, 1) + '%</td>' +
+                    '<td class="' + (r.units_pl > 0 ? 'edge-positive' : 'edge-none') + '">' + signed(r.units_pl) + 'u</td></tr>';
+            }).join('') + '</tbody></table></div>';
+    }).join('');
+
+    document.getElementById('nbt-recent-h').textContent =
+        isCareer ? 'Recent settled bets — all-time' : 'Recent settled bets — this season';
+    document.getElementById('nbt-recent').innerHTML = (v.recent || []).map(function (x) {
+        var cls = x.result === 'W' ? 'conf-high' : x.result === 'P' ? 'conf-medium' : 'conf-none';
+        var word = x.result === 'W' ? 'WON' : x.result === 'P' ? 'PUSH' : 'LOST';
+        return '<tr><td class="spread">' + x.date.slice(5) + '</td><td>' + x.matchup +
+            (nbtShowVer ? ' <span class="ver-chip">' + x.version + '</span>' : '') + '</td>' +
+            '<td><span class="bet-team">' + nbtTeam(x.team) + ' ' + nbtSpread(x.spread) + '</span></td>' +
+            '<td class="spread">' + Number(x.edge).toFixed(1) + ' <span class="' + confClass(x.confidence) +
+            '" style="font-size:10px">' + x.confidence.charAt(0) + '</span></td>' +
+            '<td class="spread">' + x.score + '</td>' +
+            '<td class="' + cls + '">' + word + '</td>' +
+            '<td class="' + (x.pl > 0 ? 'edge-positive' : 'edge-none') + '">' + signed(x.pl) + 'u</td></tr>';
+    }).join('');
+}
+
+loadNBA(); loadNHL(); loadNCAAB(); loadPonies(); loadTracker(); loadNBATracker(); loadNFL();
+setInterval(function(){ loadNBA(); loadNHL(); loadNCAAB(); loadPonies(); loadTracker(); loadNBATracker(); loadNFL(); }, 5*60*1000);
 
 // ── Ponies ──
 var poniesTrack = null;

@@ -1,13 +1,75 @@
 {
-  "generated_at": "2026-10-22 20:45:03",
+  "generated_at": "2026-10-23 10:00:05",
   "season": "2026-27",
   "model_version": "v2.2",
   "disclaimer": "Bets are picks with a 2-4 point edge (current rules, applied to the whole history; 4+ point edges are flags, not bets). Every pick is graded against the spread and book the site showed at tip-off, 1 unit flat, at the logged price (picks from before Oct 22, 2026 had no price logged and are graded at the standard -110, 52.4% to break even). A benchmark, not your P&L: real results depend on the price you got, when you bet, and whether you took every pick.",
   "breakeven": 0.5238,
-  "games_logged": 16,
-  "games_graded": 14,
-  "open_bets": [],
-  "open_flags": [],
+  "games_logged": 28,
+  "games_graded": 16,
+  "open_bets": [
+    {
+      "date": "2026-10-23",
+      "commence": "2026-10-23T23:10:00Z",
+      "matchup": "Dallas Mavericks @ Indiana Pacers",
+      "team": "Indiana Pacers",
+      "spread": -7.5,
+      "price": -110,
+      "book": "FanDuel",
+      "edge": 3.4,
+      "confidence": "MEDIUM",
+      "locked": false
+    },
+    {
+      "date": "2026-10-23",
+      "commence": "2026-10-23T23:10:00Z",
+      "matchup": "Atlanta Hawks @ Charlotte Hornets",
+      "team": "Charlotte Hornets",
+      "spread": 2.5,
+      "price": -105,
+      "book": "FanDuel",
+      "edge": 3.2,
+      "confidence": "MEDIUM",
+      "locked": false
+    },
+    {
+      "date": "2026-10-23",
+      "commence": "2026-10-23T23:10:00Z",
+      "matchup": "New York Knicks @ Boston Celtics",
+      "team": "Boston Celtics",
+      "spread": -2.5,
+      "price": -110,
+      "book": "FanDuel",
+      "edge": 3.1,
+      "confidence": "MEDIUM",
+      "locked": false
+    }
+  ],
+  "open_flags": [
+    {
+      "date": "2026-10-23",
+      "matchup": "Chicago Bulls @ Milwaukee Bucks",
+      "team": "Milwaukee Bucks",
+      "spread": 1.5,
+      "edge": 5.8,
+      "locked": false
+    },
+    {
+      "date": "2026-10-23",
+      "matchup": "Memphis Grizzlies @ Golden State Warriors",
+      "team": "Memphis Grizzlies",
+      "spread": 4.5,
+      "edge": 5.5,
+      "locked": false
+    },
+    {
+      "date": "2026-10-23",
+      "matchup": "Portland Trail Blazers @ Sacramento Kings",
+      "team": "Portland Trail Blazers",
+      "spread": -8.5,
+      "edge": 4.0,
+      "locked": false
+    }
+  ],
   "rules": {
     "edge_min": 2.0,
     "edge_flag": 4.0
@@ -1318,29 +1380,35 @@
   },
   "status": "ok",
   "predictions": {
-    "n": 14,
-    "model_mae": 14.529,
-    "vegas_mae": 15.214,
-    "dt_mae": 14.929,
-    "dt_n": 14,
-    "model_su": 0.7143,
-    "vegas_su": 0.7143,
-    "model_home_bias": -5.07,
-    "vegas_home_bias": -6.29,
-    "avg_home_margin": 9.21,
+    "n": 16,
+    "model_mae": 13.162,
+    "vegas_mae": 13.875,
+    "dt_mae": 13.575,
+    "dt_n": 16,
+    "model_su": 0.75,
+    "vegas_su": 0.75,
+    "model_home_bias": -4.89,
+    "vegas_home_bias": -6.06,
+    "avg_home_margin": 9.31,
     "ats_all": {
-      "n": 14,
-      "wins": 6,
-      "win_pct": 0.4286
+      "n": 16,
+      "wins": 8,
+      "win_pct": 0.5
     },
-    "home_side_share": 0.5,
+    "home_side_share": 0.5625,
     "beating_market": true,
     "by_edge": [
       {
         "label": "0-1 pts",
-        "n": 4,
-        "win_pct": 0.25,
-        "roi": -0.5227
+        "n": 5,
+        "win_pct": 0.4,
+        "roi": -0.2364
+      },
+      {
+        "label": "1-2 pts",
+        "n": 3,
+        "win_pct": 0.3333,
+        "roi": -0.3636
       },
       {
         "label": "3-4 pts",

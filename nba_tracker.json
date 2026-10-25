@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24 18:15:04",
+  "generated_at": "2026-10-24 20:45:03",
   "season": "2026-27",
   "model_version": "v2.2",
   "disclaimer": "Bets are picks with a 2-4 point edge (current rules, applied to the whole history; 4+ point edges are flags, not bets). Every pick is graded against the spread and book the site showed at tip-off, 1 unit flat, at the logged price (picks from before Oct 22, 2026 had no price logged and are graded at the standard -110, 52.4% to break even). A benchmark, not your P&L: real results depend on the price you got, when you bet, and whether you took every pick.",
@@ -17,7 +17,7 @@
       "book": "BetMGM",
       "edge": 3.5,
       "confidence": "MEDIUM",
-      "locked": false
+      "locked": true
     },
     {
       "date": "2026-10-24",
@@ -29,7 +29,7 @@
       "book": "FanDuel",
       "edge": 2.5,
       "confidence": "MEDIUM",
-      "locked": false
+      "locked": true
     },
     {
       "date": "2026-10-24",
@@ -41,7 +41,7 @@
       "book": "DraftKings",
       "edge": 2.3,
       "confidence": "MEDIUM",
-      "locked": false
+      "locked": true
     }
   ],
   "open_flags": [

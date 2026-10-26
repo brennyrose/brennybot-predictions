@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26 10:00:05",
+  "generated_at": "2026-10-26 18:15:04",
   "season": "2026-27",
   "model_version": "v2.2",
   "disclaimer": "Bets are picks with a 2-4 point edge (current rules, applied to the whole history; 4+ point edges are flags, not bets). Every pick is graded against the spread and book the site showed at tip-off, 1 unit flat, at the logged price (picks from before Oct 22, 2026 had no price logged and are graded at the standard -110, 52.4% to break even). A benchmark, not your P&L: real results depend on the price you got, when you bet, and whether you took every pick.",
@@ -9,13 +9,13 @@
   "open_bets": [
     {
       "date": "2026-10-26",
-      "commence": "2026-10-27T00:10:00Z",
-      "matchup": "Indiana Pacers @ Milwaukee Bucks",
-      "team": "Indiana Pacers",
+      "commence": "2026-10-27T00:40:00Z",
+      "matchup": "Atlanta Hawks @ Houston Rockets",
+      "team": "Houston Rockets",
       "spread": -4.5,
-      "price": -108,
+      "price": -115,
       "book": "DraftKings",
-      "edge": 2.9,
+      "edge": 3.0,
       "confidence": "MEDIUM",
       "locked": false
     },
@@ -24,22 +24,22 @@
       "commence": "2026-10-26T23:40:00Z",
       "matchup": "Dallas Mavericks @ Miami Heat",
       "team": "Miami Heat",
-      "spread": -8.5,
-      "price": -105,
+      "spread": -7.5,
+      "price": -110,
       "book": "DraftKings",
-      "edge": 2.1,
+      "edge": 2.9,
       "confidence": "MEDIUM",
       "locked": false
     },
     {
       "date": "2026-10-26",
-      "commence": "2026-10-26T23:10:00Z",
-      "matchup": "Minnesota Timberwolves @ Cleveland Cavaliers",
-      "team": "Minnesota Timberwolves",
-      "spread": 4.5,
-      "price": -110,
-      "book": "FanDuel",
-      "edge": 2.0,
+      "commence": "2026-10-27T02:10:00Z",
+      "matchup": "Golden State Warriors @ Denver Nuggets",
+      "team": "Denver Nuggets",
+      "spread": -6.5,
+      "price": -118,
+      "book": "BetMGM",
+      "edge": 2.3,
       "confidence": "MEDIUM",
       "locked": false
     }
@@ -50,7 +50,7 @@
       "matchup": "Chicago Bulls @ Boston Celtics",
       "team": "Boston Celtics",
       "spread": -13.5,
-      "edge": 6.7,
+      "edge": 6.5,
       "locked": false
     },
     {
@@ -58,23 +58,7 @@
       "matchup": "Memphis Grizzlies @ Utah Jazz",
       "team": "Memphis Grizzlies",
       "spread": 1.5,
-      "edge": 6.1,
-      "locked": false
-    },
-    {
-      "date": "2026-10-26",
-      "matchup": "Phoenix Suns @ Oklahoma City Thunder",
-      "team": "Oklahoma City Thunder",
-      "spread": -9.5,
-      "edge": 5.1,
-      "locked": false
-    },
-    {
-      "date": "2026-10-26",
-      "matchup": "Atlanta Hawks @ Houston Rockets",
-      "team": "Houston Rockets",
-      "spread": -4.5,
-      "edge": 4.6,
+      "edge": 5.9,
       "locked": false
     }
   ],

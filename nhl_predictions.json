@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25 18:20:03",
+  "generated_at": "2026-10-25 20:10:04",
   "sport": "NHL",
   "model_version": "v3",
   "predictions": [
@@ -208,7 +208,8 @@
       "best_bet_edge_vs_novig": 0.0466,
       "full_kelly_pct": 0.0572,
       "full_kelly_exec": 0.0661,
-      "stake_pct_bankroll": 0.0165
+      "stake_pct_bankroll": 0.0165,
+      "_locked": true
     },
     {
       "away_team": "MIN",

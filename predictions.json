@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26 18:15",
+  "generated_at": "2026-10-26 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.2",
   "pipeline_version": "2.2.0",
@@ -64,7 +64,8 @@
       "dt_win_prob": 0.661,
       "model_version": "v2.2",
       "home_abbrev": "HOU",
-      "away_abbrev": "ATL"
+      "away_abbrev": "ATL",
+      "_locked": true
     },
     {
       "home_team": "Miami Heat",
@@ -108,7 +109,8 @@
       "dt_win_prob": 0.729,
       "model_version": "v2.2",
       "home_abbrev": "MIA",
-      "away_abbrev": "DAL"
+      "away_abbrev": "DAL",
+      "_locked": true
     },
     {
       "home_team": "Denver Nuggets",
@@ -120,7 +122,7 @@
       "model_spread": -8.8,
       "ratings_spread": -8.7,
       "edge": 2.3,
-      "home_rating": 3.7,
+      "home_rating": 3.6,
       "away_rating": -2.8,
       "home_hca": 2.4,
       "hca_default": 2.25,
@@ -146,13 +148,57 @@
       "spread_price": -118,
       "books_count": 9,
       "dt_spread": -7.4,
-      "dt_total": 232.7,
+      "dt_total": 232.8,
       "dt_home_score": 120.1,
       "dt_away_score": 112.7,
-      "dt_win_prob": 0.73,
+      "dt_win_prob": 0.731,
       "model_version": "v2.2",
       "home_abbrev": "DEN",
       "away_abbrev": "GSW"
+    },
+    {
+      "home_team": "Utah Jazz",
+      "away_team": "Memphis Grizzlies",
+      "date": "2026-10-26",
+      "commence": "2026-10-27T01:10:00Z",
+      "vegas_spread": -1.5,
+      "consensus_spread": 0.8,
+      "model_spread": 5.2,
+      "ratings_spread": 5.3,
+      "edge": 6.7,
+      "home_rating": -6.1,
+      "away_rating": 1.5,
+      "home_hca": 2.3,
+      "hca_default": 2.25,
+      "home_recent_perf": 0,
+      "away_recent_perf": 0,
+      "home_shooting_luck": 0,
+      "away_shooting_luck": 0,
+      "home_ts": 0.565,
+      "away_ts": 0.565,
+      "games_analyzed": 0,
+      "confidence_scale": 1.0,
+      "recommendation": "CHECK NEWS \u2014 model leans Memphis Grizzlies +1.5",
+      "confidence": "FLAG",
+      "bet_team": null,
+      "bet_spread": null,
+      "lean_team": "Memphis Grizzlies",
+      "lean_spread": 1.5,
+      "warning": "",
+      "total": null,
+      "home_ml": null,
+      "away_ml": null,
+      "spread_book": "DraftKings",
+      "spread_price": -120,
+      "books_count": 9,
+      "dt_spread": 4.0,
+      "dt_total": 234.7,
+      "dt_home_score": 115.4,
+      "dt_away_score": 119.3,
+      "dt_win_prob": 0.371,
+      "model_version": "v2.2",
+      "home_abbrev": "UTA",
+      "away_abbrev": "MEM"
     },
     {
       "home_team": "Boston Celtics",
@@ -196,51 +242,8 @@
       "dt_win_prob": 0.921,
       "model_version": "v2.2",
       "home_abbrev": "BOS",
-      "away_abbrev": "CHI"
-    },
-    {
-      "home_team": "Utah Jazz",
-      "away_team": "Memphis Grizzlies",
-      "date": "2026-10-26",
-      "commence": "2026-10-27T01:10:00Z",
-      "vegas_spread": -1.5,
-      "consensus_spread": 0.8,
-      "model_spread": 4.4,
-      "ratings_spread": 4.5,
-      "edge": 5.9,
-      "home_rating": -5.6,
-      "away_rating": 1.1,
-      "home_hca": 2.3,
-      "hca_default": 2.25,
-      "home_recent_perf": 0,
-      "away_recent_perf": 0,
-      "home_shooting_luck": 0,
-      "away_shooting_luck": 0,
-      "home_ts": 0.565,
-      "away_ts": 0.565,
-      "games_analyzed": 0,
-      "confidence_scale": 1.0,
-      "recommendation": "CHECK NEWS \u2014 model leans Memphis Grizzlies +1.5",
-      "confidence": "FLAG",
-      "bet_team": null,
-      "bet_spread": null,
-      "lean_team": "Memphis Grizzlies",
-      "lean_spread": 1.5,
-      "warning": "",
-      "total": null,
-      "home_ml": null,
-      "away_ml": null,
-      "spread_book": "DraftKings",
-      "spread_price": -120,
-      "books_count": 9,
-      "dt_spread": 2.8,
-      "dt_total": 234.5,
-      "dt_home_score": 115.8,
-      "dt_away_score": 118.7,
-      "dt_win_prob": 0.408,
-      "model_version": "v2.2",
-      "home_abbrev": "UTA",
-      "away_abbrev": "MEM"
+      "away_abbrev": "CHI",
+      "_locked": true
     },
     {
       "home_team": "Charlotte Hornets",
@@ -284,7 +287,8 @@
       "dt_win_prob": 0.602,
       "model_version": "v2.2",
       "home_abbrev": "CHA",
-      "away_abbrev": "WAS"
+      "away_abbrev": "WAS",
+      "_locked": true
     },
     {
       "home_team": "Cleveland Cavaliers",
@@ -328,7 +332,8 @@
       "dt_win_prob": 0.618,
       "model_version": "v2.2",
       "home_abbrev": "CLE",
-      "away_abbrev": "MIN"
+      "away_abbrev": "MIN",
+      "_locked": true
     },
     {
       "home_team": "Milwaukee Bucks",
@@ -372,7 +377,8 @@
       "dt_win_prob": 0.384,
       "model_version": "v2.2",
       "home_abbrev": "MIL",
-      "away_abbrev": "IND"
+      "away_abbrev": "IND",
+      "_locked": true
     },
     {
       "home_team": "Oklahoma City Thunder",
@@ -416,7 +422,8 @@
       "dt_win_prob": 0.754,
       "model_version": "v2.2",
       "home_abbrev": "OKC",
-      "away_abbrev": "PHX"
+      "away_abbrev": "PHX",
+      "_locked": true
     }
   ],
   "summary": {

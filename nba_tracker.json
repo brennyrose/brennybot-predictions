@@ -1,32 +1,19 @@
 {
-  "generated_at": "2026-10-27 10:00:18",
+  "generated_at": "2026-10-27 18:15:04",
   "season": "2026-27",
   "model_version": "v2.2",
   "disclaimer": "Bets are picks with a 2-4 point edge (current rules, applied to the whole history; 4+ point edges are flags, not bets). Every pick is graded against the spread and book the site showed at tip-off, 1 unit flat, at the logged price (picks from before Oct 22, 2026 had no price logged and are graded at the standard -110, 52.4% to break even). A benchmark, not your P&L: real results depend on the price you got, when you bet, and whether you took every pick.",
   "breakeven": 0.5238,
   "games_logged": 56,
   "games_graded": 52,
-  "open_bets": [
-    {
-      "date": "2026-10-27",
-      "commence": "2026-10-28T00:10:00Z",
-      "matchup": "Detroit Pistons @ New York Knicks",
-      "team": "New York Knicks",
-      "spread": -3.5,
-      "price": -108,
-      "book": "DraftKings",
-      "edge": 2.4,
-      "confidence": "MEDIUM",
-      "locked": false
-    }
-  ],
+  "open_bets": [],
   "open_flags": [
     {
       "date": "2026-10-27",
       "matchup": "Brooklyn Nets @ Boston Celtics",
       "team": "Boston Celtics",
-      "spread": -11.5,
-      "edge": 7.4,
+      "spread": -12.5,
+      "edge": 6.5,
       "locked": false
     },
     {

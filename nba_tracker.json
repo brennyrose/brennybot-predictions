@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28 10:00:05",
+  "generated_at": "2026-10-28 18:15:04",
   "season": "2026-27",
   "model_version": "v2.2",
   "disclaimer": "Bets are picks with a 2-4 point edge (current rules, applied to the whole history; 4+ point edges are flags, not bets). Every pick is graded against the spread and book the site showed at tip-off, 1 unit flat, at the logged price (picks from before Oct 22, 2026 had no price logged and are graded at the standard -110, 52.4% to break even). A benchmark, not your P&L: real results depend on the price you got, when you bet, and whether you took every pick.",
@@ -9,25 +9,13 @@
   "open_bets": [
     {
       "date": "2026-10-28",
-      "commence": "2026-10-28T23:10:00Z",
-      "matchup": "Philadelphia 76ers @ Indiana Pacers",
-      "team": "Indiana Pacers",
-      "spread": 5.5,
-      "price": -110,
-      "book": "FanDuel",
-      "edge": 2.5,
-      "confidence": "MEDIUM",
-      "locked": false
-    },
-    {
-      "date": "2026-10-28",
       "commence": "2026-10-29T00:10:00Z",
       "matchup": "Golden State Warriors @ Minnesota Timberwolves",
       "team": "Golden State Warriors",
       "spread": 3.5,
-      "price": -105,
-      "book": "DraftKings",
-      "edge": 2.3,
+      "price": -102,
+      "book": "BetMGM",
+      "edge": 2.5,
       "confidence": "MEDIUM",
       "locked": false
     }
@@ -38,7 +26,15 @@
       "matchup": "New York Knicks @ Chicago Bulls",
       "team": "New York Knicks",
       "spread": -6.5,
-      "edge": 6.4,
+      "edge": 5.8,
+      "locked": false
+    },
+    {
+      "date": "2026-10-28",
+      "matchup": "Los Angeles Lakers @ Los Angeles Clippers",
+      "team": "Los Angeles Clippers",
+      "spread": 1.5,
+      "edge": 4.9,
       "locked": false
     },
     {
@@ -46,15 +42,7 @@
       "matchup": "Oklahoma City Thunder @ Dallas Mavericks",
       "team": "Dallas Mavericks",
       "spread": 6.5,
-      "edge": 5.2,
-      "locked": false
-    },
-    {
-      "date": "2026-10-28",
-      "matchup": "San Antonio Spurs @ Utah Jazz",
-      "team": "San Antonio Spurs",
-      "spread": -11.5,
-      "edge": 4.0,
+      "edge": 4.3,
       "locked": false
     }
   ],

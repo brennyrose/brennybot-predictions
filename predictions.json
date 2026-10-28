@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27 18:15",
+  "generated_at": "2026-10-27 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.2",
   "pipeline_version": "2.2.0",
@@ -64,7 +64,8 @@
       "dt_win_prob": 0.898,
       "model_version": "v2.2",
       "home_abbrev": "BOS",
-      "away_abbrev": "BKN"
+      "away_abbrev": "BKN",
+      "_locked": true
     },
     {
       "home_team": "San Antonio Spurs",
@@ -108,7 +109,8 @@
       "dt_win_prob": 0.956,
       "model_version": "v2.2",
       "home_abbrev": "SAS",
-      "away_abbrev": "SAC"
+      "away_abbrev": "SAC",
+      "_locked": true
     },
     {
       "home_team": "New York Knicks",
@@ -152,7 +154,8 @@
       "dt_win_prob": 0.627,
       "model_version": "v2.2",
       "home_abbrev": "NYK",
-      "away_abbrev": "DET"
+      "away_abbrev": "DET",
+      "_locked": true
     },
     {
       "home_team": "Los Angeles Lakers",
@@ -165,7 +168,7 @@
       "ratings_spread": -1.8,
       "edge": 0.5,
       "home_rating": 4.8,
-      "away_rating": 5.3,
+      "away_rating": 5.2,
       "home_hca": 2.4,
       "hca_default": 2.25,
       "home_recent_perf": 0,
@@ -191,7 +194,7 @@
       "books_count": 9,
       "dt_spread": -2.8,
       "dt_total": 231.1,
-      "dt_home_score": 117.0,
+      "dt_home_score": 116.9,
       "dt_away_score": 114.2,
       "dt_win_prob": 0.591,
       "model_version": "v2.2",

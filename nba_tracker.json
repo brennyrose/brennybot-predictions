@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27 18:15:04",
+  "generated_at": "2026-10-27 20:45:04",
   "season": "2026-27",
   "model_version": "v2.2",
   "disclaimer": "Bets are picks with a 2-4 point edge (current rules, applied to the whole history; 4+ point edges are flags, not bets). Every pick is graded against the spread and book the site showed at tip-off, 1 unit flat, at the logged price (picks from before Oct 22, 2026 had no price logged and are graded at the standard -110, 52.4% to break even). A benchmark, not your P&L: real results depend on the price you got, when you bet, and whether you took every pick.",
@@ -14,7 +14,7 @@
       "team": "Boston Celtics",
       "spread": -12.5,
       "edge": 6.5,
-      "locked": false
+      "locked": true
     },
     {
       "date": "2026-10-27",
@@ -22,7 +22,7 @@
       "team": "San Antonio Spurs",
       "spread": -18.5,
       "edge": 5.2,
-      "locked": false
+      "locked": true
     }
   ],
   "rules": {

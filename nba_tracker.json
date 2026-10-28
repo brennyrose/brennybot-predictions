@@ -1,28 +1,61 @@
 {
-  "generated_at": "2026-10-27 20:45:04",
+  "generated_at": "2026-10-28 10:00:05",
   "season": "2026-27",
   "model_version": "v2.2",
   "disclaimer": "Bets are picks with a 2-4 point edge (current rules, applied to the whole history; 4+ point edges are flags, not bets). Every pick is graded against the spread and book the site showed at tip-off, 1 unit flat, at the logged price (picks from before Oct 22, 2026 had no price logged and are graded at the standard -110, 52.4% to break even). A benchmark, not your P&L: real results depend on the price you got, when you bet, and whether you took every pick.",
   "breakeven": 0.5238,
-  "games_logged": 56,
-  "games_graded": 52,
-  "open_bets": [],
-  "open_flags": [
+  "games_logged": 68,
+  "games_graded": 56,
+  "open_bets": [
     {
-      "date": "2026-10-27",
-      "matchup": "Brooklyn Nets @ Boston Celtics",
-      "team": "Boston Celtics",
-      "spread": -12.5,
-      "edge": 6.5,
-      "locked": true
+      "date": "2026-10-28",
+      "commence": "2026-10-28T23:10:00Z",
+      "matchup": "Philadelphia 76ers @ Indiana Pacers",
+      "team": "Indiana Pacers",
+      "spread": 5.5,
+      "price": -110,
+      "book": "FanDuel",
+      "edge": 2.5,
+      "confidence": "MEDIUM",
+      "locked": false
     },
     {
-      "date": "2026-10-27",
-      "matchup": "Sacramento Kings @ San Antonio Spurs",
-      "team": "San Antonio Spurs",
-      "spread": -18.5,
+      "date": "2026-10-28",
+      "commence": "2026-10-29T00:10:00Z",
+      "matchup": "Golden State Warriors @ Minnesota Timberwolves",
+      "team": "Golden State Warriors",
+      "spread": 3.5,
+      "price": -105,
+      "book": "DraftKings",
+      "edge": 2.3,
+      "confidence": "MEDIUM",
+      "locked": false
+    }
+  ],
+  "open_flags": [
+    {
+      "date": "2026-10-28",
+      "matchup": "New York Knicks @ Chicago Bulls",
+      "team": "New York Knicks",
+      "spread": -6.5,
+      "edge": 6.4,
+      "locked": false
+    },
+    {
+      "date": "2026-10-28",
+      "matchup": "Oklahoma City Thunder @ Dallas Mavericks",
+      "team": "Dallas Mavericks",
+      "spread": 6.5,
       "edge": 5.2,
-      "locked": true
+      "locked": false
+    },
+    {
+      "date": "2026-10-28",
+      "matchup": "San Antonio Spurs @ Utah Jazz",
+      "team": "San Antonio Spurs",
+      "spread": -11.5,
+      "edge": 4.0,
+      "locked": false
     }
   ],
   "rules": {
@@ -1124,24 +1157,50 @@
     },
     "flags": {
       "summary": {
-        "bets": 70,
-        "wins": 31,
-        "losses": 39,
+        "bets": 72,
+        "wins": 32,
+        "losses": 40,
         "pushes": 0,
-        "win_pct": 0.4429,
-        "units_pl": -10.89,
-        "roi": -0.1556,
-        "avg_edge": 5.55
+        "win_pct": 0.4444,
+        "units_pl": -11.02,
+        "roi": -0.1531,
+        "avg_edge": 5.56
       },
       "movement": {
-        "n": 64,
-        "mean": -0.27,
-        "toward": 7,
+        "n": 66,
+        "mean": -0.24,
+        "toward": 8,
         "against": 14,
-        "flat": 43,
+        "flat": 44,
         "thin": true
       },
       "recent": [
+        {
+          "date": "2026-10-27",
+          "matchup": "Sacramento Kings @ San Antonio Spurs",
+          "team": "San Antonio Spurs",
+          "spread": -18.5,
+          "price": -115,
+          "edge": 5.2,
+          "confidence": "FLAG",
+          "score": "103-130",
+          "result": "W",
+          "pl": 0.87,
+          "version": "v2.2"
+        },
+        {
+          "date": "2026-10-27",
+          "matchup": "Brooklyn Nets @ Boston Celtics",
+          "team": "Boston Celtics",
+          "spread": -12.5,
+          "price": -110,
+          "edge": 6.5,
+          "confidence": "FLAG",
+          "score": "124-125",
+          "result": "L",
+          "pl": -1.0,
+          "version": "v2.2"
+        },
         {
           "date": "2026-10-26",
           "matchup": "Memphis Grizzlies @ Utah Jazz",
@@ -1242,32 +1301,6 @@
           "edge": 5.1,
           "confidence": "HIGH",
           "score": "83-124",
-          "result": "W",
-          "pl": 0.91,
-          "version": "v2.1"
-        },
-        {
-          "date": "2026-10-21",
-          "matchup": "Dallas Mavericks @ Houston Rockets",
-          "team": "Houston Rockets",
-          "spread": -9.5,
-          "price": null,
-          "edge": 4.3,
-          "confidence": "HIGH",
-          "score": "110-128",
-          "result": "W",
-          "pl": 0.91,
-          "version": "v2.1"
-        },
-        {
-          "date": "2026-05-23",
-          "matchup": "New York Knicks @ Cleveland Cavaliers",
-          "team": "New York Knicks",
-          "spread": 3.5,
-          "price": null,
-          "edge": 4.1,
-          "confidence": "HIGH",
-          "score": "121-108",
           "result": "W",
           "pl": 0.91,
           "version": "v2.1"
@@ -1394,35 +1427,35 @@
   },
   "status": "ok",
   "predictions": {
-    "n": 52,
-    "model_mae": 10.638,
-    "vegas_mae": 10.981,
-    "dt_mae": 10.656,
-    "dt_n": 52,
-    "model_su": 0.7308,
-    "vegas_su": 0.6923,
-    "model_home_bias": 2.62,
-    "vegas_home_bias": 1.87,
-    "avg_home_margin": 0.79,
+    "n": 56,
+    "model_mae": 10.564,
+    "vegas_mae": 10.875,
+    "dt_mae": 10.621,
+    "dt_n": 56,
+    "model_su": 0.7321,
+    "vegas_su": 0.6964,
+    "model_home_bias": 2.71,
+    "vegas_home_bias": 1.77,
+    "avg_home_margin": 1.36,
     "ats_all": {
-      "n": 52,
-      "wins": 27,
-      "win_pct": 0.5192
+      "n": 56,
+      "wins": 29,
+      "win_pct": 0.5179
     },
-    "home_side_share": 0.5962,
+    "home_side_share": 0.625,
     "beating_market": true,
     "by_edge": [
       {
         "label": "0-1 pts",
-        "n": 13,
-        "win_pct": 0.5385,
-        "roi": 0.028
+        "n": 14,
+        "win_pct": 0.5,
+        "roi": -0.0455
       },
       {
         "label": "1-2 pts",
-        "n": 13,
-        "win_pct": 0.4615,
-        "roi": -0.1189
+        "n": 14,
+        "win_pct": 0.5,
+        "roi": -0.0455
       },
       {
         "label": "2-3 pts",
@@ -1444,9 +1477,9 @@
       },
       {
         "label": "5+ pts",
-        "n": 6,
-        "win_pct": 0.8333,
-        "roi": 0.5909
+        "n": 8,
+        "win_pct": 0.75,
+        "roi": 0.4318
       }
     ]
   },
@@ -1842,24 +1875,50 @@
   },
   "flags": {
     "summary": {
-      "bets": 9,
-      "wins": 8,
-      "losses": 1,
+      "bets": 11,
+      "wins": 9,
+      "losses": 2,
       "pushes": 0,
-      "win_pct": 0.8889,
-      "units_pl": 6.2,
-      "roi": 0.689,
-      "avg_edge": 5.33
+      "win_pct": 0.8182,
+      "units_pl": 6.07,
+      "roi": 0.5518,
+      "avg_edge": 5.43
     },
     "movement": {
-      "n": 9,
-      "mean": 0.0,
-      "toward": 0,
+      "n": 11,
+      "mean": 0.09,
+      "toward": 1,
       "against": 0,
-      "flat": 9,
+      "flat": 10,
       "thin": true
     },
     "recent": [
+      {
+        "date": "2026-10-27",
+        "matchup": "Sacramento Kings @ San Antonio Spurs",
+        "team": "San Antonio Spurs",
+        "spread": -18.5,
+        "price": -115,
+        "edge": 5.2,
+        "confidence": "FLAG",
+        "score": "103-130",
+        "result": "W",
+        "pl": 0.87,
+        "version": "v2.2"
+      },
+      {
+        "date": "2026-10-27",
+        "matchup": "Brooklyn Nets @ Boston Celtics",
+        "team": "Boston Celtics",
+        "spread": -12.5,
+        "price": -110,
+        "edge": 6.5,
+        "confidence": "FLAG",
+        "score": "124-125",
+        "result": "L",
+        "pl": -1.0,
+        "version": "v2.2"
+      },
       {
         "date": "2026-10-26",
         "matchup": "Memphis Grizzlies @ Utah Jazz",
@@ -1960,19 +2019,6 @@
         "edge": 5.1,
         "confidence": "HIGH",
         "score": "83-124",
-        "result": "W",
-        "pl": 0.91,
-        "version": "v2.1"
-      },
-      {
-        "date": "2026-10-21",
-        "matchup": "Dallas Mavericks @ Houston Rockets",
-        "team": "Houston Rockets",
-        "spread": -9.5,
-        "price": null,
-        "edge": 4.3,
-        "confidence": "HIGH",
-        "score": "110-128",
         "result": "W",
         "pl": 0.91,
         "version": "v2.1"

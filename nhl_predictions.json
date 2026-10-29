@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28 18:20:16",
+  "generated_at": "2026-10-28 20:10:05",
   "sport": "NHL",
   "model_version": "v3",
   "predictions": [
@@ -48,7 +48,8 @@
       "vegas_away_prob_novig": 0.3207,
       "market_overround": 0.0191,
       "home_edge_vs_novig": 0.0044,
-      "away_edge_vs_novig": -0.0044
+      "away_edge_vs_novig": -0.0044,
+      "_locked": true
     },
     {
       "away_team": "CGY",
@@ -103,7 +104,8 @@
       "best_bet_edge_vs_novig": 0.0304,
       "full_kelly_pct": 0.0398,
       "full_kelly_exec": 0.0457,
-      "stake_pct_bankroll": 0.0114
+      "stake_pct_bankroll": 0.0114,
+      "_locked": true
     },
     {
       "away_team": "N.J",
@@ -150,7 +152,8 @@
       "vegas_away_prob_novig": 0.4288,
       "market_overround": 0.0273,
       "home_edge_vs_novig": -0.01,
-      "away_edge_vs_novig": 0.01
+      "away_edge_vs_novig": 0.01,
+      "_locked": true
     },
     {
       "away_team": "TOR",

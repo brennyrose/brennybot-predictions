@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29 18:15",
+  "generated_at": "2026-10-29 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.2",
   "pipeline_version": "2.2.0",
@@ -64,7 +64,8 @@
       "dt_win_prob": 0.645,
       "model_version": "v2.2",
       "home_abbrev": "NOP",
-      "away_abbrev": "SAC"
+      "away_abbrev": "SAC",
+      "_locked": true
     },
     {
       "home_team": "Atlanta Hawks",
@@ -108,7 +109,8 @@
       "dt_win_prob": 0.539,
       "model_version": "v2.2",
       "home_abbrev": "ATL",
-      "away_abbrev": "CLE"
+      "away_abbrev": "CLE",
+      "_locked": true
     },
     {
       "home_team": "Portland Trail Blazers",
@@ -146,10 +148,10 @@
       "spread_price": -112,
       "books_count": 9,
       "dt_spread": -7.0,
-      "dt_total": 227.5,
-      "dt_home_score": 117.3,
-      "dt_away_score": 110.2,
-      "dt_win_prob": 0.72,
+      "dt_total": 226.7,
+      "dt_home_score": 116.9,
+      "dt_away_score": 109.9,
+      "dt_win_prob": 0.719,
       "model_version": "v2.2",
       "home_abbrev": "POR",
       "away_abbrev": "MEM"

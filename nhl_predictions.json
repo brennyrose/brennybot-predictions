@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29 18:20:04",
+  "generated_at": "2026-10-29 20:10:03",
   "sport": "NHL",
   "model_version": "v3",
   "predictions": [
@@ -200,7 +200,8 @@
       "best_bet_edge_vs_novig": 0.0806,
       "full_kelly_pct": 0.1667,
       "full_kelly_exec": 0.189,
-      "stake_pct_bankroll": 0.02
+      "stake_pct_bankroll": 0.02,
+      "_locked": true
     },
     {
       "away_team": "BOS",
@@ -255,7 +256,8 @@
       "best_bet_edge_vs_novig": 0.0388,
       "full_kelly_pct": 0.0455,
       "full_kelly_exec": 0.0736,
-      "stake_pct_bankroll": 0.0184
+      "stake_pct_bankroll": 0.0184,
+      "_locked": true
     },
     {
       "away_team": "WSH",
@@ -310,7 +312,8 @@
       "best_bet_edge_vs_novig": 0.0418,
       "full_kelly_pct": 0.0563,
       "full_kelly_exec": 0.0794,
-      "stake_pct_bankroll": 0.0198
+      "stake_pct_bankroll": 0.0198,
+      "_locked": true
     },
     {
       "away_team": "MTL",
@@ -365,7 +368,8 @@
       "best_bet_edge_vs_novig": 0.0579,
       "full_kelly_pct": 0.0841,
       "full_kelly_exec": 0.0914,
-      "stake_pct_bankroll": 0.02
+      "stake_pct_bankroll": 0.02,
+      "_locked": true
     },
     {
       "away_team": "NYI",
@@ -420,19 +424,20 @@
       "best_bet_edge_vs_novig": 0.0535,
       "full_kelly_pct": 0.0978,
       "full_kelly_exec": 0.1392,
-      "stake_pct_bankroll": 0.02
+      "stake_pct_bankroll": 0.02,
+      "_locked": true
     },
     {
       "away_team": "BUF",
       "home_team": "ANA",
-      "away_win_prob": 0.5401,
-      "home_win_prob": 0.4599,
-      "model_away_odds": -117,
-      "model_home_odds": 117,
-      "goalie_adj": -0.1395,
-      "goalie_source": "Away_Indiv",
+      "away_win_prob": 0.5172,
+      "home_win_prob": 0.4828,
+      "model_away_odds": -107,
+      "model_home_odds": 107,
+      "goalie_adj": 0.0,
+      "goalie_source": "Both_Indiv",
       "away_goalie": "Colten Ellis",
-      "home_goalie": "",
+      "home_goalie": "Lukas Dostal",
       "away_b2b": false,
       "home_b2b": false,
       "away_gp": 12,
@@ -450,32 +455,32 @@
       "home_luck_adj": 0.0,
       "rest_effect": 0.0,
       "model_version": "v3",
-      "home_win_prob_raw": 0.4599,
-      "home_win_prob_calibrated": 0.4648,
+      "home_win_prob_raw": 0.4828,
+      "home_win_prob_calibrated": 0.48,
       "vegas_away_odds": -140,
       "vegas_home_odds": 125,
-      "away_ev": -0.0741,
-      "home_ev": 0.0348,
+      "away_ev": -0.1134,
+      "home_ev": 0.0863,
       "best_bet_team": "ANA",
       "best_bet_odds": 125,
-      "best_bet_ev": 0.0348,
-      "kelly_pct": 0.0139,
-      "recommended_units": 1.12,
-      "confidence": "NO_EDGE",
-      "recommendation": "",
+      "best_bet_ev": 0.0863,
+      "kelly_pct": 0.0345,
+      "recommended_units": 2.0,
+      "confidence": "MEDIUM",
+      "recommendation": "ANA ML (+125) \u2014 2.00u | EV: 8.6% | edge vs fair: +5.0pp",
       "vegas_home_prob_novig": 0.4324,
       "vegas_away_prob_novig": 0.5676,
       "market_overround": 0.0278,
-      "home_edge_vs_novig": 0.0275,
-      "away_edge_vs_novig": -0.0275,
+      "home_edge_vs_novig": 0.0504,
+      "away_edge_vs_novig": -0.0504,
       "exec_hold": 0.005,
       "exec_decimal": 2.301,
-      "exec_ev": 0.0582,
-      "full_kelly_screen": 0.0278,
-      "best_bet_edge_vs_novig": 0.0275,
-      "full_kelly_pct": 0.0278,
-      "full_kelly_exec": 0.0448,
-      "stake_pct_bankroll": 0.0112
+      "exec_ev": 0.1109,
+      "full_kelly_screen": 0.069,
+      "best_bet_edge_vs_novig": 0.0504,
+      "full_kelly_pct": 0.069,
+      "full_kelly_exec": 0.0853,
+      "stake_pct_bankroll": 0.02
     },
     {
       "away_team": "OTT",

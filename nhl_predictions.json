@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30 10:00:06",
+  "generated_at": "2026-10-30 18:20:02",
   "sport": "NHL",
   "model_version": "v3",
   "predictions": [
@@ -56,7 +56,8 @@
       "best_bet_edge_vs_novig": 0.033,
       "full_kelly_pct": 0.0358,
       "full_kelly_exec": 0.0603,
-      "stake_pct_bankroll": 0.0151
+      "stake_pct_bankroll": 0.0151,
+      "_locked": true
     },
     {
       "away_team": "WPG",
@@ -111,7 +112,8 @@
       "best_bet_edge_vs_novig": 0.0477,
       "full_kelly_pct": 0.1112,
       "full_kelly_exec": 0.1368,
-      "stake_pct_bankroll": 0.02
+      "stake_pct_bankroll": 0.02,
+      "_locked": true
     },
     {
       "away_team": "SEA",
@@ -143,31 +145,31 @@
       "model_version": "v3",
       "home_win_prob_raw": 0.5636,
       "home_win_prob_calibrated": 0.5336,
-      "vegas_away_odds": -113,
-      "vegas_home_odds": 100,
-      "away_ev": -0.1774,
-      "home_ev": 0.1272,
+      "vegas_away_odds": -112,
+      "vegas_home_odds": -102,
+      "away_ev": -0.174,
+      "home_ev": 0.1161,
       "best_bet_team": "CGY",
-      "best_bet_odds": 100,
-      "best_bet_ev": 0.1272,
-      "kelly_pct": 0.0636,
+      "best_bet_odds": -102,
+      "best_bet_ev": 0.1161,
+      "kelly_pct": 0.0592,
       "recommended_units": 2.0,
       "confidence": "HIGH",
-      "recommendation": "CGY ML (+100) \u2014 2.00u | EV: 12.7% | edge vs fair: +7.8pp",
-      "vegas_home_prob_novig": 0.4852,
-      "vegas_away_prob_novig": 0.5148,
-      "market_overround": 0.0305,
-      "home_edge_vs_novig": 0.0784,
-      "away_edge_vs_novig": -0.0784,
+      "recommendation": "CGY ML (-102) \u2014 2.00u | EV: 11.6% | edge vs fair: +7.5pp",
+      "vegas_home_prob_novig": 0.4887,
+      "vegas_away_prob_novig": 0.5113,
+      "market_overround": 0.0333,
+      "home_edge_vs_novig": 0.0749,
+      "away_edge_vs_novig": -0.0749,
       "exec_hold": 0.005,
-      "exec_decimal": 2.0508,
-      "exec_ev": 0.1558,
-      "full_kelly_screen": 0.1272,
-      "best_bet_edge_vs_novig": 0.0784,
-      "full_kelly_pct": 0.1272,
-      "full_kelly_exec": 0.1483,
+      "exec_decimal": 2.0361,
+      "exec_ev": 0.1475,
+      "full_kelly_screen": 0.1185,
+      "best_bet_edge_vs_novig": 0.0749,
+      "full_kelly_pct": 0.1185,
+      "full_kelly_exec": 0.1424,
       "stake_pct_bankroll": 0.02
     }
   ],
-  "odds_api_remaining": 277
+  "odds_api_remaining": 275
 }

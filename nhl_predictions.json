@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30 18:20:02",
+  "generated_at": "2026-10-30 20:10:03",
   "sport": "NHL",
   "model_version": "v3",
   "predictions": [
@@ -168,7 +168,8 @@
       "best_bet_edge_vs_novig": 0.0749,
       "full_kelly_pct": 0.1185,
       "full_kelly_exec": 0.1424,
-      "stake_pct_bankroll": 0.02
+      "stake_pct_bankroll": 0.02,
+      "_locked": true
     }
   ],
   "odds_api_remaining": 275

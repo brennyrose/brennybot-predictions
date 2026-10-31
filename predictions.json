@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30 18:15",
+  "generated_at": "2026-10-30 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.2",
   "pipeline_version": "2.2.0",
@@ -64,7 +64,8 @@
       "dt_win_prob": 0.891,
       "model_version": "v2.2",
       "home_abbrev": "BOS",
-      "away_abbrev": "CHI"
+      "away_abbrev": "CHI",
+      "_locked": true
     },
     {
       "home_team": "Miami Heat",
@@ -108,7 +109,8 @@
       "dt_win_prob": 0.743,
       "model_version": "v2.2",
       "home_abbrev": "MIA",
-      "away_abbrev": "IND"
+      "away_abbrev": "IND",
+      "_locked": true
     },
     {
       "home_team": "Phoenix Suns",
@@ -120,8 +122,8 @@
       "model_spread": -0.0,
       "ratings_spread": -0.0,
       "edge": 4.5,
-      "home_rating": -0.0,
-      "away_rating": 2.2,
+      "home_rating": 0.2,
+      "away_rating": 2.4,
       "home_hca": 2.3,
       "hca_default": 2.25,
       "home_recent_perf": 0,
@@ -146,8 +148,8 @@
       "spread_price": -114,
       "books_count": 9,
       "dt_spread": 0.9,
-      "dt_total": 224.5,
-      "dt_home_score": 111.8,
+      "dt_total": 224.4,
+      "dt_home_score": 111.7,
       "dt_away_score": 112.7,
       "dt_win_prob": 0.469,
       "model_version": "v2.2",
@@ -196,7 +198,8 @@
       "dt_win_prob": 0.282,
       "model_version": "v2.2",
       "home_abbrev": "DAL",
-      "away_abbrev": "HOU"
+      "away_abbrev": "HOU",
+      "_locked": true
     },
     {
       "home_team": "Minnesota Timberwolves",
@@ -240,7 +243,8 @@
       "dt_win_prob": 0.668,
       "model_version": "v2.2",
       "home_abbrev": "MIN",
-      "away_abbrev": "LAC"
+      "away_abbrev": "LAC",
+      "_locked": true
     },
     {
       "home_team": "Brooklyn Nets",
@@ -284,7 +288,8 @@
       "dt_win_prob": 0.23,
       "model_version": "v2.2",
       "home_abbrev": "BKN",
-      "away_abbrev": "DET"
+      "away_abbrev": "DET",
+      "_locked": true
     },
     {
       "home_team": "Golden State Warriors",
@@ -296,8 +301,8 @@
       "model_spread": 2.4,
       "ratings_spread": 1.9,
       "edge": 1.1,
-      "home_rating": 0.3,
-      "away_rating": 4.4,
+      "home_rating": 0.6,
+      "away_rating": 4.7,
       "home_hca": 1.7,
       "hca_default": 2.25,
       "home_recent_perf": 0,
@@ -322,8 +327,8 @@
       "spread_price": -112,
       "books_count": 8,
       "dt_spread": 1.9,
-      "dt_total": 229.0,
-      "dt_home_score": 113.6,
+      "dt_total": 228.9,
+      "dt_home_score": 113.5,
       "dt_away_score": 115.4,
       "dt_win_prob": 0.439,
       "model_version": "v2.2",
@@ -372,7 +377,8 @@
       "dt_win_prob": 0.473,
       "model_version": "v2.2",
       "home_abbrev": "WAS",
-      "away_abbrev": "CHA"
+      "away_abbrev": "CHA",
+      "_locked": true
     },
     {
       "home_team": "Toronto Raptors",
@@ -416,7 +422,8 @@
       "dt_win_prob": 0.605,
       "model_version": "v2.2",
       "home_abbrev": "TOR",
-      "away_abbrev": "ORL"
+      "away_abbrev": "ORL",
+      "_locked": true
     },
     {
       "home_team": "Philadelphia 76ers",
@@ -460,7 +467,8 @@
       "dt_win_prob": 0.435,
       "model_version": "v2.2",
       "home_abbrev": "PHI",
-      "away_abbrev": "NYK"
+      "away_abbrev": "NYK",
+      "_locked": true
     }
   ],
   "summary": {

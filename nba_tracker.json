@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31 10:00:17",
+  "generated_at": "2026-10-31 18:15:03",
   "season": "2026-27",
   "model_version": "v2.2",
   "disclaimer": "Bets are picks with a 2-4 point edge (current rules, applied to the whole history; 4+ point edges are flags, not bets). Every pick is graded against the spread and book the site showed at tip-off, 1 unit flat, at the logged price (picks from before Oct 22, 2026 had no price logged and are graded at the standard -110, 52.4% to break even). A benchmark, not your P&L: real results depend on the price you got, when you bet, and whether you took every pick.",
@@ -7,18 +7,6 @@
   "games_logged": 88,
   "games_graded": 81,
   "open_bets": [
-    {
-      "date": "2026-10-31",
-      "commence": "2026-11-01T00:10:00Z",
-      "matchup": "Cleveland Cavaliers @ Milwaukee Bucks",
-      "team": "Milwaukee Bucks",
-      "spread": 10.5,
-      "price": -110,
-      "book": "FanDuel",
-      "edge": 3.4,
-      "confidence": "MEDIUM",
-      "locked": false
-    },
     {
       "date": "2026-10-31",
       "commence": "2026-10-31T22:10:00Z",
@@ -29,24 +17,36 @@
       "book": "FanDuel",
       "edge": 3.0,
       "confidence": "MEDIUM",
+      "locked": true
+    },
+    {
+      "date": "2026-10-31",
+      "commence": "2026-11-01T00:10:00Z",
+      "matchup": "Cleveland Cavaliers @ Milwaukee Bucks",
+      "team": "Milwaukee Bucks",
+      "spread": 9.5,
+      "price": -112,
+      "book": "FanDuel",
+      "edge": 2.4,
+      "confidence": "MEDIUM",
       "locked": false
     }
   ],
   "open_flags": [
     {
       "date": "2026-10-31",
-      "matchup": "Oklahoma City Thunder @ Houston Rockets",
-      "team": "Houston Rockets",
-      "spread": -2.5,
-      "edge": 9.4,
-      "locked": false
-    },
-    {
-      "date": "2026-10-31",
       "matchup": "Sacramento Kings @ Memphis Grizzlies",
       "team": "Memphis Grizzlies",
       "spread": -8.5,
       "edge": 7.1,
+      "locked": false
+    },
+    {
+      "date": "2026-10-31",
+      "matchup": "Oklahoma City Thunder @ Houston Rockets",
+      "team": "Houston Rockets",
+      "spread": -2.5,
+      "edge": 6.6,
       "locked": false
     }
   ],

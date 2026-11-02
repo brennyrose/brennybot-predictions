@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02 10:00:05",
+  "generated_at": "2026-11-02 18:15:05",
   "season": "2026-27",
   "model_version": "v2.2",
   "disclaimer": "Bets are picks with a 2-4 point edge (current rules, applied to the whole history; 4+ point edges are flags, not bets). Every pick is graded against the spread and book the site showed at tip-off, 1 unit flat, at the logged price (picks from before Oct 22, 2026 had no price logged and are graded at the standard -110, 52.4% to break even). A benchmark, not your P&L: real results depend on the price you got, when you bet, and whether you took every pick.",
@@ -10,48 +10,60 @@
     {
       "date": "2026-11-02",
       "commence": "2026-11-03T00:40:00Z",
-      "matchup": "Atlanta Hawks @ Indiana Pacers",
-      "team": "Indiana Pacers",
-      "spread": 5.5,
+      "matchup": "Washington Wizards @ Orlando Magic",
+      "team": "Orlando Magic",
+      "spread": -2.5,
       "price": -117,
       "book": "DraftKings",
-      "edge": 3.9,
+      "edge": 3.2,
       "confidence": "MEDIUM",
       "locked": false
     },
     {
       "date": "2026-11-02",
-      "commence": "2026-11-03T00:40:00Z",
-      "matchup": "Washington Wizards @ Orlando Magic",
-      "team": "Orlando Magic",
-      "spread": -2.5,
-      "price": -106,
+      "commence": "2026-11-03T01:40:00Z",
+      "matchup": "Utah Jazz @ San Antonio Spurs",
+      "team": "San Antonio Spurs",
+      "spread": -16.5,
+      "price": -108,
+      "book": "DraftKings",
+      "edge": 3.2,
+      "confidence": "MEDIUM",
+      "locked": false
+    },
+    {
+      "date": "2026-11-02",
+      "commence": "2026-11-03T01:10:00Z",
+      "matchup": "Sacramento Kings @ Dallas Mavericks",
+      "team": "Dallas Mavericks",
+      "spread": -8.5,
+      "price": -105,
       "book": "FanDuel",
-      "edge": 3.3,
+      "edge": 2.9,
+      "confidence": "MEDIUM",
+      "locked": false
+    },
+    {
+      "date": "2026-11-02",
+      "commence": "2026-11-03T01:40:00Z",
+      "matchup": "Boston Celtics @ Houston Rockets",
+      "team": "Boston Celtics",
+      "spread": 4.5,
+      "price": -106,
+      "book": "DraftKings",
+      "edge": 2.9,
       "confidence": "MEDIUM",
       "locked": false
     },
     {
       "date": "2026-11-02",
       "commence": "2026-11-03T03:10:00Z",
-      "matchup": "Miami Heat @ Los Angeles Lakers",
-      "team": "Los Angeles Lakers",
-      "spread": -1.5,
-      "price": -113,
-      "book": "DraftKings",
-      "edge": 2.1,
-      "confidence": "MEDIUM",
-      "locked": false
-    },
-    {
-      "date": "2026-11-02",
-      "commence": "2026-11-03T00:40:00Z",
-      "matchup": "Brooklyn Nets @ New York Knicks",
-      "team": "New York Knicks",
-      "spread": -14.5,
-      "price": -110,
+      "matchup": "Phoenix Suns @ Golden State Warriors",
+      "team": "Phoenix Suns",
+      "spread": 3.5,
+      "price": -115,
       "book": "FanDuel",
-      "edge": 2.0,
+      "edge": 2.5,
       "confidence": "MEDIUM",
       "locked": false
     }
@@ -59,26 +71,26 @@
   "open_flags": [
     {
       "date": "2026-11-02",
-      "matchup": "Boston Celtics @ Houston Rockets",
-      "team": "Boston Celtics",
-      "spread": 5.5,
-      "edge": 5.0,
-      "locked": false
-    },
-    {
-      "date": "2026-11-02",
       "matchup": "New Orleans Pelicans @ Memphis Grizzlies",
       "team": "Memphis Grizzlies",
-      "spread": -4.5,
-      "edge": 4.7,
+      "spread": -5.5,
+      "edge": 5.2,
       "locked": false
     },
     {
       "date": "2026-11-02",
-      "matchup": "Utah Jazz @ San Antonio Spurs",
-      "team": "San Antonio Spurs",
-      "spread": -15.5,
-      "edge": 4.0,
+      "matchup": "Atlanta Hawks @ Indiana Pacers",
+      "team": "Atlanta Hawks",
+      "spread": -9.5,
+      "edge": 5.1,
+      "locked": false
+    },
+    {
+      "date": "2026-11-02",
+      "matchup": "Detroit Pistons @ Charlotte Hornets",
+      "team": "Charlotte Hornets",
+      "spread": 6.5,
+      "edge": 4.4,
       "locked": false
     }
   ],

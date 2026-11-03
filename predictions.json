@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02 18:15",
+  "generated_at": "2026-11-02 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.2",
   "pipeline_version": "2.2.0",
@@ -64,7 +64,8 @@
       "dt_win_prob": 0.631,
       "model_version": "v2.2",
       "home_abbrev": "ORL",
-      "away_abbrev": "WAS"
+      "away_abbrev": "WAS",
+      "_locked": true
     },
     {
       "home_team": "San Antonio Spurs",
@@ -108,7 +109,8 @@
       "dt_win_prob": 0.919,
       "model_version": "v2.2",
       "home_abbrev": "SAS",
-      "away_abbrev": "UTA"
+      "away_abbrev": "UTA",
+      "_locked": true
     },
     {
       "home_team": "Dallas Mavericks",
@@ -152,7 +154,8 @@
       "dt_win_prob": 0.808,
       "model_version": "v2.2",
       "home_abbrev": "DAL",
-      "away_abbrev": "SAC"
+      "away_abbrev": "SAC",
+      "_locked": true
     },
     {
       "home_team": "Houston Rockets",
@@ -196,7 +199,8 @@
       "dt_win_prob": 0.635,
       "model_version": "v2.2",
       "home_abbrev": "HOU",
-      "away_abbrev": "BOS"
+      "away_abbrev": "BOS",
+      "_locked": true
     },
     {
       "home_team": "Golden State Warriors",
@@ -208,8 +212,8 @@
       "model_spread": -1.0,
       "ratings_spread": -1.5,
       "edge": 2.5,
-      "home_rating": 0.9,
-      "away_rating": 1.6,
+      "home_rating": 1.0,
+      "away_rating": 1.8,
       "home_hca": 1.8,
       "hca_default": 2.25,
       "home_recent_perf": 0,
@@ -233,11 +237,11 @@
       "spread_book": "FanDuel",
       "spread_price": -115,
       "books_count": 9,
-      "dt_spread": -0.1,
-      "dt_total": 222.0,
-      "dt_home_score": 111.1,
-      "dt_away_score": 111.0,
-      "dt_win_prob": 0.503,
+      "dt_spread": -0.2,
+      "dt_total": 221.5,
+      "dt_home_score": 110.8,
+      "dt_away_score": 110.7,
+      "dt_win_prob": 0.505,
       "model_version": "v2.2",
       "home_abbrev": "GSW",
       "away_abbrev": "PHX"
@@ -284,7 +288,8 @@
       "dt_win_prob": 0.726,
       "model_version": "v2.2",
       "home_abbrev": "MEM",
-      "away_abbrev": "NOP"
+      "away_abbrev": "NOP",
+      "_locked": true
     },
     {
       "home_team": "Indiana Pacers",
@@ -328,7 +333,8 @@
       "dt_win_prob": 0.131,
       "model_version": "v2.2",
       "home_abbrev": "IND",
-      "away_abbrev": "ATL"
+      "away_abbrev": "ATL",
+      "_locked": true
     },
     {
       "home_team": "Charlotte Hornets",
@@ -372,7 +378,8 @@
       "dt_win_prob": 0.357,
       "model_version": "v2.2",
       "home_abbrev": "CHA",
-      "away_abbrev": "DET"
+      "away_abbrev": "DET",
+      "_locked": true
     },
     {
       "home_team": "Philadelphia 76ers",
@@ -416,7 +423,8 @@
       "dt_win_prob": 0.805,
       "model_version": "v2.2",
       "home_abbrev": "PHI",
-      "away_abbrev": "CHI"
+      "away_abbrev": "CHI",
+      "_locked": true
     },
     {
       "home_team": "New York Knicks",
@@ -460,7 +468,8 @@
       "dt_win_prob": 0.892,
       "model_version": "v2.2",
       "home_abbrev": "NYK",
-      "away_abbrev": "BKN"
+      "away_abbrev": "BKN",
+      "_locked": true
     },
     {
       "home_team": "Minnesota Timberwolves",
@@ -504,7 +513,8 @@
       "dt_win_prob": 0.828,
       "model_version": "v2.2",
       "home_abbrev": "MIN",
-      "away_abbrev": "MIL"
+      "away_abbrev": "MIL",
+      "_locked": true
     },
     {
       "home_team": "Los Angeles Lakers",
@@ -516,8 +526,8 @@
       "model_spread": -3.6,
       "ratings_spread": -3.5,
       "edge": 1.1,
-      "home_rating": 5.3,
-      "away_rating": 4.1,
+      "home_rating": 5.5,
+      "away_rating": 4.3,
       "home_hca": 2.4,
       "hca_default": 2.25,
       "home_recent_perf": 0,
@@ -542,9 +552,9 @@
       "spread_price": -102,
       "books_count": 9,
       "dt_spread": -1.0,
-      "dt_total": 236.0,
-      "dt_home_score": 118.5,
-      "dt_away_score": 117.5,
+      "dt_total": 236.4,
+      "dt_home_score": 118.7,
+      "dt_away_score": 117.7,
       "dt_win_prob": 0.533,
       "model_version": "v2.2",
       "home_abbrev": "LAL",
@@ -592,7 +602,8 @@
       "dt_win_prob": 0.597,
       "model_version": "v2.2",
       "home_abbrev": "CLE",
-      "away_abbrev": "OKC"
+      "away_abbrev": "OKC",
+      "_locked": true
     },
     {
       "home_team": "Denver Nuggets",
@@ -604,8 +615,8 @@
       "model_spread": -4.1,
       "ratings_spread": -4.0,
       "edge": 0.4,
-      "home_rating": 4.8,
-      "away_rating": 3.0,
+      "home_rating": 5.0,
+      "away_rating": 3.2,
       "home_hca": 2.3,
       "hca_default": 2.25,
       "home_recent_perf": 0,
@@ -629,11 +640,11 @@
       "spread_book": "FanDuel",
       "spread_price": -115,
       "books_count": 9,
-      "dt_spread": -3.5,
-      "dt_total": 229.9,
-      "dt_home_score": 116.7,
-      "dt_away_score": 113.2,
-      "dt_win_prob": 0.613,
+      "dt_spread": -3.4,
+      "dt_total": 230.3,
+      "dt_home_score": 116.9,
+      "dt_away_score": 113.4,
+      "dt_win_prob": 0.612,
       "model_version": "v2.2",
       "home_abbrev": "DEN",
       "away_abbrev": "POR"
@@ -648,8 +659,8 @@
       "model_spread": 4.6,
       "ratings_spread": 5.0,
       "edge": 0.1,
-      "home_rating": -5.2,
-      "away_rating": 2.0,
+      "home_rating": -5.1,
+      "away_rating": 2.2,
       "home_hca": 2.7,
       "hca_default": 2.25,
       "home_recent_perf": 0,
@@ -674,9 +685,9 @@
       "spread_price": -106,
       "books_count": 9,
       "dt_spread": 5.1,
-      "dt_total": 220.0,
-      "dt_home_score": 107.5,
-      "dt_away_score": 112.5,
+      "dt_total": 220.4,
+      "dt_home_score": 107.6,
+      "dt_away_score": 112.7,
       "dt_win_prob": 0.337,
       "model_version": "v2.2",
       "home_abbrev": "LAC",

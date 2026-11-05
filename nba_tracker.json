@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05 10:00:05",
+  "generated_at": "2026-11-05 18:15:04",
   "season": "2026-27",
   "model_version": "v2.2",
   "disclaimer": "Bets are picks with a 2-4 point edge (current rules, applied to the whole history; 4+ point edges are flags, not bets). Every pick is graded against the spread and book the site showed at tip-off, 1 unit flat, at the logged price (picks from before Oct 22, 2026 had no price logged and are graded at the standard -110, 52.4% to break even). A benchmark, not your P&L: real results depend on the price you got, when you bet, and whether you took every pick.",
@@ -9,27 +9,30 @@
   "open_bets": [
     {
       "date": "2026-11-05",
+      "commence": "2026-11-06T03:10:00Z",
+      "matchup": "Miami Heat @ Golden State Warriors",
+      "team": "Miami Heat",
+      "spread": 3.5,
+      "price": -102,
+      "book": "BetMGM",
+      "edge": 3.6,
+      "confidence": "MEDIUM",
+      "locked": false
+    },
+    {
+      "date": "2026-11-05",
       "commence": "2026-11-06T02:10:00Z",
       "matchup": "Orlando Magic @ Phoenix Suns",
       "team": "Phoenix Suns",
       "spread": -1.5,
-      "price": -101,
+      "price": -102,
       "book": "DraftKings",
-      "edge": 3.8,
+      "edge": 2.9,
       "confidence": "MEDIUM",
       "locked": false
     }
   ],
-  "open_flags": [
-    {
-      "date": "2026-11-05",
-      "matchup": "Miami Heat @ Golden State Warriors",
-      "team": "Miami Heat",
-      "spread": 7.5,
-      "edge": 7.6,
-      "locked": false
-    }
-  ],
+  "open_flags": [],
   "rules": {
     "edge_min": 2.0,
     "edge_flag": 4.0

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05 18:20:04",
+  "generated_at": "2026-11-05 20:10:06",
   "sport": "NHL",
   "model_version": "v3",
   "predictions": [
@@ -48,7 +48,8 @@
       "vegas_away_prob_novig": 0.5332,
       "market_overround": 0.0152,
       "home_edge_vs_novig": -0.0055,
-      "away_edge_vs_novig": 0.0055
+      "away_edge_vs_novig": 0.0055,
+      "_locked": true
     },
     {
       "away_team": "VGK",
@@ -103,7 +104,8 @@
       "best_bet_edge_vs_novig": 0.0939,
       "full_kelly_pct": 0.1499,
       "full_kelly_exec": 0.1604,
-      "stake_pct_bankroll": 0.02
+      "stake_pct_bankroll": 0.02,
+      "_locked": true
     },
     {
       "away_team": "CHI",
@@ -150,7 +152,8 @@
       "vegas_away_prob_novig": 0.199,
       "market_overround": 0.0255,
       "home_edge_vs_novig": 0.0255,
-      "away_edge_vs_novig": -0.0255
+      "away_edge_vs_novig": -0.0255,
+      "_locked": true
     },
     {
       "away_team": "STL",
@@ -205,7 +208,8 @@
       "best_bet_edge_vs_novig": 0.0774,
       "full_kelly_pct": 0.2103,
       "full_kelly_exec": 0.2281,
-      "stake_pct_bankroll": 0.02
+      "stake_pct_bankroll": 0.02,
+      "_locked": true
     },
     {
       "away_team": "CAR",
@@ -252,7 +256,8 @@
       "vegas_away_prob_novig": 0.6443,
       "market_overround": 0.026,
       "home_edge_vs_novig": 0.0009,
-      "away_edge_vs_novig": -0.0009
+      "away_edge_vs_novig": -0.0009,
+      "_locked": true
     },
     {
       "away_team": "PHI",
@@ -307,7 +312,8 @@
       "best_bet_edge_vs_novig": 0.0602,
       "full_kelly_pct": 0.1157,
       "full_kelly_exec": 0.1356,
-      "stake_pct_bankroll": 0.02
+      "stake_pct_bankroll": 0.02,
+      "_locked": true
     },
     {
       "away_team": "BOS",
@@ -354,7 +360,8 @@
       "vegas_away_prob_novig": 0.4859,
       "market_overround": 0.0189,
       "home_edge_vs_novig": -0.0196,
-      "away_edge_vs_novig": 0.0196
+      "away_edge_vs_novig": 0.0196,
+      "_locked": true
     },
     {
       "away_team": "DAL",
@@ -409,7 +416,8 @@
       "best_bet_edge_vs_novig": 0.0525,
       "full_kelly_pct": 0.0818,
       "full_kelly_exec": 0.1084,
-      "stake_pct_bankroll": 0.02
+      "stake_pct_bankroll": 0.02,
+      "_locked": true
     },
     {
       "away_team": "VAN",
@@ -464,7 +472,8 @@
       "best_bet_edge_vs_novig": 0.0749,
       "full_kelly_pct": 0.1745,
       "full_kelly_exec": 0.212,
-      "stake_pct_bankroll": 0.02
+      "stake_pct_bankroll": 0.02,
+      "_locked": true
     },
     {
       "away_team": "ANA",
@@ -519,7 +528,8 @@
       "best_bet_edge_vs_novig": 0.0279,
       "full_kelly_pct": 0.0277,
       "full_kelly_exec": 0.0412,
-      "stake_pct_bankroll": 0.0103
+      "stake_pct_bankroll": 0.0103,
+      "_locked": true
     },
     {
       "away_team": "NSH",

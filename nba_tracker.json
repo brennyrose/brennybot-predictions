@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07 10:00:04",
+  "generated_at": "2026-11-07 18:15:07",
   "season": "2026-27",
   "model_version": "v2.2",
   "disclaimer": "Bets are picks with a 2-4 point edge (current rules, applied to the whole history; 4+ point edges are flags, not bets). Every pick is graded against the spread and book the site showed at tip-off, 1 unit flat, at the logged price (picks from before Oct 22, 2026 had no price logged and are graded at the standard -110, 52.4% to break even). A benchmark, not your P&L: real results depend on the price you got, when you bet, and whether you took every pick.",
@@ -13,21 +13,9 @@
       "matchup": "Brooklyn Nets @ Atlanta Hawks",
       "team": "Atlanta Hawks",
       "spread": -6.5,
-      "price": -115,
-      "book": "FanDuel",
-      "edge": 3.1,
-      "confidence": "MEDIUM",
-      "locked": false
-    },
-    {
-      "date": "2026-11-07",
-      "commence": "2026-11-08T03:00:00Z",
-      "matchup": "San Antonio Spurs @ Portland Trail Blazers",
-      "team": "Portland Trail Blazers",
-      "spread": 5.5,
-      "price": -108,
+      "price": -116,
       "book": "DraftKings",
-      "edge": 2.7,
+      "edge": 2.6,
       "confidence": "MEDIUM",
       "locked": false
     },
@@ -37,23 +25,14 @@
       "matchup": "Houston Rockets @ Phoenix Suns",
       "team": "Phoenix Suns",
       "spread": 6.5,
-      "price": -102,
-      "book": "BetMGM",
-      "edge": 2.2,
+      "price": -108,
+      "book": "FanDuel",
+      "edge": 2.3,
       "confidence": "MEDIUM",
       "locked": false
     }
   ],
-  "open_flags": [
-    {
-      "date": "2026-11-07",
-      "matchup": "New York Knicks @ Cleveland Cavaliers",
-      "team": "Cleveland Cavaliers",
-      "spread": 5.5,
-      "edge": 5.9,
-      "locked": false
-    }
-  ],
+  "open_flags": [],
   "rules": {
     "edge_min": 2.0,
     "edge_flag": 4.0

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07 18:20:03",
+  "generated_at": "2026-11-07 20:10:04",
   "sport": "NHL",
   "model_version": "v3",
   "predictions": [
@@ -216,7 +216,8 @@
       "best_bet_edge_vs_novig": 0.0384,
       "full_kelly_pct": 0.0611,
       "full_kelly_exec": 0.0748,
-      "stake_pct_bankroll": 0.0187
+      "stake_pct_bankroll": 0.0187,
+      "_locked": true
     },
     {
       "away_team": "UTA",
@@ -271,7 +272,8 @@
       "best_bet_edge_vs_novig": 0.1066,
       "full_kelly_pct": 0.1991,
       "full_kelly_exec": 0.2206,
-      "stake_pct_bankroll": 0.02
+      "stake_pct_bankroll": 0.02,
+      "_locked": true
     },
     {
       "away_team": "N.J",
@@ -326,7 +328,8 @@
       "best_bet_edge_vs_novig": 0.0381,
       "full_kelly_pct": 0.0666,
       "full_kelly_exec": 0.0832,
-      "stake_pct_bankroll": 0.02
+      "stake_pct_bankroll": 0.02,
+      "_locked": true
     },
     {
       "away_team": "CHI",
@@ -381,7 +384,8 @@
       "best_bet_edge_vs_novig": 0.0243,
       "full_kelly_pct": 0.0249,
       "full_kelly_exec": 0.0292,
-      "stake_pct_bankroll": 0.0073
+      "stake_pct_bankroll": 0.0073,
+      "_locked": true
     },
     {
       "away_team": "S.J",
@@ -428,7 +432,8 @@
       "vegas_away_prob_novig": 0.2692,
       "market_overround": 0.0176,
       "home_edge_vs_novig": -0.0069,
-      "away_edge_vs_novig": 0.0069
+      "away_edge_vs_novig": 0.0069,
+      "_locked": true
     },
     {
       "away_team": "T.B",
@@ -475,7 +480,8 @@
       "vegas_away_prob_novig": 0.5564,
       "market_overround": 0.0293,
       "home_edge_vs_novig": 0.01,
-      "away_edge_vs_novig": -0.01
+      "away_edge_vs_novig": -0.01,
+      "_locked": true
     },
     {
       "away_team": "DET",

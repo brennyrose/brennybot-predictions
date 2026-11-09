@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09 10:00:05",
+  "generated_at": "2026-11-09 18:15:04",
   "season": "2026-27",
   "model_version": "v2.2",
   "disclaimer": "Bets are picks with a 2-4 point edge (current rules, applied to the whole history; 4+ point edges are flags, not bets). Every pick is graded against the spread and book the site showed at tip-off, 1 unit flat, at the logged price (picks from before Oct 22, 2026 had no price logged and are graded at the standard -110, 52.4% to break even). A benchmark, not your P&L: real results depend on the price you got, when you bet, and whether you took every pick.",
@@ -9,25 +9,49 @@
   "open_bets": [
     {
       "date": "2026-11-09",
-      "commence": "2026-11-10T01:40:00Z",
-      "matchup": "Denver Nuggets @ Houston Rockets",
-      "team": "Denver Nuggets",
+      "commence": "2026-11-10T02:10:00Z",
+      "matchup": "San Antonio Spurs @ Phoenix Suns",
+      "team": "Phoenix Suns",
       "spread": 8.5,
-      "price": -103,
-      "book": "DraftKings",
-      "edge": 3.6,
+      "price": -102,
+      "book": "BetMGM",
+      "edge": 3.9,
       "confidence": "MEDIUM",
       "locked": false
     },
     {
       "date": "2026-11-09",
-      "commence": "2026-11-10T02:10:00Z",
-      "matchup": "San Antonio Spurs @ Phoenix Suns",
-      "team": "Phoenix Suns",
+      "commence": "2026-11-10T00:10:00Z",
+      "matchup": "Cleveland Cavaliers @ Charlotte Hornets",
+      "team": "Charlotte Hornets",
       "spread": 9.5,
-      "price": -120,
-      "book": "FanDuel",
-      "edge": 3.3,
+      "price": -117,
+      "book": "DraftKings",
+      "edge": 3.2,
+      "confidence": "MEDIUM",
+      "locked": false
+    },
+    {
+      "date": "2026-11-09",
+      "commence": "2026-11-10T00:10:00Z",
+      "matchup": "Los Angeles Lakers @ Atlanta Hawks",
+      "team": "Los Angeles Lakers",
+      "spread": 2.5,
+      "price": -106,
+      "book": "DraftKings",
+      "edge": 2.2,
+      "confidence": "MEDIUM",
+      "locked": false
+    },
+    {
+      "date": "2026-11-09",
+      "commence": "2026-11-10T00:10:00Z",
+      "matchup": "Washington Wizards @ Detroit Pistons",
+      "team": "Detroit Pistons",
+      "spread": -9.5,
+      "price": -102,
+      "book": "BetMGM",
+      "edge": 2.2,
       "confidence": "MEDIUM",
       "locked": false
     }
@@ -35,18 +59,18 @@
   "open_flags": [
     {
       "date": "2026-11-09",
-      "matchup": "Los Angeles Lakers @ Atlanta Hawks",
-      "team": "Los Angeles Lakers",
-      "spread": 1.5,
-      "edge": 7.1,
+      "matchup": "Memphis Grizzlies @ Toronto Raptors",
+      "team": "Memphis Grizzlies",
+      "spread": -1.5,
+      "edge": 4.2,
       "locked": false
     },
     {
       "date": "2026-11-09",
-      "matchup": "Cleveland Cavaliers @ Charlotte Hornets",
-      "team": "Charlotte Hornets",
-      "spread": 8.5,
-      "edge": 4.4,
+      "matchup": "New Orleans Pelicans @ Golden State Warriors",
+      "team": "Golden State Warriors",
+      "spread": -11.5,
+      "edge": 4.0,
       "locked": false
     }
   ],

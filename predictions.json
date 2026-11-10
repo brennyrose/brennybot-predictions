@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09 18:15",
+  "generated_at": "2026-11-09 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.2",
   "pipeline_version": "2.2.0",
@@ -22,50 +22,6 @@
     "directional_accuracy": 0.693
   },
   "predictions": [
-    {
-      "home_team": "Phoenix Suns",
-      "away_team": "San Antonio Spurs",
-      "date": "2026-11-09",
-      "commence": "2026-11-10T02:10:00Z",
-      "vegas_spread": 8.5,
-      "consensus_spread": 8.9,
-      "model_spread": 4.6,
-      "ratings_spread": 4.7,
-      "edge": 3.9,
-      "home_rating": 1.8,
-      "away_rating": 8.7,
-      "home_hca": 2.3,
-      "hca_default": 2.25,
-      "home_recent_perf": 0,
-      "away_recent_perf": 0,
-      "home_shooting_luck": 0,
-      "away_shooting_luck": 0,
-      "home_ts": 0.565,
-      "away_ts": 0.565,
-      "games_analyzed": 0,
-      "confidence_scale": 1.0,
-      "recommendation": "BET Phoenix Suns +8.5",
-      "confidence": "MEDIUM",
-      "bet_team": "Phoenix Suns",
-      "bet_spread": 8.5,
-      "lean_team": null,
-      "lean_spread": null,
-      "warning": "",
-      "total": null,
-      "home_ml": null,
-      "away_ml": null,
-      "spread_book": "BetMGM",
-      "spread_price": -102,
-      "books_count": 9,
-      "dt_spread": 5.6,
-      "dt_total": 223.4,
-      "dt_home_score": 108.9,
-      "dt_away_score": 114.5,
-      "dt_win_prob": 0.323,
-      "model_version": "v2.2",
-      "home_abbrev": "PHX",
-      "away_abbrev": "SAS"
-    },
     {
       "home_team": "Charlotte Hornets",
       "away_team": "Cleveland Cavaliers",
@@ -108,7 +64,52 @@
       "dt_win_prob": 0.304,
       "model_version": "v2.2",
       "home_abbrev": "CHA",
-      "away_abbrev": "CLE"
+      "away_abbrev": "CLE",
+      "_locked": true
+    },
+    {
+      "home_team": "Phoenix Suns",
+      "away_team": "San Antonio Spurs",
+      "date": "2026-11-09",
+      "commence": "2026-11-10T02:10:00Z",
+      "vegas_spread": 8.5,
+      "consensus_spread": 8.9,
+      "model_spread": 5.5,
+      "ratings_spread": 5.5,
+      "edge": 3.0,
+      "home_rating": 1.1,
+      "away_rating": 8.9,
+      "home_hca": 2.3,
+      "hca_default": 2.25,
+      "home_recent_perf": 0,
+      "away_recent_perf": 0,
+      "home_shooting_luck": 0,
+      "away_shooting_luck": 0,
+      "home_ts": 0.565,
+      "away_ts": 0.565,
+      "games_analyzed": 0,
+      "confidence_scale": 1.0,
+      "recommendation": "BET Phoenix Suns +8.5",
+      "confidence": "MEDIUM",
+      "bet_team": "Phoenix Suns",
+      "bet_spread": 8.5,
+      "lean_team": null,
+      "lean_spread": null,
+      "warning": "",
+      "total": null,
+      "home_ml": null,
+      "away_ml": null,
+      "spread_book": "BetMGM",
+      "spread_price": -102,
+      "books_count": 9,
+      "dt_spread": 6.2,
+      "dt_total": 224.0,
+      "dt_home_score": 108.9,
+      "dt_away_score": 115.1,
+      "dt_win_prob": 0.304,
+      "model_version": "v2.2",
+      "home_abbrev": "PHX",
+      "away_abbrev": "SAS"
     },
     {
       "home_team": "Atlanta Hawks",
@@ -152,7 +153,8 @@
       "dt_win_prob": 0.56,
       "model_version": "v2.2",
       "home_abbrev": "ATL",
-      "away_abbrev": "LAL"
+      "away_abbrev": "LAL",
+      "_locked": true
     },
     {
       "home_team": "Detroit Pistons",
@@ -196,7 +198,8 @@
       "dt_win_prob": 0.772,
       "model_version": "v2.2",
       "home_abbrev": "DET",
-      "away_abbrev": "WAS"
+      "away_abbrev": "WAS",
+      "_locked": true
     },
     {
       "home_team": "Toronto Raptors",
@@ -240,7 +243,8 @@
       "dt_win_prob": 0.408,
       "model_version": "v2.2",
       "home_abbrev": "TOR",
-      "away_abbrev": "MEM"
+      "away_abbrev": "MEM",
+      "_locked": true
     },
     {
       "home_team": "Golden State Warriors",
@@ -277,11 +281,11 @@
       "spread_book": "BetMGM",
       "spread_price": -110,
       "books_count": 9,
-      "dt_spread": -13.3,
-      "dt_total": 230.7,
-      "dt_home_score": 122.0,
-      "dt_away_score": 108.7,
-      "dt_win_prob": 0.864,
+      "dt_spread": -13.2,
+      "dt_total": 231.2,
+      "dt_home_score": 122.2,
+      "dt_away_score": 109.0,
+      "dt_win_prob": 0.863,
       "model_version": "v2.2",
       "home_abbrev": "GSW",
       "away_abbrev": "NOP"
@@ -328,7 +332,8 @@
       "dt_win_prob": 0.587,
       "model_version": "v2.2",
       "home_abbrev": "DAL",
-      "away_abbrev": "IND"
+      "away_abbrev": "IND",
+      "_locked": true
     },
     {
       "home_team": "Houston Rockets",
@@ -372,7 +377,8 @@
       "dt_win_prob": 0.652,
       "model_version": "v2.2",
       "home_abbrev": "HOU",
-      "away_abbrev": "DEN"
+      "away_abbrev": "DEN",
+      "_locked": true
     }
   ],
   "summary": {

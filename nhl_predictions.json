@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11 18:20:04",
+  "generated_at": "2026-11-11 20:10:03",
   "sport": "NHL",
   "model_version": "v3",
   "predictions": [
@@ -56,7 +56,8 @@
       "best_bet_edge_vs_novig": 0.0234,
       "full_kelly_pct": 0.0273,
       "full_kelly_exec": 0.0456,
-      "stake_pct_bankroll": 0.0114
+      "stake_pct_bankroll": 0.0114,
+      "_locked": true
     },
     {
       "away_team": "NYR",
@@ -111,7 +112,8 @@
       "best_bet_edge_vs_novig": 0.0374,
       "full_kelly_pct": 0.0499,
       "full_kelly_exec": 0.062,
-      "stake_pct_bankroll": 0.0155
+      "stake_pct_bankroll": 0.0155,
+      "_locked": true
     },
     {
       "away_team": "PHI",

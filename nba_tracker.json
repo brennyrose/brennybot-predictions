@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13 10:00:05",
+  "generated_at": "2026-11-13 18:15:04",
   "season": "2026-27",
   "model_version": "v2.2",
   "disclaimer": "Bets are picks with a 2-4 point edge (current rules, applied to the whole history; 4+ point edges are flags, not bets). Every pick is graded against the spread and book the site showed at tip-off, 1 unit flat, at the logged price (picks from before Oct 22, 2026 had no price logged and are graded at the standard -110, 52.4% to break even). A benchmark, not your P&L: real results depend on the price you got, when you bet, and whether you took every pick.",
@@ -9,13 +9,25 @@
   "open_bets": [
     {
       "date": "2026-11-13",
-      "commence": "2026-11-14T03:40:00Z",
-      "matchup": "Oklahoma City Thunder @ Los Angeles Clippers",
-      "team": "Los Angeles Clippers",
+      "commence": "2026-11-14T02:40:00Z",
+      "matchup": "Golden State Warriors @ San Antonio Spurs",
+      "team": "San Antonio Spurs",
+      "spread": -12.5,
+      "price": -105,
+      "book": "DraftKings",
+      "edge": 3.0,
+      "confidence": "MEDIUM",
+      "locked": false
+    },
+    {
+      "date": "2026-11-13",
+      "commence": "2026-11-14T01:10:00Z",
+      "matchup": "Atlanta Hawks @ Chicago Bulls",
+      "team": "Chicago Bulls",
       "spread": 7.5,
-      "price": -112,
-      "book": "FanDuel",
-      "edge": 3.9,
+      "price": -118,
+      "book": "DraftKings",
+      "edge": 2.8,
       "confidence": "MEDIUM",
       "locked": false
     },
@@ -25,8 +37,8 @@
       "matchup": "New York Knicks @ Indiana Pacers",
       "team": "Indiana Pacers",
       "spread": 8.5,
-      "price": -110,
-      "book": "FanDuel",
+      "price": -118,
+      "book": "BetMGM",
       "edge": 2.2,
       "confidence": "MEDIUM",
       "locked": false
@@ -37,21 +49,9 @@
       "matchup": "Utah Jazz @ Houston Rockets",
       "team": "Houston Rockets",
       "spread": -15.5,
-      "price": -114,
-      "book": "DraftKings",
+      "price": -105,
+      "book": "BetMGM",
       "edge": 2.1,
-      "confidence": "MEDIUM",
-      "locked": false
-    },
-    {
-      "date": "2026-11-13",
-      "commence": "2026-11-14T01:10:00Z",
-      "matchup": "Cleveland Cavaliers @ Miami Heat",
-      "team": "Miami Heat",
-      "spread": -2.5,
-      "price": -104,
-      "book": "FanDuel",
-      "edge": 2.0,
       "confidence": "MEDIUM",
       "locked": false
     }
@@ -59,9 +59,17 @@
   "open_flags": [
     {
       "date": "2026-11-13",
-      "matchup": "Golden State Warriors @ San Antonio Spurs",
-      "team": "San Antonio Spurs",
-      "spread": -11.5,
+      "matchup": "Memphis Grizzlies @ New Orleans Pelicans",
+      "team": "Memphis Grizzlies",
+      "spread": -3.5,
+      "edge": 5.1,
+      "locked": false
+    },
+    {
+      "date": "2026-11-13",
+      "matchup": "Oklahoma City Thunder @ Los Angeles Clippers",
+      "team": "Los Angeles Clippers",
+      "spread": 7.5,
       "edge": 4.0,
       "locked": false
     }

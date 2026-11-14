@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-11-13 03:00:01",
+  "generated_at": "2026-11-14 03:00:01",
   "season": "20262027",
   "season_label": "2026-27",
   "model_version": "v3",
   "disclaimer": "Fair-line results price every bet at the no-vig number, which isolates model skill from execution. They are a benchmark, not a P&L \u2014 real results depend on the prices you actually get, when you bet, and whether you take every suggestion. The actual-price column uses the odds the pipeline logged.",
-  "games_logged": 306,
-  "games_graded": 306,
+  "games_logged": 308,
+  "games_graded": 308,
   "career": {
     "status": "ok",
     "note": "All-time pools every bet the pipeline has ever logged, across model versions. The combined line is the record of the process; the by-version table is the record of each model. A version change means a different model choosing a different set of games, so the versions are not interchangeable and the pooled ROI should never be read as the current model's edge.",
     "span": [
       "2026-02-26",
-      "2026-11-12"
+      "2026-11-13"
     ],
     "n_versions": 2,
     "n_seasons": 2,
@@ -22,34 +22,34 @@
     "current_version": "v3",
     "combined": {
       "fair": {
-        "bets": 469,
-        "wins": 255,
+        "bets": 470,
+        "wins": 256,
         "losses": 214,
-        "win_pct": 0.5437,
-        "flat_roi": 0.0695,
-        "flat_profit": 32.6,
-        "units_staked": 888.52,
-        "units_pl": 64.64,
-        "roi_on_turnover": 0.0727,
-        "avg_odds": -22
+        "win_pct": 0.5447,
+        "flat_roi": 0.0705,
+        "flat_profit": 33.12,
+        "units_staked": 890.52,
+        "units_pl": 65.68,
+        "roi_on_turnover": 0.0738,
+        "avg_odds": -23
       },
       "actual": {
-        "bets": 469,
-        "wins": 255,
+        "bets": 470,
+        "wins": 256,
         "losses": 214,
-        "win_pct": 0.5437,
-        "flat_roi": 0.0449,
-        "flat_profit": 21.06,
-        "units_staked": 888.52,
-        "units_pl": 42.77,
-        "roi_on_turnover": 0.0481,
-        "avg_odds": -22
+        "win_pct": 0.5447,
+        "flat_roi": 0.0458,
+        "flat_profit": 21.55,
+        "units_staked": 890.52,
+        "units_pl": 43.74,
+        "roi_on_turnover": 0.0491,
+        "avg_odds": -23
       },
       "fair_roi_ci": [
-        -0.022,
-        0.1612
+        -0.0219,
+        0.1618
       ],
-      "p_roi_positive": 0.925
+      "p_roi_positive": 0.933
     },
     "by_version": [
       {
@@ -80,25 +80,25 @@
         "key": "v3",
         "span": [
           "2026-09-29",
-          "2026-11-12"
+          "2026-11-13"
         ],
-        "bets": 144,
-        "wins": 78,
+        "bets": 145,
+        "wins": 79,
         "losses": 66,
-        "win_pct": 0.5417,
-        "flat_roi": 0.0736,
-        "flat_profit": 10.6,
-        "units_staked": 277.73,
-        "units_pl": 20.11,
-        "roi_on_turnover": 0.0724,
-        "avg_odds": -16,
-        "actual_flat_roi": 0.0487,
-        "actual_units_pl": 13.21,
+        "win_pct": 0.5448,
+        "flat_roi": 0.0767,
+        "flat_profit": 11.12,
+        "units_staked": 279.73,
+        "units_pl": 21.16,
+        "roi_on_turnover": 0.0756,
+        "avg_odds": -17,
+        "actual_flat_roi": 0.0517,
+        "actual_units_pl": 14.19,
         "clv": {
-          "n": 123,
-          "mean": -1.053,
+          "n": 124,
+          "mean": -1.057,
           "median": -1.152,
-          "beat_close_pct": 0.0813,
+          "beat_close_pct": 0.0806,
           "thin": true
         }
       }
@@ -155,25 +155,25 @@
         "key": "('20262027', 'regular')",
         "span": [
           "2026-09-29",
-          "2026-11-12"
+          "2026-11-13"
         ],
-        "bets": 144,
-        "wins": 78,
+        "bets": 145,
+        "wins": 79,
         "losses": 66,
-        "win_pct": 0.5417,
-        "flat_roi": 0.0736,
-        "flat_profit": 10.6,
-        "units_staked": 277.73,
-        "units_pl": 20.11,
-        "roi_on_turnover": 0.0724,
-        "avg_odds": -16,
-        "actual_flat_roi": 0.0487,
-        "actual_units_pl": 13.21,
+        "win_pct": 0.5448,
+        "flat_roi": 0.0767,
+        "flat_profit": 11.12,
+        "units_staked": 279.73,
+        "units_pl": 21.16,
+        "roi_on_turnover": 0.0756,
+        "avg_odds": -17,
+        "actual_flat_roi": 0.0517,
+        "actual_units_pl": 14.19,
         "clv": {
-          "n": 123,
-          "mean": -1.053,
+          "n": 124,
+          "mean": -1.057,
           "median": -1.152,
-          "beat_close_pct": 0.0813,
+          "beat_close_pct": 0.0806,
           "thin": true
         }
       }
@@ -1465,13 +1465,24 @@
         "version": "v3",
         "season": "20262027",
         "phase": "regular"
+      },
+      {
+        "date": "2026-11-13",
+        "bets": 1,
+        "wins": 1,
+        "day_fair": 1.04,
+        "cum_fair": 65.68,
+        "cum_actual": 43.74,
+        "version": "v3",
+        "season": "20262027",
+        "phase": "regular"
       }
     ],
     "clv": {
-      "n": 123,
-      "mean": -1.053,
+      "n": 124,
+      "mean": -1.057,
       "median": -1.152,
-      "beat_close_pct": 0.0813,
+      "beat_close_pct": 0.0806,
       "thin": true
     },
     "splits": [
@@ -1483,25 +1494,25 @@
             "key": "HIGH",
             "span": [
               "2026-02-26",
-              "2026-11-12"
+              "2026-11-13"
             ],
-            "bets": 283,
-            "wins": 154,
+            "bets": 284,
+            "wins": 155,
             "losses": 129,
-            "win_pct": 0.5442,
-            "flat_roi": 0.0349,
-            "flat_profit": 9.89,
-            "units_staked": 565.72,
-            "units_pl": 19.82,
-            "roi_on_turnover": 0.035,
+            "win_pct": 0.5458,
+            "flat_roi": 0.0367,
+            "flat_profit": 10.41,
+            "units_staked": 567.72,
+            "units_pl": 20.86,
+            "roi_on_turnover": 0.0367,
             "avg_odds": -34,
-            "actual_flat_roi": 0.012,
-            "actual_units_pl": 6.82,
+            "actual_flat_roi": 0.0136,
+            "actual_units_pl": 7.79,
             "clv": {
-              "n": 63,
-              "mean": -1.049,
-              "median": -1.238,
-              "beat_close_pct": 0.0952,
+              "n": 64,
+              "mean": -1.057,
+              "median": -1.261,
+              "beat_close_pct": 0.0938,
               "thin": true
             }
           },
@@ -1650,24 +1661,24 @@
             "key": "\u2264 -200",
             "span": [
               "2026-02-28",
-              "2026-11-06"
+              "2026-11-13"
             ],
-            "bets": 35,
-            "wins": 25,
+            "bets": 36,
+            "wins": 26,
             "losses": 10,
-            "win_pct": 0.7143,
-            "flat_roi": 0.0436,
-            "flat_profit": 1.53,
-            "units_staked": 69.01,
-            "units_pl": 2.62,
-            "roi_on_turnover": 0.0379,
-            "avg_odds": -246,
-            "actual_flat_roi": 0.0201,
-            "actual_units_pl": 1.0,
+            "win_pct": 0.7222,
+            "flat_roi": 0.0569,
+            "flat_profit": 2.05,
+            "units_staked": 71.01,
+            "units_pl": 3.66,
+            "roi_on_turnover": 0.0515,
+            "avg_odds": -245,
+            "actual_flat_roi": 0.0331,
+            "actual_units_pl": 1.97,
             "clv": {
-              "n": 9,
-              "mean": -1.357,
-              "median": -1.262,
+              "n": 10,
+              "mean": -1.373,
+              "median": -1.282,
               "beat_close_pct": 0.0,
               "thin": true
             }
@@ -1676,6 +1687,17 @@
       }
     ],
     "recent": [
+      {
+        "date": "2026-11-13",
+        "matchup": "NYR@VAN",
+        "team": "NYR",
+        "odds": -205,
+        "units": 2.0,
+        "won": 1,
+        "confidence": "HIGH",
+        "version": "v3",
+        "pl_fair": 1.04
+      },
       {
         "date": "2026-11-12",
         "matchup": "NYI@L.A",
@@ -1939,17 +1961,6 @@
         "confidence": "MEDIUM",
         "version": "v3",
         "pl_fair": 1.49
-      },
-      {
-        "date": "2026-11-07",
-        "matchup": "UTA@OTT",
-        "team": "UTA",
-        "odds": -118,
-        "units": 2.0,
-        "won": 0,
-        "confidence": "HIGH",
-        "version": "v3",
-        "pl_fair": -2.0
       }
     ],
     "version_marks": [
@@ -1969,30 +1980,30 @@
   },
   "status": "ok",
   "predictions": {
-    "n": 306,
-    "accuracy": 0.6078,
-    "log_loss": 0.6418,
-    "brier": 0.2255,
-    "ece": 0.062,
-    "home_win_rate": 0.549,
+    "n": 308,
+    "accuracy": 0.6071,
+    "log_loss": 0.6416,
+    "brier": 0.2254,
+    "ece": 0.0644,
+    "home_win_rate": 0.5455,
     "vs_market": {
-      "n": 306,
-      "model_log_loss": 0.6418,
+      "n": 308,
+      "model_log_loss": 0.6416,
       "market_log_loss": 0.6407,
-      "model_brier": 0.2255,
+      "model_brier": 0.2254,
       "market_brier": 0.225,
-      "model_accuracy": 0.6078,
-      "market_accuracy": 0.6144,
+      "model_accuracy": 0.6071,
+      "market_accuracy": 0.6136,
       "beating_market": false
     }
   },
   "calibration": [
     {
       "label": "0-35%",
-      "n": 13,
-      "model": 0.314,
-      "actual": 0.1538,
-      "gap": 0.1602
+      "n": 14,
+      "model": 0.3118,
+      "actual": 0.1429,
+      "gap": 0.1689
     },
     {
       "label": "35-45%",
@@ -2017,10 +2028,10 @@
     },
     {
       "label": "55-65%",
-      "n": 94,
-      "model": 0.5933,
-      "actual": 0.617,
-      "gap": -0.0238
+      "n": 95,
+      "model": 0.5931,
+      "actual": 0.6105,
+      "gap": -0.0174
     },
     {
       "label": "65-100%",
@@ -2032,34 +2043,34 @@
   ],
   "betting": {
     "fair": {
-      "bets": 144,
-      "wins": 78,
+      "bets": 145,
+      "wins": 79,
       "losses": 66,
-      "win_pct": 0.5417,
-      "flat_roi": 0.0736,
-      "flat_profit": 10.6,
-      "units_staked": 277.73,
-      "units_pl": 20.11,
-      "roi_on_turnover": 0.0724,
-      "avg_odds": -16
+      "win_pct": 0.5448,
+      "flat_roi": 0.0767,
+      "flat_profit": 11.12,
+      "units_staked": 279.73,
+      "units_pl": 21.16,
+      "roi_on_turnover": 0.0756,
+      "avg_odds": -17
     },
     "actual": {
-      "bets": 144,
-      "wins": 78,
+      "bets": 145,
+      "wins": 79,
       "losses": 66,
-      "win_pct": 0.5417,
-      "flat_roi": 0.0487,
-      "flat_profit": 7.01,
-      "units_staked": 277.73,
-      "units_pl": 13.21,
-      "roi_on_turnover": 0.0476,
-      "avg_odds": -16
+      "win_pct": 0.5448,
+      "flat_roi": 0.0517,
+      "flat_profit": 7.5,
+      "units_staked": 279.73,
+      "units_pl": 14.19,
+      "roi_on_turnover": 0.0507,
+      "avg_odds": -17
     },
     "fair_roi_ci": [
-      -0.0907,
-      0.2424
+      -0.0884,
+      0.2435
     ],
-    "p_roi_positive": 0.805,
+    "p_roi_positive": 0.815,
     "versions": [
       "v3"
     ]
@@ -2384,6 +2395,14 @@
       "day_fair": -1.33,
       "cum_fair": 20.11,
       "cum_actual": 13.21
+    },
+    {
+      "date": "2026-11-13",
+      "bets": 1,
+      "wins": 1,
+      "day_fair": 1.04,
+      "cum_fair": 21.16,
+      "cum_actual": 14.19
     }
   ],
   "splits": [
@@ -2392,16 +2411,16 @@
       "rows": [
         {
           "label": "HIGH",
-          "bets": 72,
-          "wins": 36,
+          "bets": 73,
+          "wins": 37,
           "losses": 36,
-          "win_pct": 0.5,
-          "flat_roi": -0.0494,
-          "flat_profit": -3.55,
-          "units_staked": 143.72,
-          "units_pl": -7.07,
-          "roi_on_turnover": -0.0492,
-          "avg_odds": -5
+          "win_pct": 0.5068,
+          "flat_roi": -0.0415,
+          "flat_profit": -3.03,
+          "units_staked": 145.72,
+          "units_pl": -6.02,
+          "roi_on_turnover": -0.0413,
+          "avg_odds": -8
         },
         {
           "label": "MEDIUM",
@@ -2475,16 +2494,16 @@
         },
         {
           "label": "\u2264 -200",
-          "bets": 11,
-          "wins": 8,
+          "bets": 12,
+          "wins": 9,
           "losses": 3,
-          "win_pct": 0.7273,
-          "flat_roi": 0.0642,
-          "flat_profit": 0.71,
-          "units_staked": 21.56,
-          "units_pl": 1.19,
-          "roi_on_turnover": 0.0552,
-          "avg_odds": -234
+          "win_pct": 0.75,
+          "flat_roi": 0.1023,
+          "flat_profit": 1.23,
+          "units_staked": 23.56,
+          "units_pl": 2.24,
+          "roi_on_turnover": 0.0949,
+          "avg_odds": -232
         }
       ]
     },
@@ -2493,16 +2512,16 @@
       "rows": [
         {
           "label": "both starters known",
-          "bets": 116,
-          "wins": 59,
+          "bets": 117,
+          "wins": 60,
           "losses": 57,
-          "win_pct": 0.5086,
-          "flat_roi": 0.0123,
-          "flat_profit": 1.43,
-          "units_staked": 223.84,
-          "units_pl": 2.14,
-          "roi_on_turnover": 0.0096,
-          "avg_odds": -3
+          "win_pct": 0.5128,
+          "flat_roi": 0.0166,
+          "flat_profit": 1.95,
+          "units_staked": 225.84,
+          "units_pl": 3.18,
+          "roi_on_turnover": 0.0141,
+          "avg_odds": -5
         },
         {
           "label": "starters unknown",
@@ -2521,17 +2540,27 @@
     }
   ],
   "clv": {
-    "n": 123,
-    "mean": -1.053,
+    "n": 124,
+    "mean": -1.057,
     "median": -1.152,
-    "beat_close_pct": 0.0813,
+    "beat_close_pct": 0.0806,
     "thin": true
   },
   "streak": {
-    "type": "L",
-    "length": 3
+    "type": "W",
+    "length": 1
   },
   "recent": [
+    {
+      "date": "2026-11-13",
+      "matchup": "NYR@VAN",
+      "team": "NYR",
+      "odds": -205,
+      "units": 2.0,
+      "won": 1,
+      "confidence": "HIGH",
+      "pl_fair": 1.04
+    },
     {
       "date": "2026-11-12",
       "matchup": "NYI@L.A",
@@ -2771,16 +2800,6 @@
       "won": 1,
       "confidence": "MEDIUM",
       "pl_fair": 1.49
-    },
-    {
-      "date": "2026-11-07",
-      "matchup": "UTA@OTT",
-      "team": "UTA",
-      "odds": -118,
-      "units": 2.0,
-      "won": 0,
-      "confidence": "HIGH",
-      "pl_fair": -2.0
     }
   ]
 }

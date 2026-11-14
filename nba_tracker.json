@@ -1,76 +1,60 @@
 {
-  "generated_at": "2026-11-13 20:45:04",
+  "generated_at": "2026-11-14 10:00:04",
   "season": "2026-27",
   "model_version": "v2.2",
   "disclaimer": "Bets are picks with a 2-4 point edge (current rules, applied to the whole history; 4+ point edges are flags, not bets). Every pick is graded against the spread and book the site showed at tip-off, 1 unit flat, at the logged price (picks from before Oct 22, 2026 had no price logged and are graded at the standard -110, 52.4% to break even). A benchmark, not your P&L: real results depend on the price you got, when you bet, and whether you took every pick.",
   "breakeven": 0.5238,
-  "games_logged": 181,
-  "games_graded": 172,
+  "games_logged": 186,
+  "games_graded": 181,
   "open_bets": [
     {
-      "date": "2026-11-13",
-      "commence": "2026-11-14T02:40:00Z",
-      "matchup": "Golden State Warriors @ San Antonio Spurs",
-      "team": "San Antonio Spurs",
-      "spread": -12.5,
-      "price": -105,
-      "book": "DraftKings",
-      "edge": 3.0,
+      "date": "2026-11-14",
+      "commence": "2026-11-15T01:10:00Z",
+      "matchup": "Chicago Bulls @ Minnesota Timberwolves",
+      "team": "Chicago Bulls",
+      "spread": 14.5,
+      "price": -102,
+      "book": "FanDuel",
+      "edge": 3.4,
       "confidence": "MEDIUM",
       "locked": false
     },
     {
-      "date": "2026-11-13",
-      "commence": "2026-11-14T01:10:00Z",
-      "matchup": "Atlanta Hawks @ Chicago Bulls",
-      "team": "Chicago Bulls",
-      "spread": 7.5,
-      "price": -118,
-      "book": "DraftKings",
+      "date": "2026-11-14",
+      "commence": "2026-11-15T00:10:00Z",
+      "matchup": "Denver Nuggets @ New Orleans Pelicans",
+      "team": "New Orleans Pelicans",
+      "spread": 12.5,
+      "price": -110,
+      "book": "BetMGM",
       "edge": 2.8,
       "confidence": "MEDIUM",
-      "locked": true
-    },
-    {
-      "date": "2026-11-13",
-      "commence": "2026-11-14T00:10:00Z",
-      "matchup": "New York Knicks @ Indiana Pacers",
-      "team": "Indiana Pacers",
-      "spread": 8.5,
-      "price": -118,
-      "book": "BetMGM",
-      "edge": 2.2,
-      "confidence": "MEDIUM",
-      "locked": true
-    },
-    {
-      "date": "2026-11-13",
-      "commence": "2026-11-14T01:40:00Z",
-      "matchup": "Utah Jazz @ Houston Rockets",
-      "team": "Houston Rockets",
-      "spread": -15.5,
-      "price": -105,
-      "book": "BetMGM",
-      "edge": 2.1,
-      "confidence": "MEDIUM",
-      "locked": true
+      "locked": false
     }
   ],
   "open_flags": [
     {
-      "date": "2026-11-13",
-      "matchup": "Memphis Grizzlies @ New Orleans Pelicans",
-      "team": "Memphis Grizzlies",
-      "spread": -3.5,
-      "edge": 5.1,
-      "locked": true
+      "date": "2026-11-14",
+      "matchup": "Dallas Mavericks @ Cleveland Cavaliers",
+      "team": "Cleveland Cavaliers",
+      "spread": 1.5,
+      "edge": 8.4,
+      "locked": false
     },
     {
-      "date": "2026-11-13",
-      "matchup": "Oklahoma City Thunder @ Los Angeles Clippers",
-      "team": "Los Angeles Clippers",
-      "spread": 7.5,
-      "edge": 4.0,
+      "date": "2026-11-14",
+      "matchup": "Brooklyn Nets @ Memphis Grizzlies",
+      "team": "Memphis Grizzlies",
+      "spread": -3.5,
+      "edge": 6.5,
+      "locked": false
+    },
+    {
+      "date": "2026-11-14",
+      "matchup": "Detroit Pistons @ Miami Heat",
+      "team": "Miami Heat",
+      "spread": 4.5,
+      "edge": 5.0,
       "locked": false
     }
   ],
@@ -80,20 +64,20 @@
   },
   "career": {
     "summary": {
-      "bets": 176,
-      "wins": 93,
-      "losses": 83,
+      "bets": 180,
+      "wins": 96,
+      "losses": 84,
       "pushes": 0,
-      "win_pct": 0.5284,
-      "units_pl": 1.54,
-      "roi": 0.0088,
-      "avg_edge": 2.88
+      "win_pct": 0.5333,
+      "units_pl": 3.19,
+      "roi": 0.0177,
+      "avg_edge": 2.87
     },
     "roi_ci": [
-      -0.1318,
-      0.1514
+      -0.121,
+      0.1576
     ],
-    "p_roi_positive": 0.549,
+    "p_roi_positive": 0.607,
     "versions": [
       "v2.1",
       "v2.2"
@@ -836,14 +820,23 @@
         "cum": 1.54,
         "version": "v2.2",
         "season": "2026-27"
+      },
+      {
+        "date": "2026-11-13",
+        "bets": 4,
+        "wins": 3,
+        "day": 1.65,
+        "cum": 3.19,
+        "version": "v2.2",
+        "season": "2026-27"
       }
     ],
     "movement": {
-      "n": 160,
+      "n": 164,
       "mean": 0.08,
-      "toward": 37,
-      "against": 30,
-      "flat": 93,
+      "toward": 38,
+      "against": 31,
+      "flat": 95,
       "thin": false
     },
     "splits": [
@@ -855,15 +848,15 @@
             "key": "2-3",
             "span": [
               "2026-02-25",
-              "2026-11-12"
+              "2026-11-13"
             ],
-            "bets": 94,
-            "wins": 52,
-            "losses": 42,
+            "bets": 97,
+            "wins": 54,
+            "losses": 43,
             "pushes": 0,
-            "win_pct": 0.5532,
-            "units_pl": 5.34,
-            "roi": 0.0568,
+            "win_pct": 0.5567,
+            "units_pl": 6.03,
+            "roi": 0.0622,
             "avg_edge": 2.45
           },
           {
@@ -871,15 +864,15 @@
             "key": "3-4",
             "span": [
               "2026-02-28",
-              "2026-11-12"
+              "2026-11-13"
             ],
-            "bets": 79,
-            "wins": 39,
+            "bets": 80,
+            "wins": 40,
             "losses": 40,
             "pushes": 0,
-            "win_pct": 0.4937,
-            "units_pl": -4.61,
-            "roi": -0.0583,
+            "win_pct": 0.5,
+            "units_pl": -3.66,
+            "roi": -0.0457,
             "avg_edge": 3.34
           },
           {
@@ -908,16 +901,16 @@
             "key": "home",
             "span": [
               "2026-02-27",
-              "2026-11-12"
+              "2026-11-13"
             ],
-            "bets": 110,
-            "wins": 59,
-            "losses": 51,
+            "bets": 114,
+            "wins": 62,
+            "losses": 52,
             "pushes": 0,
-            "win_pct": 0.5364,
-            "units_pl": 2.54,
-            "roi": 0.0231,
-            "avg_edge": 2.91
+            "win_pct": 0.5439,
+            "units_pl": 4.19,
+            "roi": 0.0367,
+            "avg_edge": 2.9
           },
           {
             "label": "Away team",
@@ -945,15 +938,15 @@
             "key": "fav",
             "span": [
               "2026-02-25",
-              "2026-11-11"
+              "2026-11-13"
             ],
-            "bets": 71,
-            "wins": 37,
-            "losses": 34,
+            "bets": 73,
+            "wins": 38,
+            "losses": 35,
             "pushes": 0,
-            "win_pct": 0.5211,
-            "units_pl": -0.25,
-            "roi": -0.0035,
+            "win_pct": 0.5205,
+            "units_pl": -0.29,
+            "roi": -0.004,
             "avg_edge": 2.81
           },
           {
@@ -961,21 +954,73 @@
             "key": "dog",
             "span": [
               "2026-02-26",
-              "2026-11-12"
+              "2026-11-13"
             ],
-            "bets": 105,
-            "wins": 56,
+            "bets": 107,
+            "wins": 58,
             "losses": 49,
             "pushes": 0,
-            "win_pct": 0.5333,
-            "units_pl": 1.79,
-            "roi": 0.0171,
-            "avg_edge": 2.92
+            "win_pct": 0.5421,
+            "units_pl": 3.49,
+            "roi": 0.0326,
+            "avg_edge": 2.91
           }
         ]
       }
     ],
     "recent": [
+      {
+        "date": "2026-11-13",
+        "matchup": "Utah Jazz @ Houston Rockets",
+        "team": "Houston Rockets",
+        "spread": -15.5,
+        "price": -105,
+        "edge": 2.1,
+        "confidence": "MEDIUM",
+        "score": "118-125",
+        "result": "L",
+        "pl": -1.0,
+        "version": "v2.2"
+      },
+      {
+        "date": "2026-11-13",
+        "matchup": "New York Knicks @ Indiana Pacers",
+        "team": "Indiana Pacers",
+        "spread": 8.5,
+        "price": -118,
+        "edge": 2.2,
+        "confidence": "MEDIUM",
+        "score": "104-106",
+        "result": "W",
+        "pl": 0.85,
+        "version": "v2.2"
+      },
+      {
+        "date": "2026-11-13",
+        "matchup": "Golden State Warriors @ San Antonio Spurs",
+        "team": "San Antonio Spurs",
+        "spread": -12.5,
+        "price": -105,
+        "edge": 3.0,
+        "confidence": "MEDIUM",
+        "score": "85-123",
+        "result": "W",
+        "pl": 0.95,
+        "version": "v2.2"
+      },
+      {
+        "date": "2026-11-13",
+        "matchup": "Atlanta Hawks @ Chicago Bulls",
+        "team": "Chicago Bulls",
+        "spread": 7.5,
+        "price": -118,
+        "edge": 2.8,
+        "confidence": "MEDIUM",
+        "score": "117-125",
+        "result": "W",
+        "pl": 0.85,
+        "version": "v2.2"
+      },
       {
         "date": "2026-11-12",
         "matchup": "Toronto Raptors @ Philadelphia 76ers",
@@ -1248,58 +1293,6 @@
         "result": "L",
         "pl": -1.0,
         "version": "v2.2"
-      },
-      {
-        "date": "2026-11-02",
-        "matchup": "Washington Wizards @ Orlando Magic",
-        "team": "Orlando Magic",
-        "spread": -2.5,
-        "price": -117,
-        "edge": 3.2,
-        "confidence": "MEDIUM",
-        "score": "103-94",
-        "result": "L",
-        "pl": -1.0,
-        "version": "v2.2"
-      },
-      {
-        "date": "2026-11-02",
-        "matchup": "Utah Jazz @ San Antonio Spurs",
-        "team": "San Antonio Spurs",
-        "spread": -16.5,
-        "price": -108,
-        "edge": 3.2,
-        "confidence": "MEDIUM",
-        "score": "97-119",
-        "result": "W",
-        "pl": 0.93,
-        "version": "v2.2"
-      },
-      {
-        "date": "2026-11-02",
-        "matchup": "Sacramento Kings @ Dallas Mavericks",
-        "team": "Dallas Mavericks",
-        "spread": -8.5,
-        "price": -105,
-        "edge": 2.9,
-        "confidence": "MEDIUM",
-        "score": "115-100",
-        "result": "L",
-        "pl": -1.0,
-        "version": "v2.2"
-      },
-      {
-        "date": "2026-11-02",
-        "matchup": "Phoenix Suns @ Golden State Warriors",
-        "team": "Phoenix Suns",
-        "spread": 3.5,
-        "price": -115,
-        "edge": 2.5,
-        "confidence": "MEDIUM",
-        "score": "113-116",
-        "result": "W",
-        "pl": 0.87,
-        "version": "v2.2"
       }
     ],
     "streak": {
@@ -1308,24 +1301,50 @@
     },
     "flags": {
       "summary": {
-        "bets": 92,
-        "wins": 42,
+        "bets": 94,
+        "wins": 44,
         "losses": 50,
         "pushes": 0,
-        "win_pct": 0.4565,
-        "units_pl": -11.98,
-        "roi": -0.1302,
-        "avg_edge": 5.47
+        "win_pct": 0.4681,
+        "units_pl": -10.16,
+        "roi": -0.1081,
+        "avg_edge": 5.45
       },
       "movement": {
-        "n": 86,
-        "mean": 0.05,
-        "toward": 16,
+        "n": 88,
+        "mean": 0.06,
+        "toward": 17,
         "against": 15,
-        "flat": 55,
+        "flat": 56,
         "thin": true
       },
       "recent": [
+        {
+          "date": "2026-11-13",
+          "matchup": "Oklahoma City Thunder @ Los Angeles Clippers",
+          "team": "Los Angeles Clippers",
+          "spread": 7.5,
+          "price": -112,
+          "edge": 4.0,
+          "confidence": "FLAG",
+          "score": "112-113",
+          "result": "W",
+          "pl": 0.89,
+          "version": "v2.2"
+        },
+        {
+          "date": "2026-11-13",
+          "matchup": "Memphis Grizzlies @ New Orleans Pelicans",
+          "team": "Memphis Grizzlies",
+          "spread": -3.5,
+          "price": -108,
+          "edge": 5.1,
+          "confidence": "FLAG",
+          "score": "142-111",
+          "result": "W",
+          "pl": 0.93,
+          "version": "v2.2"
+        },
         {
           "date": "2026-11-11",
           "matchup": "Oklahoma City Thunder @ Portland Trail Blazers",
@@ -1429,32 +1448,6 @@
           "result": "W",
           "pl": 0.91,
           "version": "v2.2"
-        },
-        {
-          "date": "2026-11-06",
-          "matchup": "Oklahoma City Thunder @ Memphis Grizzlies",
-          "team": "Memphis Grizzlies",
-          "spread": 4.5,
-          "price": -114,
-          "edge": 6.4,
-          "confidence": "FLAG",
-          "score": "128-97",
-          "result": "L",
-          "pl": -1.0,
-          "version": "v2.2"
-        },
-        {
-          "date": "2026-11-04",
-          "matchup": "Milwaukee Bucks @ Boston Celtics",
-          "team": "Boston Celtics",
-          "spread": -11.5,
-          "price": -110,
-          "edge": 4.9,
-          "confidence": "FLAG",
-          "score": "102-109",
-          "result": "L",
-          "pl": -1.0,
-          "version": "v2.2"
         }
       ]
     },
@@ -1472,7 +1465,7 @@
     "note": "All-time pools every pick the pipeline has logged since line logging began (Feb 26, 2026), restated under the current rules: v2.1's 4+ point HIGH picks are counted as flags, not bets. The 4-point cutoff was chosen using this same history, so the restated record flatters it; picks from Oct 22, 2026 on are the clean test. Regular season and play-in/playoffs are different populations and are split below; a model-version change means a different model picking different games, so the by-version table is the honest read.",
     "span": [
       "2026-02-25",
-      "2026-11-12"
+      "2026-11-13"
     ],
     "n_versions": 2,
     "n_seasons": 2,
@@ -1499,16 +1492,16 @@
         "key": "v2.2",
         "span": [
           "2026-10-23",
-          "2026-11-12"
+          "2026-11-13"
         ],
-        "bets": 45,
-        "wins": 20,
-        "losses": 25,
+        "bets": 49,
+        "wins": 23,
+        "losses": 26,
         "pushes": 0,
-        "win_pct": 0.4444,
-        "units_pl": -6.82,
-        "roi": -0.1515,
-        "avg_edge": 2.74
+        "win_pct": 0.4694,
+        "units_pl": -5.17,
+        "roi": -0.1056,
+        "avg_edge": 2.72
       }
     ],
     "by_season": [
@@ -1549,16 +1542,16 @@
         "key": "('2026-27', 'regular')",
         "span": [
           "2026-10-21",
-          "2026-11-12"
+          "2026-11-13"
         ],
-        "bets": 49,
-        "wins": 22,
-        "losses": 27,
+        "bets": 53,
+        "wins": 25,
+        "losses": 28,
         "pushes": 0,
-        "win_pct": 0.449,
-        "units_pl": -7.0,
-        "roi": -0.1429,
-        "avg_edge": 2.77
+        "win_pct": 0.4717,
+        "units_pl": -5.35,
+        "roi": -0.101,
+        "avg_edge": 2.75
       }
     ],
     "season_marks": [
@@ -1578,78 +1571,78 @@
   },
   "status": "ok",
   "predictions": {
-    "n": 172,
-    "model_mae": 11.034,
-    "vegas_mae": 11.081,
-    "dt_mae": 11.023,
-    "dt_n": 172,
-    "model_su": 0.7471,
-    "vegas_su": 0.7384,
-    "model_home_bias": 0.48,
-    "vegas_home_bias": -0.26,
-    "avg_home_margin": 1.75,
+    "n": 181,
+    "model_mae": 11.002,
+    "vegas_mae": 11.135,
+    "dt_mae": 10.992,
+    "dt_n": 181,
+    "model_su": 0.743,
+    "vegas_su": 0.7348,
+    "model_home_bias": 0.35,
+    "vegas_home_bias": -0.41,
+    "avg_home_margin": 1.84,
     "ats_all": {
-      "n": 171,
-      "wins": 89,
-      "win_pct": 0.5205
+      "n": 180,
+      "wins": 96,
+      "win_pct": 0.5333
     },
-    "home_side_share": 0.6023,
+    "home_side_share": 0.6111,
     "beating_market": true,
     "by_edge": [
       {
         "label": "0-1 pts",
-        "n": 40,
-        "win_pct": 0.55,
-        "roi": 0.05
+        "n": 42,
+        "win_pct": 0.5476,
+        "roi": 0.0455
       },
       {
         "label": "1-2 pts",
-        "n": 50,
-        "win_pct": 0.52,
-        "roi": -0.0073
+        "n": 51,
+        "win_pct": 0.5294,
+        "roi": 0.0107
       },
       {
         "label": "2-3 pts",
-        "n": 31,
-        "win_pct": 0.4194,
-        "roi": -0.1994
+        "n": 34,
+        "win_pct": 0.4412,
+        "roi": -0.1578
       },
       {
         "label": "3-4 pts",
-        "n": 19,
-        "win_pct": 0.4737,
-        "roi": -0.0957
+        "n": 20,
+        "win_pct": 0.5,
+        "roi": -0.0455
       },
       {
         "label": "4-5 pts",
-        "n": 13,
-        "win_pct": 0.5385,
-        "roi": 0.028
+        "n": 14,
+        "win_pct": 0.5714,
+        "roi": 0.0909
       },
       {
         "label": "5+ pts",
-        "n": 18,
-        "win_pct": 0.6667,
-        "roi": 0.2727
+        "n": 19,
+        "win_pct": 0.6842,
+        "roi": 0.3062
       }
     ]
   },
   "betting": {
     "summary": {
-      "bets": 49,
-      "wins": 22,
-      "losses": 27,
+      "bets": 53,
+      "wins": 25,
+      "losses": 28,
       "pushes": 0,
-      "win_pct": 0.449,
-      "units_pl": -7.0,
-      "roi": -0.1429,
-      "avg_edge": 2.77
+      "win_pct": 0.4717,
+      "units_pl": -5.35,
+      "roi": -0.101,
+      "avg_edge": 2.75
     },
     "roi_ci": [
-      -0.4144,
-      0.1295
+      -0.3543,
+      0.1524
     ],
-    "p_roi_positive": 0.144,
+    "p_roi_positive": 0.235,
     "versions": [
       "v2.1",
       "v2.2"
@@ -1794,14 +1787,21 @@
         "wins": 1,
         "day": -0.13,
         "cum": -7.0
+      },
+      {
+        "date": "2026-11-13",
+        "bets": 4,
+        "wins": 3,
+        "day": 1.65,
+        "cum": -5.35
       }
     ],
     "movement": {
-      "n": 47,
-      "mean": 0.13,
-      "toward": 13,
-      "against": 10,
-      "flat": 24,
+      "n": 51,
+      "mean": 0.12,
+      "toward": 14,
+      "against": 11,
+      "flat": 26,
       "thin": true
     },
     "splits": [
@@ -1813,32 +1813,32 @@
             "key": "2-3",
             "span": [
               "2026-10-21",
-              "2026-11-12"
+              "2026-11-13"
             ],
-            "bets": 30,
-            "wins": 13,
-            "losses": 17,
+            "bets": 33,
+            "wins": 15,
+            "losses": 18,
             "pushes": 0,
-            "win_pct": 0.4333,
-            "units_pl": -5.12,
-            "roi": -0.1706,
-            "avg_edge": 2.47
+            "win_pct": 0.4545,
+            "units_pl": -4.42,
+            "roi": -0.1341,
+            "avg_edge": 2.46
           },
           {
             "label": "3-4 pts",
             "key": "3-4",
             "span": [
               "2026-10-21",
-              "2026-11-12"
+              "2026-11-13"
             ],
-            "bets": 19,
-            "wins": 9,
+            "bets": 20,
+            "wins": 10,
             "losses": 10,
             "pushes": 0,
-            "win_pct": 0.4737,
-            "units_pl": -1.88,
-            "roi": -0.099,
-            "avg_edge": 3.24
+            "win_pct": 0.5,
+            "units_pl": -0.93,
+            "roi": -0.0465,
+            "avg_edge": 3.23
           }
         ]
       },
@@ -1850,16 +1850,16 @@
             "key": "home",
             "span": [
               "2026-10-21",
-              "2026-11-12"
+              "2026-11-13"
             ],
-            "bets": 34,
-            "wins": 13,
-            "losses": 21,
+            "bets": 38,
+            "wins": 16,
+            "losses": 22,
             "pushes": 0,
-            "win_pct": 0.3824,
-            "units_pl": -9.28,
-            "roi": -0.2729,
-            "avg_edge": 2.79
+            "win_pct": 0.4211,
+            "units_pl": -7.63,
+            "roi": -0.2008,
+            "avg_edge": 2.76
           },
           {
             "label": "Away team",
@@ -1887,37 +1887,89 @@
             "key": "fav",
             "span": [
               "2026-10-21",
-              "2026-11-11"
+              "2026-11-13"
             ],
-            "bets": 29,
-            "wins": 13,
-            "losses": 16,
+            "bets": 31,
+            "wins": 14,
+            "losses": 17,
             "pushes": 0,
-            "win_pct": 0.4483,
-            "units_pl": -4.07,
-            "roi": -0.1402,
-            "avg_edge": 2.78
+            "win_pct": 0.4516,
+            "units_pl": -4.11,
+            "roi": -0.1327,
+            "avg_edge": 2.76
           },
           {
             "label": "Getting points",
             "key": "dog",
             "span": [
               "2026-10-23",
-              "2026-11-12"
+              "2026-11-13"
             ],
-            "bets": 20,
-            "wins": 9,
+            "bets": 22,
+            "wins": 11,
             "losses": 11,
             "pushes": 0,
-            "win_pct": 0.45,
-            "units_pl": -2.94,
-            "roi": -0.1468,
-            "avg_edge": 2.76
+            "win_pct": 0.5,
+            "units_pl": -1.24,
+            "roi": -0.0564,
+            "avg_edge": 2.74
           }
         ]
       }
     ],
     "recent": [
+      {
+        "date": "2026-11-13",
+        "matchup": "Utah Jazz @ Houston Rockets",
+        "team": "Houston Rockets",
+        "spread": -15.5,
+        "price": -105,
+        "edge": 2.1,
+        "confidence": "MEDIUM",
+        "score": "118-125",
+        "result": "L",
+        "pl": -1.0,
+        "version": "v2.2"
+      },
+      {
+        "date": "2026-11-13",
+        "matchup": "New York Knicks @ Indiana Pacers",
+        "team": "Indiana Pacers",
+        "spread": 8.5,
+        "price": -118,
+        "edge": 2.2,
+        "confidence": "MEDIUM",
+        "score": "104-106",
+        "result": "W",
+        "pl": 0.85,
+        "version": "v2.2"
+      },
+      {
+        "date": "2026-11-13",
+        "matchup": "Golden State Warriors @ San Antonio Spurs",
+        "team": "San Antonio Spurs",
+        "spread": -12.5,
+        "price": -105,
+        "edge": 3.0,
+        "confidence": "MEDIUM",
+        "score": "85-123",
+        "result": "W",
+        "pl": 0.95,
+        "version": "v2.2"
+      },
+      {
+        "date": "2026-11-13",
+        "matchup": "Atlanta Hawks @ Chicago Bulls",
+        "team": "Chicago Bulls",
+        "spread": 7.5,
+        "price": -118,
+        "edge": 2.8,
+        "confidence": "MEDIUM",
+        "score": "117-125",
+        "result": "W",
+        "pl": 0.85,
+        "version": "v2.2"
+      },
       {
         "date": "2026-11-12",
         "matchup": "Toronto Raptors @ Philadelphia 76ers",
@@ -2190,58 +2242,6 @@
         "result": "L",
         "pl": -1.0,
         "version": "v2.2"
-      },
-      {
-        "date": "2026-11-02",
-        "matchup": "Washington Wizards @ Orlando Magic",
-        "team": "Orlando Magic",
-        "spread": -2.5,
-        "price": -117,
-        "edge": 3.2,
-        "confidence": "MEDIUM",
-        "score": "103-94",
-        "result": "L",
-        "pl": -1.0,
-        "version": "v2.2"
-      },
-      {
-        "date": "2026-11-02",
-        "matchup": "Utah Jazz @ San Antonio Spurs",
-        "team": "San Antonio Spurs",
-        "spread": -16.5,
-        "price": -108,
-        "edge": 3.2,
-        "confidence": "MEDIUM",
-        "score": "97-119",
-        "result": "W",
-        "pl": 0.93,
-        "version": "v2.2"
-      },
-      {
-        "date": "2026-11-02",
-        "matchup": "Sacramento Kings @ Dallas Mavericks",
-        "team": "Dallas Mavericks",
-        "spread": -8.5,
-        "price": -105,
-        "edge": 2.9,
-        "confidence": "MEDIUM",
-        "score": "115-100",
-        "result": "L",
-        "pl": -1.0,
-        "version": "v2.2"
-      },
-      {
-        "date": "2026-11-02",
-        "matchup": "Phoenix Suns @ Golden State Warriors",
-        "team": "Phoenix Suns",
-        "spread": 3.5,
-        "price": -115,
-        "edge": 2.5,
-        "confidence": "MEDIUM",
-        "score": "113-116",
-        "result": "W",
-        "pl": 0.87,
-        "version": "v2.2"
       }
     ],
     "streak": {
@@ -2251,24 +2251,50 @@
   },
   "flags": {
     "summary": {
-      "bets": 31,
-      "wins": 19,
+      "bets": 33,
+      "wins": 21,
       "losses": 12,
       "pushes": 0,
-      "win_pct": 0.6129,
-      "units_pl": 5.11,
-      "roi": 0.1649,
-      "avg_edge": 5.25
+      "win_pct": 0.6364,
+      "units_pl": 6.93,
+      "roi": 0.2101,
+      "avg_edge": 5.2
     },
     "movement": {
-      "n": 31,
-      "mean": 0.68,
-      "toward": 9,
+      "n": 33,
+      "mean": 0.67,
+      "toward": 10,
       "against": 1,
-      "flat": 21,
+      "flat": 22,
       "thin": true
     },
     "recent": [
+      {
+        "date": "2026-11-13",
+        "matchup": "Oklahoma City Thunder @ Los Angeles Clippers",
+        "team": "Los Angeles Clippers",
+        "spread": 7.5,
+        "price": -112,
+        "edge": 4.0,
+        "confidence": "FLAG",
+        "score": "112-113",
+        "result": "W",
+        "pl": 0.89,
+        "version": "v2.2"
+      },
+      {
+        "date": "2026-11-13",
+        "matchup": "Memphis Grizzlies @ New Orleans Pelicans",
+        "team": "Memphis Grizzlies",
+        "spread": -3.5,
+        "price": -108,
+        "edge": 5.1,
+        "confidence": "FLAG",
+        "score": "142-111",
+        "result": "W",
+        "pl": 0.93,
+        "version": "v2.2"
+      },
       {
         "date": "2026-11-11",
         "matchup": "Oklahoma City Thunder @ Portland Trail Blazers",
@@ -2371,32 +2397,6 @@
         "score": "121-116",
         "result": "W",
         "pl": 0.91,
-        "version": "v2.2"
-      },
-      {
-        "date": "2026-11-06",
-        "matchup": "Oklahoma City Thunder @ Memphis Grizzlies",
-        "team": "Memphis Grizzlies",
-        "spread": 4.5,
-        "price": -114,
-        "edge": 6.4,
-        "confidence": "FLAG",
-        "score": "128-97",
-        "result": "L",
-        "pl": -1.0,
-        "version": "v2.2"
-      },
-      {
-        "date": "2026-11-04",
-        "matchup": "Milwaukee Bucks @ Boston Celtics",
-        "team": "Boston Celtics",
-        "spread": -11.5,
-        "price": -110,
-        "edge": 4.9,
-        "confidence": "FLAG",
-        "score": "102-109",
-        "result": "L",
-        "pl": -1.0,
         "version": "v2.2"
       }
     ]

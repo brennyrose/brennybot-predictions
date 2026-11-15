@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14 18:15",
+  "generated_at": "2026-11-14 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.2",
   "pipeline_version": "2.2.0",
@@ -64,7 +64,8 @@
       "dt_win_prob": 0.858,
       "model_version": "v2.2",
       "home_abbrev": "MIN",
-      "away_abbrev": "CHI"
+      "away_abbrev": "CHI",
+      "_locked": true
     },
     {
       "home_team": "Miami Heat",
@@ -108,7 +109,8 @@
       "dt_win_prob": 0.438,
       "model_version": "v2.2",
       "home_abbrev": "MIA",
-      "away_abbrev": "DET"
+      "away_abbrev": "DET",
+      "_locked": true
     },
     {
       "home_team": "Memphis Grizzlies",
@@ -152,7 +154,8 @@
       "dt_win_prob": 0.649,
       "model_version": "v2.2",
       "home_abbrev": "MEM",
-      "away_abbrev": "BKN"
+      "away_abbrev": "BKN",
+      "_locked": true
     },
     {
       "home_team": "Cleveland Cavaliers",
@@ -196,7 +199,8 @@
       "dt_win_prob": 0.19,
       "model_version": "v2.2",
       "home_abbrev": "CLE",
-      "away_abbrev": "DAL"
+      "away_abbrev": "DAL",
+      "_locked": true
     },
     {
       "home_team": "New Orleans Pelicans",
@@ -240,7 +244,8 @@
       "dt_win_prob": 0.173,
       "model_version": "v2.2",
       "home_abbrev": "NOP",
-      "away_abbrev": "DEN"
+      "away_abbrev": "DEN",
+      "_locked": true
     }
   ],
   "summary": {

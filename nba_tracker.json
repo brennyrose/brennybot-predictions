@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14 18:15:05",
+  "generated_at": "2026-11-14 20:45:04",
   "season": "2026-27",
   "model_version": "v2.2",
   "disclaimer": "Bets are picks with a 2-4 point edge (current rules, applied to the whole history; 4+ point edges are flags, not bets). Every pick is graded against the spread and book the site showed at tip-off, 1 unit flat, at the logged price (picks from before Oct 22, 2026 had no price logged and are graded at the standard -110, 52.4% to break even). A benchmark, not your P&L: real results depend on the price you got, when you bet, and whether you took every pick.",
@@ -14,7 +14,7 @@
       "team": "Chicago Bulls",
       "spread": 16.5,
       "edge": 5.4,
-      "locked": false
+      "locked": true
     },
     {
       "date": "2026-11-14",
@@ -22,7 +22,7 @@
       "team": "Miami Heat",
       "spread": 4.5,
       "edge": 5.0,
-      "locked": false
+      "locked": true
     },
     {
       "date": "2026-11-14",
@@ -30,7 +30,7 @@
       "team": "Memphis Grizzlies",
       "spread": -1.5,
       "edge": 4.5,
-      "locked": false
+      "locked": true
     }
   ],
   "rules": {

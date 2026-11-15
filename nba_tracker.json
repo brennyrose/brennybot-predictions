@@ -1,36 +1,53 @@
 {
-  "generated_at": "2026-11-14 20:45:04",
+  "generated_at": "2026-11-15 10:00:05",
   "season": "2026-27",
   "model_version": "v2.2",
   "disclaimer": "Bets are picks with a 2-4 point edge (current rules, applied to the whole history; 4+ point edges are flags, not bets). Every pick is graded against the spread and book the site showed at tip-off, 1 unit flat, at the logged price (picks from before Oct 22, 2026 had no price logged and are graded at the standard -110, 52.4% to break even). A benchmark, not your P&L: real results depend on the price you got, when you bet, and whether you took every pick.",
   "breakeven": 0.5238,
-  "games_logged": 186,
-  "games_graded": 181,
-  "open_bets": [],
+  "games_logged": 195,
+  "games_graded": 186,
+  "open_bets": [
+    {
+      "date": "2026-11-15",
+      "commence": "2026-11-15T21:10:00Z",
+      "matchup": "Los Angeles Lakers @ Phoenix Suns",
+      "team": "Phoenix Suns",
+      "spread": 2.5,
+      "price": -102,
+      "book": "BetMGM",
+      "edge": 3.5,
+      "confidence": "MEDIUM",
+      "locked": false
+    },
+    {
+      "date": "2026-11-15",
+      "commence": "2026-11-16T02:10:00Z",
+      "matchup": "Oklahoma City Thunder @ Sacramento Kings",
+      "team": "Sacramento Kings",
+      "spread": 10.5,
+      "price": -110,
+      "book": "BetMGM",
+      "edge": 3.1,
+      "confidence": "MEDIUM",
+      "locked": false
+    }
+  ],
   "open_flags": [
     {
-      "date": "2026-11-14",
-      "matchup": "Chicago Bulls @ Minnesota Timberwolves",
-      "team": "Chicago Bulls",
-      "spread": 16.5,
-      "edge": 5.4,
-      "locked": true
+      "date": "2026-11-15",
+      "matchup": "Indiana Pacers @ Philadelphia 76ers",
+      "team": "Indiana Pacers",
+      "spread": 7.5,
+      "edge": 5.7,
+      "locked": false
     },
     {
-      "date": "2026-11-14",
-      "matchup": "Detroit Pistons @ Miami Heat",
-      "team": "Miami Heat",
-      "spread": 4.5,
-      "edge": 5.0,
-      "locked": true
-    },
-    {
-      "date": "2026-11-14",
-      "matchup": "Brooklyn Nets @ Memphis Grizzlies",
-      "team": "Memphis Grizzlies",
-      "spread": -1.5,
-      "edge": 4.5,
-      "locked": true
+      "date": "2026-11-15",
+      "matchup": "Charlotte Hornets @ Los Angeles Clippers",
+      "team": "Los Angeles Clippers",
+      "spread": 1.5,
+      "edge": 4.4,
+      "locked": false
     }
   ],
   "rules": {
@@ -1276,24 +1293,63 @@
     },
     "flags": {
       "summary": {
-        "bets": 94,
-        "wins": 44,
+        "bets": 97,
+        "wins": 47,
         "losses": 50,
         "pushes": 0,
-        "win_pct": 0.4681,
-        "units_pl": -10.16,
-        "roi": -0.1081,
-        "avg_edge": 5.45
+        "win_pct": 0.4845,
+        "units_pl": -7.5,
+        "roi": -0.0774,
+        "avg_edge": 5.44
       },
       "movement": {
-        "n": 88,
-        "mean": 0.06,
+        "n": 91,
+        "mean": 0.01,
         "toward": 17,
-        "against": 15,
-        "flat": 56,
+        "against": 17,
+        "flat": 57,
         "thin": true
       },
       "recent": [
+        {
+          "date": "2026-11-14",
+          "matchup": "Detroit Pistons @ Miami Heat",
+          "team": "Miami Heat",
+          "spread": 4.5,
+          "price": -112,
+          "edge": 5.0,
+          "confidence": "FLAG",
+          "score": "117-137",
+          "result": "W",
+          "pl": 0.89,
+          "version": "v2.2"
+        },
+        {
+          "date": "2026-11-14",
+          "matchup": "Chicago Bulls @ Minnesota Timberwolves",
+          "team": "Chicago Bulls",
+          "spread": 16.5,
+          "price": -115,
+          "edge": 5.4,
+          "confidence": "FLAG",
+          "score": "117-106",
+          "result": "W",
+          "pl": 0.87,
+          "version": "v2.2"
+        },
+        {
+          "date": "2026-11-14",
+          "matchup": "Brooklyn Nets @ Memphis Grizzlies",
+          "team": "Memphis Grizzlies",
+          "spread": -1.5,
+          "price": -112,
+          "edge": 4.5,
+          "confidence": "FLAG",
+          "score": "110-129",
+          "result": "W",
+          "pl": 0.89,
+          "version": "v2.2"
+        },
         {
           "date": "2026-11-13",
           "matchup": "Oklahoma City Thunder @ Los Angeles Clippers",
@@ -1381,45 +1437,6 @@
           "edge": 4.0,
           "confidence": "FLAG",
           "score": "87-138",
-          "result": "W",
-          "pl": 0.91,
-          "version": "v2.2"
-        },
-        {
-          "date": "2026-11-09",
-          "matchup": "Memphis Grizzlies @ Toronto Raptors",
-          "team": "Memphis Grizzlies",
-          "spread": -1.5,
-          "price": -120,
-          "edge": 4.2,
-          "confidence": "FLAG",
-          "score": "118-102",
-          "result": "W",
-          "pl": 0.83,
-          "version": "v2.2"
-        },
-        {
-          "date": "2026-11-08",
-          "matchup": "New Orleans Pelicans @ Los Angeles Clippers",
-          "team": "Los Angeles Clippers",
-          "spread": 1.5,
-          "price": -110,
-          "edge": 6.1,
-          "confidence": "FLAG",
-          "score": "123-139",
-          "result": "W",
-          "pl": 0.91,
-          "version": "v2.2"
-        },
-        {
-          "date": "2026-11-08",
-          "matchup": "Los Angeles Lakers @ Detroit Pistons",
-          "team": "Los Angeles Lakers",
-          "spread": 4.5,
-          "price": -110,
-          "edge": 5.8,
-          "confidence": "FLAG",
-          "score": "121-116",
           "result": "W",
           "pl": 0.91,
           "version": "v2.2"
@@ -1546,35 +1563,35 @@
   },
   "status": "ok",
   "predictions": {
-    "n": 181,
-    "model_mae": 11.002,
-    "vegas_mae": 11.135,
-    "dt_mae": 10.992,
-    "dt_n": 181,
-    "model_su": 0.743,
-    "vegas_su": 0.7348,
-    "model_home_bias": 0.35,
-    "vegas_home_bias": -0.41,
-    "avg_home_margin": 1.84,
+    "n": 186,
+    "model_mae": 11.132,
+    "vegas_mae": 11.333,
+    "dt_mae": 11.15,
+    "dt_n": 186,
+    "model_su": 0.7391,
+    "vegas_su": 0.7258,
+    "model_home_bias": 0.15,
+    "vegas_home_bias": -0.6,
+    "avg_home_margin": 1.95,
     "ats_all": {
-      "n": 180,
-      "wins": 96,
-      "win_pct": 0.5333
+      "n": 185,
+      "wins": 100,
+      "win_pct": 0.5405
     },
-    "home_side_share": 0.6111,
+    "home_side_share": 0.6108,
     "beating_market": true,
     "by_edge": [
       {
         "label": "0-1 pts",
-        "n": 42,
-        "win_pct": 0.5476,
-        "roi": 0.0455
+        "n": 43,
+        "win_pct": 0.5581,
+        "roi": 0.0655
       },
       {
         "label": "1-2 pts",
-        "n": 51,
-        "win_pct": 0.5294,
-        "roi": 0.0107
+        "n": 52,
+        "win_pct": 0.5192,
+        "roi": -0.0087
       },
       {
         "label": "2-3 pts",
@@ -1590,15 +1607,15 @@
       },
       {
         "label": "4-5 pts",
-        "n": 14,
-        "win_pct": 0.5714,
-        "roi": 0.0909
+        "n": 15,
+        "win_pct": 0.6,
+        "roi": 0.1455
       },
       {
         "label": "5+ pts",
-        "n": 19,
-        "win_pct": 0.6842,
-        "roi": 0.3062
+        "n": 21,
+        "win_pct": 0.7143,
+        "roi": 0.3636
       }
     ]
   },
@@ -2226,24 +2243,63 @@
   },
   "flags": {
     "summary": {
-      "bets": 33,
-      "wins": 21,
+      "bets": 36,
+      "wins": 24,
       "losses": 12,
       "pushes": 0,
-      "win_pct": 0.6364,
-      "units_pl": 6.93,
-      "roi": 0.2101,
-      "avg_edge": 5.2
+      "win_pct": 0.6667,
+      "units_pl": 9.59,
+      "roi": 0.2663,
+      "avg_edge": 5.18
     },
     "movement": {
-      "n": 33,
-      "mean": 0.67,
+      "n": 36,
+      "mean": 0.5,
       "toward": 10,
-      "against": 1,
-      "flat": 22,
+      "against": 3,
+      "flat": 23,
       "thin": true
     },
     "recent": [
+      {
+        "date": "2026-11-14",
+        "matchup": "Detroit Pistons @ Miami Heat",
+        "team": "Miami Heat",
+        "spread": 4.5,
+        "price": -112,
+        "edge": 5.0,
+        "confidence": "FLAG",
+        "score": "117-137",
+        "result": "W",
+        "pl": 0.89,
+        "version": "v2.2"
+      },
+      {
+        "date": "2026-11-14",
+        "matchup": "Chicago Bulls @ Minnesota Timberwolves",
+        "team": "Chicago Bulls",
+        "spread": 16.5,
+        "price": -115,
+        "edge": 5.4,
+        "confidence": "FLAG",
+        "score": "117-106",
+        "result": "W",
+        "pl": 0.87,
+        "version": "v2.2"
+      },
+      {
+        "date": "2026-11-14",
+        "matchup": "Brooklyn Nets @ Memphis Grizzlies",
+        "team": "Memphis Grizzlies",
+        "spread": -1.5,
+        "price": -112,
+        "edge": 4.5,
+        "confidence": "FLAG",
+        "score": "110-129",
+        "result": "W",
+        "pl": 0.89,
+        "version": "v2.2"
+      },
       {
         "date": "2026-11-13",
         "matchup": "Oklahoma City Thunder @ Los Angeles Clippers",
@@ -2331,45 +2387,6 @@
         "edge": 4.0,
         "confidence": "FLAG",
         "score": "87-138",
-        "result": "W",
-        "pl": 0.91,
-        "version": "v2.2"
-      },
-      {
-        "date": "2026-11-09",
-        "matchup": "Memphis Grizzlies @ Toronto Raptors",
-        "team": "Memphis Grizzlies",
-        "spread": -1.5,
-        "price": -120,
-        "edge": 4.2,
-        "confidence": "FLAG",
-        "score": "118-102",
-        "result": "W",
-        "pl": 0.83,
-        "version": "v2.2"
-      },
-      {
-        "date": "2026-11-08",
-        "matchup": "New Orleans Pelicans @ Los Angeles Clippers",
-        "team": "Los Angeles Clippers",
-        "spread": 1.5,
-        "price": -110,
-        "edge": 6.1,
-        "confidence": "FLAG",
-        "score": "123-139",
-        "result": "W",
-        "pl": 0.91,
-        "version": "v2.2"
-      },
-      {
-        "date": "2026-11-08",
-        "matchup": "Los Angeles Lakers @ Detroit Pistons",
-        "team": "Los Angeles Lakers",
-        "spread": 4.5,
-        "price": -110,
-        "edge": 5.8,
-        "confidence": "FLAG",
-        "score": "121-116",
         "result": "W",
         "pl": 0.91,
         "version": "v2.2"

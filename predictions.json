@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16 18:15",
+  "generated_at": "2026-11-16 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.2",
   "pipeline_version": "2.2.0",
@@ -32,8 +32,8 @@
       "model_spread": -7.2,
       "ratings_spread": -7.2,
       "edge": 3.3,
-      "home_rating": 6.1,
-      "away_rating": 1.2,
+      "home_rating": 6.5,
+      "away_rating": 1.6,
       "home_hca": 2.3,
       "hca_default": 2.25,
       "home_recent_perf": 0,
@@ -58,7 +58,7 @@
       "spread_price": -118,
       "books_count": 9,
       "dt_spread": -8.2,
-      "dt_total": 229.7,
+      "dt_total": 229.8,
       "dt_home_score": 119.0,
       "dt_away_score": 110.8,
       "dt_win_prob": 0.751,
@@ -108,7 +108,8 @@
       "dt_win_prob": 0.557,
       "model_version": "v2.2",
       "home_abbrev": "MIN",
-      "away_abbrev": "POR"
+      "away_abbrev": "POR",
+      "_locked": true
     },
     {
       "home_team": "Cleveland Cavaliers",
@@ -152,7 +153,8 @@
       "dt_win_prob": 0.668,
       "model_version": "v2.2",
       "home_abbrev": "CLE",
-      "away_abbrev": "CHI"
+      "away_abbrev": "CHI",
+      "_locked": true
     },
     {
       "home_team": "New Orleans Pelicans",
@@ -196,7 +198,8 @@
       "dt_win_prob": 0.408,
       "model_version": "v2.2",
       "home_abbrev": "NOP",
-      "away_abbrev": "GSW"
+      "away_abbrev": "GSW",
+      "_locked": true
     },
     {
       "home_team": "Brooklyn Nets",
@@ -240,7 +243,8 @@
       "dt_win_prob": 0.45,
       "model_version": "v2.2",
       "home_abbrev": "BKN",
-      "away_abbrev": "PHI"
+      "away_abbrev": "PHI",
+      "_locked": true
     },
     {
       "home_team": "Washington Wizards",
@@ -284,7 +288,8 @@
       "dt_win_prob": 0.304,
       "model_version": "v2.2",
       "home_abbrev": "WAS",
-      "away_abbrev": "MEM"
+      "away_abbrev": "MEM",
+      "_locked": true
     },
     {
       "home_team": "Miami Heat",
@@ -328,7 +333,8 @@
       "dt_win_prob": 0.497,
       "model_version": "v2.2",
       "home_abbrev": "MIA",
-      "away_abbrev": "HOU"
+      "away_abbrev": "HOU",
+      "_locked": true
     },
     {
       "home_team": "Boston Celtics",
@@ -372,7 +378,8 @@
       "dt_win_prob": 0.711,
       "model_version": "v2.2",
       "home_abbrev": "BOS",
-      "away_abbrev": "ORL"
+      "away_abbrev": "ORL",
+      "_locked": true
     }
   ],
   "summary": {

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17 18:20:04",
+  "generated_at": "2026-11-17 20:10:03",
   "sport": "NHL",
   "model_version": "v3",
   "predictions": [
@@ -58,7 +58,8 @@
       "full_kelly_exec": 0.1514,
       "stake_pct_bankroll": 0.0181,
       "stake_pct_pre_cap": 0.02,
-      "slate_scaled": true
+      "slate_scaled": true,
+      "_locked": true
     },
     {
       "away_team": "EDM",
@@ -115,7 +116,8 @@
       "full_kelly_exec": 0.1282,
       "stake_pct_bankroll": 0.0181,
       "stake_pct_pre_cap": 0.02,
-      "slate_scaled": true
+      "slate_scaled": true,
+      "_locked": true
     },
     {
       "away_team": "CBJ",
@@ -172,7 +174,8 @@
       "full_kelly_exec": 0.0834,
       "stake_pct_bankroll": 0.0181,
       "stake_pct_pre_cap": 0.02,
-      "slate_scaled": true
+      "slate_scaled": true,
+      "_locked": true
     },
     {
       "away_team": "BUF",
@@ -219,7 +222,8 @@
       "vegas_away_prob_novig": 0.5408,
       "market_overround": 0.0273,
       "home_edge_vs_novig": -0.011,
-      "away_edge_vs_novig": 0.011
+      "away_edge_vs_novig": 0.011,
+      "_locked": true
     },
     {
       "away_team": "OTT",
@@ -276,7 +280,8 @@
       "full_kelly_exec": 0.1435,
       "stake_pct_bankroll": 0.0181,
       "stake_pct_pre_cap": 0.02,
-      "slate_scaled": true
+      "slate_scaled": true,
+      "_locked": true
     },
     {
       "away_team": "WSH",
@@ -333,7 +338,8 @@
       "full_kelly_exec": 0.1666,
       "stake_pct_bankroll": 0.0181,
       "stake_pct_pre_cap": 0.02,
-      "slate_scaled": true
+      "slate_scaled": true,
+      "_locked": true
     },
     {
       "away_team": "TOR",
@@ -390,7 +396,8 @@
       "full_kelly_exec": 0.1366,
       "stake_pct_bankroll": 0.0181,
       "stake_pct_pre_cap": 0.02,
-      "slate_scaled": true
+      "slate_scaled": true,
+      "_locked": true
     },
     {
       "away_team": "ANA",
@@ -447,7 +454,8 @@
       "full_kelly_exec": 0.0761,
       "stake_pct_bankroll": 0.0172,
       "stake_pct_pre_cap": 0.019,
-      "slate_scaled": true
+      "slate_scaled": true,
+      "_locked": true
     },
     {
       "away_team": "NSH",
@@ -504,7 +512,8 @@
       "full_kelly_exec": 0.2066,
       "stake_pct_bankroll": 0.0181,
       "stake_pct_pre_cap": 0.02,
-      "slate_scaled": true
+      "slate_scaled": true,
+      "_locked": true
     },
     {
       "away_team": "DAL",

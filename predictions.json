@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18 18:15",
+  "generated_at": "2026-11-18 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.2",
   "pipeline_version": "2.2.0",
@@ -64,7 +64,8 @@
       "dt_win_prob": 0.584,
       "model_version": "v2.2",
       "home_abbrev": "CLE",
-      "away_abbrev": "MEM"
+      "away_abbrev": "MEM",
+      "_locked": true
     },
     {
       "home_team": "New Orleans Pelicans",
@@ -108,7 +109,8 @@
       "dt_win_prob": 0.299,
       "model_version": "v2.2",
       "home_abbrev": "NOP",
-      "away_abbrev": "DET"
+      "away_abbrev": "DET",
+      "_locked": true
     },
     {
       "home_team": "Miami Heat",
@@ -152,7 +154,8 @@
       "dt_win_prob": 0.82,
       "model_version": "v2.2",
       "home_abbrev": "MIA",
-      "away_abbrev": "MIL"
+      "away_abbrev": "MIL",
+      "_locked": true
     },
     {
       "home_team": "Toronto Raptors",
@@ -196,7 +199,8 @@
       "dt_win_prob": 0.623,
       "model_version": "v2.2",
       "home_abbrev": "TOR",
-      "away_abbrev": "WAS"
+      "away_abbrev": "WAS",
+      "_locked": true
     },
     {
       "home_team": "Los Angeles Lakers",
@@ -208,8 +212,8 @@
       "model_spread": -12.7,
       "ratings_spread": -12.6,
       "edge": 1.2,
-      "home_rating": 3.6,
-      "away_rating": -6.7,
+      "home_rating": 4.0,
+      "away_rating": -6.3,
       "home_hca": 2.3,
       "hca_default": 2.25,
       "home_recent_perf": 0,
@@ -234,9 +238,9 @@
       "spread_price": -115,
       "books_count": 9,
       "dt_spread": -10.7,
-      "dt_total": 228.3,
-      "dt_home_score": 119.5,
-      "dt_away_score": 108.8,
+      "dt_total": 228.5,
+      "dt_home_score": 119.6,
+      "dt_away_score": 108.9,
       "dt_win_prob": 0.811,
       "model_version": "v2.2",
       "home_abbrev": "LAL",
@@ -284,7 +288,8 @@
       "dt_win_prob": 0.319,
       "model_version": "v2.2",
       "home_abbrev": "IND",
-      "away_abbrev": "HOU"
+      "away_abbrev": "HOU",
+      "_locked": true
     },
     {
       "home_team": "Orlando Magic",
@@ -328,7 +333,8 @@
       "dt_win_prob": 0.573,
       "model_version": "v2.2",
       "home_abbrev": "ORL",
-      "away_abbrev": "PHI"
+      "away_abbrev": "PHI",
+      "_locked": true
     },
     {
       "home_team": "Brooklyn Nets",
@@ -372,7 +378,8 @@
       "dt_win_prob": 0.52,
       "model_version": "v2.2",
       "home_abbrev": "BKN",
-      "away_abbrev": "CHI"
+      "away_abbrev": "CHI",
+      "_locked": true
     },
     {
       "home_team": "Oklahoma City Thunder",
@@ -416,7 +423,8 @@
       "dt_win_prob": 0.7,
       "model_version": "v2.2",
       "home_abbrev": "OKC",
-      "away_abbrev": "ATL"
+      "away_abbrev": "ATL",
+      "_locked": true
     },
     {
       "home_team": "Sacramento Kings",
@@ -428,8 +436,8 @@
       "model_spread": 8.0,
       "ratings_spread": 7.9,
       "edge": 0.5,
-      "home_rating": -8.0,
-      "away_rating": 2.2,
+      "home_rating": -7.7,
+      "away_rating": 2.5,
       "home_hca": 2.1,
       "hca_default": 2.25,
       "home_recent_perf": 0,
@@ -454,9 +462,9 @@
       "spread_price": -104,
       "books_count": 9,
       "dt_spread": 6.6,
-      "dt_total": 228.8,
-      "dt_home_score": 111.1,
-      "dt_away_score": 117.7,
+      "dt_total": 229.1,
+      "dt_home_score": 111.2,
+      "dt_away_score": 117.8,
       "dt_win_prob": 0.291,
       "model_version": "v2.2",
       "home_abbrev": "SAC",
@@ -472,8 +480,8 @@
       "model_spread": 2.7,
       "ratings_spread": 2.8,
       "edge": 0.2,
-      "home_rating": 5.7,
-      "away_rating": 10.7,
+      "home_rating": 6.1,
+      "away_rating": 11.1,
       "home_hca": 2.3,
       "hca_default": 2.25,
       "home_recent_perf": 0,
@@ -498,10 +506,10 @@
       "spread_price": -110,
       "books_count": 9,
       "dt_spread": 1.9,
-      "dt_total": 222.6,
-      "dt_home_score": 110.4,
-      "dt_away_score": 112.2,
-      "dt_win_prob": 0.438,
+      "dt_total": 222.8,
+      "dt_home_score": 110.5,
+      "dt_away_score": 112.4,
+      "dt_win_prob": 0.437,
       "model_version": "v2.2",
       "home_abbrev": "DEN",
       "away_abbrev": "BOS"
@@ -548,7 +556,8 @@
       "dt_win_prob": 0.589,
       "model_version": "v2.2",
       "home_abbrev": "DAL",
-      "away_abbrev": "GSW"
+      "away_abbrev": "GSW",
+      "_locked": true
     }
   ],
   "summary": {

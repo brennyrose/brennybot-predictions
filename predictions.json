@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19 18:15",
+  "generated_at": "2026-11-19 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.2",
   "pipeline_version": "2.2.0",
@@ -64,7 +64,8 @@
       "dt_win_prob": 0.229,
       "model_version": "v2.2",
       "home_abbrev": "MIL",
-      "away_abbrev": "POR"
+      "away_abbrev": "POR",
+      "_locked": true
     },
     {
       "home_team": "San Antonio Spurs",
@@ -108,7 +109,8 @@
       "dt_win_prob": 0.851,
       "model_version": "v2.2",
       "home_abbrev": "SAS",
-      "away_abbrev": "LAC"
+      "away_abbrev": "LAC",
+      "_locked": true
     },
     {
       "home_team": "Minnesota Timberwolves",
@@ -152,7 +154,8 @@
       "dt_win_prob": 0.488,
       "model_version": "v2.2",
       "home_abbrev": "MIN",
-      "away_abbrev": "NYK"
+      "away_abbrev": "NYK",
+      "_locked": true
     },
     {
       "home_team": "Memphis Grizzlies",
@@ -196,7 +199,8 @@
       "dt_win_prob": 0.624,
       "model_version": "v2.2",
       "home_abbrev": "MEM",
-      "away_abbrev": "GSW"
+      "away_abbrev": "GSW",
+      "_locked": true
     }
   ],
   "summary": {

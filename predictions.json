@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21 18:15",
+  "generated_at": "2026-11-21 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.2",
   "pipeline_version": "2.2.0",
@@ -64,7 +64,8 @@
       "dt_win_prob": 0.575,
       "model_version": "v2.2",
       "home_abbrev": "DAL",
-      "away_abbrev": "LAC"
+      "away_abbrev": "LAC",
+      "_locked": true
     },
     {
       "home_team": "Sacramento Kings",
@@ -76,8 +77,8 @@
       "model_spread": 7.9,
       "ratings_spread": 7.8,
       "edge": 4.6,
-      "home_rating": -7.3,
-      "away_rating": 2.7,
+      "home_rating": -7.2,
+      "away_rating": 2.8,
       "home_hca": 2.1,
       "hca_default": 2.25,
       "home_recent_perf": 0,
@@ -152,7 +153,8 @@
       "dt_win_prob": 0.924,
       "model_version": "v2.2",
       "home_abbrev": "SAS",
-      "away_abbrev": "NOP"
+      "away_abbrev": "NOP",
+      "_locked": true
     },
     {
       "home_team": "New York Knicks",
@@ -196,7 +198,8 @@
       "dt_win_prob": 0.457,
       "model_version": "v2.2",
       "home_abbrev": "NYK",
-      "away_abbrev": "POR"
+      "away_abbrev": "POR",
+      "_locked": true
     },
     {
       "home_team": "Minnesota Timberwolves",
@@ -240,7 +243,8 @@
       "dt_win_prob": 0.688,
       "model_version": "v2.2",
       "home_abbrev": "MIN",
-      "away_abbrev": "MEM"
+      "away_abbrev": "MEM",
+      "_locked": true
     }
   ],
   "summary": {

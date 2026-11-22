@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21 18:20:05",
+  "generated_at": "2026-11-21 20:10:03",
   "sport": "NHL",
   "model_version": "v3",
   "predictions": [
@@ -230,7 +230,8 @@
       "full_kelly_exec": 0.1476,
       "stake_pct_bankroll": 0.0155,
       "stake_pct_pre_cap": 0.02,
-      "slate_scaled": true
+      "slate_scaled": true,
+      "_locked": true
     },
     {
       "away_team": "CBJ",
@@ -287,7 +288,8 @@
       "full_kelly_exec": 0.0999,
       "stake_pct_bankroll": 0.0155,
       "stake_pct_pre_cap": 0.02,
-      "slate_scaled": true
+      "slate_scaled": true,
+      "_locked": true
     },
     {
       "away_team": "PHI",
@@ -342,7 +344,8 @@
       "best_bet_edge_vs_novig": 0.0251,
       "full_kelly_pct": 0.0309,
       "full_kelly_exec": 0.0543,
-      "stake_pct_bankroll": 0.0136
+      "stake_pct_bankroll": 0.0136,
+      "_locked": true
     },
     {
       "away_team": "L.A",
@@ -399,7 +402,8 @@
       "full_kelly_exec": 0.1722,
       "stake_pct_bankroll": 0.0155,
       "stake_pct_pre_cap": 0.02,
-      "slate_scaled": true
+      "slate_scaled": true,
+      "_locked": true
     },
     {
       "away_team": "NYI",
@@ -456,7 +460,8 @@
       "full_kelly_exec": 0.1955,
       "stake_pct_bankroll": 0.0155,
       "stake_pct_pre_cap": 0.02,
-      "slate_scaled": true
+      "slate_scaled": true,
+      "_locked": true
     },
     {
       "away_team": "N.J",
@@ -513,7 +518,8 @@
       "full_kelly_exec": 0.1534,
       "stake_pct_bankroll": 0.0155,
       "stake_pct_pre_cap": 0.02,
-      "slate_scaled": true
+      "slate_scaled": true,
+      "_locked": true
     },
     {
       "away_team": "VGK",
@@ -570,7 +576,8 @@
       "full_kelly_exec": 0.0994,
       "stake_pct_bankroll": 0.0155,
       "stake_pct_pre_cap": 0.02,
-      "slate_scaled": true
+      "slate_scaled": true,
+      "_locked": true
     },
     {
       "away_team": "ANA",

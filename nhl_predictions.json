@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22 18:20:03",
+  "generated_at": "2026-11-22 20:10:04",
   "sport": "NHL",
   "model_version": "v3",
   "predictions": [
@@ -160,7 +160,8 @@
       "best_bet_edge_vs_novig": 0.05,
       "full_kelly_pct": 0.0892,
       "full_kelly_exec": 0.1001,
-      "stake_pct_bankroll": 0.02
+      "stake_pct_bankroll": 0.02,
+      "_locked": true
     },
     {
       "away_team": "PIT",
@@ -207,7 +208,8 @@
       "vegas_away_prob_novig": 0.3235,
       "market_overround": 0.0303,
       "home_edge_vs_novig": 0.0051,
-      "away_edge_vs_novig": -0.0051
+      "away_edge_vs_novig": -0.0051,
+      "_locked": true
     },
     {
       "away_team": "CHI",
@@ -262,7 +264,8 @@
       "best_bet_edge_vs_novig": 0.0348,
       "full_kelly_pct": 0.0374,
       "full_kelly_exec": 0.0658,
-      "stake_pct_bankroll": 0.0165
+      "stake_pct_bankroll": 0.0165,
+      "_locked": true
     }
   ],
   "odds_api_remaining": 354

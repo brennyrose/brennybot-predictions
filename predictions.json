@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22 18:15",
+  "generated_at": "2026-11-22 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.2",
   "pipeline_version": "2.2.0",
@@ -64,7 +64,8 @@
       "dt_win_prob": 0.328,
       "model_version": "v2.2",
       "home_abbrev": "WAS",
-      "away_abbrev": "ORL"
+      "away_abbrev": "ORL",
+      "_locked": true
     },
     {
       "home_team": "Golden State Warriors",
@@ -108,7 +109,8 @@
       "dt_win_prob": 0.285,
       "model_version": "v2.2",
       "home_abbrev": "GSW",
-      "away_abbrev": "BOS"
+      "away_abbrev": "BOS",
+      "_locked": true
     },
     {
       "home_team": "Chicago Bulls",
@@ -152,7 +154,8 @@
       "dt_win_prob": 0.21,
       "model_version": "v2.2",
       "home_abbrev": "CHI",
-      "away_abbrev": "DEN"
+      "away_abbrev": "DEN",
+      "_locked": true
     },
     {
       "home_team": "Utah Jazz",
@@ -196,7 +199,8 @@
       "dt_win_prob": 0.51,
       "model_version": "v2.2",
       "home_abbrev": "UTA",
-      "away_abbrev": "DAL"
+      "away_abbrev": "DAL",
+      "_locked": true
     },
     {
       "home_team": "New York Knicks",
@@ -240,7 +244,8 @@
       "dt_win_prob": 0.645,
       "model_version": "v2.2",
       "home_abbrev": "NYK",
-      "away_abbrev": "IND"
+      "away_abbrev": "IND",
+      "_locked": true
     },
     {
       "home_team": "Miami Heat",

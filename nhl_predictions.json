@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-11-24 10:00:09",
+  "generated_at": "2026-11-24 18:20:03",
   "sport": "NHL",
   "model_version": "v3",
   "predictions": [
     {
       "away_team": "VGK",
       "home_team": "EDM",
-      "away_win_prob": 0.5121,
-      "home_win_prob": 0.4879,
+      "away_win_prob": 0.5127,
+      "home_win_prob": 0.4873,
       "model_away_odds": -105,
       "model_home_odds": 105,
-      "goalie_adj": 0.0034,
-      "goalie_source": "Home_Indiv",
-      "away_goalie": "",
+      "goalie_adj": 0.0,
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Carter Hart",
       "home_goalie": "Devon Levi",
       "away_b2b": false,
       "home_b2b": false,
@@ -31,12 +31,12 @@
       "home_luck_adj": 0.0,
       "rest_effect": -0.01,
       "model_version": "v3",
-      "home_win_prob_raw": 0.4879,
-      "home_win_prob_calibrated": 0.4833,
-      "vegas_away_odds": -112,
-      "vegas_home_odds": 100,
-      "away_ev": -0.0307,
-      "home_ev": -0.0242,
+      "home_win_prob_raw": 0.4873,
+      "home_win_prob_calibrated": 0.483,
+      "vegas_away_odds": -113,
+      "vegas_home_odds": 106,
+      "away_ev": -0.0336,
+      "home_ev": 0.0038,
       "best_bet_team": null,
       "best_bet_odds": null,
       "best_bet_ev": null,
@@ -44,12 +44,12 @@
       "recommended_units": 0,
       "confidence": "NO_EDGE",
       "recommendation": "",
-      "vegas_home_prob_novig": 0.4862,
-      "vegas_away_prob_novig": 0.5138,
-      "market_overround": 0.0283,
-      "home_edge_vs_novig": 0.0017,
-      "away_edge_vs_novig": -0.0017
+      "vegas_home_prob_novig": 0.4778,
+      "vegas_away_prob_novig": 0.5222,
+      "market_overround": 0.016,
+      "home_edge_vs_novig": 0.0095,
+      "away_edge_vs_novig": -0.0095
     }
   ],
-  "odds_api_remaining": 342
+  "odds_api_remaining": 340
 }

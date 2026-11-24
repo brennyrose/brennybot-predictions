@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23 18:15",
+  "generated_at": "2026-11-23 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.2",
   "pipeline_version": "2.2.0",
@@ -64,7 +64,8 @@
       "dt_win_prob": 0.45,
       "model_version": "v2.2",
       "home_abbrev": "PHI",
-      "away_abbrev": "POR"
+      "away_abbrev": "POR",
+      "_locked": true
     },
     {
       "home_team": "Chicago Bulls",
@@ -108,51 +109,8 @@
       "dt_win_prob": 0.306,
       "model_version": "v2.2",
       "home_abbrev": "CHI",
-      "away_abbrev": "CLE"
-    },
-    {
-      "home_team": "Sacramento Kings",
-      "away_team": "San Antonio Spurs",
-      "date": "2026-11-23",
-      "commence": "2026-11-24T03:10:00Z",
-      "vegas_spread": 12.5,
-      "consensus_spread": 12.5,
-      "model_spread": 15.1,
-      "ratings_spread": 14.9,
-      "edge": 2.6,
-      "home_rating": -8.2,
-      "away_rating": 9.0,
-      "home_hca": 2.1,
-      "hca_default": 2.25,
-      "home_recent_perf": 0,
-      "away_recent_perf": 0,
-      "home_shooting_luck": 0,
-      "away_shooting_luck": 0,
-      "home_ts": 0.565,
-      "away_ts": 0.565,
-      "games_analyzed": 0,
-      "confidence_scale": 1.0,
-      "recommendation": "BET San Antonio Spurs -12.5",
-      "confidence": "MEDIUM",
-      "bet_team": "San Antonio Spurs",
-      "bet_spread": -12.5,
-      "lean_team": null,
-      "lean_spread": null,
-      "warning": "",
-      "total": null,
-      "home_ml": null,
-      "away_ml": null,
-      "spread_book": "DraftKings",
-      "spread_price": -109,
-      "books_count": 9,
-      "dt_spread": 14.0,
-      "dt_total": 225.8,
-      "dt_home_score": 105.9,
-      "dt_away_score": 119.9,
-      "dt_win_prob": 0.123,
-      "model_version": "v2.2",
-      "home_abbrev": "SAC",
-      "away_abbrev": "SAS"
+      "away_abbrev": "CLE",
+      "_locked": true
     },
     {
       "home_team": "New Orleans Pelicans",
@@ -196,7 +154,52 @@
       "dt_win_prob": 0.379,
       "model_version": "v2.2",
       "home_abbrev": "NOP",
-      "away_abbrev": "PHX"
+      "away_abbrev": "PHX",
+      "_locked": true
+    },
+    {
+      "home_team": "Sacramento Kings",
+      "away_team": "San Antonio Spurs",
+      "date": "2026-11-23",
+      "commence": "2026-11-24T03:10:00Z",
+      "vegas_spread": 12.5,
+      "consensus_spread": 12.5,
+      "model_spread": 0.3,
+      "ratings_spread": 0.2,
+      "edge": 12.2,
+      "home_rating": -7.8,
+      "away_rating": -5.4,
+      "home_hca": 2.1,
+      "hca_default": 2.25,
+      "home_recent_perf": 0,
+      "away_recent_perf": 0,
+      "home_shooting_luck": 0,
+      "away_shooting_luck": 0,
+      "home_ts": 0.565,
+      "away_ts": 0.565,
+      "games_analyzed": 0,
+      "confidence_scale": 1.0,
+      "recommendation": "CHECK NEWS \u2014 model leans Sacramento Kings +12.5",
+      "confidence": "FLAG",
+      "bet_team": null,
+      "bet_spread": null,
+      "lean_team": "Sacramento Kings",
+      "lean_spread": 12.5,
+      "warning": "",
+      "total": null,
+      "home_ml": null,
+      "away_ml": null,
+      "spread_book": "FanDuel",
+      "spread_price": -105,
+      "books_count": 9,
+      "dt_spread": 4.4,
+      "dt_total": 225.4,
+      "dt_home_score": 110.5,
+      "dt_away_score": 114.9,
+      "dt_win_prob": 0.359,
+      "model_version": "v2.2",
+      "home_abbrev": "SAC",
+      "away_abbrev": "SAS"
     },
     {
       "home_team": "Indiana Pacers",
@@ -240,7 +243,8 @@
       "dt_win_prob": 0.506,
       "model_version": "v2.2",
       "home_abbrev": "IND",
-      "away_abbrev": "OKC"
+      "away_abbrev": "OKC",
+      "_locked": true
     },
     {
       "home_team": "Minnesota Timberwolves",
@@ -284,7 +288,8 @@
       "dt_win_prob": 0.799,
       "model_version": "v2.2",
       "home_abbrev": "MIN",
-      "away_abbrev": "BKN"
+      "away_abbrev": "BKN",
+      "_locked": true
     },
     {
       "home_team": "Los Angeles Lakers",
@@ -296,8 +301,8 @@
       "model_spread": -11.8,
       "ratings_spread": -11.7,
       "edge": 1.7,
-      "home_rating": 2.2,
-      "away_rating": -7.2,
+      "home_rating": 2.7,
+      "away_rating": -6.7,
       "home_hca": 2.3,
       "hca_default": 2.25,
       "home_recent_perf": 0,
@@ -322,9 +327,9 @@
       "spread_price": -105,
       "books_count": 9,
       "dt_spread": -12.0,
-      "dt_total": 227.6,
+      "dt_total": 227.7,
       "dt_home_score": 119.8,
-      "dt_away_score": 107.8,
+      "dt_away_score": 107.9,
       "dt_win_prob": 0.839,
       "model_version": "v2.2",
       "home_abbrev": "LAL",
@@ -372,7 +377,8 @@
       "dt_win_prob": 0.763,
       "model_version": "v2.2",
       "home_abbrev": "TOR",
-      "away_abbrev": "MIL"
+      "away_abbrev": "MIL",
+      "_locked": true
     },
     {
       "home_team": "Houston Rockets",
@@ -416,7 +422,8 @@
       "dt_win_prob": 0.828,
       "model_version": "v2.2",
       "home_abbrev": "HOU",
-      "away_abbrev": "LAC"
+      "away_abbrev": "LAC",
+      "_locked": true
     },
     {
       "home_team": "Charlotte Hornets",
@@ -460,14 +467,15 @@
       "dt_win_prob": 0.378,
       "model_version": "v2.2",
       "home_abbrev": "CHA",
-      "away_abbrev": "MEM"
+      "away_abbrev": "MEM",
+      "_locked": true
     }
   ],
   "summary": {
     "total_games": 10,
     "high_confidence": 0,
-    "flagged": 1,
-    "medium_confidence": 4,
+    "flagged": 2,
+    "medium_confidence": 3,
     "no_edge": 5
   }
 }

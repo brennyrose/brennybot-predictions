@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23 18:20:04",
+  "generated_at": "2026-11-23 20:10:04",
   "sport": "NHL",
   "model_version": "v3",
   "predictions": [
@@ -56,7 +56,8 @@
       "best_bet_edge_vs_novig": 0.0983,
       "full_kelly_pct": 0.243,
       "full_kelly_exec": 0.2703,
-      "stake_pct_bankroll": 0.02
+      "stake_pct_bankroll": 0.02,
+      "_locked": true
     },
     {
       "away_team": "L.A",
@@ -111,7 +112,8 @@
       "best_bet_edge_vs_novig": 0.0641,
       "full_kelly_pct": 0.0963,
       "full_kelly_exec": 0.1059,
-      "stake_pct_bankroll": 0.02
+      "stake_pct_bankroll": 0.02,
+      "_locked": true
     },
     {
       "away_team": "CGY",
@@ -166,7 +168,8 @@
       "best_bet_edge_vs_novig": 0.0927,
       "full_kelly_pct": 0.1267,
       "full_kelly_exec": 0.1319,
-      "stake_pct_bankroll": 0.02
+      "stake_pct_bankroll": 0.02,
+      "_locked": true
     },
     {
       "away_team": "TOR",
@@ -213,7 +216,8 @@
       "vegas_away_prob_novig": 0.412,
       "market_overround": 0.0285,
       "home_edge_vs_novig": -0.0041,
-      "away_edge_vs_novig": 0.0041
+      "away_edge_vs_novig": 0.0041,
+      "_locked": true
     },
     {
       "away_team": "UTA",
@@ -268,7 +272,8 @@
       "best_bet_edge_vs_novig": 0.0841,
       "full_kelly_pct": 0.1477,
       "full_kelly_exec": 0.1667,
-      "stake_pct_bankroll": 0.02
+      "stake_pct_bankroll": 0.02,
+      "_locked": true
     },
     {
       "away_team": "ANA",

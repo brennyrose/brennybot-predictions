@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24 18:15",
+  "generated_at": "2026-11-24 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.2",
   "pipeline_version": "2.2.0",
@@ -64,7 +64,8 @@
       "dt_win_prob": 0.509,
       "model_version": "v2.2",
       "home_abbrev": "ORL",
-      "away_abbrev": "DET"
+      "away_abbrev": "DET",
+      "_locked": true
     },
     {
       "home_team": "Denver Nuggets",
@@ -76,8 +77,8 @@
       "model_spread": -10.7,
       "ratings_spread": -10.6,
       "edge": 2.2,
-      "home_rating": 5.7,
-      "away_rating": -2.7,
+      "home_rating": 5.8,
+      "away_rating": -2.5,
       "home_hca": 2.4,
       "hca_default": 2.25,
       "home_recent_perf": 0,
@@ -102,9 +103,9 @@
       "spread_price": -106,
       "books_count": 9,
       "dt_spread": -8.2,
-      "dt_total": 234.2,
-      "dt_home_score": 121.2,
-      "dt_away_score": 113.0,
+      "dt_total": 234.6,
+      "dt_home_score": 121.4,
+      "dt_away_score": 113.2,
       "dt_win_prob": 0.75,
       "model_version": "v2.2",
       "home_abbrev": "DEN",
@@ -152,7 +153,8 @@
       "dt_win_prob": 0.2,
       "model_version": "v2.2",
       "home_abbrev": "WAS",
-      "away_abbrev": "BOS"
+      "away_abbrev": "BOS",
+      "_locked": true
     }
   ],
   "summary": {

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25 18:15",
+  "generated_at": "2026-11-25 20:45",
   "ratings_file": "Dunks & Threes API (automated)",
   "model_version": "BrennyBot Smart Model v2.2",
   "pipeline_version": "2.2.0",
@@ -64,7 +64,8 @@
       "dt_win_prob": 0.458,
       "model_version": "v2.2",
       "home_abbrev": "OKC",
-      "away_abbrev": "MIN"
+      "away_abbrev": "MIN",
+      "_locked": true
     },
     {
       "home_team": "Charlotte Hornets",
@@ -108,7 +109,8 @@
       "dt_win_prob": 0.599,
       "model_version": "v2.2",
       "home_abbrev": "CHA",
-      "away_abbrev": "CHI"
+      "away_abbrev": "CHI",
+      "_locked": true
     },
     {
       "home_team": "Milwaukee Bucks",
@@ -152,7 +154,8 @@
       "dt_win_prob": 0.479,
       "model_version": "v2.2",
       "home_abbrev": "MIL",
-      "away_abbrev": "BKN"
+      "away_abbrev": "BKN",
+      "_locked": true
     },
     {
       "home_team": "Memphis Grizzlies",
@@ -196,7 +199,8 @@
       "dt_win_prob": 0.681,
       "model_version": "v2.2",
       "home_abbrev": "MEM",
-      "away_abbrev": "LAC"
+      "away_abbrev": "LAC",
+      "_locked": true
     },
     {
       "home_team": "Golden State Warriors",
@@ -234,9 +238,9 @@
       "spread_price": -115,
       "books_count": 9,
       "dt_spread": -5.7,
-      "dt_total": 220.5,
-      "dt_home_score": 113.1,
-      "dt_away_score": 107.4,
+      "dt_total": 220.3,
+      "dt_home_score": 113.0,
+      "dt_away_score": 107.3,
       "dt_win_prob": 0.682,
       "model_version": "v2.2",
       "home_abbrev": "GSW",
@@ -278,7 +282,7 @@
       "spread_price": -110,
       "books_count": 9,
       "dt_spread": 2.7,
-      "dt_total": 225.2,
+      "dt_total": 225.0,
       "dt_home_score": 111.2,
       "dt_away_score": 113.9,
       "dt_win_prob": 0.411,
@@ -328,7 +332,8 @@
       "dt_win_prob": 0.588,
       "model_version": "v2.2",
       "home_abbrev": "NYK",
-      "away_abbrev": "CLE"
+      "away_abbrev": "CLE",
+      "_locked": true
     },
     {
       "home_team": "Philadelphia 76ers",
@@ -417,7 +422,8 @@
       "dt_win_prob": 0.751,
       "model_version": "v2.2",
       "home_abbrev": "HOU",
-      "away_abbrev": "PHX"
+      "away_abbrev": "PHX",
+      "_locked": true
     }
   ],
   "summary": {

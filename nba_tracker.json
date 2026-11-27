@@ -1,62 +1,95 @@
 {
-  "generated_at": "2026-11-26 20:45:04",
+  "generated_at": "2026-11-27 10:00:04",
   "season": "2026-27",
   "model_version": "v2.2",
   "disclaimer": "Bets are picks with a 2-4 point edge (current rules, applied to the whole history; 4+ point edges are flags, not bets). Every pick is graded against the spread and book the site showed at tip-off, 1 unit flat, at the logged price (picks from before Oct 22, 2026 had no price logged and are graded at the standard -110, 52.4% to break even). A benchmark, not your P&L: real results depend on the price you got, when you bet, and whether you took every pick.",
   "breakeven": 0.5238,
-  "games_logged": 268,
+  "games_logged": 279,
   "games_graded": 268,
   "open_bets": [
     {
-      "date": "2026-11-25",
-      "commence": "2026-11-26T00:40:00Z",
-      "matchup": "Minnesota Timberwolves @ Oklahoma City Thunder",
-      "team": "Minnesota Timberwolves",
-      "spread": 2.5,
+      "date": "2026-11-27",
+      "commence": "2026-11-28T02:40:00Z",
+      "matchup": "New Orleans Pelicans @ Los Angeles Clippers",
+      "team": "Los Angeles Clippers",
+      "spread": -2.5,
       "price": -110,
-      "book": "BetMGM",
-      "edge": 2.9,
+      "book": "DraftKings",
+      "edge": 3.2,
       "confidence": "MEDIUM",
-      "locked": true
+      "locked": false
     },
     {
-      "date": "2026-11-25",
-      "commence": "2026-11-26T00:10:00Z",
-      "matchup": "Chicago Bulls @ Charlotte Hornets",
-      "team": "Charlotte Hornets",
-      "spread": -3.5,
-      "price": -110,
+      "date": "2026-11-27",
+      "commence": "2026-11-28T00:40:00Z",
+      "matchup": "Philadelphia 76ers @ Indiana Pacers",
+      "team": "Indiana Pacers",
+      "spread": 3.5,
+      "price": -116,
+      "book": "DraftKings",
+      "edge": 2.9,
+      "confidence": "MEDIUM",
+      "locked": false
+    },
+    {
+      "date": "2026-11-27",
+      "commence": "2026-11-28T02:10:00Z",
+      "matchup": "Dallas Mavericks @ Phoenix Suns",
+      "team": "Phoenix Suns",
+      "spread": -1.5,
+      "price": -115,
       "book": "BetMGM",
       "edge": 2.8,
       "confidence": "MEDIUM",
-      "locked": true
+      "locked": false
     },
     {
-      "date": "2026-11-25",
-      "commence": "2026-11-26T01:10:00Z",
-      "matchup": "Brooklyn Nets @ Milwaukee Bucks",
+      "date": "2026-11-27",
+      "commence": "2026-11-28T00:40:00Z",
+      "matchup": "Brooklyn Nets @ Toronto Raptors",
       "team": "Brooklyn Nets",
-      "spread": 1.5,
-      "price": -114,
-      "book": "DraftKings",
-      "edge": 2.3,
+      "spread": 9.5,
+      "price": -106,
+      "book": "FanDuel",
+      "edge": 2.6,
       "confidence": "MEDIUM",
-      "locked": true
+      "locked": false
     },
     {
-      "date": "2026-11-25",
-      "commence": "2026-11-26T01:10:00Z",
-      "matchup": "Los Angeles Clippers @ Memphis Grizzlies",
-      "team": "Los Angeles Clippers",
-      "spread": 7.5,
-      "price": -110,
-      "book": "BetMGM",
-      "edge": 2.0,
+      "date": "2026-11-27",
+      "commence": "2026-11-28T02:40:00Z",
+      "matchup": "Golden State Warriors @ Portland Trail Blazers",
+      "team": "Portland Trail Blazers",
+      "spread": -9.5,
+      "price": -106,
+      "book": "FanDuel",
+      "edge": 2.6,
       "confidence": "MEDIUM",
-      "locked": true
+      "locked": false
+    },
+    {
+      "date": "2026-11-27",
+      "commence": "2026-11-28T00:10:00Z",
+      "matchup": "Miami Heat @ New York Knicks",
+      "team": "New York Knicks",
+      "spread": -3.5,
+      "price": -120,
+      "book": "FanDuel",
+      "edge": 2.5,
+      "confidence": "MEDIUM",
+      "locked": false
     }
   ],
-  "open_flags": [],
+  "open_flags": [
+    {
+      "date": "2026-11-27",
+      "matchup": "Atlanta Hawks @ Boston Celtics",
+      "team": "Boston Celtics",
+      "spread": -8.5,
+      "edge": 5.4,
+      "locked": false
+    }
+  ],
   "rules": {
     "edge_min": 2.0,
     "edge_flag": 4.0

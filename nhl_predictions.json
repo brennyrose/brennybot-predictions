@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27 10:00:08",
+  "generated_at": "2026-11-27 18:20:04",
   "sport": "NHL",
   "model_version": "v3",
   "predictions": [
@@ -48,7 +48,8 @@
       "vegas_away_prob_novig": 0.4098,
       "market_overround": 0.0167,
       "home_edge_vs_novig": -0.0207,
-      "away_edge_vs_novig": 0.0207
+      "away_edge_vs_novig": 0.0207,
+      "_locked": true
     },
     {
       "away_team": "CGY",
@@ -95,7 +96,8 @@
       "vegas_away_prob_novig": 0.2967,
       "market_overround": 0.0213,
       "home_edge_vs_novig": -0.001,
-      "away_edge_vs_novig": 0.001
+      "away_edge_vs_novig": 0.001,
+      "_locked": true
     },
     {
       "away_team": "UTA",
@@ -150,7 +152,8 @@
       "best_bet_edge_vs_novig": 0.1138,
       "full_kelly_pct": 0.2186,
       "full_kelly_exec": 0.2301,
-      "stake_pct_bankroll": 0.02
+      "stake_pct_bankroll": 0.02,
+      "_locked": true
     },
     {
       "away_team": "DAL",
@@ -205,7 +208,8 @@
       "best_bet_edge_vs_novig": 0.0684,
       "full_kelly_pct": 0.1018,
       "full_kelly_exec": 0.1183,
-      "stake_pct_bankroll": 0.02
+      "stake_pct_bankroll": 0.02,
+      "_locked": true
     },
     {
       "away_team": "OTT",
@@ -260,7 +264,8 @@
       "best_bet_edge_vs_novig": 0.0754,
       "full_kelly_pct": 0.1418,
       "full_kelly_exec": 0.1659,
-      "stake_pct_bankroll": 0.02
+      "stake_pct_bankroll": 0.02,
+      "_locked": true
     },
     {
       "away_team": "VAN",
@@ -307,7 +312,8 @@
       "vegas_away_prob_novig": 0.3185,
       "market_overround": 0.0294,
       "home_edge_vs_novig": -0.0074,
-      "away_edge_vs_novig": 0.0074
+      "away_edge_vs_novig": 0.0074,
+      "_locked": true
     },
     {
       "away_team": "FLA",
@@ -354,7 +360,8 @@
       "vegas_away_prob_novig": 0.507,
       "market_overround": 0.0242,
       "home_edge_vs_novig": -0.0036,
-      "away_edge_vs_novig": 0.0036
+      "away_edge_vs_novig": 0.0036,
+      "_locked": true
     },
     {
       "away_team": "DET",
@@ -401,7 +408,8 @@
       "vegas_away_prob_novig": 0.4601,
       "market_overround": 0.0253,
       "home_edge_vs_novig": -0.0092,
-      "away_edge_vs_novig": 0.0092
+      "away_edge_vs_novig": 0.0092,
+      "_locked": true
     },
     {
       "away_team": "COL",
@@ -456,7 +464,8 @@
       "best_bet_edge_vs_novig": 0.0344,
       "full_kelly_pct": 0.0555,
       "full_kelly_exec": 0.0689,
-      "stake_pct_bankroll": 0.0172
+      "stake_pct_bankroll": 0.0172,
+      "_locked": true
     },
     {
       "away_team": "L.A",
@@ -503,7 +512,8 @@
       "vegas_away_prob_novig": 0.5105,
       "market_overround": 0.0215,
       "home_edge_vs_novig": 0.0032,
-      "away_edge_vs_novig": -0.0032
+      "away_edge_vs_novig": -0.0032,
+      "_locked": true
     },
     {
       "away_team": "VGK",
@@ -550,7 +560,8 @@
       "vegas_away_prob_novig": 0.6596,
       "market_overround": 0.0271,
       "home_edge_vs_novig": 0.0128,
-      "away_edge_vs_novig": -0.0128
+      "away_edge_vs_novig": -0.0128,
+      "_locked": true
     },
     {
       "away_team": "NYR",
@@ -597,7 +608,8 @@
       "vegas_away_prob_novig": 0.6162,
       "market_overround": 0.0218,
       "home_edge_vs_novig": 0.0183,
-      "away_edge_vs_novig": -0.0183
+      "away_edge_vs_novig": -0.0183,
+      "_locked": true
     },
     {
       "away_team": "WPG",
@@ -609,7 +621,7 @@
       "goalie_adj": 0.0,
       "goalie_source": "Both_Indiv",
       "away_goalie": "Stuart Skinner",
-      "home_goalie": "Ilya Sorokin",
+      "home_goalie": "Semyon Varlamov",
       "away_b2b": false,
       "home_b2b": false,
       "away_gp": 26,
@@ -629,34 +641,42 @@
       "model_version": "v3",
       "home_win_prob_raw": 0.5679,
       "home_win_prob_calibrated": 0.5365,
-      "vegas_away_odds": 116,
-      "vegas_home_odds": -130,
-      "away_ev": -0.0667,
-      "home_ev": 0.0047,
-      "best_bet_team": null,
-      "best_bet_odds": null,
-      "best_bet_ev": null,
-      "kelly_pct": null,
-      "recommended_units": 0,
-      "confidence": "NO_EDGE",
-      "recommendation": "",
-      "vegas_home_prob_novig": 0.5497,
-      "vegas_away_prob_novig": 0.4503,
-      "market_overround": 0.0282,
-      "home_edge_vs_novig": 0.0182,
-      "away_edge_vs_novig": -0.0182
+      "vegas_away_odds": 107,
+      "vegas_home_odds": -117,
+      "away_ev": -0.1056,
+      "home_ev": 0.0533,
+      "best_bet_team": "NYI",
+      "best_bet_odds": -117,
+      "best_bet_ev": 0.0533,
+      "kelly_pct": 0.0312,
+      "recommended_units": 2.0,
+      "confidence": "MEDIUM",
+      "recommendation": "NYI ML (-117) \u2014 2.00u | EV: 5.3% | edge vs fair: +4.0pp",
+      "vegas_home_prob_novig": 0.5274,
+      "vegas_away_prob_novig": 0.4726,
+      "market_overround": 0.0223,
+      "home_edge_vs_novig": 0.0405,
+      "away_edge_vs_novig": -0.0405,
+      "exec_hold": 0.005,
+      "exec_decimal": 1.8866,
+      "exec_ev": 0.0714,
+      "full_kelly_screen": 0.0623,
+      "best_bet_edge_vs_novig": 0.0405,
+      "full_kelly_pct": 0.0623,
+      "full_kelly_exec": 0.0805,
+      "stake_pct_bankroll": 0.02
     },
     {
       "away_team": "PIT",
       "home_team": "BUF",
-      "away_win_prob": 0.4108,
-      "home_win_prob": 0.5892,
-      "model_away_odds": 143,
-      "model_home_odds": -143,
-      "goalie_adj": 0.2659,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "away_win_prob": 0.4539,
+      "home_win_prob": 0.5461,
+      "model_away_odds": 120,
+      "model_home_odds": -120,
+      "goalie_adj": 0.0,
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Sergei Murashov",
+      "home_goalie": "Ukko-Pekka Luukkonen",
       "away_b2b": false,
       "home_b2b": false,
       "away_gp": 24,
@@ -674,12 +694,12 @@
       "home_luck_adj": 0.0,
       "rest_effect": 0.0,
       "model_version": "v3",
-      "home_win_prob_raw": 0.5892,
-      "home_win_prob_calibrated": 0.5508,
-      "vegas_away_odds": 135,
-      "vegas_home_odds": -150,
-      "away_ev": -0.0346,
-      "home_ev": -0.018,
+      "home_win_prob_raw": 0.5461,
+      "home_win_prob_calibrated": 0.5219,
+      "vegas_away_odds": 117,
+      "vegas_home_odds": -125,
+      "away_ev": -0.015,
+      "home_ev": -0.017,
       "best_bet_team": null,
       "best_bet_odds": null,
       "best_bet_ev": null,
@@ -687,23 +707,23 @@
       "recommended_units": 0,
       "confidence": "NO_EDGE",
       "recommendation": "",
-      "vegas_home_prob_novig": 0.5851,
-      "vegas_away_prob_novig": 0.4149,
-      "market_overround": 0.0255,
-      "home_edge_vs_novig": 0.0041,
-      "away_edge_vs_novig": -0.0041
+      "vegas_home_prob_novig": 0.5466,
+      "vegas_away_prob_novig": 0.4534,
+      "market_overround": 0.0164,
+      "home_edge_vs_novig": -0.0005,
+      "away_edge_vs_novig": 0.0005
     },
     {
       "away_team": "SEA",
       "home_team": "EDM",
-      "away_win_prob": 0.3465,
-      "home_win_prob": 0.6535,
-      "model_away_odds": 189,
-      "model_home_odds": -189,
-      "goalie_adj": -0.1,
-      "goalie_source": "Both_Team",
-      "away_goalie": "",
-      "home_goalie": "",
+      "away_win_prob": 0.377,
+      "home_win_prob": 0.623,
+      "model_away_odds": 165,
+      "model_home_odds": -165,
+      "goalie_adj": -0.3,
+      "goalie_source": "Both_Indiv",
+      "away_goalie": "Philipp Grubauer",
+      "home_goalie": "Tristan Jarry",
       "away_b2b": false,
       "home_b2b": false,
       "away_gp": 22,
@@ -721,25 +741,33 @@
       "home_luck_adj": 0.0,
       "rest_effect": 0.01,
       "model_version": "v3",
-      "home_win_prob_raw": 0.6535,
-      "home_win_prob_calibrated": 0.5951,
-      "vegas_away_odds": 195,
-      "vegas_home_odds": -210,
-      "away_ev": 0.0222,
-      "home_ev": -0.0353,
-      "best_bet_team": null,
-      "best_bet_odds": null,
-      "best_bet_ev": null,
-      "kelly_pct": null,
-      "recommended_units": 0,
-      "confidence": "NO_EDGE",
-      "recommendation": "",
-      "vegas_home_prob_novig": 0.6665,
-      "vegas_away_prob_novig": 0.3335,
-      "market_overround": 0.0164,
-      "home_edge_vs_novig": -0.013,
-      "away_edge_vs_novig": 0.013
+      "home_win_prob_raw": 0.623,
+      "home_win_prob_calibrated": 0.5739,
+      "vegas_away_odds": 185,
+      "vegas_home_odds": -200,
+      "away_ev": 0.0745,
+      "home_ev": -0.0655,
+      "best_bet_team": "SEA",
+      "best_bet_odds": 185,
+      "best_bet_ev": 0.0745,
+      "kelly_pct": 0.0201,
+      "recommended_units": 1.16,
+      "confidence": "MEDIUM",
+      "recommendation": "SEA ML (+185) \u2014 1.16u | EV: 7.4% | edge vs fair: +3.2pp",
+      "vegas_home_prob_novig": 0.6552,
+      "vegas_away_prob_novig": 0.3448,
+      "market_overround": 0.0175,
+      "home_edge_vs_novig": -0.0322,
+      "away_edge_vs_novig": 0.0322,
+      "exec_hold": 0.005,
+      "exec_decimal": 2.8856,
+      "exec_ev": 0.0879,
+      "full_kelly_screen": 0.0402,
+      "best_bet_edge_vs_novig": 0.0322,
+      "full_kelly_pct": 0.0402,
+      "full_kelly_exec": 0.0466,
+      "stake_pct_bankroll": 0.0116
     }
   ],
-  "odds_api_remaining": 325
+  "odds_api_remaining": 323
 }
